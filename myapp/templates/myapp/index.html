@@ -1,0 +1,192 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}
+    {% if estado %}{{ estado.etapa }}{% else %}Subvenciones{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="row subv-subvenciones-title">
+    <div class="col">
+        <h1>Subvenciones 2017</h1>
+    </div>
+</div>
+
+<div class="row subv-sidebar">
+    <!--
+    <div class="col subv-list-items">
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center {% if not estado %} selected {% endif %}">
+                <a href="{% url 'myapp:index' %}">Todas las subvenciones</a>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a tabindex="0" data-html="true" data-trigger="focus" data-toggle="popover" data-placement="bottom"
+                   data-content="{% for e in estados %}<li style='background-color:#66B9BF;border: 1px solid white;' class='list-group-item d-flex justify-content-between align-items-center {% if estado.slug == e.slug %} selected {% endif %}'><a style='color: white;' href='{{ e.get_absolute_url }}'>{{ e.etapa }}</a></li>{% endfor %}">Listar por estado</a>
+            </li>
+        </ul>
+    </div>-->
+
+    <div class="col">
+        <nav class="subv-nav-breadcumb" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                {% if user.is_authenticated %}
+                <li class="breadcrumb-item"><a href="#">Bienvenido, {{ user.username|title }}</a></li>
+                {% else %}
+                    <li class="breadcrumb-item">Bienvenido nuevo usuario. Por favor inicie sesión</li>
+                {% endif %}
+                <li class="breadcrumb-item"><a href="{% url 'myapp:new_subvencion' %}">Crear subvención</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'logout' %}">Salir</a></li>
+            </ol>
+        </nav>
+    </div>
+
+
+    <!--
+    <div class="col">
+        <nav class="subv-nav-breadcumb" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Añadir Subvención</a></li>
+                <li class="breadcrumb-item"><a href="#">Perfil</a></li>
+                <li class="breadcrumb-item"><a href="#">Salir</a></li>
+            </ol>
+        </nav>
+    </div>
+    -->
+</div>
+
+<div class="row subv-row-departamentos">
+    <div class="col-lg">
+        {% for e in estados %}
+            <div class="div-dep" style="background-color:{{ e.font_color }};">
+                {{ e.etapa }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="row align-items-center subv-table-row">
+    <div class="col-12">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <table id="subv_table_ordering" class="table table-responsive" width="100%">
+            <thead class="thead-subv-table">
+                <tr class="table-active">
+                    <th>INICIO</th>
+                    <th>DEPARTAMENTO</th>
+                    <th>NOMBRE</th>
+                    <th>FIN</th>
+                    <th>CUANTÍA</th>
+                    <th>RESPONSABLES</th>
+                    <th>ESTADO</th>
+                    <th>GESTIONA</th>
+                    <th><i class="fa fa-tasks" aria-hidden="true"></i></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for subvencion in subvenciones %}
+                    <tr>
+                        <td>
+                            {% for inicio in subvencion.inicio.all %}
+                                {{ inicio }}<br>
+                            {% endfor %}
+                        </td>
+                        <td style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
+                            {% if subvencion.generalitat == None %}
+                                {{ subvencion.diputacion }}
+                            {% else %}
+                                {{ subvencion.generalitat }}
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="{{ subvencion.get_absolute_url }}" target="_blank">
+                                {{ subvencion.nombre }}
+                            </a>
+                        </td>
+                        <td>
+                            {% for fin in subvencion.fin.all %}
+                                {{ fin }}<br>
+                            {% endfor %}
+                        </td>
+                        <td>{{ subvencion.cuantia }}</td>
+                        <td>
+                            {% for responsable in subvencion.responsable.all %}
+                                {{ responsable }}<br>
+                            {% endfor %}
+                        </td>
+                        <td style="background-color:{{ subvencion.estado.font_color }};">{{ subvencion.estado }}</td>
+                        <td>
+                            {{ subvencion.gestiona_expediente }}<br>
+                            {% if not subvencion.gestiona %}
+                            {% else %}
+                                <a href="{{ subvencion.gestiona }}" target="_blank">Drive</a>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="{% url 'myapp:edit_subvencion' slug=subvencion.slug %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="{% url 'myapp:delete_subvencion' slug=subvencion.slug %}"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Paginator -->
+        {% if subvenciones.has_other_pages %}
+            <ul class="pagination">
+                {% if subvenciones.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page={{ subvenciones.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                    <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+                {% endif %}
+
+                {% for i in subvenciones.paginator.page_range %}
+                    {% if subvenciones.number == i %}
+                        <li class="page-item active"><a href="#" class="page-link">{{ i }}</a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if subvenciones.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ subvenciones.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                    <li class=" page-item disabled"><span class="page-link">&raquo;</span></li>
+                {% endif %}
+            </ul>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="popover"]').popover();
+            $('#subv_table_ordering').DataTable();
+
+            /* Change color if background divs are darker */
+            divs_darkers = $('.div-dep');
+            td_darkers = $('#subv_table_ordering tbody tr td');
+            divs_darkers.each(function(i) {
+                //console.log($(this).css('background-color'));
+                if($(this).css('background-color') == 'rgb(51, 51, 51)' || $(this).css('background-color') == 'rgb(128, 0, 0)') {
+                    $(this).css('color', '#fff');
+                    //console.log("si");
+                } //else { console.log("no"); }
+            });
+            td_darkers.each(function(i) {
+                if($(this).css('background-color') == 'rgb(51, 51, 51)' || $(this).css('background-color') == 'rgb(128, 0, 0)' || $(this).text() === 'Desestimada') {
+                    $(this).css('color', '#fff');
+                    //console.log($(this).text());
+                } //else { console.log("no"); }
+            });
+        });
+    </script>
+{% endblock %}

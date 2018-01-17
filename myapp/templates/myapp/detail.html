@@ -1,0 +1,151 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}
+    {% if estado %}{{ estado.etapa }}{% else %}Subvenciones{% endif %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="card text-center">
+        <div class="card-header" style="background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;">
+            {{ subvencion.estado }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ subvencion.nombre }}</h5>
+
+            <div class="table-responsive-lg">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>INICIO</th>
+                            {% for inicio in subvencion.inicio.all %}
+                                <td>{{ inicio }}</td>
+                            {% endfor %}
+                        </tr>
+
+                        <tr>
+                            <th>FIN</th>
+                            {% for fin in subvencion.fin.all %}
+                                <td>{{ fin }}</td>
+                            {% endfor %}
+                        </tr>
+
+                        {% if not subvencion.descripcion %}
+                            <tr>
+                                <th>DESCRIPCIÓN</th>
+                                <td>-</td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <th>DESCRIPCIÓN</th>
+                                <td>{{ subvencion.descripcion|linebreaks }}</td>
+                            </tr>
+                        {% endif %}
+
+                        <tr>
+                            <th>RESPONSABLES</th>
+                            {% for responsable in subvencion.responsable.all %}
+                                <td>{{ responsable }}</td>
+                            {% endfor %}
+                        </tr>
+
+                        {% if not subvencion.bases %}
+                            <tr>
+                                <th>BASES</th>
+                                <td>-</td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <th>BASES</th>
+                                <td><a target="_blank" href="{{ subvencion.bases }}">{{ subvencion.bases }}</a></td>
+                            </tr>
+                        {% endif %}
+
+                        {% if not subvencion.solicitud %}
+                            <tr>
+                                <th>SOLICITUD</th>
+                                <td><a target="_blank" href="{{ subvencion.solicitud }}">-</a></td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <th>SOLICITUD</th>
+                                <td><a target="_blank" href="{{ subvencion.solicitud }}">{{ subvencion.solicitud }}</a></td>
+                            </tr>
+                        {% endif %}
+
+                        {% if not subvencion.observaciones %}
+                            <tr>
+                                <th>OBSERVACIONES</th>
+                                <td>-</td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <th>OBSERVACIONES</th>
+                                <td><a target="_blank" href="{{ subvencion.observaciones }}">{{ subvencion.observaciones }}</a></td>
+                            </tr>
+                        {% endif %}
+
+                        {% if subvencion.generalitat == None %}
+                            <tr>
+                                <th>DEPARTAMENTO</th>
+                                <td>{{ subvencion.diputacion }}</td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <th>DEPARTAMENTO</th>
+                                <td>{{ subvencion.generalitat }}</td>
+                            </tr>
+                        {% endif %}
+
+                        <tr>
+                            <th>CUANTÍA</th>
+                            <td>{{ subvencion.cuantia }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>GESTIONA</th>
+                            <td><a target="_blank" href="{{ subvencion.observaciones }}">{{ subvencion.gestiona }}</a></td>
+                        </tr>
+
+                        <tr>
+                            <th>GESTIONA EXPEDIENTE</th>
+                            <td>{{ subvencion.gestiona_expediente }}</td>
+                        </tr>
+
+                        {% if not subvencion.comentarios %}
+                            <tr>
+                                <th>COMENTARIOS</th>
+                                <td>-</td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <th>COMENTARIOS</th>
+                                <td>{{ subvencion.comentarios|linebreaks }}</td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+
+                <a href="{% url 'myapp:index' %}"><button type="button" class="btn btn-info">Volver</button></a>
+            </div>
+        </div>
+        <div class="card-footer" style="background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;">
+            Subvención creada el {{ subvencion.created }} por {{ user.get_username|title }}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function() {
+            /* Change color if background divs are darker */
+            divs_darkers = $('.card-header, .card-footer');
+            divs_darkers.each(function(i) {
+                if($(this).css('background-color') == 'rgb(51, 51, 51)' || $(this).css('background-color') == 'rgb(128, 0, 0)') {
+                    $(this).css('color', '#fff');
+                }
+            });
+        });
+    </script>
+{% endblock %}

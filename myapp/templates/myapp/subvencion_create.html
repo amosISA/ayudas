@@ -1,0 +1,182 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+
+    {% load staticfiles %}
+    {% load tags %}
+    <div class="row">
+        <div class="ag_create_post_wrapper col">
+            <h1>Añadir Subvención</h1>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+
+            <form class="form-horizontal" method="post" enctype="multipart/form-data" action="">{% csrf_token %}
+
+                {% if form.errors %}
+                    <div class="ag_form_login_message_error">
+                        {% for field,error in form.errors.items %}
+                            {{ field|capfirst }} - {{ error|striptags }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <!-- Inicio -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.inicio.label_tag }}
+                    {{ form.inicio|htmlattributes:"class:form-control" }}
+                </div>
+
+                <!-- Fin -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.fin.label_tag }}
+                    {{ form.fin|htmlattributes:"class:form-control" }}
+                </div>
+
+                <!-- Responsable -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.responsable.label_tag }}
+                    {{ form.responsable|htmlattributes:"class:form-control" }}
+                </div>
+
+                <!-- Nombre -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.nombre.label_tag }}
+                    {{ form.nombre|htmlattributes:"class:form-control" }}
+                </div>
+
+                <!-- Bases -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.bases.label_tag }}
+                    {{ form.bases|htmlattributes:"placeholder: Bases, class:form-control" }}
+                </div>
+
+                <!-- Solicitud -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.solicitud.label_tag }}
+                    {{ form.solicitud|htmlattributes:"placeholder: Solicitud, class:form-control" }}
+                </div>
+
+                <!-- Observaciones -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.observaciones.label_tag }}
+                    {{ form.observaciones|htmlattributes:"placeholder: Observaciones, class:form-control" }}
+                </div>
+
+                <!-- Ente -->
+                <div class="input-group title-create_post">
+                    {{ form.ente|htmlattributes:"class:form-control" }}
+                </div>
+
+                <!-- Diputacion -->
+                <div class="title-create_post field-diputacion">
+                    {{ form.diputacion|htmlattributes:"class:form-control" }}
+                </div>
+
+                <!-- Generalitat -->
+                <div class="title-create_post field-generalitat">
+                    {{ form.generalitat|htmlattributes:"class:form-control" }}
+                </div>
+
+                <!-- Cuantia -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.cuantia.label_tag }}
+                    {{ form.cuantia|htmlattributes:"placeholder: Cuantia, class:form-control" }}
+                </div>
+
+                <!-- Descripcion -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.descripcion.label_tag }}
+                    {{ form.descripcion|htmlattributes:"placeholder: Descripcion, class:form-control" }}
+                </div>
+
+                <!-- Estado -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.estado.label_tag }}
+                    {{ form.estado|htmlattributes:"class:form-control" }}
+                </div>
+
+                <!-- Comentarios -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.comentarios.label_tag }}
+                    {{ form.comentarios|htmlattributes:"placeholder: Comentarios, class:form-control" }}
+                </div>
+
+                <!-- Gestiona Enlace -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.gestiona.label_tag }}
+                    {{ form.gestiona|htmlattributes:"placeholder: Gestiona, class:form-control" }}
+                </div>
+
+                <!-- Gestiona Expediente -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.gestiona_expediente.label_tag }}
+                    {{ form.gestiona_expediente|htmlattributes:"placeholder: Expediente, class:form-control" }}
+                </div>
+
+                {% if request.path == '/new/' %}
+                    <input class="button_submit_create_form" type="submit" value="Crear Subvención" />
+                {% else %}
+                    <input class="button_submit_create_form" type="submit" value="Actualizar Subvención" />
+                {% endif %}
+            </form>
+        </div>
+
+        <div class="col">
+            <h1>Acciones</h1>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_inicio' %}">Añadir fecha Inicio</a></li>
+                <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_fin' %}">Añadir fecha Fin</a></li>
+                <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_responsable' %}">Añadir Responsable</a></li>
+                <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_diputacion' %}">Añadir departamento Diputación</a></li>
+                <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_generalitat' %}">Añadir departamento Generalitat</a></li>
+                <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_estado' %}">Añadir Estado</a></li>
+                <a style="margin-top:20px;" href="{% url 'myapp:index' %}"><button type="button" class="btn btn-info">Volver</button></a>
+            </ul>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        window.onload = function(e){
+            var ente = document.getElementById("id_ente");
+            ente.addEventListener("change", myFunction);
+
+            function myFunction() {
+                var ente_value = ente.options[ente.selectedIndex].value;
+                var diputacion = document.getElementsByClassName('field-diputacion');
+                var generalitat = document.getElementsByClassName('field-generalitat');
+
+                if(ente_value == 'DA') {
+                   for (var i=0; i<generalitat.length; i+=1){
+                      generalitat[i].style.display = 'none';
+                      document.getElementById("id_generalitat").selectedIndex = 0;
+                   }
+                   for (var i=0; i<diputacion.length; i+=1){
+                      diputacion[i].style.display = 'block';
+                      document.getElementById("id_diputacion").selectedIndex = 0;
+                   }
+                } else {
+                    for (var i=0; i<diputacion.length; i+=1){
+                      diputacion[i].style.display = 'none';
+                      document.getElementById("id_diputacion").selectedIndex = 0;
+                    }
+                    for (var i=0; i<generalitat.length; i+=1){
+                      generalitat[i].style.display = 'block';
+                      document.getElementById("id_generalitat").selectedIndex = 0;
+                   }
+                }
+            }
+
+            if(ente.options[ente.selectedIndex].value == 'DA') {
+                for (var i=0; i<document.getElementsByClassName('field-generalitat').length; i+=1){
+                  document.getElementsByClassName('field-generalitat')[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+{% endblock %}

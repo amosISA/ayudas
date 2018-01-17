@@ -1,0 +1,34 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+
+    {% load staticfiles %}
+    {% load tags %}
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="ag_create_post_wrapper col">
+            <h1>Añadir Responsable</h1>
+
+            <form class="form-horizontal" method="post" enctype="multipart/form-data" action="">{% csrf_token %}
+
+                {% if form.errors %}
+                    <div class="ag_form_login_message_error">
+                        {% for field,error in form.errors.items %}
+                            {{ field|capfirst }} - {{ error|striptags }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <!-- Responsable -->
+                <div class="input-group title-create_post">
+                    {{ form.responsable|htmlattributes:"class:form-control" }}
+                </div>
+
+                <input class="button_submit_create_form" type="submit" value="Crear Responsable" />
+                <a href="{% url 'myapp:new_subvencion' %}"><button type="button" class="btn btn-info">Volver</button></a>
+            </form>
+        </div>
+        <div class="col"></div>
+
+    </div>
+{% endblock %}

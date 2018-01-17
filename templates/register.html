@@ -1,0 +1,203 @@
+{% extends "myapp/base.html" %}
+
+{% block content %}
+
+    <style>
+        .ag_auth_page_register {
+        width: 95%;
+        margin: auto;
+        max-width: 380px;
+        text-align: center;
+        padding-top: 30px;
+        font-size: 14px;
+        /* Register Form */ }
+        .ag_auth_page_register .ag_form_auth_register {
+        display: block;
+        margin-top: 0em;
+        border-radius: 3px;
+        background-color: #fff;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+        padding: 2.9em 2.5em 1.7em 2.5em;
+        /* Form register error messages div */
+        /* Input divs blocks */
+        /* Register Button */
+        /* Login Hint */ }
+        .ag_auth_page_register .ag_form_auth_register .ag_form_login_message_error {
+        color: #ff7142;
+        background-color: #fff5f2;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        min-height: 50px;
+        padding: 6px 25px 6px 15px;
+        margin-bottom: 10px; }
+        .ag_auth_page_register .ag_form_auth_register .ag_form_block_input {
+        text-align: left;
+        margin-bottom: 1em; }
+        .ag_auth_page_register .ag_form_auth_register .ag_form_block_input .ag_form_inner_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse; }
+        .ag_auth_page_register .ag_form_auth_register .ag_form_block_input .ag_form_inner_wrapper .ag_input_form_register {
+        border: solid 1px #e6e6e6;
+        width: 100%;
+        border-radius: 3px;
+        padding: .8em 1.1em;
+        font-size: 16px; }
+        .ag_auth_page_register .ag_form_auth_register .ag_form_block_input .ag_form_inner_wrapper .ag_input_form_register:focus {
+        border: solid 1px #00b5e2; }
+        .ag_auth_page_register .ag_form_auth_register .ag_form_block_input label {
+        color: #999;
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+        display: block;
+        cursor: pointer; }
+        .ag_auth_page_register .ag_form_auth_register .ag_form_block_input label .ag_label_span_required {
+        color: #666;
+        font-size: .85em;
+        margin-left: 5px; }
+        .ag_auth_page_register .ag_form_auth_register .ag_register_form_submit_button {
+        width: 100%;
+        font-weight: bold;
+        margin-bottom: 30px;
+        padding: 16px;
+        text-transform: none;
+        height: 50px;
+        color: #fff;
+        background: #2c3e50;
+        border-radius: 3px;
+        text-align: center;
+        outline: none;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1em;
+        line-height: 1;
+        border: none;
+        text-shadow: none;
+        letter-spacing: 0; }
+        .ag_auth_page_register .ag_form_auth_register .ag_register_form_submit_button:active {
+        background: #2c3e50;
+        box-shadow: none;
+        text-decoration: none; }
+        .ag_auth_page_register .ag_form_auth_register .ag_register_form_submit_button:hover {
+        background: #253350;
+        box-shadow: none;
+        text-decoration: none; }
+        .ag_auth_page_register .ag_form_auth_register .ag_auth_page_login_account_hint {
+        color: #666; }
+        .ag_auth_page_register .ag_form_auth_register .ag_auth_page_login_account_hint .ag_auth_page_login_button {
+        margin-left: 5px;
+        color: #00b5e2;
+        cursor: pointer; }
+        .ag_auth_page_register .ag_form_auth_register .ag_auth_page_login_account_hint .ag_auth_page_login_button:hover {
+        text-decoration: underline; }
+
+        .ag_webapp_content input[type="text"],
+        .ag_webapp_content input[type="password"],
+        .ag_webapp_content input[type="email"] {
+        margin: 0;
+        color: #555;
+        transition: all .4s ease-out;
+        outline: none;
+        height: auto;
+        line-height: initial;
+        background: #fff;
+        min-width: 120px;
+        max-width: 100%; }
+        .ag_webapp_content input[type="text"]:required,
+        .ag_webapp_content input[type="password"]:required,
+        .ag_webapp_content input[type="email"]:required {
+        box-shadow: none; }
+    </style>
+
+    {% load tags %}
+    <div class="ag_auth_page_register">
+        <form name="ag_register_form" class="ag_form_auth_register" method="post">
+            {% csrf_token %}
+
+            {% if form.errors %}
+                <div class="ag_form_login_message_error">
+                    {% for field in form %}
+                        {% if field.errors %}
+                            - {{ field.errors|striptags }}<br />
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="ag_form_block_input">
+                {{ form.username.label_tag }}
+                <div class="ag_form_inner_wrapper">
+                    {{ form.username|htmlattributes:"class: ag_input_form_register" }}
+                </div>
+            </div>
+
+            <div class="ag_form_block_input">
+                {{ form.email.label_tag }}
+                <div class="ag_form_inner_wrapper">
+                    {{ form.email|htmlattributes:"class: ag_input_form_register" }}
+                </div>
+            </div>
+
+            <div class="ag_form_block_input">
+                {{ form.first_name.label_tag }}
+                <div class="ag_form_inner_wrapper">
+                    {{ form.first_name|htmlattributes:"class: ag_input_form_register" }}
+                </div>
+            </div>
+
+            <div class="ag_form_block_input">
+                {{ form.last_name.label_tag }}
+                <div class="ag_form_inner_wrapper">
+                    {{ form.last_name|htmlattributes:"class: ag_input_form_register" }}
+                </div>
+            </div>
+
+            <div class="ag_form_block_input">
+                {{ form.password1.label_tag }}
+                <div class="ag_form_inner_wrapper">
+                    {{ form.password1|htmlattributes:"class: ag_input_form_register" }}
+                </div>
+            </div>
+
+            <div class="ag_form_block_input">
+                {{ form.password2.label_tag }}
+                <div class="ag_form_inner_wrapper">
+                    {{ form.password2|htmlattributes:"class: ag_input_form_register" }}
+                </div>
+            </div>
+
+            <div class="ag_form_block_input">
+                <div class="ag_form_inner_wrapper">
+                    <button class="ag_register_form_submit_button" type="submit">Registrar</button>
+                </div>
+            </div>
+
+            <div class="ag_auth_page_login_account_hint">
+                ¿Dispone de una cuenta?
+                <a href="{% url 'login' %}" class="ag_auth_page_login_button">Log in</a>
+            </div>
+
+        </form>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function() {
+            /* Remove ':' chacracter from labels */
+            labels = $(".ag_form_auth_register label");
+            labels.each(function() {
+                new_value = $(this).text().slice(0,-1);
+                $(this).text(new_value);
+                $(this).append("<span class='ag_label_span_required'>*</span>");
+            });
+
+            /* Change error list */
+            $("ul.errorlist").each(function(index){
+                $(this).appendTo($(this).parent());
+            });
+        });
+    </script>
+{% endblock %}
