@@ -5,7 +5,11 @@
     {% load tags %}
     <div class="row">
         <div class="ag_create_post_wrapper col">
-            <h1>Añadir Subvención</h1>
+            {% if request.path == '/new/' %}
+                <h1>Añadir Subvención</h1>
+            {% else %}
+                <h1>Editar Subvención</h1>
+            {% endif %}
 
             {% if messages %}
                 {% for message in messages %}
@@ -106,8 +110,8 @@
 
                 <!-- Gestiona Enlace -->
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.gestiona.label_tag }}
-                    {{ form.gestiona|htmlattributes:"placeholder: Gestiona, class:form-control" }}
+                    {{ form.drive.label_tag }}
+                    {{ form.drive|htmlattributes:"placeholder: Enlace para el drive de Gestiona, class:form-control" }}
                 </div>
 
                 <!-- Gestiona Expediente -->
@@ -131,6 +135,9 @@
                 <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_diputacion' %}">Añadir departamento Diputación</a></li>
                 <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_generalitat' %}">Añadir departamento Generalitat</a></li>
                 <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_estado' %}">Añadir Estado</a></li>
+                {% if request.path != '/new/' %}
+                    <a style="margin-top:20px;" href="{% url 'myapp:delete_subvencion' slug=subvencion.slug %}">Eliminar subvención</a>
+                {% endif %}
                 <a style="margin-top:20px;" href="{% url 'myapp:index' %}"><button type="button" class="btn btn-info">Volver</button></a>
             </ul>
         </div>

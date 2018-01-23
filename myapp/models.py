@@ -112,8 +112,8 @@ class Subvencion(models.Model):
     comentarios = models.TextField(blank=True)
 
     # Link y numero de expediente GESTIONA
-    gestiona = models.TextField(blank=True,
-                                help_text="Enlace para el Gestiona")
+    drive = models.TextField(blank=True,
+                                help_text="Drive")
     gestiona_expediente = models.CharField(max_length=250,
                                            help_text="Número de expediente del Gestiona",
                                            default="-")

@@ -38,8 +38,8 @@ class SubvencionAdmin(admin.ModelAdmin):
                            obj.observaciones)
     def Gestiona(self, obj):
         return format_html('<a href="{}" target="_blank">{}</a>',
-                           obj.gestiona,
-                           obj.gestiona)
+                           obj.drive,
+                           obj.drive)
 
     #Inicio.allow_tags = True
     #Fin.allow_tags = True

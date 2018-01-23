@@ -69,7 +69,7 @@ class SubvencionUpdateView(LoginRequiredMixin, UpdateView):
     model = Subvencion
     template_name = 'myapp/subvencion_create.html'
     fields = ["inicio", "fin", "responsable", "nombre", "bases", "solicitud", "observaciones", "ente",
-            "diputacion", "generalitat", "cuantia", "descripcion", "estado", "comentarios", "gestiona",
+            "diputacion", "generalitat", "cuantia", "descripcion", "estado", "comentarios", "drive",
             "gestiona_expediente"]
     success_url = reverse_lazy('myapp:index')
 
