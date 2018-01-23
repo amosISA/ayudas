@@ -11,7 +11,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from .models import Subvencion, Estado
-from .forms import SubvencionForm, InicioForm, FinForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm
+from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm
 
 # Create your views here.
 @login_required()
@@ -102,25 +102,25 @@ class SubvencionDeleteView(LoginRequiredMixin, DeleteView):
             # when data is coming from the form which lists all items
             return self.get(self, *args, **kwargs)
 
-# --------------- Create New Inicio --------------- #
-class InicioCreateView(LoginRequiredMixin, CreateView):
-    form_class = InicioForm
-    template_name = 'myapp/inicio_create.html'
-    success_url = reverse_lazy('myapp:new_subvencion')
-
-    def form_valid(self, form):
-        messages.success(self.request, 'Inicio añadido correctamente!')
-        return super(InicioCreateView, self).form_valid(form)
-
-# --------------- Create New Fin --------------- #
-class FinCreateView(LoginRequiredMixin, CreateView):
-    form_class = FinForm
-    template_name = 'myapp/fin_create.html'
-    success_url = reverse_lazy('myapp:new_subvencion')
-
-    def form_valid(self, form):
-        messages.success(self.request, 'Fin añadido correctamente!')
-        return super(FinCreateView, self).form_valid(form)
+# # --------------- Create New Inicio --------------- #
+# class InicioCreateView(LoginRequiredMixin, CreateView):
+#     form_class = InicioForm
+#     template_name = 'myapp/inicio_create.html'
+#     success_url = reverse_lazy('myapp:new_subvencion')
+#
+#     def form_valid(self, form):
+#         messages.success(self.request, 'Inicio añadido correctamente!')
+#         return super(InicioCreateView, self).form_valid(form)
+#
+# # --------------- Create New Fin --------------- #
+# class FinCreateView(LoginRequiredMixin, CreateView):
+#     form_class = FinForm
+#     template_name = 'myapp/fin_create.html'
+#     success_url = reverse_lazy('myapp:new_subvencion')
+#
+#     def form_valid(self, form):
+#         messages.success(self.request, 'Fin añadido correctamente!')
+#         return super(FinCreateView, self).form_valid(form)
 
 # --------------- Create New Responsable --------------- #
 class ResponsableCreateView(LoginRequiredMixin, CreateView):

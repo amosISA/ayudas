@@ -12,17 +12,17 @@ from .widgets import ColorPickerWidget
 User = settings.AUTH_USER_MODEL
 
 # Create your models here.
-class Inicio(models.Model):
-    inicio = models.DateField()
-
-    def __unicode__(self):
-        return '{}'.format(self.inicio)
-
-class Fin(models.Model):
-    fin = models.DateField()
-
-    def __unicode__(self):
-        return '{}'.format(self.fin)
+# class Inicio(models.Model):
+#     inicio = models.DateField()
+#
+#     def __unicode__(self):
+#         return '{}'.format(self.inicio)
+#
+# class Fin(models.Model):
+#     fin = models.DateField()
+#
+#     def __unicode__(self):
+#         return '{}'.format(self.fin)
 
 class Responsable(models.Model):
     responsable = models.CharField(max_length=250)
@@ -77,8 +77,10 @@ class Estado(models.Model):
 
 class Subvencion(models.Model):
     user = models.ForeignKey(User, blank=True, null=True)
-    inicio = models.ManyToManyField(Inicio, blank=True)
-    fin = models.ManyToManyField(Fin, blank=True)
+    #inicio = models.ManyToManyField(Inicio, blank=True)
+    #fin = models.ManyToManyField(Fin, blank=True)
+    inicio = models.CharField(max_length=250, default="")
+    fin = models.CharField(max_length=250, default="")
     responsable = models.ManyToManyField(Responsable, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

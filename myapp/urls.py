@@ -19,8 +19,8 @@ from . import views
 
 urlpatterns = [
     url(r'^new/$', views.SubvencionCreateView.as_view(), name='new_subvencion'),
-    url(r'^new/inicio/$', views.InicioCreateView.as_view(), name='new_inicio'),
-    url(r'^new/fin/$', views.FinCreateView.as_view(), name='new_fin'),
+    #url(r'^new/inicio/$', views.InicioCreateView.as_view(), name='new_inicio'),
+    #url(r'^new/fin/$', views.FinCreateView.as_view(), name='new_fin'),
     url(r'^new/responsable/$', views.ResponsableCreateView.as_view(), name='new_responsable'),
     url(r'^new/diputacion/$', views.DiputacionCreateView.as_view(), name='new_diputacion'),
     url(r'^new/generalitat/$', views.GeneralitatCreateView.as_view(), name='new_generalitat'),

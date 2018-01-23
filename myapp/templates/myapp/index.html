@@ -92,9 +92,7 @@
                 {% for subvencion in subvenciones %}
                     <tr>
                         <td>
-                            {% for inicio in subvencion.inicio.all %}
-                                {{ inicio }}<br>
-                            {% endfor %}
+                            {{ subvencion.inicio }}
                         </td>
                         <td style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
                             {% if subvencion.generalitat == None %}
@@ -109,9 +107,7 @@
                             </a>
                         </td>
                         <td>
-                            {% for fin in subvencion.fin.all %}
-                                {{ fin }}<br>
-                            {% endfor %}
+                            {{ subvencion.fin }}
                         </td>
                         <td>{{ subvencion.cuantia }}</td>
                         <td>

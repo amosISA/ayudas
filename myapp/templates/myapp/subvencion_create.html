@@ -127,8 +127,6 @@
         <div class="col">
             <h1>Acciones</h1>
             <ul class="list-group">
-                <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_inicio' %}">Añadir fecha Inicio</a></li>
-                <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_fin' %}">Añadir fecha Fin</a></li>
                 <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_responsable' %}">Añadir Responsable</a></li>
                 <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_diputacion' %}">Añadir departamento Diputación</a></li>
                 <li class="list-group-item list-group-item-dark"><a style="color:#000;" href="{% url 'myapp:new_generalitat' %}">Añadir departamento Generalitat</a></li>
@@ -177,6 +175,9 @@
                   document.getElementsByClassName('field-generalitat')[i].style.display = 'none';
                 }
             }
+
+            // Convert input text inicio and fin into datepickers!!!
+            $("#id_inicio, #id_fin").datepicker();
         }
     </script>
 {% endblock %}
