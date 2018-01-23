@@ -79,8 +79,10 @@ class Subvencion(models.Model):
     user = models.ForeignKey(User, blank=True, null=True)
     #inicio = models.ManyToManyField(Inicio, blank=True)
     #fin = models.ManyToManyField(Fin, blank=True)
-    inicio = models.CharField(max_length=250, default="")
-    fin = models.CharField(max_length=250, default="")
+    #inicio = models.CharField(max_length=250, default="")
+    #fin = models.CharField(max_length=250, default="")
+    inicio = models.DateField(blank=True, null=True)
+    fin = models.DateField(blank=True, null=True)
     responsable = models.ManyToManyField(Responsable, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -134,6 +136,8 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
     # Lo devuelve como (con los guiones): tesla-item-1
     #instance.slug = slugify(instance.title)
     if not instance.slug:
+        instance.slug = unique_slug_generator(instance)
+    else:
         instance.slug = unique_slug_generator(instance)
 
 pre_save.connect(pre_save_post_receiver, sender=Subvencion)

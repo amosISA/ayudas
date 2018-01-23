@@ -45,21 +45,9 @@ class DateInput(forms.DateInput):
 class SubvencionForm(forms.ModelForm):
     class Meta:
         model = Subvencion
-        fields = [
-            "inicio",
-            "fin",
-            "responsable",
-            "nombre",
-            "bases",
-            "solicitud",
-            "observaciones",
-            "ente",
-            "diputacion",
-            "generalitat",
-            "cuantia",
-            "descripcion",
-            "estado",
-            "comentarios",
-            "gestiona",
-            "gestiona_expediente"
-        ]
+        fields = '__all__'
+        widgets = {
+            'inicio': DateInput(),
+            'fin': DateInput()
+        }
+        exclude = ('slug',)
