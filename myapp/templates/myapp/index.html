@@ -92,7 +92,7 @@
                 {% for subvencion in subvenciones %}
                     <tr>
                         <td>
-                            {{ subvencion.inicio }}
+                            {{ subvencion.inicio|date:"d/m/Y" }}
                         </td>
                         <td style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
                             {% if subvencion.generalitat == None %}
@@ -107,7 +107,7 @@
                             </a>
                         </td>
                         <td>
-                            {{ subvencion.fin }}
+                            {{ subvencion.fin|date:"d/m/Y" }}
                         </td>
                         <td>{{ subvencion.cuantia }}</td>
                         <td>
