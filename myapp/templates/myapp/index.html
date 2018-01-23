@@ -125,7 +125,30 @@
                         </td>
                         <td>
                             <a href="{% url 'myapp:edit_subvencion' slug=subvencion.slug %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                            <a href="{% url 'myapp:delete_subvencion' slug=subvencion.slug %}"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            <a id="myModalDelete" data-toggle="modal" href="#{{ subvencion.id }}"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+                            <!-- Modal with ajax for delete subsidie -->
+                            <div id="{{ subvencion.id }}" class="modal fade">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Eliminar subvención</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <p>Está seguro que quiere elimnar la subvención: "<b>{{ subvencion.nombre }}</b>"?</p>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Eliminar</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 {% endfor %}
@@ -183,6 +206,7 @@
                     //console.log($(this).text());
                 } //else { console.log("no"); }
             });
+
         });
     </script>
 {% endblock %}
