@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-
+{% load tags %}
 <div class="row subv-subvenciones-title">
     <div class="col">
         <h1>Subvenciones 2017</h1>
@@ -93,6 +93,7 @@
                     <tr>
                         <td>
                             {{ subvencion.inicio|date:"d/m/Y" }}
+
                         </td>
                         <td style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
                             {% if subvencion.generalitat == None %}
@@ -115,7 +116,9 @@
                                 {{ responsable }}<br>
                             {% endfor %}
                         </td>
-                        <td style="background-color:{{ subvencion.estado.font_color }};">{{ subvencion.estado }}</td>
+                        <td style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;{% else %}background-color:{{ subvencion.estado.font_color }};{% endif %}">
+                            {{ subvencion.estado }}
+                        </td>
                         <td>
                             {{ subvencion.gestiona_expediente }}<br>
                             {% if not subvencion.drive %}

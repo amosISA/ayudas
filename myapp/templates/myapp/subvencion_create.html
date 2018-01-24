@@ -41,7 +41,7 @@
 
                 <!-- Responsable -->
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.responsable.label_tag }}
+                    {{ form.responsable.label_tag }} <span style="font-size: 12.5px;">(Para seleccionar más de uno, presione ctrl)</span>
                     {{ form.responsable|htmlattributes:"class:form-control" }}
                 </div>
 
@@ -53,19 +53,19 @@
 
                 <!-- Bases -->
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.bases.label_tag }}
+                    {{ form.bases.label_tag }} <span style="font-size: 12.5px;">(Enlace para las bases de la subvención)</span>
                     {{ form.bases|htmlattributes:"placeholder: Bases, class:form-control" }}
                 </div>
 
                 <!-- Solicitud -->
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.solicitud.label_tag }}
+                    {{ form.solicitud.label_tag }} <span style="font-size: 12.5px;">(Enlace para la solicitud de la subvención)</span>
                     {{ form.solicitud|htmlattributes:"placeholder: Solicitud, class:form-control" }}
                 </div>
 
                 <!-- Observaciones -->
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.observaciones.label_tag }}
+                    {{ form.observaciones.label_tag }} <span style="font-size: 12.5px;">(Otros enlaces)</span>
                     {{ form.observaciones|htmlattributes:"placeholder: Observaciones, class:form-control" }}
                 </div>
 
@@ -111,7 +111,7 @@
                 <!-- Gestiona Enlace -->
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                     {{ form.drive.label_tag }}
-                    {{ form.drive|htmlattributes:"placeholder: Enlace para el drive de Gestiona, class:form-control" }}
+                    {{ form.drive|htmlattributes:"class:form-control" }}
                 </div>
 
                 <!-- Gestiona Expediente -->

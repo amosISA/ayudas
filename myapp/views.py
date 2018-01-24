@@ -36,11 +36,14 @@ def index(request, estado_slug=None):
         estado = get_object_or_404(Estado, slug=estado_slug)
         subvenciones = subvenciones.filter(estado=estado)
 
+    days_until_estado = ['7d', '6d', '5d', '4d', '3d', '2d', '1d', 'expires today', 'expired']
+
     return render(request,
                   'myapp/index.html',
                   {'estado': estado,
                    'estados': estados,
-                   'subvenciones': subvenciones})
+                   'subvenciones': subvenciones,
+                   'days_until_estado': days_until_estado})
 
 @login_required()
 def subvencion_detail(request, id, slug):
