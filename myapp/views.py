@@ -51,9 +51,12 @@ def subvencion_detail(request, id, slug):
                                    id=id,
                                    slug=slug)
 
+    days_until_estado = ['7d', '6d', '5d', '4d', '3d', '2d', '1d', 'expires today', 'expired']
+
     return render(request,
                   'myapp/detail.html',
-                  {'subvencion': subvencion})
+                  {'subvencion': subvencion,
+                   'days_until_estado': days_until_estado})
 
 # --------------- Create New Subsidie --------------- #
 class SubvencionCreateView(LoginRequiredMixin, CreateView):
