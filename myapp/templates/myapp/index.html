@@ -116,7 +116,7 @@
                                 {{ responsable }}<br>
                             {% endfor %}
                         </td>
-                        <td style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;{% else %}background-color:{{ subvencion.estado.font_color }};{% endif %}">
+                        <td style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;color:#fff;{% else %}background-color:{{ subvencion.estado.font_color }};{% endif %}">
                             {{ subvencion.estado }}
                         </td>
                         <td>
