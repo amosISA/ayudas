@@ -11,7 +11,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from .models import Subvencion, Estado
-from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm
+from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm, NombreForm
 
 # Create your views here.
 @login_required()
@@ -167,5 +167,15 @@ class EstadoCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         messages.success(self.request, 'Estado añadido correctamente!')
         return super(EstadoCreateView, self).form_valid(form)
+
+# --------------- Create New Nombre --------------- #
+class NombreCreateView(LoginRequiredMixin, CreateView):
+    form_class = NombreForm
+    template_name = 'myapp/nombre_create.html'
+    success_url = reverse_lazy('myapp:new_subvencion')
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Nombre añadido correctamente!')
+        return super(NombreCreateView, self).form_valid(form)
 
 

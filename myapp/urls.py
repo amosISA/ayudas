@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^new/diputacion/$', views.DiputacionCreateView.as_view(), name='new_diputacion'),
     url(r'^new/generalitat/$', views.GeneralitatCreateView.as_view(), name='new_generalitat'),
     url(r'^new/estado/$', views.EstadoCreateView.as_view(), name='new_estado'),
+    url(r'^new/nombre/subvencion/$', views.NombreCreateView.as_view(), name='new_nombre'),
     url(r'^edit/(?P<slug>[\w-]+)/$', views.SubvencionUpdateView.as_view(), name='edit_subvencion'),
     url(r'^delete/(?P<slug>[\w-]+)/$', views.SubvencionDeleteView.as_view(), name='delete_subvencion'),
     url(r'^$', views.index, name='index'),

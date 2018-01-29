@@ -443,7 +443,10 @@
       background: #2c3e50;
       box-shadow: none;
       text-decoration: none; }
-    .ag_create_post_wrapper .button_submit_create_form:hover {
-      background: #253350;
-      box-shadow: none;
-      text-decoration: none; }
+.ag_create_post_wrapper .button_submit_create_form:hover {
+  background: #253350;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.ag_create_post_wrapper .smalls_for_departments { display: block; text-align: left; }

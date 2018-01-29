@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 from django import forms
 
-from .models import Subvencion, Responsable, Diputacion, Generalitat, Estado, ColorField
+from .models import Subvencion, Responsable, Diputacion, Generalitat, Estado, ColorField, Nombre
+
+class NombreForm(forms.ModelForm):
+    class Meta:
+        model = Nombre
+        fields = ["nombre"]
 
 class DiputacionForm(forms.ModelForm):
     class Meta:

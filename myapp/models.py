@@ -75,6 +75,15 @@ class Estado(models.Model):
         return reverse('myapp:subvencion_by_category',
                        args=[self.slug])
 
+class Nombre(models.Model):
+    nombre = models.CharField(max_length=250)
+
+    def __unicode__(self):
+        return '{}'.format(self.nombre)
+
+    class Meta:
+        ordering = ["nombre"]
+
 class Subvencion(models.Model):
     user = models.ForeignKey(User, blank=True, null=True)
     #inicio = models.ManyToManyField(Inicio, blank=True)
@@ -88,7 +97,8 @@ class Subvencion(models.Model):
     updated = models.DateTimeField(auto_now=True)
     slug = models.SlugField(max_length=250, unique=True)
 
-    nombre = models.TextField(blank=False, default="Subvención")
+    #nombre = models.TextField(blank=False, default="Subvención")
+    nombre = models.ForeignKey(Nombre, on_delete=models.CASCADE, default=None, blank=True, null=True)
     bases = models.TextField(blank=True,
                              help_text="Enlace para las bases")
     solicitud = models.TextField(blank=True,
