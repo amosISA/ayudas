@@ -6,11 +6,6 @@
 
 {% block content %}
 {% load tags %}
-<div class="row subv-subvenciones-title">
-    <div class="col">
-        <h1>Subvenciones 2017</h1>
-    </div>
-</div>
 
 <div class="row subv-sidebar">
     <!--
@@ -26,21 +21,6 @@
             </li>
         </ul>
     </div>-->
-
-    <div class="col">
-        <nav class="subv-nav-breadcumb" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                {% if user.is_authenticated %}
-                <li class="breadcrumb-item"><a href="#">Bienvenido, {{ user.username|title }}</a></li>
-                {% else %}
-                    <li class="breadcrumb-item">Bienvenido nuevo usuario. Por favor inicie sesión</li>
-                {% endif %}
-                <li class="breadcrumb-item"><a href="{% url 'myapp:new_subvencion' %}">Crear subvención</a></li>
-                <li class="breadcrumb-item"><a href="{% url 'logout' %}">Salir</a></li>
-            </ol>
-        </nav>
-    </div>
-
 
     <!--
     <div class="col">
@@ -73,90 +53,94 @@
             {% endfor %}
         {% endif %}
 
-        <table id="subv_table_ordering" class="table table-responsive" width="100%">
-            <thead class="thead-subv-table">
-                <tr class="table-active">
-                    <th>INICIO</th>
-                    <th>DEPARTAMENTO</th>
-                    <th>NOMBRE</th>
-                    <th>FIN</th>
-                    <th>CUANTÍA</th>
-                    <th>RESPONSABLES</th>
-                    <th>ESTADO</th>
-                    <th>GESTIONA</th>
-                    <th><i class="fa fa-tasks" aria-hidden="true"></i></th>
-                </tr>
-            </thead>
-
-            <tbody>
-                {% for subvencion in subvenciones %}
-                    <tr>
-                        <td>
-                            {{ subvencion.inicio|date:"d/m/Y" }}
-
-                        </td>
-                        <td style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
-                            {% if subvencion.generalitat == None %}
-                                {{ subvencion.diputacion }}
-                            {% else %}
-                                {{ subvencion.generalitat }}
-                            {% endif %}
-                        </td>
-                        <td>
-                            <a href="{{ subvencion.get_absolute_url }}" target="_blank">
-                                {{ subvencion.nombre }}
-                            </a>
-                        </td>
-                        <td>
-                            {{ subvencion.fin|date:"d/m/Y" }}
-                        </td>
-                        <td>{{ subvencion.cuantia }}</td>
-                        <td>
-                            {% for responsable in subvencion.responsable.all %}
-                                {{ responsable }}<br>
-                            {% endfor %}
-                        </td>
-                        <td style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;color:#fff;{% else %}background-color:{{ subvencion.estado.font_color }};{% endif %}">
-                            {{ subvencion.estado }}
-                        </td>
-                        <td>
-                            {{ subvencion.gestiona_expediente }}<br>
-                            {% if not subvencion.drive %}
-                            {% else %}
-                                <a href="{{ subvencion.drive }}" target="_blank">Drive</a>
-                            {% endif %}
-                        </td>
-                        <td>
-                            <a href="{% url 'myapp:edit_subvencion' slug=subvencion.slug %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                        </td>
+        {% if subvenciones %}
+            <table id="subv_table_ordering" class="table table-responsive" width="100%">
+                <thead class="thead-subv-table">
+                    <tr class="table-active">
+                        <th>INICIO</th>
+                        <th>DEPARTAMENTO</th>
+                        <th>NOMBRE</th>
+                        <th>FIN</th>
+                        <th>CUANTÍA</th>
+                        <th>RESPONSABLES</th>
+                        <th>ESTADO</th>
+                        <th>GESTIONA</th>
+                        <th><i class="fa fa-tasks" aria-hidden="true"></i></th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                </thead>
 
-        <!-- Paginator -->
-        {% if subvenciones.has_other_pages %}
-            <ul class="pagination">
-                {% if subvenciones.has_previous %}
-                    <li class="page-item"><a class="page-link" href="?page={{ subvenciones.previous_page_number }}">&laquo;</a></li>
-                {% else %}
-                    <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
-                {% endif %}
+                <tbody>
+                    {% for subvencion in subvenciones %}
+                        <tr>
+                            <td>
+                                {{ subvencion.inicio|date:"d/m/Y" }}
 
-                {% for i in subvenciones.paginator.page_range %}
-                    {% if subvenciones.number == i %}
-                        <li class="page-item active"><a href="#" class="page-link">{{ i }}</a></li>
+                            </td>
+                            <td style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
+                                {% if subvencion.generalitat == None %}
+                                    {{ subvencion.diputacion }}
+                                {% else %}
+                                    {{ subvencion.generalitat }}
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{{ subvencion.get_absolute_url }}" target="_blank">
+                                    {{ subvencion.nombre }}
+                                </a>
+                            </td>
+                            <td>
+                                {{ subvencion.fin|date:"d/m/Y" }}
+                            </td>
+                            <td>{{ subvencion.cuantia }}</td>
+                            <td>
+                                {% for responsable in subvencion.responsable.all %}
+                                    {{ responsable }}<br>
+                                {% endfor %}
+                            </td>
+                            <td style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;color:#fff;{% else %}background-color:{{ subvencion.estado.font_color }};{% endif %}">
+                                {{ subvencion.estado }}
+                            </td>
+                            <td>
+                                {{ subvencion.gestiona_expediente }}<br>
+                                {% if not subvencion.drive %}
+                                {% else %}
+                                    <a href="{{ subvencion.drive }}" target="_blank">Drive</a>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a href="{% url 'myapp:edit_subvencion' slug=subvencion.slug %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <!-- Paginator -->
+            {% if subvenciones.has_other_pages %}
+                <ul class="pagination">
+                    {% if subvenciones.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ subvenciones.previous_page_number }}">&laquo;</a></li>
                     {% else %}
-                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                        <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
                     {% endif %}
-                {% endfor %}
 
-                {% if subvenciones.has_next %}
-                    <li class="page-item"><a class="page-link" href="?page={{ subvenciones.next_page_number }}">&raquo;</a></li>
-                {% else %}
-                    <li class=" page-item disabled"><span class="page-link">&raquo;</span></li>
-                {% endif %}
-            </ul>
+                    {% for i in subvenciones.paginator.page_range %}
+                        {% if subvenciones.number == i %}
+                            <li class="page-item active"><a href="#" class="page-link">{{ i }}</a></li>
+                        {% else %}
+                            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if subvenciones.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ subvenciones.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                        <li class=" page-item disabled"><span class="page-link">&raquo;</span></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+        {% else %}
+            <h2>No hay subvenciones, proceda a insertar <a href="{% url 'myapp:new_subvencion' %}">una.</a></h2>
         {% endif %}
     </div>
 </div>

@@ -11,7 +11,7 @@ class SubvencionAdmin(admin.ModelAdmin):
     list_display = ['inicio', 'nombre', 'fin', 'cuantia',
                     'Responsable', 'estado', 'Gestiona', 'gestiona_expediente', 'user']
     list_filter = ['nombre', 'estado']
-    search_fields = ('nombre',)
+    search_fields = ('nombre__nombre',)
     empty_value_display = '-' # para los campos vacios se pone eso
     list_display_links = ('nombre',) # que campo aparece como un link para editar el registro
     #raw_id_fields = ["departamento"]

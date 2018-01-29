@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-sm navbar-custom">
+    <a href="{% url 'myapp:index' %}" class="navbar-brand">Gestión de Subvenciones</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+        <i class="fa fa-bars fa-lg py-1 text-white"></i>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarCustom">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'myapp:index' %}">Inicio</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bienvenido, {{ user.username|title }}</a>
+                </li>
+            {% else %}
+                <li class="nav-link" class="nav-item">Bienvenido nuevo usuario. Por favor inicie sesión</li>
+            {% endif %}
+            <li class="nav-item {% if request.path == '/new/' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'myapp:new_subvencion' %}">Crear subvención</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Salir</a></li>
+        </ul>
+    </div>
+</nav>

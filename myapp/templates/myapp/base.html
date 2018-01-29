@@ -56,6 +56,11 @@
     </head>
     <body>
 
+        <!-- Navbar -->
+        {% if request.path != '/accounts/login/' %}
+            {% include 'myapp/navbar.html' %}
+        {% endif %}
+
         <div class="container-fluid subv_webapp_container">
             <div class="starter-template">
             {% block content %}
