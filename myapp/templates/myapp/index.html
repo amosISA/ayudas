@@ -151,7 +151,11 @@
     <script>
         $(document).ready(function() {
             $('[data-toggle="popover"]').popover();
-            $('#subv_table_ordering').DataTable();
+            $('#subv_table_ordering').DataTable({
+                "language": {
+                    url: "/static/myapp/location/es_ES.json"
+                }
+            });
 
             /* Change color if background divs are darker */
             divs_darkers = $('.div-dep');
