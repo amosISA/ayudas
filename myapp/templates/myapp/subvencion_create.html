@@ -4,7 +4,8 @@
     {% load staticfiles %}
     {% load tags %}
     <div class="row">
-        <div class="ag_create_post_wrapper col">
+        <div class="col-lg-3"></div>
+        <div class="ag_create_post_wrapper col-lg-6">
             {% if request.path == '/new/' %}
                 <h1>Añadir Subvención</h1>
             {% else %}
@@ -155,8 +156,9 @@
                 {% endif %}
             </form>
         </div>
+        <div class="col-lg-3"></div>
 
-        <div class="col">
+        <div class="col" style="display:none;">
             {% if request.path != '/new/' %}
                 <a style="margin-top:20px;" href="{% url 'myapp:delete_subvencion' slug=subvencion.slug %}">Eliminar subvención</a>
             {% endif %}
