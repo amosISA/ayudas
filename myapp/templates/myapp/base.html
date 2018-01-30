@@ -28,6 +28,7 @@
              rel="stylesheet" type="text/css" />
 
             <link rel="stylesheet" href="{% static 'myapp/css/jquery-ui.multidatespicker.css' %}">
+            <link rel="stylesheet" type="text/css" href="{% static 'myapp/datatables.min.css' %}"/>
         {% endblock %}
 
         <!-- Bootstrap core JavaScript
@@ -49,6 +50,8 @@
 
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="{% static 'myapp/js/jquery-ui.multidatespicker.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'myapp/datatables.min.js' %}"></script>
 
         <title>
             {% block title %}Subvenciones{% endblock %}

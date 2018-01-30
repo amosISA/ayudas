@@ -8,3 +8,6 @@
         - Cuando hago click en el nombre de una subvención relacionarla con otras con el mismo nombre.
 
         - Añadir favicon.
+
+        - Cuando a una subvención la creo con un departamento de la generalitat, lugeo al editarla aparecen los dos campos,
+        tanto el del departamento de diuptación como el de generalitat.
