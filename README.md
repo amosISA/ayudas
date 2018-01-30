@@ -7,6 +7,4 @@
 
         - Cuando hago click en el nombre de una subvención relacionarla con otras con el mismo nombre.
 
-        - Arreglar que aparezca en rojo si falta menos de una semana para una subvención con el estado "Definiéndose".
-
         - Añadir favicon.
