@@ -132,11 +132,19 @@ class SubvencionDeleteView(LoginRequiredMixin, DeleteView):
 class ResponsableCreateView(LoginRequiredMixin, CreateView):
     form_class = ResponsableForm
     template_name = 'myapp/responsable_create.html'
-    success_url = reverse_lazy('myapp:new_subvencion')
 
     def form_valid(self, form):
         messages.success(self.request, 'Responsable añadido correctamente!')
         return super(ResponsableCreateView, self).form_valid(form)
+
+    def get_success_url(self):
+        url = self.request.GET.get('next')
+        print url
+        if url == '/next/':
+            return reverse_lazy('myapp:new_subvencion')
+        else:
+            return reverse('myapp:edit_subvencion', kwargs={'slug': url[6:-1]})
+
 
 # --------------- Create New Diputacion --------------- #
 class DiputacionCreateView(LoginRequiredMixin, CreateView):
@@ -148,7 +156,7 @@ class DiputacionCreateView(LoginRequiredMixin, CreateView):
         messages.success(self.request, 'Departamento (diputación) añadido correctamente!')
         return super(DiputacionCreateView, self).form_valid(form)
 
-# --------------- Create New Generalitat --------------- #
+    # --------------- Create New Generalitat --------------- #
 class GeneralitatCreateView(LoginRequiredMixin, CreateView):
     form_class = GeneralitatForm
     template_name = 'myapp/generalitat_create.html'

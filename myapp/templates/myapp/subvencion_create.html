@@ -45,7 +45,7 @@
                     {{ form.responsable.label_tag }} <span style="font-size: 12.5px;">(Para seleccionar más de uno, presione ctrl)</span>
                     {{ form.responsable|htmlattributes:"class:form-control" }}
                     <small id="selectResponsable" class="form-text text-muted">
-                        Añadir responsable <a class="related-widget-wrapper-link add-related" href="{% url 'myapp:new_responsable' %}" title="Añadir responsable">
+                        Añadir responsable <a class="related-widget-wrapper-link add-related" href="{% url 'myapp:new_responsable' %}?next={{ request.path }}" title="Añadir responsable">
                             <img style="margin-bottom:4px;" src="{% static 'myapp/img/icons/icon-addlink.svg' %}" alt="Añadir">
                         </a>
                     </small>
