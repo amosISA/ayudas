@@ -127,8 +127,6 @@
                                 {% endif %}
                             </tbody>
                         </table>
-
-                        <a href="{% url 'myapp:index' %}"><button type="button" class="btn btn-info">Volver</button></a>
                     </div>
                 </div>
                 <div class="card-footer" style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;font-size:20px;font-weight:bold;color:#fff;{% else %}background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;{% endif %}">
