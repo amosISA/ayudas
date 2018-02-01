@@ -213,3 +213,5 @@ class NombreCreateView(LoginRequiredMixin, CreateView):
             return reverse('myapp:edit_subvencion', kwargs={'slug': url[6:-1]})
 
 
+
+

@@ -26,6 +26,7 @@
 
                 <input class="button_submit_create_form" type="submit" value="Crear Nombre" />
                 <a href="{% url 'myapp:new_subvencion' %}"><button type="button" class="btn btn-info">Volver</button></a>
+                <input type="hidden" name="next" value="{{ request.GET.next }}" />
             </form>
         </div>
         <div class="col"></div>
