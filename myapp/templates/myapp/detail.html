@@ -141,11 +141,16 @@
     <div class="row" style="margin-top:50px;">
         <div class="col"></div>
         <div class="col-sm-12">
-            <div style="border:1px solid black;border: 1px solid rgba(0,0,0,0.12);">
-                <h2>Subvención relacionada con</h2>
-                {% for subv in subvencion.se_relaciona_con.all %}
-                    - <a href="{{ subv.get_absolute_url }}">{{ subv.nombre }}</a>
-                {% endfor %}
+            <div class="jumbotron" style="border:1px solid black;border: 1px solid rgba(0,0,0,0.12);">
+                <h3 style="font-size: 2.5rem;" class="display-3">Subvención relacionada con</h3>
+                <hr class="my-4">
+                <div class="card-block">
+                    {% for subv in subvencion.se_relaciona_con.all %}
+                        <p>
+                            <a href="{{ subv.get_absolute_url }}" target="_blank"><span style="color:#000;">-</span> {{ subv.nombre }}</a>
+                        </p>
+                    {% endfor %}
+                </div>
             </div>
         </div>
         <div class="col"></div>
