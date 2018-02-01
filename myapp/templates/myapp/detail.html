@@ -6,132 +6,149 @@
 
 {% block content %}
 {% load tags %}
-    <div class="card text-center">
-        <div class="card-header" style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;font-size:20px;font-weight:bold;color:#fff;{% else %}background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;{% endif %}">
-            {{ subvencion.estado }}
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">{{ subvencion.nombre }}</h5>
+    <div class="row">
+        <div class="col-lg">
+            <div class="card text-center">
+                <div class="card-header" style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;font-size:20px;font-weight:bold;color:#fff;{% else %}background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;{% endif %}">
+                    {{ subvencion.estado }}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ subvencion.nombre }}</h5>
 
-            <div class="table-responsive-lg">
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <th>INICIO</th>
-                            {% for inicio in subvencion.inicio.all %}
-                                <td>{{ inicio }}</td>
-                            {% endfor %}
-                        </tr>
+                    <div class="table-responsive-lg">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>INICIO</th>
+                                    {% for inicio in subvencion.inicio.all %}
+                                        <td>{{ inicio }}</td>
+                                    {% endfor %}
+                                </tr>
 
-                        <tr>
-                            <th>FIN</th>
-                            {% for fin in subvencion.fin.all %}
-                                <td>{{ fin }}</td>
-                            {% endfor %}
-                        </tr>
+                                <tr>
+                                    <th>FIN</th>
+                                    {% for fin in subvencion.fin.all %}
+                                        <td>{{ fin }}</td>
+                                    {% endfor %}
+                                </tr>
 
-                        {% if not subvencion.descripcion %}
-                            <tr>
-                                <th>DESCRIPCIÓN</th>
-                                <td>-</td>
-                            </tr>
-                        {% else %}
-                            <tr>
-                                <th>DESCRIPCIÓN</th>
-                                <td>{{ subvencion.descripcion|linebreaks }}</td>
-                            </tr>
-                        {% endif %}
+                                {% if not subvencion.descripcion %}
+                                    <tr>
+                                        <th>DESCRIPCIÓN</th>
+                                        <td>-</td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <th>DESCRIPCIÓN</th>
+                                        <td>{{ subvencion.descripcion|linebreaks }}</td>
+                                    </tr>
+                                {% endif %}
 
-                        <tr>
-                            <th>RESPONSABLES</th>
-                            {% for responsable in subvencion.responsable.all %}
-                                <td>{{ responsable }}</td>
-                            {% endfor %}
-                        </tr>
+                                <tr>
+                                    <th>RESPONSABLES</th>
+                                    {% for responsable in subvencion.responsable.all %}
+                                        <td>{{ responsable }}</td>
+                                    {% endfor %}
+                                </tr>
 
-                        {% if not subvencion.bases %}
-                            <tr>
-                                <th>BASES</th>
-                                <td>-</td>
-                            </tr>
-                        {% else %}
-                            <tr>
-                                <th>BASES</th>
-                                <td><a target="_blank" href="{{ subvencion.bases }}">{{ subvencion.bases }}</a></td>
-                            </tr>
-                        {% endif %}
+                                {% if not subvencion.bases %}
+                                    <tr>
+                                        <th>BASES</th>
+                                        <td>-</td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <th>BASES</th>
+                                        <td><a target="_blank" href="{{ subvencion.bases }}">{{ subvencion.bases }}</a></td>
+                                    </tr>
+                                {% endif %}
 
-                        {% if not subvencion.solicitud %}
-                            <tr>
-                                <th>SOLICITUD</th>
-                                <td><a target="_blank" href="{{ subvencion.solicitud }}">-</a></td>
-                            </tr>
-                        {% else %}
-                            <tr>
-                                <th>SOLICITUD</th>
-                                <td><a target="_blank" href="{{ subvencion.solicitud }}">{{ subvencion.solicitud }}</a></td>
-                            </tr>
-                        {% endif %}
+                                {% if not subvencion.solicitud %}
+                                    <tr>
+                                        <th>SOLICITUD</th>
+                                        <td><a target="_blank" href="{{ subvencion.solicitud }}">-</a></td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <th>SOLICITUD</th>
+                                        <td><a target="_blank" href="{{ subvencion.solicitud }}">{{ subvencion.solicitud }}</a></td>
+                                    </tr>
+                                {% endif %}
 
-                        {% if not subvencion.observaciones %}
-                            <tr>
-                                <th>OBSERVACIONES</th>
-                                <td>-</td>
-                            </tr>
-                        {% else %}
-                            <tr>
-                                <th>OBSERVACIONES</th>
-                                <td><a target="_blank" href="{{ subvencion.observaciones }}">{{ subvencion.observaciones }}</a></td>
-                            </tr>
-                        {% endif %}
+                                {% if not subvencion.observaciones %}
+                                    <tr>
+                                        <th>OBSERVACIONES</th>
+                                        <td>-</td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <th>OBSERVACIONES</th>
+                                        <td><a target="_blank" href="{{ subvencion.observaciones }}">{{ subvencion.observaciones }}</a></td>
+                                    </tr>
+                                {% endif %}
 
-                        {% if subvencion.generalitat == None %}
-                            <tr>
-                                <th>DEPARTAMENTO</th>
-                                <td>{{ subvencion.diputacion }}</td>
-                            </tr>
-                        {% else %}
-                            <tr>
-                                <th>DEPARTAMENTO</th>
-                                <td>{{ subvencion.generalitat }}</td>
-                            </tr>
-                        {% endif %}
+                                {% if subvencion.generalitat == None %}
+                                    <tr>
+                                        <th>DEPARTAMENTO</th>
+                                        <td>{{ subvencion.diputacion }}</td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <th>DEPARTAMENTO</th>
+                                        <td>{{ subvencion.generalitat }}</td>
+                                    </tr>
+                                {% endif %}
 
-                        <tr>
-                            <th>CUANTÍA</th>
-                            <td>{{ subvencion.cuantia }}</td>
-                        </tr>
+                                <tr>
+                                    <th>CUANTÍA</th>
+                                    <td>{{ subvencion.cuantia }}</td>
+                                </tr>
 
-                        <tr>
-                            <th>GESTIONA</th>
-                            <td><a target="_blank" href="{{ subvencion.drive }}">{{ subvencion.drive }}</a></td>
-                        </tr>
+                                <tr>
+                                    <th>GESTIONA</th>
+                                    <td><a target="_blank" href="{{ subvencion.drive }}">{{ subvencion.drive }}</a></td>
+                                </tr>
 
-                        <tr>
-                            <th>GESTIONA EXPEDIENTE</th>
-                            <td>{{ subvencion.gestiona_expediente }}</td>
-                        </tr>
+                                <tr>
+                                    <th>GESTIONA EXPEDIENTE</th>
+                                    <td>{{ subvencion.gestiona_expediente }}</td>
+                                </tr>
 
-                        {% if not subvencion.comentarios %}
-                            <tr>
-                                <th>COMENTARIOS</th>
-                                <td>-</td>
-                            </tr>
-                        {% else %}
-                            <tr>
-                                <th>COMENTARIOS</th>
-                                <td>{{ subvencion.comentarios|linebreaks }}</td>
-                            </tr>
-                        {% endif %}
-                    </tbody>
-                </table>
+                                {% if not subvencion.comentarios %}
+                                    <tr>
+                                        <th>COMENTARIOS</th>
+                                        <td>-</td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <th>COMENTARIOS</th>
+                                        <td>{{ subvencion.comentarios|linebreaks }}</td>
+                                    </tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
 
-                <a href="{% url 'myapp:index' %}"><button type="button" class="btn btn-info">Volver</button></a>
+                        <a href="{% url 'myapp:index' %}"><button type="button" class="btn btn-info">Volver</button></a>
+                    </div>
+                </div>
+                <div class="card-footer" style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;font-size:20px;font-weight:bold;color:#fff;{% else %}background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;{% endif %}">
+                    Subvención creada el {{ subvencion.created }} por {{ user.get_username|title }}
+                </div>
             </div>
         </div>
-        <div class="card-footer" style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;font-size:20px;font-weight:bold;color:#fff;{% else %}background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;{% endif %}">
-            Subvención creada el {{ subvencion.created }} por {{ user.get_username|title }}
+    </div>
+
+    <div class="row" style="margin-top:50px;">
+        <div class="col"></div>
+        <div class="col-sm-12">
+            <div style="border:1px solid black;border: 1px solid rgba(0,0,0,0.12);">
+                <h2>Subvención relacionada con</h2>
+                {% for subv in subvencion.se_relaciona_con.all %}
+                    - <a href="{{ subv.get_absolute_url }}">{{ subv.nombre }}</a>
+                {% endfor %}
+            </div>
         </div>
+        <div class="col"></div>
     </div>
 
 {% endblock %}
