@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 
-from .models import Subvencion, Responsable, Diputacion, Generalitat, Estado, ColorField, Nombre
-
-class NombreForm(forms.ModelForm):
-    class Meta:
-        model = Nombre
-        fields = ["nombre"]
+from .models import Subvencion, Responsable, Diputacion, Generalitat, Estado, ColorField
 
 class DiputacionForm(forms.ModelForm):
     class Meta:
@@ -30,22 +25,6 @@ class ResponsableForm(forms.ModelForm):
 
 class DateInput(forms.DateInput):
     input_type = 'date'
-
-# class InicioForm(forms.ModelForm):
-#     class Meta:
-#         model = Inicio
-#         fields = '__all__'
-#         widgets = {
-#             'inicio': DateInput()
-#         }
-#
-# class FinForm(forms.ModelForm):
-#     class Meta:
-#         model = Fin
-#         fields = '__all__'
-#         widgets = {
-#             'fin': DateInput()
-#         }
 
 class SubvencionForm(forms.ModelForm):
     class Meta:

@@ -10,18 +10,14 @@ from .models import Subvencion, Responsable, Estado, Diputacion, Generalitat, No
 class SubvencionAdmin(admin.ModelAdmin):
     list_display = ['inicio', 'nombre', 'fin', 'cuantia',
                     'Responsable', 'estado', 'Gestiona', 'gestiona_expediente', 'user']
-    list_filter = ['nombre', 'estado']
-    search_fields = ('nombre__nombre',)
+    list_filter = ['nombre', 'estado', 'generalitat', 'diputacion', 'responsable']
+    search_fields = ('nombre',)
     empty_value_display = '-' # para los campos vacios se pone eso
     list_display_links = ('nombre',) # que campo aparece como un link para editar el registro
     #raw_id_fields = ["departamento"]
     prepopulated_fields = {'slug': ('nombre',)}
     show_full_result_count = True
 
-    # def Inicio(self, obj):
-    #     return format_html('<br><br>'.join([str(i.inicio) for i in obj.inicio.all()]))
-    # def Fin(self, obj):
-    #     return format_html('<br><br>'.join([str(i.fin) for i in obj.fin.all()]))
     def Responsable(self, obj):
         return format_html('<br>'.join([str(i.responsable) for i in obj.responsable.all()]))
     def Bases(self, obj):
@@ -41,8 +37,6 @@ class SubvencionAdmin(admin.ModelAdmin):
                            obj.drive,
                            obj.drive)
 
-    #Inicio.allow_tags = True
-    #Fin.allow_tags = True
     Responsable.allow_tags = True
     Observaciones.allow_tags = True
     Solicitud.allow_tags = True
@@ -52,14 +46,6 @@ class SubvencionAdmin(admin.ModelAdmin):
     class Media:
         js = ('/static/admin/js/assets_admin.js',)
 admin.site.register(Subvencion, SubvencionAdmin)
-
-# class InicioAdmin(admin.ModelAdmin):
-#     pass
-# admin.site.register(Inicio, InicioAdmin)
-#
-# class FinAdmin(admin.ModelAdmin):
-#     pass
-# admin.site.register(Fin, FinAdmin)
 
 class ResponsableAdmin(admin.ModelAdmin):
     pass

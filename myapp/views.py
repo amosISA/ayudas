@@ -11,7 +11,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from .models import Subvencion, Estado
-from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm, NombreForm
+from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm
 
 # Create your views here.
 @login_required()
@@ -76,7 +76,7 @@ class SubvencionUpdateView(LoginRequiredMixin, UpdateView):
     template_name = 'myapp/subvencion_create.html'
     fields = ["inicio", "fin", "responsable", "nombre", "bases", "solicitud", "observaciones", "ente",
             "diputacion", "generalitat", "cuantia", "descripcion", "estado", "comentarios", "drive",
-            "gestiona_expediente"]
+            "gestiona_expediente", "se_relaciona_con"]
     success_url = reverse_lazy('myapp:index')
 
     def form_valid(self, form):
@@ -87,13 +87,6 @@ class SubvencionUpdateView(LoginRequiredMixin, UpdateView):
 class SubvencionDeleteView(LoginRequiredMixin, DeleteView):
     model = Subvencion
     success_url = reverse_lazy('myapp:index')
-
-    #def get_object(self, queryset=None):
-    """ Hook to ensure object is owned by request.user. """
-        #obj = super(SubvencionDeleteView, self).get_object()
-        #if not obj.user == self.request.user:
-            #raise Http404
-        #return obj
 
     def post(self, request, *args, **kwargs):
         if self.request.POST.get("confirm_delete"):
@@ -107,26 +100,6 @@ class SubvencionDeleteView(LoginRequiredMixin, DeleteView):
         else:
             # when data is coming from the form which lists all items
             return self.get(self, *args, **kwargs)
-
-# # --------------- Create New Inicio --------------- #
-# class InicioCreateView(LoginRequiredMixin, CreateView):
-#     form_class = InicioForm
-#     template_name = 'myapp/inicio_create.html'
-#     success_url = reverse_lazy('myapp:new_subvencion')
-#
-#     def form_valid(self, form):
-#         messages.success(self.request, 'Inicio añadido correctamente!')
-#         return super(InicioCreateView, self).form_valid(form)
-#
-# # --------------- Create New Fin --------------- #
-# class FinCreateView(LoginRequiredMixin, CreateView):
-#     form_class = FinForm
-#     template_name = 'myapp/fin_create.html'
-#     success_url = reverse_lazy('myapp:new_subvencion')
-#
-#     def form_valid(self, form):
-#         messages.success(self.request, 'Fin añadido correctamente!')
-#         return super(FinCreateView, self).form_valid(form)
 
 # --------------- Create New Responsable --------------- #
 class ResponsableCreateView(LoginRequiredMixin, CreateView):
@@ -187,23 +160,6 @@ class EstadoCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         messages.success(self.request, 'Estado añadido correctamente!')
         return super(EstadoCreateView, self).form_valid(form)
-
-    def get_success_url(self):
-        url = self.request.GET.get('next')
-        if url == '/new/':
-            return reverse_lazy('myapp:new_subvencion')
-        else:
-            return reverse('myapp:edit_subvencion', kwargs={'slug': url[6:-1]})
-
-# --------------- Create New Nombre --------------- #
-class NombreCreateView(LoginRequiredMixin, CreateView):
-    form_class = NombreForm
-    template_name = 'myapp/nombre_create.html'
-    success_url = reverse_lazy('myapp:new_subvencion')
-
-    def form_valid(self, form):
-        messages.success(self.request, 'Nombre añadido correctamente!')
-        return super(NombreCreateView, self).form_valid(form)
 
     def get_success_url(self):
         url = self.request.GET.get('next')

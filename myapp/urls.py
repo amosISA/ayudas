@@ -19,13 +19,10 @@ from . import views
 
 urlpatterns = [
     url(r'^new/$', views.SubvencionCreateView.as_view(), name='new_subvencion'),
-    #url(r'^new/inicio/$', views.InicioCreateView.as_view(), name='new_inicio'),
-    #url(r'^new/fin/$', views.FinCreateView.as_view(), name='new_fin'),
     url(r'^new/responsable/$', views.ResponsableCreateView.as_view(), name='new_responsable'),
     url(r'^new/diputacion/$', views.DiputacionCreateView.as_view(), name='new_diputacion'),
     url(r'^new/generalitat/$', views.GeneralitatCreateView.as_view(), name='new_generalitat'),
     url(r'^new/estado/$', views.EstadoCreateView.as_view(), name='new_estado'),
-    url(r'^new/nombre/subvencion/$', views.NombreCreateView.as_view(), name='new_nombre'),
     url(r'^edit/(?P<slug>[\w-]+)/$', views.SubvencionUpdateView.as_view(), name='edit_subvencion'),
     url(r'^delete/(?P<slug>[\w-]+)/$', views.SubvencionDeleteView.as_view(), name='delete_subvencion'),
     url(r'^$', views.index, name='index'),

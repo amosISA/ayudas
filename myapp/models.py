@@ -12,18 +12,6 @@ from .widgets import ColorPickerWidget
 User = settings.AUTH_USER_MODEL
 
 # Create your models here.
-# class Inicio(models.Model):
-#     inicio = models.DateField()
-#
-#     def __unicode__(self):
-#         return '{}'.format(self.inicio)
-#
-# class Fin(models.Model):
-#     fin = models.DateField()
-#
-#     def __unicode__(self):
-#         return '{}'.format(self.fin)
-
 class Responsable(models.Model):
     responsable = models.CharField(max_length=250)
 
@@ -86,10 +74,6 @@ class Nombre(models.Model):
 
 class Subvencion(models.Model):
     user = models.ForeignKey(User, blank=True, null=True)
-    #inicio = models.ManyToManyField(Inicio, blank=True)
-    #fin = models.ManyToManyField(Fin, blank=True)
-    #inicio = models.CharField(max_length=250, default="")
-    #fin = models.CharField(max_length=250, default="")
     inicio = models.DateField(blank=True, null=True)
     fin = models.DateField(blank=True, null=True)
     responsable = models.ManyToManyField(Responsable, blank=True)
@@ -97,8 +81,7 @@ class Subvencion(models.Model):
     updated = models.DateTimeField(auto_now=True)
     slug = models.SlugField(max_length=250, unique=True)
 
-    #nombre = models.TextField(blank=False, default="Subvención")
-    nombre = models.ForeignKey(Nombre, on_delete=models.CASCADE, default=None, blank=True, null=True)
+    nombre = models.CharField(blank=False, max_length=250, default="")
     bases = models.TextField(blank=True,
                              help_text="Enlace para las bases")
     solicitud = models.TextField(blank=True,
@@ -111,7 +94,6 @@ class Subvencion(models.Model):
         ('GV', 'Generalitat Valenciana'),
     )
 
-    #departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE, default="-")
     ente = models.CharField(max_length=255, choices=ENTE_CHOICES, default=None)
     diputacion = models.ForeignKey(Diputacion, on_delete=models.CASCADE, default=None, blank=True, null=True)
     generalitat = models.ForeignKey(Generalitat, on_delete=models.CASCADE, default=None, blank=True, null=True)
@@ -127,6 +109,7 @@ class Subvencion(models.Model):
     gestiona_expediente = models.CharField(max_length=250,
                                            help_text="Número de expediente del Gestiona",
                                            default="-")
+    se_relaciona_con = models.ManyToManyField('self', blank=True, default='')
 
     class Meta:
         ordering = ["-created"]
@@ -134,7 +117,7 @@ class Subvencion(models.Model):
         verbose_name_plural = "Subvenciones"
 
     def __unicode__(self):
-        return '{}'.format(self.id)
+        return '{}'.format(self.nombre)
 
     def get_absolute_url(self):
         return reverse('myapp:subvencion_detail',

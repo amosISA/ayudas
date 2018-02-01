@@ -55,11 +55,6 @@
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                     {{ form.nombre.label_tag }}
                     {{ form.nombre|htmlattributes:"class:form-control" }}
-                    <small id="selectNombre" class="form-text text-muted">
-                        Añadir nombre <a class="related-widget-wrapper-link add-related" href="{% url 'myapp:new_nombre' %}?next={{ request.path }}" title="Añadir nombre">
-                            <img style="margin-bottom:4px;" src="{% static 'myapp/img/icons/icon-addlink.svg' %}" alt="Añadir">
-                        </a>
-                    </small>
                 </div>
 
                 <!-- Bases -->
@@ -149,8 +144,14 @@
                     {{ form.gestiona_expediente|htmlattributes:"placeholder: Expediente, class:form-control" }}
                 </div>
 
+                <!-- Se relacion con -->
+                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                    {{ form.se_relaciona_con.label_tag }}
+                    {{ form.se_relaciona_con|htmlattributes:"placeholder: Expediente, class:form-control" }}
+                </div>
+
                 {% if request.path == '/new/' %}
-                    <input class="button_submit_create_form" type="submit" value="Crear Subvención" />
+                    <input onclick="this.disabled=true,this.form.submit();" class="button_submit_create_form" type="submit" value="Crear Subvención" />
                 {% else %}
                     <input class="button_submit_create_form" type="submit" value="Actualizar Subvención" />
                 {% endif %}
