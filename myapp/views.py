@@ -139,12 +139,10 @@ class ResponsableCreateView(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         url = self.request.GET.get('next')
-        print url
-        if url == '/next/':
+        if url == '/new/':
             return reverse_lazy('myapp:new_subvencion')
         else:
             return reverse('myapp:edit_subvencion', kwargs={'slug': url[6:-1]})
-
 
 # --------------- Create New Diputacion --------------- #
 class DiputacionCreateView(LoginRequiredMixin, CreateView):
@@ -156,6 +154,13 @@ class DiputacionCreateView(LoginRequiredMixin, CreateView):
         messages.success(self.request, 'Departamento (diputación) añadido correctamente!')
         return super(DiputacionCreateView, self).form_valid(form)
 
+    def get_success_url(self):
+        url = self.request.GET.get('next')
+        if url == '/new/':
+            return reverse_lazy('myapp:new_subvencion')
+        else:
+            return reverse('myapp:edit_subvencion', kwargs={'slug': url[6:-1]})
+
     # --------------- Create New Generalitat --------------- #
 class GeneralitatCreateView(LoginRequiredMixin, CreateView):
     form_class = GeneralitatForm
@@ -165,6 +170,13 @@ class GeneralitatCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         messages.success(self.request, 'Departamento (generalitat) añadido correctamente!')
         return super(GeneralitatCreateView, self).form_valid(form)
+
+    def get_success_url(self):
+        url = self.request.GET.get('next')
+        if url == '/new/':
+            return reverse_lazy('myapp:new_subvencion')
+        else:
+            return reverse('myapp:edit_subvencion', kwargs={'slug': url[6:-1]})
 
 # --------------- Create New Estado --------------- #
 class EstadoCreateView(LoginRequiredMixin, CreateView):
@@ -176,6 +188,13 @@ class EstadoCreateView(LoginRequiredMixin, CreateView):
         messages.success(self.request, 'Estado añadido correctamente!')
         return super(EstadoCreateView, self).form_valid(form)
 
+    def get_success_url(self):
+        url = self.request.GET.get('next')
+        if url == '/new/':
+            return reverse_lazy('myapp:new_subvencion')
+        else:
+            return reverse('myapp:edit_subvencion', kwargs={'slug': url[6:-1]})
+
 # --------------- Create New Nombre --------------- #
 class NombreCreateView(LoginRequiredMixin, CreateView):
     form_class = NombreForm
@@ -185,5 +204,12 @@ class NombreCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         messages.success(self.request, 'Nombre añadido correctamente!')
         return super(NombreCreateView, self).form_valid(form)
+
+    def get_success_url(self):
+        url = self.request.GET.get('next')
+        if url == '/new/':
+            return reverse_lazy('myapp:new_subvencion')
+        else:
+            return reverse('myapp:edit_subvencion', kwargs={'slug': url[6:-1]})
 
 
