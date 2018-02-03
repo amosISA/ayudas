@@ -17,3 +17,5 @@
         - Podría cambiar el campo nombre a char pues se relacionan en la tabla, no haría falta.
 
         - Mejorar plantillas 404 y 505.
+
+        - Cambiar la url de admin para más seguridad. 
