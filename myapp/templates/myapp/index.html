@@ -7,11 +7,18 @@
 {% block content %}
 {% load tags %}
 
-<div class="notification-box-list">
-{% load notification_tags %}
-{% include_notify_js_variables %}
-{% user_notifications for box %}
+<div class="notificationPanel" style="position:relative; width: 100%; overflow: hidden;  min-width: 300px;">
+    <div class="notificationContent" style="overflow-y: scroll; height: 100%;">
+        <ul class="notification-box-list" style="margin:0; padding:0;list-style-type: none;">
+            {% load notification_tags %}
+            {% render_notifications using user.notifications.active.prefetch for box %}
+            {% include_notify_js_variables %}
+            <li style="background-color: #ddd; padding: 5px; text-align: center;">
+                <a href="#" style="color: black;">All Notifications</a>
+            </li>
+        </ul>
     </div>
+</div>
 
 <div class="row subv-row-departamentos">
     <div class="col-lg">
