@@ -31,6 +31,24 @@
             <link rel="stylesheet" type="text/css" href="{% static 'myapp/datatables/datatables.min.css' %}"/>
         {% endblock %}
 
+        <title>
+            {% block title %}Subvenciones{% endblock %}
+        </title>
+    </head>
+    <body>
+
+        <!-- Navbar -->
+        {% if request.path != '/accounts/login/' %}
+            {% include 'myapp/navbar.html' %}
+        {% endif %}
+
+        <div class="container-fluid subv_webapp_container">
+            <div class="starter-template">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
@@ -53,25 +71,25 @@
 
         <script type="text/javascript" src="{% static 'myapp/datatables/datatables.min.js' %}"></script>
 
-        <title>
-            {% block title %}Subvenciones{% endblock %}
-        </title>
-    </head>
-    <body>
-
-        <!-- Navbar -->
-        {% if request.path != '/accounts/login/' %}
-            {% include 'myapp/navbar.html' %}
-        {% endif %}
-
-        <div class="container-fluid subv_webapp_container">
-            <div class="starter-template">
-            {% block content %}
-            {% endblock %}
-            </div>
-        </div>
-
         <script src="{% static 'myapp/js/bootstrap.min.js' %}"></script>
+
+        <script>
+            $(document).ready(function() {
+                $("#news").popover({
+                    'title' : 'Notificaciones',
+                    'html' : true,
+                    'placement' : 'right',
+                    'content' : $(".alert_list").html(),
+                    trigger: 'focus'
+                });
+
+                $('.turn_off_alert').on('click', function(event){
+                  var alert = $(this).parent();
+                  var alert_id = alert.data("alert_id");
+                  alert.hide("fast");
+                });
+            });
+        </script>
 
         <!-- jQuery or JS Block -->
         {% block js %}

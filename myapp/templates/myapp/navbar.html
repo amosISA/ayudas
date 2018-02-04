@@ -9,6 +9,45 @@
             <li class="nav-item {% if request.path == '/' %}active{% endif %}">
                 <a class="nav-link" href="{% url 'myapp:index' %}">Inicio</a>
             </li>
+            <li class="nav-item">
+                <a href="#" id="news" class="nav-link">
+                    <i class="fa fa-bell"></i>
+                    <span class="button__badge">{{ logCount }}</span>
+                </a>
+
+                <div style="display:none" class="alert_list">
+                    {% if logs %}
+                        <ul class="unstyled">
+                            {% for log in logs|slice:":5" %}
+                                <li class="alert_li">
+                                    <a href="javascript:;" class="alert_message">
+                                        <span style="color:#000;" class="time">{{ log.action_time|date:"d/m/Y - H:i" }} - {{ log.user.username|capfirst }} </span><br>
+                                        <span class="details">
+                                        {% if log.action_flag == 1 %}
+                                            <span class="label label-sm label-icon label-success">
+                                                <i class="fa fa-plus"></i>
+                                            </span>
+                                        {% elif log.action_flag == 2 %}
+                                            <span class="label label-sm label-icon label-info">
+                                                <i class="fa fa-edit"></i>
+                                            </span>
+                                        {% elif log.action_flag == 3 %}
+                                            <span class="label label-sm label-icon label-danger">
+                                                <i class="fa fa-minus"></i>
+                                            </span>
+                                        {% endif %}
+                                        {{ log.content_type|capfirst }}: {{ log }}
+                                    </span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <a href=""><p style="float:right;">Ver todas</p></a>
+                    {% else %}
+                        <p>No hay notificaciones.</p>
+                    {% endif %}
+                </div>
+            </li>
         </ul>
 
         <ul class="navbar-nav">

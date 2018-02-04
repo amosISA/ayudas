@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import messages
+from django.contrib.admin.models import LogEntry, ADDITION, CHANGE, DELETION
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -37,13 +38,17 @@ def index(request, estado_slug=None):
         subvenciones = subvenciones.filter(estado=estado)
 
     days_until_estado = ['7d', '6d', '5d', '4d', '3d', '2d', '1d', 'expires today', 'expired']
+    logs = LogEntry.objects.exclude(change_message="No fields changed.").order_by('-action_time')[:20]
+    logCount = LogEntry.objects.exclude(change_message="No fields changed.").order_by('-action_time')[:20].count()
 
     return render(request,
                   'myapp/index.html',
                   {'estado': estado,
                    'estados': estados,
                    'subvenciones': subvenciones,
-                   'days_until_estado': days_until_estado})
+                   'days_until_estado': days_until_estado,
+                   "logs": logs,
+                   "logCount": logCount})
 
 @login_required()
 def subvencion_detail(request, id, slug):
