@@ -5,12 +5,14 @@ from django.contrib import messages
 from django.contrib.admin.models import LogEntry, ADDITION, CHANGE, DELETION
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import User
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.urlresolvers import reverse, reverse_lazy
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
+from notify.signals import notify
 from .models import Subvencion, Estado
 from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm
 
@@ -112,6 +114,10 @@ class ResponsableCreateView(LoginRequiredMixin, CreateView):
     template_name = 'myapp/responsable_create.html'
 
     def form_valid(self, form):
+        users = User.objects.all()
+        notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
+                    verb='ha creado un nuevo responsable.', nf_type='crear')
+
         messages.success(self.request, 'Responsable añadido correctamente!')
         return super(ResponsableCreateView, self).form_valid(form)
 

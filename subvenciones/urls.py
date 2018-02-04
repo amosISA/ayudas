@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('myapp.urls', namespace='myapp')),
     url(r'^accounts/login/', views.custom_login, {'template_name': 'login.html'}, name='login'),
+    url(r'^notifications/', include('notify.urls', namespace='notifications')),
 ]
 
 if settings.DEBUG:

@@ -7,33 +7,11 @@
 {% block content %}
 {% load tags %}
 
-<div class="row subv-sidebar">
-    <!--
-    <div class="col subv-list-items">
-        <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center {% if not estado %} selected {% endif %}">
-                <a href="{% url 'myapp:index' %}">Todas las subvenciones</a>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a tabindex="0" data-html="true" data-trigger="focus" data-toggle="popover" data-placement="bottom"
-                   data-content="{% for e in estados %}<li style='background-color:#66B9BF;border: 1px solid white;' class='list-group-item d-flex justify-content-between align-items-center {% if estado.slug == e.slug %} selected {% endif %}'><a style='color: white;' href='{{ e.get_absolute_url }}'>{{ e.etapa }}</a></li>{% endfor %}">Listar por estado</a>
-            </li>
-        </ul>
-    </div>-->
-
-    <!--
-    <div class="col">
-        <nav class="subv-nav-breadcumb" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Añadir Subvención</a></li>
-                <li class="breadcrumb-item"><a href="#">Perfil</a></li>
-                <li class="breadcrumb-item"><a href="#">Salir</a></li>
-            </ol>
-        </nav>
+<div class="notification-box-list">
+{% load notification_tags %}
+{% include_notify_js_variables %}
+{% user_notifications for box %}
     </div>
-    -->
-</div>
 
 <div class="row subv-row-departamentos">
     <div class="col-lg">
