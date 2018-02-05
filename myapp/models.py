@@ -117,7 +117,7 @@ class Subvencion(models.Model):
         verbose_name_plural = "Subvenciones"
 
     def __unicode__(self):
-        return '{}'.format(self.nombre)
+        return '{} {}'.format(self.nombre, self.fin)
 
     def get_absolute_url(self):
         return reverse('myapp:subvencion_detail',

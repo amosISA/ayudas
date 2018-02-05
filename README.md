@@ -26,5 +26,3 @@
 
         - En estado, cuando falta una semana para todas se ponga en rojo la fecha fin, pero si es aceptada en gris y si
         no es aceptada en negro (ambiguo).
-
-        - Añadir nueva columna a la tabla después de estado => comentarios
