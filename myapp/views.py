@@ -38,6 +38,7 @@ def index(request, estado_slug=None):
         estado = get_object_or_404(Estado, slug=estado_slug)
         subvenciones = subvenciones.filter(estado=estado)
 
+    notification_list = request.user.notifications.active().prefetch()
     days_until_estado = ['7d', '6d', '5d', '4d', '3d', '2d', '1d', 'expires today', 'expired']
 
     return render(request,
@@ -45,7 +46,8 @@ def index(request, estado_slug=None):
                   {'estado': estado,
                    'estados': estados,
                    'subvenciones': subvenciones,
-                   'days_until_estado': days_until_estado})
+                   'days_until_estado': days_until_estado,
+                   'notifications': notification_list})
 
 @login_required()
 def subvencion_detail(request, id, slug):
@@ -130,6 +132,10 @@ class DiputacionCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:new_subvencion')
 
     def form_valid(self, form):
+        users = User.objects.all()
+        notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
+                    verb='ha creado un nuevo departameto de diputación.', nf_type='crear')
+
         messages.success(self.request, 'Departamento (diputación) añadido correctamente!')
         return super(DiputacionCreateView, self).form_valid(form)
 
@@ -147,6 +153,10 @@ class GeneralitatCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:new_subvencion')
 
     def form_valid(self, form):
+        users = User.objects.all()
+        notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
+                    verb='ha creado un nuevo departamento de la generalitat.', nf_type='crear')
+
         messages.success(self.request, 'Departamento (generalitat) añadido correctamente!')
         return super(GeneralitatCreateView, self).form_valid(form)
 
@@ -164,6 +174,10 @@ class EstadoCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:new_subvencion')
 
     def form_valid(self, form):
+        users = User.objects.all()
+        notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
+                    verb='ha creado un nuevo estado.', nf_type='crear')
+
         messages.success(self.request, 'Estado añadido correctamente!')
         return super(EstadoCreateView, self).form_valid(form)
 
@@ -173,7 +187,3 @@ class EstadoCreateView(LoginRequiredMixin, CreateView):
             return reverse_lazy('myapp:new_subvencion')
         else:
             return reverse('myapp:edit_subvencion', kwargs={'slug': url[6:-1]})
-
-
-
-

@@ -9,23 +9,24 @@
 {% load staticfiles %}
 {% load notification_tags %}
 
-<div class="row">
-    <div class="col-md-3 col-lg-3"></div>
-    <div class="col-md-6 col-lg-6">
-        <div class="card">
-            <div class="card-header">
-                Notificaciones
-            </div>
+{% if notifications %}
+    <div class="row">
+        <div class="col-md-3 col-lg-3"></div>
+        <div class="col-md-6 col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    Notificaciones
+                </div>
 
-            <div class="notification-box-list card-block" style="padding:10px;">
-                {% user_notifications %}
-                {% include_notify_js_variables %}
+                <div class="notification-box-list card-block" style="padding:10px;height:150px;overflow:auto;">
+                    {% user_notifications %}
+                    {% include_notify_js_variables %}
+                </div>
             </div>
         </div>
+        <div class="col-md-3 col-lg-3"></div>
     </div>
-    <div class="col-md-3 col-lg-3"></div>
-</div>
-
+{% endif %}
 
 <div class="row subv-row-departamentos">
     <div class="col-lg">
@@ -164,6 +165,15 @@
                     $(this).css('color', '#fff');
                     //console.log($(this).text());
                 } //else { console.log("no"); }
+            });
+
+            //Notifications script
+            $(".notification-box-list .delete-notification").click(function()
+            {
+                if ($(this).parent().parent().find('div.notification').length == 1)
+                {
+                    $(this).parent().parent().parent().parent().parent().hide();
+                }
             });
         });
     </script>
