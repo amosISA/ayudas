@@ -22,7 +22,5 @@
 
         - Enviar email cuando alguien añade, modifica, etc.
 
-        - Que cuando creas, en relacionado, a parte del nombre de la subvención, tenga también la fecha fin.
-
         - En estado, cuando falta una semana para todas se ponga en rojo la fecha fin, pero si es aceptada en gris y si
         no es aceptada en negro (ambiguo).
