@@ -12,7 +12,6 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
-        {% load notification_tags %}
         {% load staticfiles %}
         {% block stylesheets %}
             <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.min.css' %}">
@@ -31,28 +30,6 @@
             <link rel="stylesheet" href="{% static 'myapp/css/jquery-ui.multidatespicker.css' %}">
             <link rel="stylesheet" type="text/css" href="{% static 'myapp/datatables/datatables.min.css' %}"/>
         {% endblock %}
-
-        <title>
-            {% block title %}Subvenciones{% endblock %}
-        </title>
-
-        {% block extrahead %}
-            {% include_notify_js_variables %}
-        {% endblock %}
-    </head>
-    <body>
-
-        <!-- Navbar -->
-        {% if request.path != '/accounts/login/' %}
-            {% include 'myapp/navbar.html' %}
-        {% endif %}
-
-        <div class="container-fluid subv_webapp_container">
-            <div class="starter-template">
-            {% block content %}
-            {% endblock %}
-            </div>
-        </div>
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
@@ -78,7 +55,23 @@
 
         <script src="{% static 'myapp/js/bootstrap.min.js' %}"></script>
 
-        <script src="{% static 'notify/notifyX.js' %}"></script>
+        <title>
+            {% block title %}Subvenciones{% endblock %}
+        </title>
+    </head>
+    <body>
+
+        <!-- Navbar -->
+        {% if request.path != '/accounts/login/' %}
+            {% include 'myapp/navbar.html' %}
+        {% endif %}
+
+        <div class="container-fluid subv_webapp_container">
+            <div class="starter-template">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
 
         <script>
             $(document).ready(function() {
