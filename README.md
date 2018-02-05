@@ -12,13 +12,7 @@
         - Cuando a una subvención la creo con un departamento de la generalitat, lugeo al editarla aparecen los dos campos,
         tanto el del departamento de diuptación como el de generalitat.
 
-        - Añadir historial de quien añade, edita, etc.
-
-        - Podría cambiar el campo nombre a char pues se relacionan en la tabla, no haría falta.
-
         - Mejorar plantillas 404 y 505.
-
-        - Cambiar la url de admin para más seguridad.
 
         - Enviar email cuando alguien añade, modifica, etc.
 
