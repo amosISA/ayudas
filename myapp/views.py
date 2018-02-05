@@ -69,6 +69,10 @@ class SubvencionCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:index')
 
     def form_valid(self, form):
+        users = User.objects.exclude(username=self.request.user)
+        notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
+                    verb='ha creado una nueva subvención: "%s"' % (form.cleaned_data.get('nombre')), nf_type='crear')
+
         instance = form.save(commit=False)
         instance.user = self.request.user
         messages.success(self.request, 'Subvención añadida correctamente!')
@@ -84,6 +88,10 @@ class SubvencionUpdateView(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('myapp:index')
 
     def form_valid(self, form):
+        users = User.objects.exclude(username=self.request.user)
+        notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
+                    verb='ha editado una subvención: "%s"' % (form.cleaned_data.get('nombre')), nf_type='edit')
+
         messages.success(self.request, 'Subvención actualizada correctamente!')
         return super(SubvencionUpdateView, self).form_valid(form)
 
@@ -111,9 +119,9 @@ class ResponsableCreateView(LoginRequiredMixin, CreateView):
     template_name = 'myapp/responsable_create.html'
 
     def form_valid(self, form):
-        users = User.objects.all()
+        users = User.objects.exclude(username=self.request.user)
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
-                    verb='ha creado un nuevo responsable.', nf_type='crear')
+                    verb='ha creado un nuevo responsable: "%s"' % (form.cleaned_data.get('responsable')), nf_type='crear')
 
         messages.success(self.request, 'Responsable añadido correctamente!')
         return super(ResponsableCreateView, self).form_valid(form)
@@ -132,9 +140,9 @@ class DiputacionCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:new_subvencion')
 
     def form_valid(self, form):
-        users = User.objects.all()
+        users = User.objects.exclude(username=self.request.user)
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
-                    verb='ha creado un nuevo departameto de diputación.', nf_type='crear')
+                    verb='ha creado un nuevo departameto: "%s"' % (form.cleaned_data.get('nombre')), nf_type='crear')
 
         messages.success(self.request, 'Departamento (diputación) añadido correctamente!')
         return super(DiputacionCreateView, self).form_valid(form)
@@ -153,9 +161,9 @@ class GeneralitatCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:new_subvencion')
 
     def form_valid(self, form):
-        users = User.objects.all()
+        users = User.objects.exclude(username=self.request.user)
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
-                    verb='ha creado un nuevo departamento de la generalitat.', nf_type='crear')
+                    verb='ha creado un nuevo departamento: "%s"' % (form.cleaned_data.get('nombre')), nf_type='crear')
 
         messages.success(self.request, 'Departamento (generalitat) añadido correctamente!')
         return super(GeneralitatCreateView, self).form_valid(form)
@@ -174,9 +182,9 @@ class EstadoCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:new_subvencion')
 
     def form_valid(self, form):
-        users = User.objects.all()
+        users = User.objects.exclude(username=self.request.user)
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
-                    verb='ha creado un nuevo estado.', nf_type='crear')
+                    verb='ha creado un nuevo estado: "%s"' % (form.cleaned_data.get('etapa')), nf_type='crear')
 
         messages.success(self.request, 'Estado añadido correctamente!')
         return super(EstadoCreateView, self).form_valid(form)
