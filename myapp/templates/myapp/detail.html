@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-lg">
             <div class="card text-center">
-                <div class="card-header" style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;font-size:20px;font-weight:bold;color:#fff;{% else %}background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;{% endif %}">
+                <div class="card-header" style="background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;">
                     {{ subvencion.estado }}
                 </div>
                 <div class="card-body">
@@ -129,7 +129,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="card-footer" style="{% if subvencion.fin|daysuntil in days_until_estado and subvencion.estado.etapa == 'Definiéndose' %}background-color:#ff0000;font-size:20px;font-weight:bold;color:#fff;{% else %}background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;{% endif %}">
+                <div class="card-footer" style="background-color:{{ subvencion.estado.font_color }};font-size:20px;font-weight:bold;">
                     Subvención creada el {{ subvencion.created }} por {{ user.get_username|title }}
                 </div>
             </div>
