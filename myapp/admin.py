@@ -9,7 +9,7 @@ from .models import Subvencion, Responsable, Estado, Diputacion, Generalitat
 # Register your models here.
 class SubvencionAdmin(admin.ModelAdmin):
     list_display = ['inicio', 'nombre', 'fin', 'cuantia',
-                    'Responsable', 'estado', 'Gestiona', 'gestiona_expediente', 'user']
+                    'estado', 'Gestiona', 'gestiona_expediente', 'user']
     list_filter = ['nombre', 'estado', 'generalitat', 'diputacion', 'responsable']
     search_fields = ('nombre',)
     empty_value_display = '-' # para los campos vacios se pone eso
