@@ -143,6 +143,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 
 
+# Configuramos el servidor de correo
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'agoraweb700@gmail.com'
+EMAIL_HOST_PASSWORD = 'Agora7000'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'agoraweb700@gmail.com'
+
 # To receive server errors to my inbox
 ADMINS = (
     ('Amos', 'agoraweb700@gmail.com'),
