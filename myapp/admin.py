@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.contrib import admin
 from django import forms
 from django.utils.html import format_html
-from .models import Subvencion, Responsable, Estado, Diputacion, Generalitat, Nombre
+from .models import Subvencion, Responsable, Estado, Diputacion, Generalitat
 
 # Register your models here.
 class SubvencionAdmin(admin.ModelAdmin):
@@ -62,7 +62,3 @@ admin.site.register(Diputacion, DiputacionAdmin)
 class GeneralitatAdmin(admin.ModelAdmin):
     pass
 admin.site.register(Generalitat, GeneralitatAdmin)
-
-class NombreAdmin(admin.ModelAdmin):
-    pass
-admin.site.register(Nombre, NombreAdmin)

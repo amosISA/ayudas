@@ -63,15 +63,6 @@ class Estado(models.Model):
         return reverse('myapp:subvencion_by_category',
                        args=[self.slug])
 
-class Nombre(models.Model):
-    nombre = models.CharField(max_length=250)
-
-    def __unicode__(self):
-        return '{}'.format(self.nombre)
-
-    class Meta:
-        ordering = ["nombre"]
-
 class Subvencion(models.Model):
     user = models.ForeignKey(User, blank=True, null=True)
     inicio = models.DateField(blank=True, null=True)
