@@ -16,11 +16,6 @@
 
         - Enviar email cuando alguien añade, modifica, etc.
 
-        - En estado, cuando falta una semana para todas se ponga en rojo la fecha fin, pero si es aceptada en gris y si
-        no es aceptada en negro (ambiguo).
-	
-	- Arregalar settings para prod y dev
-
 
        - THINGS TO KEEP IN MIND WHEN I DEPLOY(or maybe I can override model in mine project):
         The notify application has in his models the verb to 50 limit character, just update it to 255 and then

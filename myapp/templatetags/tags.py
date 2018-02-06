@@ -45,6 +45,8 @@ def days_until(value):
         return '{days}d'.format(days=diff.days)
     elif diff.days == 0:
         return 'expires today'
+    elif diff.days < -2:
+        return 'passed days'
     else:
         # Date is in the past; return expired message
         return 'expired'

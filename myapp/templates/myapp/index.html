@@ -71,6 +71,7 @@
 
                 <tbody>
                     {% for subvencion in subvenciones %}
+                        {{ subvencion.fin|daysuntil }}
                         <tr>
                             <td>
                                 {{ subvencion.inicio|date:"d/m/Y" }}
@@ -88,7 +89,7 @@
                                     {{ subvencion.nombre }}
                                 </a>
                             </td>
-                            <td style="{% if subvencion.fin|daysuntil in days_until_estado %}background-color:#ff0000;color:#fff;{% endif %}">
+                            <td style="{% if subvencion.fin|daysuntil in days_until_estado %}background-color:#ff0000;color:#fff;{% elif subvencion.fin|daysuntil == 'passed days' %}background-color:{{ subvencion.estado.font_color }};{% else %}background-color:#fff;{% endif %}">
                                 {{ subvencion.fin|date:"d/m/Y" }}
                             </td>
                             <td>{{ subvencion.cuantia }}</td>
