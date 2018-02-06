@@ -71,7 +71,6 @@
 
                 <tbody>
                     {% for subvencion in subvenciones %}
-                        {{ subvencion.fin|daysuntil }}
                         <tr>
                             <td>
                                 {{ subvencion.inicio|date:"d/m/Y" }}
