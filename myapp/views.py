@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.core.mail import send_mail
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.urlresolvers import reverse, reverse_lazy
 from django.http import HttpResponse, HttpResponseRedirect, Http404
@@ -69,9 +70,19 @@ class SubvencionCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:index')
 
     def form_valid(self, form):
+        recievers = []
+        for user in User.objects.all():
+            if self.request.user.email != user.email:
+                recievers.append(user.email)
+
         users = User.objects.exclude(username=self.request.user)
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
                     verb='ha creado una nueva subvención: "%s"' % (form.cleaned_data.get('nombre')), nf_type='crear')
+
+        send_mail('Gestión de subvenciones',
+                  '%s ha creado una nueva subvención: "%s".' % (self.request.user.username, form.cleaned_data.get('nombre')),
+                  self.request.user.email,
+                  recievers)
 
         instance = form.save(commit=False)
         instance.user = self.request.user
@@ -88,9 +99,19 @@ class SubvencionUpdateView(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('myapp:index')
 
     def form_valid(self, form):
+        recievers = []
+        for user in User.objects.all():
+            if self.request.user.email != user.email:
+                recievers.append(user.email)
+
         users = User.objects.exclude(username=self.request.user)
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
                     verb='ha editado una subvención: "%s"' % (form.cleaned_data.get('nombre')), nf_type='edit')
+
+        send_mail('Gestión de subvenciones',
+                  '%s ha editado una subvención: "%s".' % (self.request.user.username, form.cleaned_data.get('nombre')),
+                  self.request.user.email,
+                  recievers)
 
         messages.success(self.request, 'Subvención actualizada correctamente!')
         return super(SubvencionUpdateView, self).form_valid(form)
@@ -119,9 +140,19 @@ class ResponsableCreateView(LoginRequiredMixin, CreateView):
     template_name = 'myapp/responsable_create.html'
 
     def form_valid(self, form):
+        recievers = []
+        for user in User.objects.all():
+            if self.request.user.email != user.email:
+                recievers.append(user.email)
+
         users = User.objects.exclude(username=self.request.user)
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
                     verb='ha creado un nuevo responsable: "%s"' % (form.cleaned_data.get('responsable')), nf_type='crear')
+
+        send_mail('Gestión de subvenciones',
+                  '%s ha creado un nuevo responsable: "%s".' % (self.request.user.username, form.cleaned_data.get('responsable')),
+                  self.request.user.email,
+                  recievers)
 
         messages.success(self.request, 'Responsable añadido correctamente!')
         return super(ResponsableCreateView, self).form_valid(form)
@@ -140,9 +171,19 @@ class DiputacionCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:new_subvencion')
 
     def form_valid(self, form):
+        recievers = []
+        for user in User.objects.all():
+            if self.request.user.email != user.email:
+                recievers.append(user.email)
+
         users = User.objects.exclude(username=self.request.user)
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
                     verb='ha creado un nuevo departameto: "%s"' % (form.cleaned_data.get('nombre')), nf_type='crear')
+
+        send_mail('Gestión de subvenciones',
+                  '%s ha creado un nuevo departamento (Diputación): "%s".' % (self.request.user.username, form.cleaned_data.get('nombre')),
+                  self.request.user.email,
+                  recievers)
 
         messages.success(self.request, 'Departamento (diputación) añadido correctamente!')
         return super(DiputacionCreateView, self).form_valid(form)
@@ -161,9 +202,19 @@ class GeneralitatCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:new_subvencion')
 
     def form_valid(self, form):
+        recievers = []
+        for user in User.objects.all():
+            if self.request.user.email != user.email:
+                recievers.append(user.email)
+
         users = User.objects.exclude(username=self.request.user)
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
                     verb='ha creado un nuevo departamento: "%s"' % (form.cleaned_data.get('nombre')), nf_type='crear')
+
+        send_mail('Gestión de subvenciones',
+                  '%s ha creado un nuevo departamento (Generalitat): "%s".' % (self.request.user.username, form.cleaned_data.get('nombre')),
+                  self.request.user.email,
+                  recievers)
 
         messages.success(self.request, 'Departamento (generalitat) añadido correctamente!')
         return super(GeneralitatCreateView, self).form_valid(form)
@@ -182,9 +233,19 @@ class EstadoCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:new_subvencion')
 
     def form_valid(self, form):
+        recievers = []
+        for user in User.objects.all():
+            if self.request.user.email != user.email:
+                recievers.append(user.email)
+
         users = User.objects.exclude(username=self.request.user)
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
                     verb='ha creado un nuevo estado: "%s"' % (form.cleaned_data.get('etapa')), nf_type='crear')
+
+        send_mail('Gestión de subvenciones',
+                  '%s ha creado un nuevo estado: "%s".' % (self.request.user.username, form.cleaned_data.get('etapa')),
+                  self.request.user.email,
+                  recievers)
 
         messages.success(self.request, 'Estado añadido correctamente!')
         return super(EstadoCreateView, self).form_valid(form)
