@@ -31,7 +31,7 @@
 <div class="row subv-row-departamentos">
     <div class="col-lg">
         {% for e in estados %}
-            <div class="div-dep" style="background-color:{{ e.font_color }};">
+            <div class="div-dep estadocss" style="background-color:{{ e.font_color }};">
                 {{ e.etapa }}
             </div>
         {% endfor %}
@@ -97,7 +97,7 @@
                                     {{ responsable }}<br>
                                 {% endfor %}
                             </td>
-                            <td style="background-color:{{ subvencion.estado.font_color }};">
+                            <td class="estadocss" style="background-color:{{ subvencion.estado.font_color }};">
                                 {{ subvencion.estado }}
                             </td>
                             <td tabindex="0" data-toggle="popover" data-trigger="hover" title="Comentarios" data-content="{{ subvencion.comentarios|safe }}">
@@ -163,23 +163,6 @@
                 }
             });
 
-            /* Change color if background divs are darker */
-            divs_darkers = $('.div-dep');
-            td_darkers = $('#subv_table_ordering tbody tr td');
-            divs_darkers.each(function(i) {
-                //console.log($(this).css('background-color'));
-                if($(this).css('background-color') == 'rgb(51, 51, 51)' || $(this).css('background-color') == 'rgb(128, 0, 0)') {
-                    $(this).css('color', '#fff');
-                    //console.log("si");
-                } //else { console.log("no"); }
-            });
-            td_darkers.each(function(i) {
-                if($(this).css('background-color') == 'rgb(51, 51, 51)' || $(this).css('background-color') == 'rgb(128, 0, 0)' || $(this).text() === 'Desestimada') {
-                    $(this).css('color', '#fff');
-                    //console.log($(this).text());
-                } //else { console.log("no"); }
-            });
-
             //Notifications script
             $(".notification-box-list .delete-notification").click(function()
             {
@@ -188,7 +171,25 @@
                     $(this).parent().parent().parent().parent().parent().hide();
                 }
             });
+
+            $('.estadocss').each(function() {
+                var rgb = $(this).css('backgroundColor');
+
+                var colors = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+                var brightness = 1;
+
+                var r = colors[1];
+                var g = colors[2];
+                var b = colors[3];
+
+                var ir = Math.floor((255-r)*brightness);
+                var ig = Math.floor((255-g)*brightness);
+                var ib = Math.floor((255-b)*brightness);
+
+                $(this).css('color', 'rgb('+ir+','+ig+','+ib+')');
+            });
         });
     </script>
     <script src="{% static 'notify/notifyX.js' %}"></script>
 {% endblock %}
+
