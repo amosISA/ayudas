@@ -85,13 +85,13 @@
                             </td>
                             <td>
                                 <a href="{{ subvencion.get_absolute_url }}" target="_blank">
-                                    {{ subvencion.nombre }}
+                                    {{ subvencion.nombre|safe }}
                                 </a>
                             </td>
                             <td style="{% if subvencion.fin|daysuntil in days_until_estado %}background-color:#ff0000;color:#fff;{% elif subvencion.fin|daysuntil == 'passed days' %}background-color:{{ subvencion.estado.font_color }};{% else %}background-color:#fff;{% endif %}">
                                 {{ subvencion.fin|date:"d/m/Y" }}
                             </td>
-                            <td>{{ subvencion.cuantia }}</td>
+                            <td>{{ subvencion.cuantia|safe }}</td>
                             <td>
                                 {% for responsable in subvencion.responsable.all %}
                                     {{ responsable }}<br>
@@ -100,11 +100,11 @@
                             <td style="background-color:{{ subvencion.estado.font_color }};">
                                 {{ subvencion.estado }}
                             </td>
-                            <td>
-                                {{ subvencion.comentarios }}
+                            <td tabindex="0" data-toggle="popover" data-trigger="hover" title="Comentarios" data-content="{{ subvencion.comentarios|safe }}">
+                                {{ subvencion.comentarios|truncatewords:6|safe }}
                             </td>
-							<td>
-                                {{ subvencion.descripcion }}
+							<td tabindex="0" data-toggle="popover" data-trigger="hover" title="Descripción" data-content="{{ subvencion.descripcion|safe }}">
+                                {{ subvencion.descripcion|truncatewords:6|safe }}
                             </td>
                             <td>
                                 {{ subvencion.gestiona_expediente }}<br>

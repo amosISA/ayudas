@@ -10,6 +10,8 @@
     font-variant: normal;
 }
 
+.subv_webapp_container .subv-table-row table { font-size: 0.8rem; }
+
 .subv_webapp_container .subv-table-row .thead-subv-table {
     background-color: #07889B;
     color: #fff;
