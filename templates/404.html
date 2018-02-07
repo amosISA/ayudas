@@ -1,6 +1,20 @@
 {% extends "myapp/base.html" %}
-   
-{% block content %}      
-    <h1>Página no encontrada</h1>      
-    <p>Lo sentimos, pero la página que buscas no ha sido encontrada.</p> 
+
+{% load staticfiles %}
+
+{% block title %}
+    404
+{% endblock %}
+
+{% block content %}
+    <section class="error-404 not-found">
+		<header class="page-header">
+			<h1 class="page-title screen-reader-text">404</h1>
+		</header><!-- .page-header -->
+
+		<div class="page-content">
+			<h3>Página no encontrada.</h3>
+			<p>Lo sentimos, pero la página que buscas no ha sido encontrada.</p>
+		</div><!-- .page-content -->
+	</section>
 {% endblock %}

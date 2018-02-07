@@ -1,7 +1,21 @@
 {% extends "myapp/base.html" %}
-   
+
+{% load staticfiles %}
+
+{% block title %}
+    505
+{% endblock %}
+
 {% block content %}      
-    <h1>Página no disponible</h1>      
-    <p>Lo sentimos, pero la página pedida no está disponible por que el servidor tiene hipo.</p>         
-    <p>Los desarrolladores han sido notificados, así que vuelva a revisar más tarde</p> 
+    <section class="error-404 not-found">
+		<header class="page-header">
+			<h1 class="page-title screen-reader-text">505</h1>
+		</header><!-- .page-header -->
+
+		<div class="page-content">
+			<h3>Página no disponible.</h3>
+			<p>Lo sentimos, pero la página pedida no está disponible por que el servidor tiene hipo.
+            Los desarrolladores han sido notificados, así que vuelva a revisar más tarde.</p>
+		</div><!-- .page-content -->
+	</section>
 {% endblock %}
