@@ -34,6 +34,7 @@
                 <input onclick="this.disabled=true,this.form.submit();" class="button_submit_create_form" type="submit" value="Crear Departamento" />
                 <a href="{% url 'myapp:new_subvencion' %}"><button type="button" class="btn btn-info">Volver</button></a>
                 <input type="hidden" name="next" value="{{ request.GET.next }}" />
+                {% if is_popup %}<input type="hidden" name="_popup" value="1" />{% endif %}
             </form>
         </div>
         <div class="col"></div>

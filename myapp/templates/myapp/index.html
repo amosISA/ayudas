@@ -100,10 +100,10 @@
                             <td class="estadocss" style="background-color:{{ subvencion.estado.font_color }};">
                                 {{ subvencion.estado }}
                             </td>
-                            <td tabindex="0" data-toggle="popover" data-trigger="hover" title="Comentarios" data-content="{{ subvencion.comentarios|safe }}">
+                            <td {% if subvencion.comentarios %}tabindex="0" data-toggle="popover" data-trigger="hover" title="Comentarios" data-content="{{ subvencion.comentarios|safe }}"{% endif %}>
                                 {{ subvencion.comentarios|truncatewords:6|safe }}
                             </td>
-							<td tabindex="0" data-toggle="popover" data-trigger="hover" title="Descripción" data-content="{{ subvencion.descripcion|safe }}">
+							<td {% if subvencion.descripcion %} tabindex="0" data-toggle="popover" data-trigger="hover" title="Descripción" data-content="{{ subvencion.descripcion|safe }}"{% endif %}>
                                 {{ subvencion.descripcion|truncatewords:6|safe }}
                             </td>
                             <td>

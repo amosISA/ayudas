@@ -49,11 +49,6 @@
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                     {{ form.responsable.label_tag }} <span style="font-size: 12.5px;">(Para seleccionar más de uno, presione ctrl)</span>
                     {{ form.responsable|htmlattributes:"class:form-control" }}
-                    <small id="selectResponsable" class="form-text text-muted">
-                        Añadir responsable <a class="related-widget-wrapper-link add-related" href="{% url 'myapp:new_responsable' %}?next={{ request.path }}" title="Añadir responsable">
-                            <img style="margin-bottom:4px;" src="{% static 'myapp/img/icons/icon-addlink.svg' %}" alt="Añadir">
-                        </a>
-                    </small>
                 </div>
 
                 <!-- Nombre -->
@@ -95,19 +90,6 @@
                     {{ form.generalitat|htmlattributes:"class:form-control" }}
                 </div>
 
-                <div class="input-group title-create_post smalls_for_departments">
-                    <small id="selectDepartamentoDiputacion" class="form-text text-muted">
-                        Añadir departamento Diputación <a class="related-widget-wrapper-link add-related" href="{% url 'myapp:new_diputacion' %}?next={{ request.path }}" title="Añadir departamento diputación">
-                            <img style="margin-bottom:4px;" src="{% static 'myapp/img/icons/icon-addlink.svg' %}" alt="Añadir">
-                        </a>
-                    </small>
-                    <small id="selectDepartamentoGeneralitat" class="form-text text-muted">
-                        Añadir departamento Generalitat <a class="related-widget-wrapper-link add-related" href="{% url 'myapp:new_generalitat' %}?next={{ request.path }}" title="Añadir departamento generalitat">
-                            <img style="margin-bottom:4px;" src="{% static 'myapp/img/icons/icon-addlink.svg' %}" alt="Añadir">
-                        </a>
-                    </small>
-                </div>
-
                 <!-- Cuantia -->
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                     {{ form.cuantia.label_tag }}
@@ -124,11 +106,6 @@
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                     {{ form.estado.label_tag }}
                     {{ form.estado|htmlattributes:"class:form-control" }}
-                    <small id="selectEstado" class="form-text text-muted">
-                        Añadir estado <a class="related-widget-wrapper-link add-related" href="{% url 'myapp:new_estado' %}?next={{ request.path }}" title="Añadir estado">
-                            <img style="margin-bottom:4px;" src="{% static 'myapp/img/icons/icon-addlink.svg' %}" alt="Añadir">
-                        </a>
-                    </small>
                 </div>
 
                 <!-- Comentarios -->
@@ -151,7 +128,7 @@
 
                 <!-- Se relacion con -->
                 <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.se_relaciona_con.label_tag }}
+                    {{ form.se_relaciona_con.label_tag }} <span style="font-size: 12.5px;">(Para seleccionar más de una, presione ctrl)</span>
                     {{ form.se_relaciona_con|htmlattributes:"placeholder: Expediente, class:form-control" }}
                 </div>
 
@@ -216,6 +193,16 @@
 
             // Change textarea cols
             $('textarea').attr({'cols': '20', 'rows': '2'});
+
+            // Admin plus
+            $('#add_id_diputacion').wrap("<div class='input-group title-create_post smalls_for_departments'><small id='selectDepartamentoDiputacion' class='form-text text-muted'>Añadir departamento Diputación </small></div>");
+            $('#add_id_generalitat').wrap("<div class='input-group title-create_post smalls_for_departments'><small id='selectDepartamentoDiputacion' class='form-text text-muted'>Añadir departamento Generalitat </small></div>");
+            $('#add_id_estado').wrap("<div class='input-group title-create_post smalls_for_departments'><small id='selectDepartamentoDiputacion' class='form-text text-muted'>Añadir Estado </small></div>");
+            $('#add_id_responsable').wrap("<div class='input-group title-create_post smalls_for_departments'><small id='selectDepartamentoDiputacion' class='form-text text-muted'>Añadir Responsable </small></div>");
         }
     </script>
+    <!-- For the admin site -->
+    <script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+    <script src="{% static 'admin/js/core.js' %}"></script>
+    <script src="{% static 'admin/js/admin/RelatedObjectLookups.js' %}"></script>
 {% endblock %}

@@ -2,11 +2,32 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.admin.options import ModelAdmin
+from django.core.mail import send_mail
 from django import forms
 from django.utils.html import format_html
 from .models import Subvencion, Responsable, Estado, Diputacion, Generalitat
+from notify.signals import notify
+from .sites import my_admin_site
 
 # Register your models here.
+def email_notify(request, form, message, name_field):
+    recievers = []
+    for user in User.objects.all():
+        if request.user.email != user.email:
+            recievers.append(user.email)
+
+    users = User.objects.exclude(username=request.user)
+    notify.send(request.user, recipient_list=list(users), actor=request.user,
+                verb=message+': "%s"' % (form.cleaned_data.get(name_field)), nf_type='crear')
+
+    send_mail('Gestión de subvenciones',
+              '{} '.format(request.user.username)+message+': "{}".'.format(form.cleaned_data.get(name_field)),
+              request.user.email,
+              recievers)
+
 class SubvencionAdmin(admin.ModelAdmin):
     list_display = ['inicio', 'nombre', 'fin', 'cuantia',
                     'estado', 'Gestiona', 'gestiona_expediente', 'user']
@@ -45,20 +66,44 @@ class SubvencionAdmin(admin.ModelAdmin):
 
     class Media:
         js = ('/static/admin/js/assets_admin.js',)
+my_admin_site.register(Subvencion, SubvencionAdmin)
 admin.site.register(Subvencion, SubvencionAdmin)
 
 class ResponsableAdmin(admin.ModelAdmin):
-    pass
+    def save_model(self, request, obj, form, change):
+        recievers = []
+        for user in User.objects.all():
+            if request.user.email != user.email:
+                recievers.append(user.email)
+
+        users = User.objects.exclude(username=request.user)
+        notify.send(request.user, recipient_list=list(users), actor=request.user,
+                    verb='ha creado un nuevo responsable: "%s"' % (form.cleaned_data.get('responsable')),
+                    nf_type='crear')
+
+        send_mail('Gestión de subvenciones',
+                  '%s ha creado un nuevo responsable: "%s".' % (
+                  request.user.username, form.cleaned_data.get('responsable')),
+                  request.user.email,
+                  recievers)
 admin.site.register(Responsable, ResponsableAdmin)
 
 class EstadoAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('etapa',)}
+    exclude = ('slug',)
+
+    def save_model(self, request, obj, form, change):
+        email_notify(request, form, message='ha creado un nuevo estado', name_field='etapa')
+        super(EstadoAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Estado, EstadoAdmin)
 
 class DiputacionAdmin(admin.ModelAdmin):
-    pass
+    def save_model(self, request, obj, form, change):
+        email_notify(request, form, message='ha creado un nuevo departamento (Diputación)', name_field='nombre')
+        super(DiputacionAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Diputacion, DiputacionAdmin)
 
 class GeneralitatAdmin(admin.ModelAdmin):
-    pass
+    def save_model(self, request, obj, form, change):
+        email_notify(request, form, message='ha creado un nuevo departamento (Generalitat)', name_field='nombre')
+        super(GeneralitatAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Generalitat, GeneralitatAdmin)
