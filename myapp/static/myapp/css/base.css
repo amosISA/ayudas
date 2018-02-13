@@ -514,3 +514,13 @@ a.alert_message:hover{color: grey;}
   right: 0;
 }
 .unstyled { list-style-type: none; }
+
+/**** Form borders ****/
+@media screen and (min-width: 1000px) {
+    .doted-right {
+        border-right: 1px dotted #CCC;
+    }
+    .doted-top {
+      border-top: 1px dotted #CCC;
+    }
+}

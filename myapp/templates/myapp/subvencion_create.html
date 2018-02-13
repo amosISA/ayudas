@@ -4,8 +4,7 @@
     {% load staticfiles %}
     {% load tags %}
     <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="ag_create_post_wrapper col-lg-6">
+        <div class="ag_create_post_wrapper col-lg-12">
             {% if request.path == '/new/' %}
                 <h1>Añadir Subvención</h1>
             {% else %}
@@ -33,103 +32,122 @@
                     </div>
                 {% endif %}
 
-                <!-- Inicio -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.inicio.label_tag }}
-                    {{ form.inicio|htmlattributes:"class:form-control" }}
+                <div class="row">
+                    <div class="col-lg-3 doted-right">
+                        <!-- Inicio -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.inicio.label_tag }}
+                            {{ form.inicio|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <!-- Fin -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.fin.label_tag }}
+                            {{ form.fin|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <!-- Responsable -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.responsable.label_tag }} <span style="font-size: 12.5px;"><br />Para seleccionar más de uno, presione ctrl</span>
+                            {{ form.responsable|htmlattributes:"class:form-control" }}
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 doted-right">
+                        <!-- Nombre -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.nombre.label_tag }}
+                            {{ form.nombre|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <!-- Bases -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.bases.label_tag }} <span style="font-size: 12.5px;">(Enlace para las bases de la subvención)</span>
+                            {{ form.bases|htmlattributes:"placeholder: Bases, class:form-control" }}
+                        </div>
+
+                        <!-- Solicitud -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.solicitud.label_tag }} <span style="font-size: 12.5px;">(Enlace para la solicitud de la subvención)</span>
+                            {{ form.solicitud|htmlattributes:"placeholder: Solicitud, class:form-control" }}
+                        </div>
+
+                        <!-- Observaciones -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            <label for="id_observaciones">Otros enlaces:</label>
+                            {{ form.observaciones|htmlattributes:"placeholder: Observaciones, class:form-control" }}
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <!-- Ente -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            <label for="id_ente">Departamento:</label>
+                            {{ form.ente|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <!-- Diputacion -->
+                        <div class="title-create_post field-diputacion">
+                            {{ form.diputacion|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <!-- Generalitat -->
+                        <div class="title-create_post field-generalitat">
+                            {{ form.generalitat|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <!-- Cuantia -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.cuantia.label_tag }}
+                            {{ form.cuantia|htmlattributes:"placeholder: Cuantia, class:form-control" }}
+                        </div>
+
+                        <!-- Estado -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.estado.label_tag }}
+                            {{ form.estado|htmlattributes:"class:form-control" }}
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Fin -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.fin.label_tag }}
-                    {{ form.fin|htmlattributes:"class:form-control" }}
+                <div class="row doted-top">
+                    <div class="col-lg-6">
+                        <!-- Descripcion -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.descripcion.label_tag }}
+                            {{ form.descripcion|htmlattributes:"placeholder: Descripcion, class:form-control" }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- Comentarios -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.comentarios.label_tag }}
+                            {{ form.comentarios|htmlattributes:"placeholder: Comentarios, class:form-control" }}
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Responsable -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.responsable.label_tag }} <span style="font-size: 12.5px;">(Para seleccionar más de uno, presione ctrl)</span>
-                    {{ form.responsable|htmlattributes:"class:form-control" }}
-                </div>
+                <div class="row">
+                    <div class="col-lg-6 doted-top doted-right">
+                        <!-- Gestiona Enlace -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.drive.label_tag }}
+                            {{ form.drive|htmlattributes:"class:form-control" }}
+                        </div>
 
-                <!-- Nombre -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.nombre.label_tag }}
-                    {{ form.nombre|htmlattributes:"class:form-control" }}
-                </div>
-
-                <!-- Bases -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.bases.label_tag }} <span style="font-size: 12.5px;">(Enlace para las bases de la subvención)</span>
-                    {{ form.bases|htmlattributes:"placeholder: Bases, class:form-control" }}
-                </div>
-
-                <!-- Solicitud -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.solicitud.label_tag }} <span style="font-size: 12.5px;">(Enlace para la solicitud de la subvención)</span>
-                    {{ form.solicitud|htmlattributes:"placeholder: Solicitud, class:form-control" }}
-                </div>
-
-                <!-- Observaciones -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.observaciones.label_tag }} <span style="font-size: 12.5px;">(Otros enlaces)</span>
-                    {{ form.observaciones|htmlattributes:"placeholder: Observaciones, class:form-control" }}
-                </div>
-
-                <!-- Ente -->
-                <div class="input-group title-create_post">
-                    {{ form.ente|htmlattributes:"class:form-control" }}
-                </div>
-
-                <!-- Diputacion -->
-                <div class="title-create_post field-diputacion">
-                    {{ form.diputacion|htmlattributes:"class:form-control" }}
-                </div>
-
-                <!-- Generalitat -->
-                <div class="title-create_post field-generalitat">
-                    {{ form.generalitat|htmlattributes:"class:form-control" }}
-                </div>
-
-                <!-- Cuantia -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.cuantia.label_tag }}
-                    {{ form.cuantia|htmlattributes:"placeholder: Cuantia, class:form-control" }}
-                </div>
-
-                <!-- Descripcion -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.descripcion.label_tag }}
-                    {{ form.descripcion|htmlattributes:"placeholder: Descripcion, class:form-control" }}
-                </div>
-
-                <!-- Estado -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.estado.label_tag }}
-                    {{ form.estado|htmlattributes:"class:form-control" }}
-                </div>
-
-                <!-- Comentarios -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.comentarios.label_tag }}
-                    {{ form.comentarios|htmlattributes:"placeholder: Comentarios, class:form-control" }}
-                </div>
-
-                <!-- Gestiona Enlace -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.drive.label_tag }}
-                    {{ form.drive|htmlattributes:"class:form-control" }}
-                </div>
-
-                <!-- Gestiona Expediente -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.gestiona_expediente.label_tag }}
-                    {{ form.gestiona_expediente|htmlattributes:"placeholder: Expediente, class:form-control" }}
-                </div>
-
-                <!-- Se relacion con -->
-                <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                    {{ form.se_relaciona_con.label_tag }} <span style="font-size: 12.5px;">(Para seleccionar más de una, presione ctrl)</span>
-                    {{ form.se_relaciona_con|htmlattributes:"placeholder: Expediente, class:form-control" }}
+                        <!-- Gestiona Expediente -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.gestiona_expediente.label_tag }}
+                            {{ form.gestiona_expediente|htmlattributes:"placeholder: Expediente, class:form-control" }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 doted-top">
+                        <!-- Se relacion con -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.se_relaciona_con.label_tag }} <span style="font-size: 12.5px;"><br />Para seleccionar más de uno, presione ctrl</span>
+                            {{ form.se_relaciona_con|htmlattributes:"placeholder: Expediente, class:form-control" }}
+                        </div>
+                    </div>
                 </div>
 
                 {% if request.path == '/new/' %}
@@ -139,7 +157,6 @@
                 {% endif %}
             </form>
         </div>
-        <div class="col-lg-3"></div>
 
         <div class="col" style="display:none;">
             {% if request.path != '/new/' %}
