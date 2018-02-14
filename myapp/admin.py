@@ -86,6 +86,7 @@ class ResponsableAdmin(admin.ModelAdmin):
                   request.user.username, form.cleaned_data.get('responsable')),
                   request.user.email,
                   recievers)
+        super(ResponsableAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Responsable, ResponsableAdmin)
 
 class EstadoAdmin(admin.ModelAdmin):

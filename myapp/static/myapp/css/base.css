@@ -354,8 +354,8 @@
     padding: 6px 25px 6px 15px;
     margin-bottom: 10px; }
   .ag_create_post_wrapper .title-create_post {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     width: 100%; }
   .ag_create_post_wrapper .image-preview {
     margin-bottom: 20px; }
@@ -423,7 +423,7 @@
       color: #fff;
       background-color: #333; }
   .ag_create_post_wrapper .button_submit_create_form {
-    width: 100%;
+    width: 50%;
     font-weight: bold;
     margin-bottom: 30px;
     padding: 16px;
@@ -517,10 +517,45 @@ a.alert_message:hover{color: grey;}
 
 /**** Form borders ****/
 @media screen and (min-width: 1000px) {
-    .doted-right {
+    .doted-right:after {
+        content : "";
+        position: absolute;
         border-right: 1px dotted #CCC;
+        right    : 0;
+        z-index: 100;
+        top  : 0;
+        height   : 60%;  /* or 100px */
     }
-    .doted-top {
-      border-top: 1px dotted #CCC;
-    }
+}
+
+/*** Juan Carlos styles for form ****/
+.ag_create_post_wrapper .h1 {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.forms_act_crea .ag_create_post_wrapper label {
+    display: inline-block;
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+
+.forms_act_crea .ag_create_post_wrapper .form-control {
+    display: block;
+    width: 100%;
+    padding: .35rem 0.25rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: papayawhip;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .15rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.forms_act_crea .ag_create_post_wrapper .related-widget-wrapper-link {
+    float: right;
 }

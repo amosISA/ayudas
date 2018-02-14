@@ -92,10 +92,13 @@ class SubvencionCreateView(LoginRequiredMixin, CreateView):
 # --------------- Edit Subsidie --------------- #
 class SubvencionUpdateView(LoginRequiredMixin, UpdateView):
     model = Subvencion
+    form_class = SubvencionForm
     template_name = 'myapp/subvencion_create.html'
+    """
     fields = ["inicio", "fin", "responsable", "nombre", "bases", "solicitud", "observaciones", "ente",
             "diputacion", "generalitat", "cuantia", "descripcion", "estado", "comentarios", "drive",
             "gestiona_expediente", "se_relaciona_con"]
+    """
     success_url = reverse_lazy('myapp:index')
 
     def form_valid(self, form):
