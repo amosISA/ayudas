@@ -178,7 +178,7 @@
                       diputacion[i].style.display = 'block';
                       document.getElementById("id_diputacion").selectedIndex = 0;
                    }
-                } else {
+                } else if (ente_value == 'GV') {
                     for (var i=0; i<diputacion.length; i+=1){
                       diputacion[i].style.display = 'none';
                       document.getElementById("id_diputacion").selectedIndex = 0;
@@ -193,6 +193,10 @@
             if(ente.options[ente.selectedIndex].value == 'DA') {
                 for (var i=0; i<document.getElementsByClassName('field-generalitat').length; i+=1){
                   document.getElementsByClassName('field-generalitat')[i].style.display = 'none';
+                }
+            } else if (ente.options[ente.selectedIndex].value == 'GV') {
+                for (var i=0; i<document.getElementsByClassName('field-diputacion').length; i+=1){
+                  document.getElementsByClassName('field-diputacion')[i].style.display = 'none';
                 }
             }
 
@@ -214,6 +218,8 @@
             $('#add_id_diputacion').wrap("<div class='input-group title-create_post smalls_for_departments'><small id='selectDepartamentoDiputacion' class='form-text text-muted'>Añadir departamento Diputación </small></div>");
             $('#add_id_generalitat').wrap("<div class='input-group title-create_post smalls_for_departments'><small id='selectDepartamentoGeneralitat' class='form-text text-muted'>Añadir departamento Generalitat </small></div>");
 
+            // add class to select because they lose class with admin functionality
+            $("form:first select").removeClass("form-control").addClass("form-control");
         }
     </script>
     <!-- For the admin site -->
