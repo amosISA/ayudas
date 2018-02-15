@@ -25,16 +25,17 @@ class ResponsableForm(forms.ModelForm):
         model = Responsable
         fields = ['responsable']
 
-class DateInput(forms.DateInput):
-    input_type = 'date'
+#class DateInput(forms.DateInput):
+ #   input_type = 'date'
+  #  format = ['%Y-%m-%d']
 
 class SubvencionForm(forms.ModelForm):
     class Meta:
         model = Subvencion
         fields = '__all__'
         widgets = {
-            'inicio': DateInput(),
-            'fin': DateInput(),
+            'inicio': forms.DateInput(format='%Y-%m-%d', attrs={'type':'date'}),
+            'fin': forms.DateInput(format='%Y-%m-%d', attrs={'type':'date'}),
             'diputacion': RelatedFieldWidgetWrapper(
                 Subvencion._meta.get_field('diputacion').formfield().widget,
                 Subvencion._meta.get_field('diputacion').rel,
