@@ -423,12 +423,13 @@
       color: #fff;
       background-color: #333; }
   .ag_create_post_wrapper .button_submit_create_form {
-    width: 200px;
     font-weight: bold;
-    margin-bottom: 30px;
-    padding: 16px;
+    /*margin-bottom: 30px;
+    padding: 16px;*/
+    padding-left:5px;
+    padding-right:5px;
     text-transform: none;
-    height: 50px;
+    height: 40px;
     color: #fff;
     background: #2c3e50;
     border-radius: 3px;
@@ -558,4 +559,19 @@ a.alert_message:hover{color: grey;}
 
 .forms_act_crea .ag_create_post_wrapper .related-widget-wrapper-link {
     float: right;
+}
+
+/***** ul li checkbox se relaciona con ****/
+#id_se_relaciona_con li {
+    list-style-type: none;
+}
+
+#id_se_relaciona_con li label {
+    display: block;
+    padding-left:10px;
+    padding-bottom:5px;
+}
+
+#id_se_relaciona_con li label:hover {
+    cursor:pointer;
 }

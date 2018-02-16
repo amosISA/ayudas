@@ -144,9 +144,13 @@
                 <hr class="my-4">
                 <div class="card-block">
                     {% for subv in subvencion.se_relaciona_con.all %}
+                        {% if subv %}
                         <p>
                             <a href="{{ subv.get_absolute_url }}" target="_blank"><span style="color:#000;">-</span> {{ subv.nombre }}</a>
                         </p>
+                        {% else %}
+                            <p>No se relaciona con niguna subvención.</p>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>

@@ -34,16 +34,17 @@
 
                 <div class="row">
                     <div class="col-lg-3 doted-right">
-                        <!-- Inicio -->
-                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            {{ form.inicio.label_tag }}
-                            {{ form.inicio|htmlattributes:"class:form-control" }}
-                        </div>
-
-                        <!-- Fin -->
-                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            {{ form.fin.label_tag }}
-                            {{ form.fin|htmlattributes:"class:form-control" }}
+                        <div class="row">
+                            <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
+                                <!-- Inicio -->
+                                {{ form.inicio.label_tag }}
+                                {{ form.inicio|htmlattributes:"class:form-control" }}
+                            </div>
+                            <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
+                                <!-- Fin -->
+                                {{ form.fin.label_tag }}
+                                {{ form.fin|htmlattributes:"class:form-control" }}
+                            </div>
                         </div>
 
                         <!-- Responsable -->
@@ -52,16 +53,52 @@
                             {{ form.responsable|htmlattributes:"class:form-control" }}
                         </div>
 
-                        <!-- Gestiona Enlace -->
-                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            {{ form.drive.label_tag }}
-                            {{ form.drive|htmlattributes:"class:form-control" }}
+                        <div class="row">
+                            <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
+                                <!-- Gestiona Enlace -->
+                                {{ form.drive.label_tag }}
+                                {{ form.drive|htmlattributes:"class:form-control" }}
+                            </div>
+                            <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
+                                <!-- Gestiona Expediente -->
+                                {{ form.gestiona_expediente.label_tag }}
+                                {{ form.gestiona_expediente|htmlattributes:"placeholder: Expediente, class:form-control" }}
+                            </div>
                         </div>
 
-                        <!-- Gestiona Expediente -->
+                        <!-- Estado -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            {{ form.gestiona_expediente.label_tag }}
-                            {{ form.gestiona_expediente|htmlattributes:"placeholder: Expediente, class:form-control" }}
+                            {{ form.estado.label_tag }}
+                            {{ form.estado|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
+                                <!-- Cuantia -->
+                                {{ form.cuantia.label_tag }}
+                                {{ form.cuantia|htmlattributes:"placeholder: Cuantia, class:form-control" }}
+                            </div>
+                            <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
+                                <!-- Observaciones -->
+                                <label for="id_observaciones">Otros enlaces:</label>
+                                {{ form.observaciones|htmlattributes:"placeholder: Observaciones, class:form-control" }}
+                            </div>
+                        </div>
+
+                        <!-- Ente -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            <label for="id_ente">Departamento:</label>
+                            {{ form.ente|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <!-- Diputacion -->
+                        <div class="title-create_post field-diputacion">
+                            {{ form.diputacion|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <!-- Generalitat -->
+                        <div class="title-create_post field-generalitat">
+                            {{ form.generalitat|htmlattributes:"class:form-control" }}
                         </div>
                     </div>
 
@@ -85,6 +122,14 @@
                             </div>
                         </div>
 
+                        <!-- Se relacion con -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.se_relaciona_con.label_tag }}
+                            {{ form.se_relaciona_con|htmlattributes:"placeholder: Expediente, class:form-control" }}
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
                         <!-- Descripcion -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                             {{ form.descripcion.label_tag }}
@@ -95,48 +140,6 @@
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                             {{ form.comentarios.label_tag }}
                             {{ form.comentarios|htmlattributes:"placeholder: Comentarios, class:form-control" }}
-                        </div>
-
-                        <!-- Se relacion con -->
-                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            {{ form.se_relaciona_con.label_tag }}
-                            {{ form.se_relaciona_con|htmlattributes:"placeholder: Expediente, class:form-control" }}
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <!-- Ente -->
-                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            <label for="id_ente">Departamento:</label>
-                            {{ form.ente|htmlattributes:"class:form-control" }}
-                        </div>
-
-                        <!-- Diputacion -->
-                        <div class="title-create_post field-diputacion">
-                            {{ form.diputacion|htmlattributes:"class:form-control" }}
-                        </div>
-
-                        <!-- Generalitat -->
-                        <div class="title-create_post field-generalitat">
-                            {{ form.generalitat|htmlattributes:"class:form-control" }}
-                        </div>
-
-                        <!-- Cuantia -->
-                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            {{ form.cuantia.label_tag }}
-                            {{ form.cuantia|htmlattributes:"placeholder: Cuantia, class:form-control" }}
-                        </div>
-
-                        <!-- Estado -->
-                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            {{ form.estado.label_tag }}
-                            {{ form.estado|htmlattributes:"class:form-control" }}
-                        </div>
-
-                        <!-- Observaciones -->
-                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            <label for="id_observaciones">Otros enlaces:</label>
-                            {{ form.observaciones|htmlattributes:"placeholder: Observaciones, class:form-control" }}
                         </div>
                     </div>
                 </div>
@@ -205,9 +208,9 @@
 
             // Change textarea cols
             $("textarea[name='drive'], textarea[name='bases'], textarea[name='solicitud'], textarea[name='observaciones']").attr({'cols': '20', 'rows': '1'});
-            $("textarea[name='descripcion']").attr({'cols': '20', 'rows': '5'});
-            $("textarea[name='comentarios']").attr({'cols': '20', 'rows': '2'});
-            $("textarea[name='cuantia']").attr({'cols': '20', 'rows': '2'});
+            $("textarea[name='descripcion']").attr({'cols': '20', 'rows': '12'});
+            $("textarea[name='comentarios']").attr({'cols': '20', 'rows': '12'});
+            $("textarea[name='cuantia']").attr({'cols': '20', 'rows': '1'});
 
             // Admin plus
             /*$('.related-widget-wrapper .related-widget-wrapper-link').each(function() {
@@ -220,6 +223,17 @@
 
             // add class to select because they lose class with admin functionality
             $("form:first select").removeClass("form-control").addClass("form-control");
+
+            // select multiple fix height with size
+            $("select#id_responsable").attr('size', '10');
+            $("select#id_se_relaciona_con").attr('size', '10');
+            var select_resp = document.getElementById('id_responsable');
+            var select_relac = document.getElementById('id_se_relaciona_con');
+            select_resp.size = select_resp.length;
+            select_relac.size = select_relac.length;
+
+            //quit checkbox attr formcontrol
+            $("#id_se_relaciona_con li label input").removeClass("form-control");
         }
     </script>
     <!-- For the admin site -->
