@@ -1,6 +1,7 @@
 .starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
+  /*padding: 3rem 1.5rem;
+  text-align: center;*/
+    width: 100%;
 }
 
 .subv_webapp_container .subv-table-row {
@@ -35,8 +36,21 @@
 }
 
 .subv_webapp_container .subv-row-departamentos {
-    margin-top: 30px;
-    text-align:center;
+    /*margin-top: 30px;
+    text-align:center;*/
+  padding-top: 1rem;
+}
+.subv_webapp_container .subv-row-departamentos .col-departamentos {
+    margin-bottom:10px;
+}
+
+.subv_webapp_container .subv-row-departamentos .col-departamentos .div-dep {
+    margin-left: 20px;
+}
+
+.subv_webapp_container .subv-row-departamentos .col-departamentos .div-dep span {
+    float:right;
+    margin-right:5px;
 }
 
 .subv_webapp_container .subv-row-departamentos .div-dep {
@@ -46,7 +60,7 @@
     font-variant: normal;
 	font-weight: 500;
 	line-height: 26.4px;
-    font-size: 13.5px;
+    font-size: 0.8rem;
     text-align: justify;
     width: 220px;
     padding-left: 10px;
@@ -535,6 +549,11 @@ a.alert_message:hover{color: grey;}
     text-align: left;
 }
 
+.forms_act_crea {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
 .forms_act_crea .ag_create_post_wrapper label {
     display: inline-block;
     font-weight: normal;
@@ -574,4 +593,38 @@ a.alert_message:hover{color: grey;}
 
 #id_se_relaciona_con li label:hover {
     cursor:pointer;
+}
+
+/*** USER NOTIFICATIONS ***/
+.row-user-notifications .card {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: none;
+	border-radius: .25rem;
+}
+.row-user-notifications .card-header {
+    padding: 0.1rem;
+	margin-bottom: 0;
+	background-color: #fff;
+}
+.row-user-notifications .alert-info, .row-user-notifications .alert-success {
+	color: #0c5460;
+	background-color: whitesmoke;
+	border-color: #ddd;
+	border: 0px solid transparent;
+}
+.row-user-notifications .alert {margin-bottom: 0.1rem;}
+.row-user-notifications .close {
+    float: right;
+    font-size: 1.0rem;
 }

@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.urlresolvers import reverse, reverse_lazy
+from django.db.models import Count
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -20,20 +21,8 @@ from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatF
 @login_required()
 def index(request, estado_slug=None):
     estado = None
-    estados = Estado.objects.all()
-    queryset_list = Subvencion.objects.all()
-    paginator = Paginator(queryset_list, 300)
-
-    page = request.GET.get('page', 1)
-
-    try:
-        subvenciones = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        subvenciones = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        subvenciones = paginator.page(paginator.num_pages)
+    estados = Estado.objects.all().annotate(number_stats=Count('subvencion'))
+    subvenciones = Subvencion.objects.all()
 
     if estado_slug:
         estado = get_object_or_404(Estado, slug=estado_slug)

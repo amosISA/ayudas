@@ -91,6 +91,8 @@ admin.site.register(Responsable, ResponsableAdmin)
 
 class EstadoAdmin(admin.ModelAdmin):
     exclude = ('slug',)
+    #prepopulated_fields = {'slug': ('etapa',)}
+    #readonly_fields = 'etapa'
 
     def save_model(self, request, obj, form, change):
         email_notify(request, form, message='ha creado un nuevo estado', name_field='etapa')

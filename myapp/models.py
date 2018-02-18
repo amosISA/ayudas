@@ -5,6 +5,7 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.db.models.signals import pre_save
+from django.template.defaultfilters import slugify
 
 from .utils import unique_slug_generator
 from .widgets import ColorPickerWidget
@@ -59,9 +60,16 @@ class Estado(models.Model):
     class Meta:
         ordering = ["etapa"]
 
+    def save(self):
+        self.slug = slugify(self.etapa)
+        super(Estado, self).save()
+
     def get_absolute_url(self):
         return reverse('myapp:subvencion_by_category',
                        args=[self.slug])
+
+    def count_subsidies(self):
+        return Subvencion.objects.filter(estado=self.etapa)
 
 class Subvencion(models.Model):
     user = models.ForeignKey(User, blank=True, null=True)

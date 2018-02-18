@@ -9,33 +9,35 @@
 {% load staticfiles %}
 {% load notification_tags %}
 
-{% if notifications %}
-    <div class="row">
-        <div class="col-md-3 col-lg-3"></div>
-        <div class="col-md-6 col-lg-6">
+<div class="row subv-row-departamentos">
+    <div class="col-md-3 col-lg-3 col-departamentos">
+        {% for e in estados %}
+            <div class="div-dep estadocss" style="background-color:{{ e.font_color }};">
+                <a href="{{ e.get_absolute_url }}">{{ e.etapa }}</a>
+                <!--
+                    In order to get the number of estados that each subsidie has i took this from:
+                    https://stackoverflow.com/questions/13145254/django-annotate-count-with-a-distinct-field
+                    also defined in my index view
+                -->
+                <span>{{ e.number_stats }}</span>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if notifications %}
+        <div class="col-md-9 col-lg-9 row-user-notifications">
             <div class="card">
                 <div class="card-header">
                     Notificaciones
                 </div>
 
-                <div class="notification-box-list card-block" style="padding:10px;height:150px;overflow:auto;">
+                <div class="notification-box-list" style="height:150px;overflow:auto;">
                     {% user_notifications %}
                     {% include_notify_js_variables %}
                 </div>
             </div>
         </div>
-        <div class="col-md-3 col-lg-3"></div>
-    </div>
 {% endif %}
-
-<div class="row subv-row-departamentos">
-    <div class="col-lg">
-        {% for e in estados %}
-            <div class="div-dep estadocss" style="background-color:{{ e.font_color }};">
-                {{ e.etapa }}
-            </div>
-        {% endfor %}
-    </div>
 </div>
 
 <div class="row align-items-center subv-table-row">
@@ -74,7 +76,6 @@
                         <tr>
                             <td>
                                 {{ subvencion.inicio|date:"d/m/Y" }}
-
                             </td>
                             <td style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
                                 {% if subvencion.generalitat == None %}
@@ -120,31 +121,6 @@
                     {% endfor %}
                 </tbody>
             </table>
-
-            <!-- Paginator -->
-            {% if subvenciones.has_other_pages %}
-                <ul class="pagination">
-                    {% if subvenciones.has_previous %}
-                        <li class="page-item"><a class="page-link" href="?page={{ subvenciones.previous_page_number }}">&laquo;</a></li>
-                    {% else %}
-                        <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
-                    {% endif %}
-
-                    {% for i in subvenciones.paginator.page_range %}
-                        {% if subvenciones.number == i %}
-                            <li class="page-item active"><a href="#" class="page-link">{{ i }}</a></li>
-                        {% else %}
-                            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
-                        {% endif %}
-                    {% endfor %}
-
-                    {% if subvenciones.has_next %}
-                        <li class="page-item"><a class="page-link" href="?page={{ subvenciones.next_page_number }}">&raquo;</a></li>
-                    {% else %}
-                        <li class=" page-item disabled"><span class="page-link">&raquo;</span></li>
-                    {% endif %}
-                </ul>
-            {% endif %}
         {% else %}
             <h2>No hay subvenciones, proceda a insertar <a href="{% url 'myapp:new_subvencion' %}">una.</a></h2>
         {% endif %}
@@ -168,7 +144,7 @@
             {
                 if ($(this).parent().parent().find('div.notification').length == 1)
                 {
-                    $(this).parent().parent().parent().parent().parent().hide();
+                    $(this).parent().parent().parent().parent().hide();
                 }
             });
 

@@ -26,3 +26,6 @@
             - se relaciona con: con height fijo y overflow pero con checkbox y no select multiple
             - quitar padding al boton
             - tamaño textarea de comentarios del mismo q el de desc
+
+        - añadir colores tmb a departamento cuando es negro ps q el color sea blanco igual en detalle de cada subvencion
+        - ahora como he hecho q al dar click sobre el estado liste todas las subv de ese estado, pues cambiarle el color al anchor
