@@ -42,6 +42,13 @@
   }
 },
 {
+  "model": "myapp.responsable",
+  "pk": 8,
+  "fields": {
+    "responsable": "Personal"
+  }
+},
+{
   "model": "myapp.diputacion",
   "pk": 1,
   "fields": {
@@ -70,7 +77,7 @@
   "pk": 1,
   "fields": {
     "etapa": "Cerrada a espera de resoluci\u00f3n",
-    "slug": null,
+    "slug": "cerrada-a-espera-de-resolucion",
     "font_color": "#99cc00"
   }
 },
@@ -79,7 +86,7 @@
   "pk": 2,
   "fields": {
     "etapa": "No aplicable",
-    "slug": null,
+    "slug": "no-aplicable",
     "font_color": "#333333"
   }
 },
@@ -88,7 +95,7 @@
   "pk": 3,
   "fields": {
     "etapa": "Solicitada con detalles por definir",
-    "slug": null,
+    "slug": "solicitada-con-detalles-por-definir",
     "font_color": "#FFFFFF"
   }
 },
@@ -97,7 +104,7 @@
   "pk": 4,
   "fields": {
     "etapa": "Defini\u00e9ndose",
-    "slug": null,
+    "slug": "definiendose",
     "font_color": "#FFFFFF"
   }
 },
@@ -106,7 +113,7 @@
   "pk": 5,
   "fields": {
     "etapa": "Aprobada",
-    "slug": null,
+    "slug": "aprobada",
     "font_color": "#FFFFFF"
   }
 },
@@ -115,7 +122,7 @@
   "pk": 6,
   "fields": {
     "etapa": "Desestimada",
-    "slug": null,
+    "slug": "desestimada",
     "font_color": "#FFFFFF"
   }
 },
@@ -124,7 +131,7 @@
   "pk": 7,
   "fields": {
     "etapa": "Ejecutada y terminada",
-    "slug": null,
+    "slug": "ejecutada-y-terminada",
     "font_color": "#808000"
   }
 },
@@ -133,7 +140,7 @@
   "pk": 8,
   "fields": {
     "etapa": "Limbo",
-    "slug": null,
+    "slug": "limbo",
     "font_color": "#ffff00"
   }
 },
@@ -175,7 +182,7 @@
     "inicio": "2018-01-03",
     "fin": "2018-02-02",
     "created": "2018-02-02T19:05:51Z",
-    "updated": "2018-02-02T19:05:51Z",
+    "updated": "2018-02-06T13:25:37Z",
     "slug": "actividades-culturales-de-especial-relieve",
     "nombre": "Actividades culturales de especial relieve",
     "bases": "-",
@@ -206,7 +213,7 @@
     "inicio": "2018-01-03",
     "fin": "2018-02-02",
     "created": "2018-02-02T19:09:41Z",
-    "updated": "2018-02-02T19:09:41Z",
+    "updated": "2018-02-06T13:49:10Z",
     "slug": "campana-de-musica-als-pobles",
     "nombre": "Campa\u00f1a de M\u00fasica als Pobles",
     "bases": "--",
@@ -233,12 +240,12 @@
   "model": "myapp.subvencion",
   "pk": 4,
   "fields": {
-    "user": 1,
+    "user": null,
     "inicio": "2018-02-06",
     "fin": "2018-02-05",
     "created": "2018-02-02T19:15:45Z",
-    "updated": "2018-02-02T19:15:45Z",
-    "slug": "actividades-culturales-musicales-y-escenicas-2018",
+    "updated": "2018-02-15T16:41:25Z",
+    "slug": "actividades-culturales-musicales-y-escenicas-2018-gzy4",
     "nombre": "Actividades culturales, musicales y esc\u00e9nicas 2018",
     "bases": "--",
     "solicitud": "--",
@@ -264,12 +271,12 @@
   "model": "myapp.subvencion",
   "pk": 5,
   "fields": {
-    "user": 1,
+    "user": null,
     "inicio": "2018-01-23",
     "fin": "2018-02-22",
     "created": "2018-02-02T20:24:00Z",
-    "updated": "2018-02-02T20:43:04Z",
-    "slug": "equipamiento-de-instalaciones-culturales-de-titularidad-municipal-1uec",
+    "updated": "2018-02-15T13:20:25Z",
+    "slug": "equipamiento-de-instalaciones-culturales-de-titularidad-municipal-aykd",
     "nombre": "Equipamiento de Instalaciones Culturales de titularidad municipal",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00042.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00043.pdf",
@@ -280,9 +287,9 @@
     "cuantia": "7000 \u20ac\r\n80%",
     "descripcion": "Se pidi\u00f3 el a\u00f1o 2016. As\u00ed que este a\u00f1o se puede pedir\r\n\r\nColaborar econ\u00f3micamente con los Ayuntamientos al objeto de mejorar las instalaciones para la prestaci\u00f3n a los usuarios de sus servicios culturales.\r\n\r\nA estos efectos ser\u00e1n subvencionables inversiones tales como adquisici\u00f3n de mobiliario, (mesas, sillas, armarios), equipos de audiovisuales e inform\u00e1ticos, fotocopiadoras y equipos multifunci\u00f3n, equipos audiovisuales e inform\u00e1ticos, fotocopiadoras y equipos multifunci\u00f3n, equipos de climatizaci\u00f3n (aire acondicionado). Y no ser\u00e1n subvencionables las adquisiciones de equipamiento no inventariable (mesa/silla pegables...).",
     "estado": 4,
-    "comentarios": "Se podr\u00eda usar para cambiar los aires acondicionados en el sal\u00f3n de plenos.\r\nO a\u00f1adirlos en ses vivendes.\r\nUn ordenador para ses vivendes, servidor de la biblioteca y para usuario final (dos)\r\n\r\npor otro lado, en la casa de cultura, un escenario fijo. Una barra donde poner el proyector luces y altavoces.",
+    "comentarios": "Se podr\u00eda usar para cambiar los aires acondicionados en el sal\u00f3n de plenos.\r\nO a\u00f1adirlos en ses vivendes. IMPORTANTE HAY QUE ARREGLAR EL AIRE ACONDICIONADO DE LA SALA DE LA CASA DE CULTURA - YA HAY UN PRESUPUESTO Y HAY QUE PEDIR OTROS\r\nUn ordenador para ses vivendes, servidor de la biblioteca y para usuario final (dos)\r\n\r\npor otro lado, en la casa de cultura, un escenario fijo. Una barra donde poner el proyector luces y altavoces.",
     "drive": "--",
-    "gestiona_expediente": "--",
+    "gestiona_expediente": "3/2018 EXP 7",
     "responsable": [
       1,
       2
@@ -296,11 +303,11 @@
   "model": "myapp.subvencion",
   "pk": 6,
   "fields": {
-    "user": 1,
+    "user": null,
     "inicio": "2016-12-30",
     "fin": "2017-01-30",
     "created": "2018-02-02T20:45:20Z",
-    "updated": "2018-02-02T20:45:20Z",
+    "updated": "2018-02-15T16:40:15Z",
     "slug": "equipamiento-instalaciones-culturales-municipales",
     "nombre": "equipamiento instalaciones culturales municipales",
     "bases": "--",
@@ -314,7 +321,7 @@
     "estado": 2,
     "comentarios": "Este a\u00f1o no se pod\u00eda optar a ella. Por haberla pedido el a\u00f1o pasado.",
     "drive": "--",
-    "gestiona_expediente": "--",
+    "gestiona_expediente": "3/2018 EXP 7",
     "responsable": [
       1,
       2
