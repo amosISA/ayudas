@@ -59,7 +59,7 @@
                     <tr class="table-active">
                         <th>INICIO</th>
                         <th>DEPARTAMENTO</th>
-                        <th>NOMBRE</th>
+                        <th style="width:200px;">NOMBRE</th>
                         <th>FIN</th>
                         <th>CUANTÍA</th>
                         <th>RESPONSABLES</th>
@@ -77,7 +77,7 @@
                             <td>
                                 {{ subvencion.inicio|date:"d/m/Y" }}
                             </td>
-                            <td style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
+                            <td class="estadocss" style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
                                 {% if subvencion.generalitat == None %}
                                     {{ subvencion.diputacion }}
                                 {% else %}
@@ -95,17 +95,17 @@
                             <td>{{ subvencion.cuantia|safe }}</td>
                             <td>
                                 {% for responsable in subvencion.responsable.all %}
-                                    {{ responsable }}<br>
+                                <span class="badge badge-pill badge-danger">{{ responsable|split_value }}</span>
                                 {% endfor %}
                             </td>
                             <td class="estadocss" style="background-color:{{ subvencion.estado.font_color }};">
                                 {{ subvencion.estado }}
                             </td>
                             <td {% if subvencion.comentarios %}tabindex="0" data-toggle="popover" data-trigger="hover" title="Comentarios" data-content="{{ subvencion.comentarios|safe }}"{% endif %}>
-                                {{ subvencion.comentarios|truncatewords:6|safe }}
+                                {{ subvencion.comentarios|truncatewords:3|safe }}
                             </td>
 							<td {% if subvencion.descripcion %} tabindex="0" data-toggle="popover" data-trigger="hover" title="Descripción" data-content="{{ subvencion.descripcion|safe }}"{% endif %}>
-                                {{ subvencion.descripcion|truncatewords:6|safe }}
+                                {{ subvencion.descripcion|truncatewords:3|safe }}
                             </td>
                             <td>
                                 {{ subvencion.gestiona_expediente }}<br>

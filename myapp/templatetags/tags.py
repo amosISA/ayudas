@@ -52,3 +52,11 @@ def days_until(value):
         return 'expired'
 
 register.filter('daysuntil', days_until)
+
+def split_value(value):
+    str_word = str(value)
+    words = str_word.split()
+    letters = [word[0] for word in words]
+    return "".join(letters)
+
+register.filter('split_value', split_value)

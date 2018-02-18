@@ -13,19 +13,16 @@
             - Al email q solo llegue cuando crea la subvencion con enlace a la misma
             - Y en el front to.do, cuando crea, edita, q aparezca todoo en las notificaciones en el email solo cuando crea
             - Además en el front link a la subvención editada
-            - En la tabla align-left a todos para q aparezcan a la izquierda
             - Añadir las subvenciones del excel
             - Hacer script para copia de seguridad de bbdd y añadir exportar a excel desde el admin
-            - Los estados q aparecen a la izquierda q al hacer click q liste en la tabla solo las aprobadas
-            (arreglar tema con slug y absolute_url, hacer un exclude en el form pero luego en el model con el signal q se cree auto)
-            - En los responsables de la tabla hacer como etiquetas con un circulo alrededor: es decir, las iniciales como MV de maria vicenta
-            , ese MV en un circulo rojo todos al lado del otro
+
 
         - En el form:
-            - responsables sin overflow q se vean todos
             - se relaciona con: con height fijo y overflow pero con checkbox y no select multiple
-            - quitar padding al boton
-            - tamaño textarea de comentarios del mismo q el de desc
 
-        - añadir colores tmb a departamento cuando es negro ps q el color sea blanco igual en detalle de cada subvencion
+
         - ahora como he hecho q al dar click sobre el estado liste todas las subv de ese estado, pues cambiarle el color al anchor
+
+        - Detalles cada subv:
+            - jc quiere q sea el mismo diseño q al crear las subv
+            - y quiere cambiar las urls de slug por id
