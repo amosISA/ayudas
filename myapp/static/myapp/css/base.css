@@ -628,3 +628,15 @@ a.alert_message:hover{color: grey;}
     float: right;
     font-size: 1.0rem;
 }
+
+/*** Table badges responsables ***/
+#subv_table_ordering .badge-pill {
+    padding-right: .6em!important;
+    padding-left: .6em!important;
+    border-radius: 50%;
+    width: 30px;
+    padding: 0.5rem 0!important;
+    height: 30px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}

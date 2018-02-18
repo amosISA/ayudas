@@ -77,7 +77,7 @@
                             <td>
                                 {{ subvencion.inicio|date:"d/m/Y" }}
                             </td>
-                            <td class="estadocss" style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
+                            <td style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
                                 {% if subvencion.generalitat == None %}
                                     {{ subvencion.diputacion }}
                                 {% else %}
@@ -95,7 +95,7 @@
                             <td>{{ subvencion.cuantia|safe }}</td>
                             <td>
                                 {% for responsable in subvencion.responsable.all %}
-                                    <span class="badge badge-pill badge-{% if responsable|split_value == 'MV' %}danger{% elif responsable|split_value == 'T' %}primary{% elif responsable|split_value == 'JC' %}warning{% elif responsable|split_value == 'R' %}info{% elif responsable|split_value == 'M' %}success{% else %}default{% endif %}">{{ responsable|split_value }}</span>
+                                    <span class="badge badge-pill badge-{% if responsable|split_value == 'MV' %}danger{% elif responsable|split_value == 'T' %}primary{% elif responsable|split_value == 'JC' %}warning{% elif responsable|split_value == 'R' %}info{% elif responsable|split_value == 'M' %}success{% else %}default{% endif %}" tabindex="0" data-toggle="popover" data-trigger="hover" data-content="{{ responsable }}">{{ responsable|split_value }}</span>
                                 {% endfor %}
                             </td>
                             <td class="estadocss" style="background-color:{{ subvencion.estado.font_color }};">
@@ -142,7 +142,7 @@
             //Notifications script
             $(".notification-box-list .delete-notification").click(function()
             {
-                if ($(this).parent().parent().find('div.notification').length == 1)
+                if ($(this).parent().parent().find('div.notification').length === 1)
                 {
                     $(this).parent().parent().parent().parent().hide();
                 }
