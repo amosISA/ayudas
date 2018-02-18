@@ -95,7 +95,7 @@
                             <td>{{ subvencion.cuantia|safe }}</td>
                             <td>
                                 {% for responsable in subvencion.responsable.all %}
-                                <span class="badge badge-pill badge-danger">{{ responsable|split_value }}</span>
+                                    <span class="badge badge-pill badge-{% if responsable|split_value == 'MV' %}danger{% elif responsable|split_value == 'T' %}primary{% elif responsable|split_value == 'JC' %}warning{% elif responsable|split_value == 'R' %}info{% elif responsable|split_value == 'M' %}success{% else %}default{% endif %}">{{ responsable|split_value }}</span>
                                 {% endfor %}
                             </td>
                             <td class="estadocss" style="background-color:{{ subvencion.estado.font_color }};">
