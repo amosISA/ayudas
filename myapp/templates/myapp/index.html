@@ -12,7 +12,7 @@
 <div class="row subv-row-departamentos">
     <div class="col-md-3 col-lg-3 col-departamentos">
         {% for e in estados %}
-            <div class="div-dep estadocss" style="background-color:{{ e.font_color }};">
+            <div class="div-dep" style="border-left-style: solid;border-left-width: 15px;border-left-color:{{ e.font_color }};">
                 <a href="{{ e.get_absolute_url }}">{{ e.etapa }}</a>
                 <!--
                     In order to get the number of estados that each subsidie has i took this from:

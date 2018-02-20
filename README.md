@@ -26,3 +26,16 @@
         - Detalles cada subv:
             - jc quiere q sea el mismo diseño q al crear las subv
             - y quiere cambiar las urls de slug por id
+
+
+        - Nuevas reglas JC:
+            - Nuevo campo:
+                -Colectivo de uno a muchos
+                    - Ayuntamiento
+                    - Mancomunidad
+                    - Asociaciones
+
+            - Pulsar sobre dep y listar con ajax
+            - Pulsar sobre nombre y listar ajax tmb
+            - Estados nuevo estilo: primero el color y luego el nombre
+            - Mirar para estados dl dt dd
