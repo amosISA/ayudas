@@ -596,6 +596,7 @@ a.alert_message:hover{color: grey;}
 }
 
 /*** USER NOTIFICATIONS ***/
+.row-user-notifications { font-size: 0.8rem; }
 .row-user-notifications .card {
 	position: relative;
 	display: -webkit-box;

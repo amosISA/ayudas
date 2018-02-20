@@ -6,12 +6,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.core.mail import send_mail
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.urlresolvers import reverse, reverse_lazy
 from django.db.models import Count
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.template import loader
 
 from notify.signals import notify
 from .models import Subvencion, Estado
@@ -59,19 +59,10 @@ class SubvencionCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('myapp:index')
 
     def form_valid(self, form):
-        recievers = []
-        for user in User.objects.all():
-            if self.request.user.email != user.email:
-                recievers.append(user.email)
-
-        users = User.objects.exclude(username=self.request.user)
+        # users = User.objects.exclude(username=self.request.user)
+        users = User.objects.all()
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
-                    verb='ha creado una nueva subvención: "%s"' % (form.cleaned_data.get('nombre')), nf_type='crear')
-
-        send_mail('Gestión de subvenciones',
-                  '%s ha creado una nueva subvención: "%s".' % (self.request.user.username, form.cleaned_data.get('nombre')),
-                  self.request.user.email,
-                  recievers)
+                    verb='subvención, %s' % (form.cleaned_data.get('nombre')), nf_type='crear')
 
         instance = form.save(commit=False)
         instance.user = self.request.user
@@ -93,17 +84,29 @@ class SubvencionUpdateView(LoginRequiredMixin, UpdateView):
     def form_valid(self, form):
         recievers = []
         for user in User.objects.all():
-            if self.request.user.email != user.email:
-                recievers.append(user.email)
+            # if self.request.user.email != user.email:
+            recievers.append(user.email)
 
-        users = User.objects.exclude(username=self.request.user)
+        users = User.objects.all()
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
-                    verb='ha editado una subvención: "%s"' % (form.cleaned_data.get('nombre')), nf_type='edit')
+                    verb='subvención, %s' % (form.cleaned_data.get('nombre')), nf_type='edit')
+
+        object = form.instance
+        html_message = loader.render_to_string(
+            'myapp/subv_email_create.html',
+            {
+                'name_actor': self.request.user.username,
+                'name_subv': form.cleaned_data.get('nombre'),
+                'object': object
+            }
+        )
 
         send_mail('Gestión de subvenciones',
-                  '%s ha editado una subvención: "%s".' % (self.request.user.username, form.cleaned_data.get('nombre')),
+                  '',
                   self.request.user.email,
-                  recievers)
+                  recievers,
+                  html_message=html_message
+        )
 
         messages.success(self.request, 'Subvención actualizada correctamente!')
         return super(SubvencionUpdateView, self).form_valid(form)

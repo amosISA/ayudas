@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h2>Gestión de subvenciones</h2>
+        {% if created == True %}
+            <i><b>{{ name_actor }}</b></i> ha creado una nueva subvención: <a href="{{ object.get_absolute_url }}">{{ name_subv }}</a>
+        {% else %}
+            <i><b>{{ name_actor }}</b></i> ha modificado una subvención: <a href="{{ object.get_absolute_url }}">{{ name_subv }}</a>
+        {% endif %}
+    </body>
+</html>

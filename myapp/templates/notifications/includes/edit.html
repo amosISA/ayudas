@@ -7,7 +7,7 @@
             {% endblocktrans %}
         {% else %}
             {% blocktrans with actor_url=notification.actor_url actor=notification.actor verb=notification.verb%}
-            <strong><i class="fa fa-pencil-square"></i> {{ actor }}</strong> {{ verb }}
+            Editar: {{ verb }}, <i><b>{{ actor }}.</b></i>
             {% endblocktrans %}
         {% endif %}
         <span class="timesince"><small class="timestamp">{% blocktrans with created=notification.created|timesince %}Hace {{created}}.{% endblocktrans %}</small></span>

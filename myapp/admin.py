@@ -14,19 +14,20 @@ from .sites import my_admin_site
 
 # Register your models here.
 def email_notify(request, form, message, name_field):
-    recievers = []
-    for user in User.objects.all():
-        if request.user.email != user.email:
-            recievers.append(user.email)
+    # recievers = []
+    # for user in User.objects.all():
+    #     if request.user.email != user.email:
+    #         recievers.append(user.email)
 
-    users = User.objects.exclude(username=request.user)
+    #users = User.objects.exclude(username=request.user)
+    users = User.objects.all()
     notify.send(request.user, recipient_list=list(users), actor=request.user,
-                verb=message+': "%s"' % (form.cleaned_data.get(name_field)), nf_type='crear')
+                verb=message+', "%s"' % (form.cleaned_data.get(name_field)), nf_type='crear')
 
-    send_mail('Gestión de subvenciones',
-              '{} '.format(request.user.username)+message+': "{}".'.format(form.cleaned_data.get(name_field)),
-              request.user.email,
-              recievers)
+    # send_mail('Gestión de subvenciones',
+    #           '{} '.format(request.user.username)+message+': "{}".'.format(form.cleaned_data.get(name_field)),
+    #           request.user.email,
+    #           recievers)
 
 class SubvencionAdmin(admin.ModelAdmin):
     list_display = ['inicio', 'nombre', 'fin', 'cuantia',
@@ -70,24 +71,9 @@ my_admin_site.register(Subvencion, SubvencionAdmin)
 admin.site.register(Subvencion, SubvencionAdmin)
 
 class ResponsableAdmin(admin.ModelAdmin):
-    pass
-    # def save_model(self, request, obj, form, change):
-    #     recievers = []
-    #     for user in User.objects.all():
-    #         if request.user.email != user.email:
-    #             recievers.append(user.email)
-    #
-    #     users = User.objects.exclude(username=request.user)
-    #     notify.send(request.user, recipient_list=list(users), actor=request.user,
-    #                 verb='ha creado un nuevo responsable: "%s"' % (form.cleaned_data.get('responsable')),
-    #                 nf_type='crear')
-    #
-    #     send_mail('Gestión de subvenciones',
-    #               '%s ha creado un nuevo responsable: "%s".' % (
-    #               request.user.username, form.cleaned_data.get('responsable')),
-    #               request.user.email,
-    #               recievers)
-    #     super(ResponsableAdmin, self).save_model(request, obj, form, change)
+    def save_model(self, request, obj, form, change):
+        email_notify(request, form, message='responsable', name_field='responsable')
+        super(ResponsableAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Responsable, ResponsableAdmin)
 
 class EstadoAdmin(admin.ModelAdmin):
@@ -95,21 +81,19 @@ class EstadoAdmin(admin.ModelAdmin):
     #prepopulated_fields = {'slug': ('etapa',)}
     #readonly_fields = 'etapa'
 
-    # def save_model(self, request, obj, form, change):
-    #     email_notify(request, form, message='ha creado un nuevo estado', name_field='etapa')
-    #     super(EstadoAdmin, self).save_model(request, obj, form, change)
+    def save_model(self, request, obj, form, change):
+        email_notify(request, form, message='estado', name_field='etapa')
+        super(EstadoAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Estado, EstadoAdmin)
 
 class DiputacionAdmin(admin.ModelAdmin):
-    pass
-    # def save_model(self, request, obj, form, change):
-    #     email_notify(request, form, message='ha creado un nuevo departamento (Diputación)', name_field='nombre')
-    #     super(DiputacionAdmin, self).save_model(request, obj, form, change)
+    def save_model(self, request, obj, form, change):
+        email_notify(request, form, message='departamento (Diputación)', name_field='nombre')
+        super(DiputacionAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Diputacion, DiputacionAdmin)
 
 class GeneralitatAdmin(admin.ModelAdmin):
-    pass
-    # def save_model(self, request, obj, form, change):
-    #     email_notify(request, form, message='ha creado un nuevo departamento (Generalitat)', name_field='nombre')
-    #     super(GeneralitatAdmin, self).save_model(request, obj, form, change)
+    def save_model(self, request, obj, form, change):
+        email_notify(request, form, message='departamento (Generalitat)', name_field='nombre')
+        super(GeneralitatAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Generalitat, GeneralitatAdmin)

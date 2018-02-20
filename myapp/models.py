@@ -3,8 +3,11 @@ from __future__ import unicode_literals
 
 from django.conf import settings
 from django.core.urlresolvers import reverse
+from django.core.mail import send_mail
+from django.contrib.auth.models import User as Usuario
 from django.db import models
-from django.db.models.signals import pre_save
+from django.db.models.signals import pre_save, post_save
+from django.template import loader
 from django.template.defaultfilters import slugify
 
 from .utils import unique_slug_generator
@@ -80,7 +83,7 @@ class Subvencion(models.Model):
     updated = models.DateTimeField(auto_now=True)
     slug = models.SlugField(max_length=250, unique=True)
 
-    nombre = models.CharField(blank=False, max_length=250, default="")
+    nombre = models.TextField(blank=False, default="")
     bases = models.TextField(blank=True,
                              help_text="Enlace para las bases")
     solicitud = models.TextField(blank=True,
@@ -133,3 +136,30 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
         instance.slug = unique_slug_generator(instance)
 
 pre_save.connect(pre_save_post_receiver, sender=Subvencion)
+
+# Function that send email after create
+def send_email_created_updates(sender, instance, created, *args, **kwargs):
+    if created == True:
+        recievers = []
+        for user in Usuario.objects.all():
+            # if self.request.user.email != user.email:
+            recievers.append(user.email)
+
+        html_message = loader.render_to_string(
+            'myapp/subv_email_create.html',
+            {
+                'name_actor': instance.user.username,
+                'name_subv': instance.nombre,
+                'object': instance,
+                'created': created
+            }
+        )
+
+        send_mail('Gestión de subvenciones',
+                  '',
+                  instance.user.email,
+                  recievers,
+                  html_message=html_message
+        )
+
+post_save.connect(send_email_created_updates, sender=Subvencion)
