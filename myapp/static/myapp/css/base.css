@@ -641,3 +641,25 @@ a.alert_message:hover{color: grey;}
     font-weight: bold;
     font-size: 0.8rem;
 }
+
+/*** Change badges colors every time a new responsable is added ***/
+.badge-inverse {
+    background-color: #333333;
+    color: #fff;
+}
+
+/*** Estilos JC HOME ***/
+#subv_table_ordering td, #subv_table_ordering th {
+    padding: .2rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+#subv_table_ordering thead th {
+    vertical-align: bottom;
+    border-bottom: 0;
+    background: darkgrey;
+}
+
+#subv_table_ordering thead th:before { content:none; }
+#subv_table_ordering thead th:after { content:none; }
