@@ -66,6 +66,22 @@
                             </div>
                         </div>
 
+                        <!-- Ente -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            <label for="id_ente">Departamento:</label>
+                            {{ form.ente|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <!-- Diputacion -->
+                        <div class="title-create_post field-diputacion">
+                            {{ form.diputacion|htmlattributes:"class:form-control" }}
+                        </div>
+
+                        <!-- Generalitat -->
+                        <div class="title-create_post field-generalitat">
+                            {{ form.generalitat|htmlattributes:"class:form-control" }}
+                        </div>
+
                         <!-- Estado -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                             {{ form.estado.label_tag }}
@@ -83,22 +99,6 @@
                                 <label for="id_observaciones">Otros enlaces:</label>
                                 {{ form.observaciones|htmlattributes:"placeholder: Observaciones, class:form-control" }}
                             </div>
-                        </div>
-
-                        <!-- Ente -->
-                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            <label for="id_ente">Departamento:</label>
-                            {{ form.ente|htmlattributes:"class:form-control" }}
-                        </div>
-
-                        <!-- Diputacion -->
-                        <div class="title-create_post field-diputacion">
-                            {{ form.diputacion|htmlattributes:"class:form-control" }}
-                        </div>
-
-                        <!-- Generalitat -->
-                        <div class="title-create_post field-generalitat">
-                            {{ form.generalitat|htmlattributes:"class:form-control" }}
                         </div>
                     </div>
 
@@ -122,14 +122,6 @@
                             </div>
                         </div>
 
-                        <!-- Se relacion con -->
-                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            {{ form.se_relaciona_con.label_tag }}
-                            {{ form.se_relaciona_con|htmlattributes:"placeholder: Expediente, class:form-control" }}
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
                         <!-- Descripcion -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                             {{ form.descripcion.label_tag }}
@@ -140,6 +132,14 @@
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                             {{ form.comentarios.label_tag }}
                             {{ form.comentarios|htmlattributes:"placeholder: Comentarios, class:form-control" }}
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <!-- Se relacion con -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.se_relaciona_con.label_tag }}
+                            {{ form.se_relaciona_con|htmlattributes:"placeholder: Expediente, class:form-control" }}
                         </div>
                     </div>
                 </div>
@@ -181,6 +181,8 @@
                       diputacion[i].style.display = 'block';
                       document.getElementById("id_diputacion").selectedIndex = 0;
                    }
+                   $('#add_id_diputacion').css('display', 'block').insertAfter($('label[for="id_ente"]'));
+                   $('#add_id_generalitat').css('display', 'none');
                 } else if (ente_value == 'GV') {
                     for (var i=0; i<diputacion.length; i+=1){
                       diputacion[i].style.display = 'none';
@@ -189,7 +191,9 @@
                     for (var i=0; i<generalitat.length; i+=1){
                       generalitat[i].style.display = 'block';
                       document.getElementById("id_generalitat").selectedIndex = 0;
-                   }
+                    }
+                    $('#add_id_generalitat').css('display', 'block').insertAfter($('label[for="id_ente"]'));
+                    $('#add_id_diputacion').css('display', 'none');
                 }
             }
 
@@ -197,10 +201,14 @@
                 for (var i=0; i<document.getElementsByClassName('field-generalitat').length; i+=1){
                   document.getElementsByClassName('field-generalitat')[i].style.display = 'none';
                 }
+                $('#add_id_diputacion').css('display', 'block').insertAfter($('label[for="id_ente"]'));
+                $('#add_id_generalitat').css('display', 'none');
             } else if (ente.options[ente.selectedIndex].value == 'GV') {
                 for (var i=0; i<document.getElementsByClassName('field-diputacion').length; i+=1){
                   document.getElementsByClassName('field-diputacion')[i].style.display = 'none';
                 }
+                $('#add_id_generalitat').css('display', 'block').insertAfter($('label[for="id_ente"]'));
+                $('#add_id_diputacion').css('display', 'none');
             }
 
             // Convert input text inicio and fin into datepickers!!!
@@ -208,8 +216,8 @@
 
             // Change textarea cols
             $("textarea[name='drive'], textarea[name='bases'], textarea[name='solicitud'], textarea[name='observaciones'], textarea[name='nombre']").attr({'cols': '20', 'rows': '1'});
-            $("textarea[name='descripcion']").attr({'cols': '20', 'rows': '12'});
-            $("textarea[name='comentarios']").attr({'cols': '20', 'rows': '12'});
+            $("textarea[name='descripcion']").attr({'cols': '20', 'rows': '9'});
+            $("textarea[name='comentarios']").attr({'cols': '20', 'rows': '9'});
             $("textarea[name='cuantia']").attr({'cols': '20', 'rows': '1'});
 
             // Admin plus
@@ -218,19 +226,19 @@
             });*/
             $('#add_id_estado').insertAfter($('label[for="id_estado"]'));
             $('#add_id_responsable').insertAfter($('label[for="id_responsable"]'));
-            $('#add_id_diputacion').wrap("<div class='input-group title-create_post smalls_for_departments'><small id='selectDepartamentoDiputacion' class='form-text text-muted'>Añadir departamento Diputación </small></div>");
-            $('#add_id_generalitat').wrap("<div class='input-group title-create_post smalls_for_departments'><small id='selectDepartamentoGeneralitat' class='form-text text-muted'>Añadir departamento Generalitat </small></div>");
+            //$('#add_id_diputacion').wrap("<div class='input-group title-create_post smalls_for_departments'><small id='selectDepartamentoDiputacion' class='form-text text-muted'>Añadir departamento Diputación </small></div>");
+            //$('#add_id_generalitat').wrap("<div class='input-group title-create_post smalls_for_departments'><small id='selectDepartamentoGeneralitat' class='form-text text-muted'>Añadir departamento Generalitat </small></div>");
 
             // add class to select because they lose class with admin functionality
             $("form:first select").removeClass("form-control").addClass("form-control");
 
             // select multiple fix height with size
             $("select#id_responsable").attr('size', '10');
-            $("select#id_se_relaciona_con").attr('size', '10');
+            //$("select#id_se_relaciona_con").attr('size', '10');
             var select_resp = document.getElementById('id_responsable');
-            var select_relac = document.getElementById('id_se_relaciona_con');
+            //var select_relac = document.getElementById('id_se_relaciona_con');
             select_resp.size = select_resp.length;
-            select_relac.size = select_relac.length;
+            //select_relac.size = select_relac.length;
 
             //quit checkbox attr formcontrol
             $("#id_se_relaciona_con li label input").removeClass("form-control");

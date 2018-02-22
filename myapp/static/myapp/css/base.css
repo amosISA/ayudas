@@ -579,8 +579,13 @@ a.alert_message:hover{color: grey;}
 .forms_act_crea .ag_create_post_wrapper .related-widget-wrapper-link {
     float: right;
 }
-
+  
 /***** ul li checkbox se relaciona con ****/
+ul#id_se_relaciona_con {
+  height: 535px;
+  overflow: auto;
+}
+
 #id_se_relaciona_con li {
     list-style-type: none;
 }
@@ -663,3 +668,6 @@ a.alert_message:hover{color: grey;}
 
 #subv_table_ordering thead th:before { content:none; }
 #subv_table_ordering thead th:after { content:none; }
+#subv_table_ordering thead .table_th_dep { width: 20px; }
+#subv_table_ordering thead .table_th_nombre { width: 400px; }
+

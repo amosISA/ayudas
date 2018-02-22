@@ -1,41 +1,50 @@
 
-    Errors to fix:
-       - Escribir un script q se ejecute cada 5 días y envie los datos de la bbdd a mi email para una mayor seguridad
+       - THINGS TO KEEP IN MIND WHEN I DEPLOY:
 
-       - THINGS TO KEEP IN MIND WHEN I DEPLOY(or maybe I can override model in mine project):
-        The notify application has in his models the verb to 50 limit character, just change it to TextField instead of CharField
-        python manage.py makemigrations notify
-        python manage.py migrate notify
+            1. Notify Application
+                The notify application has in his models the verb to 50 limit character, just change it to TextField instead of CharField
+                python manage.py makemigrations notify
+                python manage.py migrate notify
+                Or maybe I can override his model in mine project
 
-        - Pantallazo:
-            - 0.7 rem letra notificaciones, y el nombre tiene bold e italica
-            - Ampliar width de la tabla del nombre de la subvención
-            - Al email q solo llegue cuando crea la subvencion con enlace a la misma
-            - Y en el front to.do, cuando crea, edita, q aparezca todoo en las notificaciones en el email solo cuando crea
-            - Además en el front link a la subvención editada
-            - Añadir las subvenciones del excel
-            - Hacer script para copia de seguridad de bbdd y añadir exportar a excel desde el admin
+            2. When I load data from fixtures:
+                I can load users from auth model successfully.
 
-
-        - En el form:
-            - se relaciona con: con height fijo y overflow pero con checkbox y no select multiple
+                But when I try to load subsidies.json: python .\manage.py loaddata subsidies.json
+                Will give me a problem:
+                    Problem installing fixture 'C:\Users\AMOS\Dev\ayudas\subvenciones\myapp\fixtures\subsidies.json': 'NoneType' object has no attribute 'username'
+                To solve it i go to myapp/models.py and I comment:
+                    def send_email_created_updates => the whole function
+                    and: post_save.connect(send_email_created_updates, sender=Subvencion)
 
 
-        - ahora como he hecho q al dar click sobre el estado liste todas las subv de ese estado, pues cambiarle el color al anchor
 
-        - Detalles cada subv:
-            - jc quiere q sea el mismo diseño q al crear las subv
-            - y quiere cambiar las urls de slug por id
+       - ERRORS TO FIX:
+            1. Escribir un script q se ejecute cada 5 días y envie los datos de la bbdd a mi email para una mayor seguridad
 
+            2. Pantallazo:
+                - Además en el front link a la subvención creada o editada
+                - Añadir las subvenciones del excel
+                - Hacer script para copia de seguridad de bbdd (tanto de phpmyadmin como de fixtures) y añadir exportar a excel desde el admin
 
-        - Nuevas reglas JC:
-            - Nuevo campo:
-                -Colectivo de uno a muchos
-                    - Ayuntamiento
-                    - Mancomunidad
-                    - Asociaciones
+            3. Al crear subvención se envía el email pero el link de la misma no es el que corresponde.
+               Mirar en el proyecto de sharing_things lo de sites, sin ver como hacerlo.
 
-            - Pulsar sobre dep y listar con ajax
-            - Pulsar sobre nombre y listar ajax tmb
-            - Estados nuevo estilo: primero el color y luego el nombre
-            - Mirar para estados dl dt dd
+            4. Detalles cada subv:
+                - JC quiere q sea el mismo diseño q al crear las subv
+                - y quiere cambiar las urls de slug por id
+
+            5. Nuevas reglas JC:
+                - Nuevo campo (select):
+                    - Colectivo de uno a muchos
+                        - Ayuntamiento
+                        - Mancomunidad
+                        - Asociaciones
+
+            6. Pulsar sobre dep y listar con ajax
+            7. Pulsar sobre nombre y listar ajax tmb
+            8. Mirar para estados dl dt dd
+            9. En la columna dep poner dynamic color y background pero da error de jquery pq es hex y no rgb
+            10. En relaciona con al crear y editar la subvención:
+                - Que se filtre por mismo si la subvención que yo creo le pongo el dep aguas hídricas,
+                pues que aparezcan esas subvenciones relacionadas con ese departamento
