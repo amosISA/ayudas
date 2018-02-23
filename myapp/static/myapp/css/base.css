@@ -550,7 +550,7 @@ a.alert_message:hover{color: grey;}
 }
 
 .forms_act_crea {
-  padding: 3rem 1.5rem;
+  padding: 0.2rem 1.5rem;
   text-align: center;
 }
 
@@ -579,7 +579,7 @@ a.alert_message:hover{color: grey;}
 .forms_act_crea .ag_create_post_wrapper .related-widget-wrapper-link {
     float: right;
 }
-  
+
 /***** ul li checkbox se relaciona con ****/
 ul#id_se_relaciona_con {
   height: 535px;
@@ -588,6 +588,14 @@ ul#id_se_relaciona_con {
 
 #id_se_relaciona_con li {
     list-style-type: none;
+}
+
+#id_se_relaciona_con li:nth-child(odd) {
+    background-color: #ffd6d6;
+}
+
+#id_se_relaciona_con li:nth-child(even) {
+    background-color: #fff3d6;
 }
 
 #id_se_relaciona_con li label {
@@ -671,3 +679,8 @@ ul#id_se_relaciona_con {
 #subv_table_ordering thead .table_th_dep { width: 20px; }
 #subv_table_ordering thead .table_th_nombre { width: 400px; }
 
+/*** Override bootstrap cols padding ***/
+.subv-table-row .nopadding, .subv-row-departamentos .nopadding {
+  padding-right: 0.1rem!important;
+  padding-left: 0.1rem!important;
+}

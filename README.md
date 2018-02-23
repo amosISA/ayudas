@@ -37,9 +37,11 @@
             5. Nuevas reglas JC:
                 - Nuevo campo (select):
                     - Colectivo de uno a muchos
-                        - Ayuntamiento
+                        - Ayuntamiento (por defecto)
                         - Mancomunidad
                         - Asociaciones
+                        - Particulares
+                        - Ayuntamientos y mancomunidades
 
             6. Pulsar sobre dep y listar con ajax
             7. Pulsar sobre nombre y listar ajax tmb
@@ -48,3 +50,14 @@
             10. En relaciona con al crear y editar la subvención:
                 - Que se filtre por mismo si la subvención que yo creo le pongo el dep aguas hídricas,
                 pues que aparezcan esas subvenciones relacionadas con ese departamento
+            12. En la columna fin no ordena bien
+            13. Quitar la columna de editar y cuando entremos en el detalle de la subvención pues que tengamos ahí
+            dos botones: uno de editar y el otro para eliminarla si queremos
+            14. Que la tabla ocupe lo q tenga q ocupar y ponerle overflow
+            15. En la fecha fin al crear subsidies: poner una opción dentro del ui de jquery calendar q sea:
+                + 30 días hábiles
+                + 25 días hábiles
+                + 15 días hábiles
+                *** Aun falta añadir los días festivos nacionales, intentar coger de alguna api pero no he encontrado,
+                de manera que hay que ir actualizándolo
+            16. Añadir enlace a las notificaciones de las subvenciones

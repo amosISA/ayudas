@@ -242,6 +242,33 @@
 
             //quit checkbox attr formcontrol
             $("#id_se_relaciona_con li label input").removeClass("form-control");
+
+            /*$('#id_inicio').change(function() {
+                var numAdd = 30;
+                var dataAvui = new Date($(this).val());
+                console.log(dataAvui);
+                for (var i=1;i<=numAdd;i++)
+                {
+                    var dataTemp = dataAvui;
+                    //console.dir(dataTemp.toString())
+                    dataTemp.setDate(dataTemp.getDate() + 1)
+                    if(dataTemp.getDay() == 6){
+                        dataTemp.setDate(dataTemp.getDate() + 2)
+                    }else if(dataTemp.getDay() == 0){
+                        dataTemp.setDate(dataTemp.getDate() + 1)
+                    }
+
+                    dataAvui = dataTemp;
+                    $("#id_fin").val(dataAvui.toInputFormat());
+                }
+            });
+
+            Date.prototype.toInputFormat = function() {
+               var yyyy = this.getFullYear().toString();
+               var mm = (this.getMonth()+1).toString(); // getMonth() is zero-based
+               var dd  = this.getDate().toString();
+               return yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-" + (dd[1]?dd:"0"+dd[0]); // padding
+            };*/
         }
     </script>
     <!-- For the admin site -->

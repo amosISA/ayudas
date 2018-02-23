@@ -10,6 +10,7 @@ from django.db.models.signals import pre_save, post_save
 from django.template import loader
 from django.template.defaultfilters import slugify
 
+from notify.signals import notify
 from .utils import unique_slug_generator
 from .widgets import ColorPickerWidget
 
@@ -119,7 +120,10 @@ class Subvencion(models.Model):
         verbose_name_plural = "Subvenciones"
 
     def __unicode__(self):
-        return '{} {}'.format(self.nombre, self.fin)
+        if self.fin == None:
+            return '{}'.format(self.nombre)
+        else:
+            return '{} {}'.format(self.nombre, self.fin.strftime("%Y"))
 
     def get_absolute_url(self):
         return reverse('myapp:subvencion_detail',
@@ -154,6 +158,10 @@ def send_email_created_updates(sender, instance, created, *args, **kwargs):
                 'created': created
             }
         )
+
+        users = Usuario.objects.all()
+        notify.send(instance.user, recipient_list=list(users), actor=instance.user,
+                    verb='subvención', obj=instance, target=instance, nf_type='crear')
 
         send_mail('Gestión de subvenciones',
                   '',

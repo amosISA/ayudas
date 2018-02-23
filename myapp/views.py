@@ -60,9 +60,10 @@ class SubvencionCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         # users = User.objects.exclude(username=self.request.user)
-        users = User.objects.all()
-        notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
-                    verb='subvención, %s' % (form.cleaned_data.get('nombre')), nf_type='crear')
+
+        # users = User.objects.all()
+        # notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
+        #             verb='subvención, %s' % (form.cleaned_data.get('nombre')), obj=form.instance, nf_type='crear')
 
         instance = form.save(commit=False)
         instance.user = self.request.user
@@ -89,7 +90,7 @@ class SubvencionUpdateView(LoginRequiredMixin, UpdateView):
 
         users = User.objects.all()
         notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
-                    verb='subvención, %s' % (form.cleaned_data.get('nombre')), nf_type='edit')
+                    verb='subvención', obj=form.instance, target=form.instance, nf_type='edit')
 
         object = form.instance
         html_message = loader.render_to_string(
