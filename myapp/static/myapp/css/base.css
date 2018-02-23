@@ -681,6 +681,10 @@ ul#id_se_relaciona_con {
 
 /*** Override bootstrap cols padding ***/
 .subv-table-row .nopadding, .subv-row-departamentos .nopadding {
-  padding-right: 0.1rem!important;
-  padding-left: 0.1rem!important;
+    padding-right: 0.1rem!important;
+    padding-left: 0.1rem!important;
+}
+
+#subv_table_ordering tbody a.dep_gene_dip {
+  color: #000!important;
 }

@@ -23,7 +23,6 @@
             1. Escribir un script q se ejecute cada 5 días y envie los datos de la bbdd a mi email para una mayor seguridad
 
             2. Pantallazo:
-                - Además en el front link a la subvención creada o editada
                 - Añadir las subvenciones del excel
                 - Hacer script para copia de seguridad de bbdd (tanto de phpmyadmin como de fixtures) y añadir exportar a excel desde el admin
 
@@ -60,4 +59,3 @@
                 + 15 días hábiles
                 *** Aun falta añadir los días festivos nacionales, intentar coger de alguna api pero no he encontrado,
                 de manera que hay que ir actualizándolo
-            16. Añadir enlace a las notificaciones de las subvenciones

@@ -14,19 +14,30 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.template import loader
 
 from notify.signals import notify
-from .models import Subvencion, Estado
+from .models import Subvencion, Estado, Diputacion, Generalitat, Responsable
 from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm
 
 # Create your views here.
 @login_required()
 def index(request, estado_slug=None):
     estado = None
+    diputacion = None
+    generalitat = None
     estados = Estado.objects.all().annotate(number_stats=Count('subvencion'))
     subvenciones = Subvencion.objects.all()
 
     if estado_slug:
-        estado = get_object_or_404(Estado, slug=estado_slug)
-        subvenciones = subvenciones.filter(estado=estado)
+        if Diputacion.objects.filter(slug=estado_slug).exists():
+            diputacion = get_object_or_404(Diputacion, slug=estado_slug)
+            subvenciones = subvenciones.filter(diputacion=diputacion)
+        elif Estado.objects.filter(slug=estado_slug).exists():
+            estado = get_object_or_404(Estado, slug=estado_slug)
+            subvenciones = subvenciones.filter(estado=estado)
+        elif Generalitat.objects.filter(slug=estado_slug).exists():
+            generalitat = get_object_or_404(Generalitat, slug=estado_slug)
+            subvenciones = subvenciones.filter(generalitat=generalitat)
+        else:
+            subvenciones = Subvencion.objects.all()
 
     notification_list = request.user.notifications.active().prefetch()
     days_until_estado = ['7d', '6d', '5d', '4d', '3d', '2d', '1d', 'expires today', 'expired']
@@ -34,6 +45,30 @@ def index(request, estado_slug=None):
     return render(request,
                   'myapp/index.html',
                   {'estado': estado,
+                   'diputacion': diputacion,
+                   'generalitat': generalitat,
+                   'estados': estados,
+                   'subvenciones': subvenciones,
+                   'days_until_estado': days_until_estado,
+                   'notifications': notification_list})
+
+@login_required()
+def subvencion_by_user(request, name_slug):
+    #Subvencion.objects.filter(responsable__responsable='Juan Carlos')
+    subsidiers = None
+    estados = Estado.objects.all().annotate(number_stats=Count('subvencion'))
+    subvenciones = Subvencion.objects.all()
+
+    if name_slug:
+        subsidiers = get_object_or_404(Responsable, responsable=name_slug)
+        subvenciones = subvenciones.filter(responsable__responsable=subsidiers)
+
+    notification_list = request.user.notifications.active().prefetch()
+    days_until_estado = ['7d', '6d', '5d', '4d', '3d', '2d', '1d', 'expires today', 'expired']
+
+    return render(request,
+                  'myapp/index.html',
+                  {'subsidiers': subsidiers,
                    'estados': estados,
                    'subvenciones': subvenciones,
                    'days_until_estado': days_until_estado,

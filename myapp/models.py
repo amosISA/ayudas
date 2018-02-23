@@ -35,22 +35,40 @@ class ColorField(models.CharField):
 class Diputacion(models.Model):
     nombre = models.CharField(max_length=250)
     font_color = ColorField(blank=True)
+    slug = models.SlugField(max_length=250, unique=True, default=None, blank=True, null=True)
 
     def __unicode__(self):
         return '{}'.format(self.nombre)
 
     class Meta:
         ordering = ["nombre"]
+
+    def save(self):
+        self.slug = slugify(self.nombre)
+        super(Diputacion, self).save()
+
+    def get_absolute_url(self):
+        return reverse('myapp:subvencion_by_category',
+                       args=[self.slug])
 
 class Generalitat(models.Model):
     nombre = models.CharField(max_length=250)
     font_color = ColorField(blank=True)
+    slug = models.SlugField(max_length=250, unique=True, default=None, blank=True, null=True)
 
     def __unicode__(self):
         return '{}'.format(self.nombre)
 
     class Meta:
         ordering = ["nombre"]
+
+    def save(self):
+        self.slug = slugify(self.nombre)
+        super(Generalitat, self).save()
+
+    def get_absolute_url(self):
+        return reverse('myapp:subvencion_by_category',
+                       args=[self.slug])
 
 class Estado(models.Model):
     etapa = models.CharField(max_length=250)
