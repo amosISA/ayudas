@@ -152,10 +152,23 @@ class SubvencionDeleteView(LoginRequiredMixin, DeleteView):
     model = Subvencion
     success_url = reverse_lazy('myapp:index')
 
+    def get_object(self, queryset=None):
+        obj = super(SubvencionDeleteView, self).get_object()
+        return obj
+
     def post(self, request, *args, **kwargs):
         if self.request.POST.get("confirm_delete"):
             # when confirmation page has been displayed and confirm button pressed
+            recievers = []
+            for user in User.objects.all():
+                recievers.append(user.email)
+
+            users = User.objects.all()
+            notify.send(self.request.user, recipient_list=list(users), actor=self.request.user,
+                        verb='subvención, %s' % (self.get_object()), nf_type='delete')
+
             self.get_object().delete()
+
             messages.success(self.request, 'Subvención eliminada correctamente!')
             return HttpResponseRedirect(self.success_url)
         elif self.request.POST.get("cancel"):
