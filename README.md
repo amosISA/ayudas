@@ -17,6 +17,10 @@
                     def send_email_created_updates => the whole function
                     and: post_save.connect(send_email_created_updates, sender=Subvencion)
 
+            3. Si al darle sobre el departamento para listar por ese departamento y en la url pone None, es que
+            no tiene slug ese dep y por tanto vamos al backend y seleccionamos ese dep y lo guardamos para q se le guarde un
+            dep. Y luego de hacer eso volver a guardar las fixtures para que se guarde los slug de cada uno.
+
 
 
        - ERRORS TO FIX:
@@ -59,3 +63,4 @@
                 + 15 días hábiles
                 *** Aun falta añadir los días festivos nacionales, intentar coger de alguna api pero no he encontrado,
                 de manera que hay que ir actualizándolo
+            16. En detalles de la subv siempre saca que la ha creado el usuario logeado

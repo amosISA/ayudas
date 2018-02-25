@@ -19,7 +19,8 @@ def unique_slug_generator(instance, new_slug=None):
     if new_slug is not None:
         slug = new_slug
     else:
-        slug = slugify(instance.nombre)
+        #slug = slugify(instance.nombre) # with this I get DataError if slug > 255 chars
+        slug = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(6))
 
     Klass = instance.__class__
     qs_exists = Klass.objects.filter(slug=slug).exists()
