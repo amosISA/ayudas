@@ -53,7 +53,8 @@
   "pk": 1,
   "fields": {
     "nombre": "Cultura",
-    "font_color": "#808080"
+    "font_color": "#808080",
+    "slug": "cultura"
   }
 },
 {
@@ -61,7 +62,8 @@
   "pk": 2,
   "fields": {
     "nombre": "Agua. Ciclo h\u00eddrico",
-    "font_color": "#0000ff"
+    "font_color": "#0000ff",
+    "slug": "agua-ciclo-hidrico"
   }
 },
 {
@@ -69,7 +71,8 @@
   "pk": 3,
   "fields": {
     "nombre": "Infraestructuras. Cooperaci\u00f3n",
-    "font_color": "#71866a"
+    "font_color": "#71866a",
+    "slug": "infraestructuras-cooperacion"
   }
 },
 {
@@ -77,7 +80,17 @@
   "pk": 6,
   "fields": {
     "nombre": "Bienestar social",
-    "font_color": "#86b179"
+    "font_color": "#86b179",
+    "slug": "bienestar-social"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 7,
+  "fields": {
+    "nombre": "Deportes",
+    "font_color": "#ffcc00",
+    "slug": "deportes"
   }
 },
 {
@@ -85,7 +98,8 @@
   "pk": 3,
   "fields": {
     "nombre": "Conselleria de Agricultura, Medio Ambiente, Cambio Clim\u00e1tico y Desarrollo Rural",
-    "font_color": "#008000"
+    "font_color": "#008000",
+    "slug": "conselleria-de-agricultura-medio-ambiente-cambio-climatico-y-desarrollo-rural"
   }
 },
 {
@@ -93,7 +107,35 @@
   "pk": 4,
   "fields": {
     "nombre": "Conselleria de Transparencia, Responsabilidad Social, Participaci\u00f3n y Cooperaci\u00f3n",
-    "font_color": "#b1de81"
+    "font_color": "#b1de81",
+    "slug": "conselleria-de-transparencia-responsabilidad-social-participacion-y-cooperacion"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 5,
+  "fields": {
+    "nombre": "Direcci\u00f3n General de Administraci\u00f3n Local, de la Presidencia de la Generalitat",
+    "font_color": "#a461d2",
+    "slug": "direccion-general-de-administracion-local-de-la-presidencia-de-la-generalitat"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 6,
+  "fields": {
+    "nombre": "Conselleria de Econom\u00eda Sostenible, Sectores Productivos, Comercio y Trabajo",
+    "font_color": "#ff6600",
+    "slug": "conselleria-de-economia-sostenible-sectores-productivos-comercio-y-trabajo"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 7,
+  "fields": {
+    "nombre": "Direcci\u00f3n Territorial de Igualdad y Pol\u00edticas Inclusivas",
+    "font_color": "#333333",
+    "slug": "direccion-territorial-de-igualdad-y-politicas-inclusivas"
   }
 },
 {
@@ -176,8 +218,8 @@
     "inicio": "2018-01-03",
     "fin": "2018-02-02",
     "created": "2018-02-02T18:49:48Z",
-    "updated": "2018-02-02T18:49:48Z",
-    "slug": "fomento-de-la-lengua-y-cultura-popular-valenciana",
+    "updated": "2018-02-25T14:57:46Z",
+    "slug": "lW9Re2",
     "nombre": "Fomento de la lengua y cultura popular valenciana",
     "bases": "https://drive.google.com/open?id=1Ikp-oJkMl4AjZqFWPVf6yi7alcUpjZgU",
     "solicitud": "https://drive.google.com/open?id=14aRHxdySpvPDQQp7ZnnQrnKvO7aPpWON",
@@ -206,8 +248,8 @@
     "inicio": "2018-01-03",
     "fin": "2018-02-02",
     "created": "2018-02-02T19:05:51Z",
-    "updated": "2018-02-21T13:02:51Z",
-    "slug": "actividades-culturales-de-especial-relieve",
+    "updated": "2018-02-25T14:57:43Z",
+    "slug": "nyF7H5",
     "nombre": "Actividades culturales de especial relieve",
     "bases": "-",
     "solicitud": "-",
@@ -237,8 +279,8 @@
     "inicio": "2018-01-03",
     "fin": "2018-02-02",
     "created": "2018-02-02T19:09:41Z",
-    "updated": "2018-02-06T13:49:10Z",
-    "slug": "campana-de-musica-als-pobles",
+    "updated": "2018-02-25T14:57:40Z",
+    "slug": "eL3H6y",
     "nombre": "Campa\u00f1a de M\u00fasica als Pobles",
     "bases": "--",
     "solicitud": "--",
@@ -268,8 +310,8 @@
     "inicio": "2018-02-06",
     "fin": "2018-02-05",
     "created": "2018-02-02T19:15:45Z",
-    "updated": "2018-02-21T13:02:16Z",
-    "slug": "actividades-culturales-musicales-y-escenicas-2018",
+    "updated": "2018-02-25T14:57:34Z",
+    "slug": "EGUReK",
     "nombre": "Actividades culturales, musicales y esc\u00e9nicas 2018",
     "bases": "--",
     "solicitud": "--",
@@ -299,8 +341,8 @@
     "inicio": "2018-01-23",
     "fin": "2018-02-22",
     "created": "2018-02-02T20:24:00Z",
-    "updated": "2018-02-18T18:31:39Z",
-    "slug": "equipamiento-de-instalaciones-culturales-de-titularidad-municipal",
+    "updated": "2018-02-25T14:57:31Z",
+    "slug": "v317Fi",
     "nombre": "Equipamiento de Instalaciones Culturales de titularidad municipal",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00042.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00043.pdf",
@@ -310,8 +352,8 @@
     "generalitat": null,
     "cuantia": "7000 \u20ac\r\n80%",
     "descripcion": "Se pidi\u00f3 el a\u00f1o 2016. As\u00ed que este a\u00f1o se puede pedir\r\n\r\nColaborar econ\u00f3micamente con los Ayuntamientos al objeto de mejorar las instalaciones para la prestaci\u00f3n a los usuarios de sus servicios culturales.\r\n\r\nA estos efectos ser\u00e1n subvencionables inversiones tales como adquisici\u00f3n de mobiliario, (mesas, sillas, armarios), equipos de audiovisuales e inform\u00e1ticos, fotocopiadoras y equipos multifunci\u00f3n, equipos audiovisuales e inform\u00e1ticos, fotocopiadoras y equipos multifunci\u00f3n, equipos de climatizaci\u00f3n (aire acondicionado). Y no ser\u00e1n subvencionables las adquisiciones de equipamiento no inventariable (mesa/silla pegables...).",
-    "estado": 4,
-    "comentarios": "Se podr\u00eda usar para cambiar los aires acondicionados en el sal\u00f3n de plenos.\r\nO a\u00f1adirlos en ses vivendes. IMPORTANTE HAY QUE ARREGLAR EL AIRE ACONDICIONADO DE LA SALA DE LA CASA DE CULTURA - YA HAY UN PRESUPUESTO Y HAY QUE PEDIR OTROS\r\n\r\n-Un ordenador para ses vivendes, servidor de la biblioteca y para usuario final (dos)\r\nLe he pedido dos ordenadores como los que pedimos para Maril\u00f3 y MariaVicenta. Podr\u00edan usarse para amics des museu y ses vivendes (jovenes)\r\n\r\n- en la casa de cultura, un escenario fijo. \r\ntengo el plano que me ha hecho josemi. Faltar\u00eda enviar los planos a http://guil-staging.com\r\n\r\n- Una barra donde poner el proyector luces y altavoces.\r\nle he pedido un presupuesto a Mateu para una barra para focos, unos focos y unos altavoces fijos para la sala",
+    "estado": 1,
+    "comentarios": "Se podr\u00eda usar para cambiar los aires acondicionados en el sal\u00f3n de plenos.\r\nO a\u00f1adirlos en ses vivendes. IMPORTANTE HAY QUE ARREGLAR EL AIRE ACONDICIONADO DE LA SALA DE LA CASA DE CULTURA - YA HAY UN PRESUPUESTO Y HAY QUE PEDIR OTROS\r\n\r\n-Un ordenador para ses vivendes, servidor de la biblioteca y para usuario final (dos)\r\nLe he pedido dos ordenadores como los que pedimos para Maril\u00f3 y MariaVicenta. Podr\u00edan usarse para amics des museu y ses vivendes (jovenes)\r\n\r\n- en la casa de cultura, un escenario fijo. \r\ntengo el plano que me ha hecho josemi. Faltar\u00eda enviar los planos a http://guil-staging.com\r\n\r\n- Una barra donde poner el proyector luces y altavoces.\r\nle he pedido un presupuesto a Mateu para una barra para focos, unos focos y unos altavoces fijos para la sala\r\n\r\n22-02-2018 - al final se env\u00edan dos presupuestos de material inform\u00e1tico y focos y material para el escenario casa cultura",
     "drive": "--",
     "gestiona_expediente": "3/2018 EXP 7",
     "responsable": [
@@ -331,8 +373,8 @@
     "inicio": "2016-12-30",
     "fin": "2017-01-30",
     "created": "2018-02-02T20:45:20Z",
-    "updated": "2018-02-15T16:40:15Z",
-    "slug": "equipamiento-instalaciones-culturales-municipales",
+    "updated": "2018-02-25T14:57:27Z",
+    "slug": "g32pEc",
     "nombre": "equipamiento instalaciones culturales municipales",
     "bases": "--",
     "solicitud": "--",
@@ -363,8 +405,8 @@
     "inicio": "2018-02-13",
     "fin": "2018-04-13",
     "created": "2018-02-18T17:25:59Z",
-    "updated": "2018-02-18T17:25:59Z",
-    "slug": "ayudas-para-la-aplicacion-de-medidas-de-gestion-forestal-sostenible-en-el-marco-del-programa-de-desarrollo-rural-de-la-comunitat-valenciana-2014-2020",
+    "updated": "2018-02-25T14:57:22Z",
+    "slug": "skQEvy",
     "nombre": "Ayudas para la aplicaci\u00f3n de medidas de gesti\u00f3n forestal sostenible en el marco del Programa de Desarrollo Rural de la Comunitat Valenciana 2014-2020",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18518",
     "solicitud": "https://www.dogv.gva.es/datos/2017/09/05/pdf/2017_7675.pdf",
@@ -394,8 +436,8 @@
     "inicio": "2018-02-15",
     "fin": "2018-03-28",
     "created": "2018-02-20T07:32:41Z",
-    "updated": "2018-02-20T07:32:41Z",
-    "slug": "ayudas-destinadas-para-la-redaccion-de-nuevos-planes-locales-de-prevencion-de-incendios-forestales-plpif-o-para-la-revision-de-los-ya-aprobados",
+    "updated": "2018-02-25T14:57:18Z",
+    "slug": "24uvYb",
     "nombre": "Ayudas destinadas para la redacci\u00f3n de nuevos Planes Locales de Prevenci\u00f3n de Incendios Forestales (PLPIF) o para la revisi\u00f3n de los ya aprobados",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18692",
     "solicitud": "https://www.dogv.gva.es/datos/2017/09/29/pdf/2017_8442.pdf",
@@ -425,8 +467,8 @@
     "inicio": "2018-02-14",
     "fin": "2018-03-12",
     "created": "2018-02-20T08:21:01Z",
-    "updated": "2018-02-20T08:21:01Z",
-    "slug": "entidades-sin-fin-de-lucro-dentro-del-ambito-de-los-servicios-sociales-para-la-realizacion-de-actividades-de-caracter-formativo-terapeutico-yo-rehabilitador",
+    "updated": "2018-02-25T14:56:56Z",
+    "slug": "bgMDM0",
     "nombre": "entidades sin fin de lucro, dentro del \u00e1mbito de los servicios sociales, para la realizaci\u00f3n de actividades de car\u00e1cter formativo, terap\u00e9utico y/o rehabilitador",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00052.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00048.pdf",
@@ -458,8 +500,8 @@
     "inicio": "2018-02-14",
     "fin": "2018-03-12",
     "created": "2018-02-20T08:52:36Z",
-    "updated": "2018-02-20T08:52:36Z",
-    "slug": "entidades-sin-animo-de-lucro-en-el-ambito-del-bienestar-social-para-el-desarrollo-de-actividades-de-promocion-de-la-convivencia-a-traves-del-ocio-y-el-tiempo-libre",
+    "updated": "2018-02-25T14:56:48Z",
+    "slug": "cLoAB2",
     "nombre": "entidades sin \u00e1nimo de lucro en el \u00e1mbito del bienestar social para el desarrollo de actividades de promoci\u00f3n de la convivencia a trav\u00e9s del ocio y el tiempo libre",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00051.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00047.pdf",
@@ -492,8 +534,8 @@
     "inicio": "2017-12-27",
     "fin": "2018-05-31",
     "created": "2018-02-20T09:04:54Z",
-    "updated": "2018-02-21T11:51:15Z",
-    "slug": "ayudas-no-dinerarias-para-reparaciones-y-conservacion-de-caminos-de-titularidad-no-provincial-a-ejecutar-por-la-diputacion",
+    "updated": "2018-02-25T14:56:40Z",
+    "slug": "9rSurD",
     "nombre": "Ayudas no dinerarias para reparaciones y conservaci\u00f3n de caminos de titularidad no provincial a ejecutar por la Diputaci\u00f3n",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00043.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00038.pdf",
@@ -522,8 +564,8 @@
     "inicio": "2018-02-17",
     "fin": "2018-03-13",
     "created": "2018-02-20T17:09:00Z",
-    "updated": "2018-02-20T17:09:00Z",
-    "slug": "subvenciones-destinadas-a-ayuntamientos-y-mancomunidades-para-la-realizacion-de-actividades-de-promocion-social-dirigidas-a-colectivos-vulnerables-y-para-la-adquisicion-de-equipamiento-destinado-a-centros-y-otros-espacios-municipales-de-uso-social",
+    "updated": "2018-02-25T14:56:23Z",
+    "slug": "2FkYMw",
     "nombre": "Subvenciones destinadas a ayuntamientos y mancomunidades para la realizaci\u00f3n de actividades de promoci\u00f3n social dirigidas a colectivos vulnerables y para la adquisici\u00f3n de equipamiento destinado a centros y otros espacios municipales de uso social",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00054.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00050.pdf",
@@ -555,8 +597,8 @@
     "inicio": "2018-01-20",
     "fin": "2018-05-31",
     "created": "2018-02-20T17:19:19Z",
-    "updated": "2018-02-21T11:49:21Z",
-    "slug": "subvenciones-para-la-realizacion-y-mejora-de-infraestructuras-e-instalaciones-hidraulicas-que-incrementen-la-eficiencia-del-uso-de-agua-en-regadio",
+    "updated": "2018-02-25T14:56:11Z",
+    "slug": "Y8auJv",
     "nombre": "Subvenciones para la realizaci\u00f3n y mejora de infraestructuras e instalaciones hidr\u00e1ulicas que incrementen la eficiencia del uso de agua en regad\u00edo",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00038.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00034.pdf",
@@ -587,8 +629,8 @@
     "inicio": "2018-01-20",
     "fin": "2018-07-31",
     "created": "2018-02-20T17:22:52Z",
-    "updated": "2018-02-20T17:22:52Z",
-    "slug": "subvenciones-a-entidades-locales-y-entidades-de-riego-para-la-redaccion-por-la-diputacion-de-proyectos-en-materia-de-ciclo-hidrico",
+    "updated": "2018-02-25T14:55:57Z",
+    "slug": "Ksp87i",
     "nombre": "Subvenciones a Entidades Locales y Entidades de Riego para la redacci\u00f3n, por la Diputaci\u00f3n de proyectos en materia de Ciclo Hidr\u00edco.",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00049.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00045.pdf",
@@ -618,8 +660,8 @@
     "inicio": "2017-12-27",
     "fin": "2018-09-17",
     "created": "2018-02-20T17:29:12Z",
-    "updated": "2018-02-21T11:43:16Z",
-    "slug": "subvenciones-a-favor-entidades-locales-para-coadyugar-en-la-financiacion-de-infraestructuras-hidraulicas-de-abastecimiento-y-saneamiento-iach-2018",
+    "updated": "2018-02-25T14:55:45Z",
+    "slug": "YaDDK2",
     "nombre": "Subvenciones a favor Entidades Locales para coadyugar en la financiaci\u00f3n de infraestructuras hidr\u00e1ulicas de abastecimiento y saneamiento. IACH 2018",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00041.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00037.pdf",
@@ -647,8 +689,8 @@
     "inicio": "2017-12-27",
     "fin": "2018-06-15",
     "created": "2018-02-20T17:46:26Z",
-    "updated": "2018-02-21T11:45:02Z",
-    "slug": "ayudas-para-la-realizacion-y-mejora-de-infraestructuras-hidraulicas-de-abastecimiento-y-saneamiento-a-ejecutar-por-la-diputacion-idch-2018",
+    "updated": "2018-02-25T14:55:36Z",
+    "slug": "m5R1ii",
     "nombre": "Ayudas para la realizaci\u00f3n y mejora de infraestructuras hidr\u00e1ulicas de abastecimiento y saneamiento a ejecutar por la Diputaci\u00f3n. IDCH 2018",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00040.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00036.pdf",
@@ -677,8 +719,8 @@
     "inicio": "2018-02-21",
     "fin": "2018-10-31",
     "created": "2018-02-21T07:26:53Z",
-    "updated": "2018-02-21T07:26:53Z",
-    "slug": "realizacion-de-actuaciones-relacionadas-con-la-formacion-y-divulgacion-en-materia-de-responsabilidad-social",
+    "updated": "2018-02-25T14:55:27Z",
+    "slug": "z7R0fY",
     "nombre": "Realizaci\u00f3n de actuaciones relacionadas con la formaci\u00f3n y divulgaci\u00f3n en materia de responsabilidad social",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=16280",
     "solicitud": "http://www.dogv.gva.es/datos/2016/06/06/pdf/2016_4113.pdf",
@@ -706,8 +748,8 @@
     "inicio": "2017-12-20",
     "fin": "2018-05-31",
     "created": "2018-02-21T07:59:34Z",
-    "updated": "2018-02-21T11:48:32Z",
-    "slug": "reparacion-de-infraestructuras-hidraulicas-a-ejecutar-por-los-municipios-rach-2018",
+    "updated": "2018-02-25T14:54:52Z",
+    "slug": "Ag0wua",
     "nombre": "Reparaci\u00f3n de infraestructuras hidr\u00e1ulicas a ejecutar por los municipios. RACH 2018",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00039.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00035.pdf",
@@ -736,8 +778,8 @@
     "inicio": "2018-02-17",
     "fin": "2018-03-13",
     "created": "2018-02-21T08:08:12Z",
-    "updated": "2018-02-21T08:08:12Z",
-    "slug": "subvenciones-a-instituciones-sin-fin-de-lucro-en-el-ambito-del-bienestar-social-para-la-adquisicion-de-equipamiento",
+    "updated": "2018-02-25T14:54:11Z",
+    "slug": "UQEH5o",
     "nombre": "Subvenciones a Instituciones sin fin de lucro en el \u00e1mbito del Bienestar Social para la adquisici\u00f3n de equipamiento",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00053.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00049.pdf",
@@ -765,8 +807,8 @@
     "inicio": "2018-02-17",
     "fin": "2018-03-13",
     "created": "2018-02-21T08:22:53Z",
-    "updated": "2018-02-21T08:22:53Z",
-    "slug": "subvenciones-a-instituciones-sin-fin-de-lucro-en-el-ambito-del-bienestar-social-para-la-adquisicion-de-equipamiento-45va",
+    "updated": "2018-02-25T14:53:58Z",
+    "slug": "63YfZV",
     "nombre": "Subvenciones a Instituciones sin fin de lucro en el \u00e1mbito del Bienestar Social para la adquisici\u00f3n de equipamiento",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00053.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00049.pdf",
@@ -782,6 +824,123 @@
     "gestiona_expediente": "-",
     "responsable": [
       1
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 24,
+  "fields": {
+    "user": null,
+    "inicio": "2018-02-08",
+    "fin": "2018-03-26",
+    "created": "2018-02-22T10:45:15Z",
+    "updated": "2018-02-25T14:53:20Z",
+    "slug": "x4zvQx",
+    "nombre": "Solicitud de subvenciones para sostenimiento de gastos corrientes de las mancomunidades de municipios de la Comunitat Valenciana.",
+    "bases": "http://www.dogv.gva.es/datos/2018/02/21/pdf/2018_1616.pdf",
+    "solicitud": "https://www.tramita.gva.es/ctt-att-atr/asistente/iniciarTramite.html?tramite=DGM_SUB&version=1&login=c&idioma=es&idCatGuc=PR&idProcGuc=16274",
+    "observaciones": "http://www.gva.es/es/inicio/procedimientos?id_proc=16274",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 5,
+    "cuantia": "100.000",
+    "descripcion": "Coadyuvar al desarrollo integral de las mancomunidades de municipios de la Comunitat Valenciana, a trav\u00e9s de la financiaci\u00f3n de sus gastos corrientes en bienes y servicios.",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 25,
+  "fields": {
+    "user": null,
+    "inicio": "2018-02-22",
+    "fin": "2018-03-13",
+    "created": "2018-02-22T19:20:06Z",
+    "updated": "2018-02-25T14:53:06Z",
+    "slug": "9zEI7K",
+    "nombre": "Concesi\u00f3n de Premios a los Mejores Deportistas, al Mejor T\u00e9cnico y Mejor Club Deportivo de la Provincia.",
+    "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00055.pdf",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 7,
+    "generalitat": null,
+    "cuantia": "",
+    "descripcion": "Deportistas. Deportistas discapacitados. J\u00f3venes valores que no superen la edad de 17 a\u00f1os, al 31 de diciembre del a\u00f1o al que se refiere la convocatoria. T\u00e9cnicos Deportivos. Todos ellos deben ser naturales de la Provincia de Alicante, o acreditar su residencia continuada en la misma, al menos en los tres \u00faltimos a\u00f1os. Clubes Deportivos que, legalmente constituidos e inscritos en el registro correspondiente, est\u00e9n radicados en la Provincia de Alicante, y desarrollen una o varias disciplinas deportivas y se hallen adscritos a la correspondiente Federaci\u00f3n.",
+    "estado": 2,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 26,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-02-24",
+    "fin": "2018-10-31",
+    "created": "2018-02-24T18:00:30Z",
+    "updated": "2018-02-25T14:52:33Z",
+    "slug": "ED2Izm",
+    "nombre": "Solicitud de estancias en balnearios de la Comunidad Valenciana: Programa de Termalismo Valenciano",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=1177",
+    "solicitud": "http://www.dogv.gva.es/datos/2018/02/23/pdf/2018_1771.pdf",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 7,
+    "cuantia": "200 \u20ac persona",
+    "descripcion": "La Generalitat contribuir\u00e1 a la financiaci\u00f3n del coste de las plazas con una aportaci\u00f3n m\u00e1xima de 126,5 euros IVA incluido para temporada alta y 200 euros IVA incluido para temporada baja, por plaza a cada uno de los/as beneficiarios/as del programa, abonando dicha cantidad al establecimiento receptor y corriendo por cuenta del la persona beneficiaria, el resto del importe conforme con los precios que se indican en el anexo I de la convocatoria.",
+    "estado": 4,
+    "comentarios": "Se convocan 10.378 plazas en dos temporadas\r\n\r\nUna vez comprobado el cumplimiento de los requisitos, la adjudicaci\u00f3n de plazas se realizar\u00e1 seg\u00fan el orden de presentaci\u00f3n de solicitudes que servir\u00e1 como criterio \u00fanico en la mencionada adjudicaci\u00f3n, as\u00ed como en el orden de reserva de las personas que no obtengan plaza directa.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 27,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-02-22",
+    "fin": "2018-03-22",
+    "created": "2018-02-24T18:11:57Z",
+    "updated": "2018-02-25T10:16:20Z",
+    "slug": "bZXqEI",
+    "nombre": "EMERGE 2018. Programa de subvenciones Iniciativa Social, destinadas a la contrataci\u00f3n, para la realizaci\u00f3n de acciones previstas en planes o procedimientos de emergencias en el \u00e1mbito forestal",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=19132",
+    "solicitud": "http://www.dogv.gva.es/datos/2018/02/22/pdf/2018_1711.pdf",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 6,
+    "cuantia": "66.000",
+    "descripcion": "El objeto de estas subvenciones es la contrataci\u00f3n de personas desempleadas por corporaciones locales de la Comunitat Valenciana para la realizaci\u00f3n de acciones previstas en planes o procedimientos de emergencias en el \u00e1mbito forestal .",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      5
     ],
     "se_relaciona_con": []
   }
