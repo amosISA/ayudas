@@ -61,10 +61,9 @@
                         <th class="table_th_dep">DEPARTAMENTO</th>
                         <th class="table_th_nombre">NOMBRE</th>
                         <th>FIN</th>
-                        <th>DESCRIPCIÓN</th>
                         <th>CUANTÍA</th>
                         <th>RESPONSABLES</th>
-                        <th>ESTADO</th>
+                        <th class="table_th_estado">ESTADO</th>
                         <th>COMENTARIOS</th>
                         <th>GESTIONA</th>
                         <th><i class="fa fa-tasks" aria-hidden="true"></i></th>
@@ -88,12 +87,10 @@
                                 <a href="{{ subvencion.get_absolute_url }}" target="_blank">
                                     {{ subvencion.nombre|safe }}
                                 </a>
+                                <span style="display:block;">{{ subvencion.descripcion }}</span>
                             </td>
                             <td class="estadocss" style="{% if subvencion.fin|daysuntil in days_until_estado %}background-color:#ff0000;color:#fff;{% elif subvencion.fin|daysuntil == 'passed days' %}background-color:{{ subvencion.estado.font_color }};{% else %}background-color:#fff;{% endif %}">
                                 {{ subvencion.fin|date:"d/m/Y" }}
-                            </td>
-                            <td {% if subvencion.descripcion %} tabindex="0" data-toggle="popover" data-trigger="hover" title="Descripción" data-content="{{ subvencion.descripcion|safe }}"{% endif %}>
-                                {{ subvencion.descripcion|truncatewords:3|safe }}
                             </td>
                             <td>{{ subvencion.cuantia|safe }}</td>
                             <td>

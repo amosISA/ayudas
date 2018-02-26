@@ -8,6 +8,8 @@
 {% load tags %}
     <div class="row forms_act_crea">
         <div class="ag_create_post_wrapper col-lg-12">
+            <h1 class="h1">Detalles Subvención</h1>
+
             <form class="form-horizontal">
                 <div class="row">
                     <div class="col-lg-3 doted-right">
@@ -26,12 +28,16 @@
 
                         <!-- Responsable -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            <label for="id_responsable">Responsable:</label>
-                            <div class="related-widget-wrapper">
-                                <select multiple="multiple" class="form-control" id="id_responsable" disabled>
-                                    {% for responsable in subvencion.responsable.all %}<option value="{{ responsable.id }}">{{ responsable }}</option>{% endfor %}
-                                </select>
-                            </div>
+                            <label>Responsable:</label>
+                            <ul id="id_responsable" class="form-control">
+                                {% for responsable in subvencion.responsable.all %}
+                                <li>
+                                    <label for="id_responsable_{{ responsable.id }}"><input checked onclick="return false;" type="checkbox" value="{{ responsable.id }}" id="id_responsable_{{ responsable.id }}">
+                                        {{ responsable.responsable }}
+                                    </label>
+                                </li>
+                                {% endfor %}
+                            </ul>
                         </div>
 
                         <div class="row">

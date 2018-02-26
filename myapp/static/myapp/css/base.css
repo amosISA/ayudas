@@ -586,25 +586,25 @@ ul#id_se_relaciona_con {
   overflow: auto;
 }
 
-#id_se_relaciona_con li {
+#id_se_relaciona_con li, #id_responsable li {
     list-style-type: none;
 }
 
-#id_se_relaciona_con li:nth-child(odd) {
+#id_se_relaciona_con li:nth-child(odd), #id_responsable li:nth-child(odd) {
     background-color: #ffd6d6;
 }
 
-#id_se_relaciona_con li:nth-child(even) {
+#id_se_relaciona_con li:nth-child(even), #id_responsable li:nth-child(even) {
     background-color: #fff3d6;
 }
 
-#id_se_relaciona_con li label {
+#id_se_relaciona_con li label, #id_responsable li label {
     display: block;
     padding-left:10px;
     padding-bottom:5px;
 }
 
-#id_se_relaciona_con li label:hover {
+#id_se_relaciona_con li label:hover, #id_responsable li label:hover {
     cursor:pointer;
 }
 
@@ -678,6 +678,7 @@ ul#id_se_relaciona_con {
 #subv_table_ordering thead th:after { content:none; }
 #subv_table_ordering thead .table_th_dep { width: 20px; }
 #subv_table_ordering thead .table_th_nombre { width: 400px; }
+#subv_table_ordering thead .table_th_estado { width: 70px; }
 
 /*** Override bootstrap cols padding ***/
 .subv-table-row .nopadding, .subv-row-departamentos .nopadding {

@@ -60,6 +60,7 @@ class SubvencionForm(forms.ModelForm):
                 my_admin_site,
                 can_add_related=True
             ),
-            'se_relaciona_con': forms.CheckboxSelectMultiple()
+            'se_relaciona_con': forms.CheckboxSelectMultiple(),
+            'responsable': forms.CheckboxSelectMultiple(),
         }
         exclude = ('slug',)

@@ -233,15 +233,15 @@
             $("form:first select").removeClass("form-control").addClass("form-control");
 
             // select multiple fix height with size
-            $("select#id_responsable").attr('size', '10');
+            //$("select#id_responsable").attr('size', '10');
             //$("select#id_se_relaciona_con").attr('size', '10');
-            var select_resp = document.getElementById('id_responsable');
+            //var select_resp = document.getElementById('id_responsable');
             //var select_relac = document.getElementById('id_se_relaciona_con');
-            select_resp.size = select_resp.length;
+            //select_resp.size = select_resp.length;
             //select_relac.size = select_relac.length;
 
             //quit checkbox attr formcontrol
-            $("#id_se_relaciona_con li label input").removeClass("form-control");
+            $("#id_se_relaciona_con li label input, #id_responsable li label input").removeClass("form-control");
 
             /*$('#id_inicio').change(function() {
                 var numAdd = 30;
