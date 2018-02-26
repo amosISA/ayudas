@@ -127,9 +127,17 @@
 {% endblock %}
 
 {% block js %}
+    <!-- Sorting datatimes in datatables -->
+    <!-- 
+        https://datatables.net/blog/2014-12-18
+        Datatables plugin for sorting dates in the table
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="{% static 'myapp/js/datetime-moment.js' %}"></script>
     <script>
         $(document).ready(function() {
             $('[data-toggle="popover"]').popover();
+            $.fn.dataTable.moment('D/M/YYYY');
             $('#subv_table_ordering').DataTable({
                 "language": {
                     url: "/static/myapp/location/es_ES.json"

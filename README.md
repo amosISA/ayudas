@@ -33,10 +33,6 @@
             3. Al crear subvención se envía el email pero el link de la misma no es el que corresponde.
                Mirar en el proyecto de sharing_things lo de sites, sin ver como hacerlo.
 
-            4. Detalles cada subv:
-                - JC quiere q sea el mismo diseño q al crear las subv
-                - y quiere cambiar las urls de slug por id
-
             5. Nuevas reglas JC:
                 - Nuevo campo (select):
                     - Colectivo de uno a muchos
@@ -46,13 +42,10 @@
                         - Particulares
                         - Ayuntamientos y mancomunidades
 
-            6. Pulsar sobre dep y listar con ajax
-            7. Pulsar sobre nombre y listar ajax tmb
-            8. En la columna dep poner dynamic color y background pero da error de jquery pq es hex y no rgb
+            7. Pulsar sobre nombre y listar
             9. En relaciona con al crear y editar la subvención:
                 - Que se filtre por mismo si la subvención que yo creo le pongo el dep aguas hídricas,
                 pues que aparezcan esas subvenciones relacionadas con ese departamento
-            10. En la columna fin no ordena bien
             11. Quitar la columna de editar y cuando entremos en el detalle de la subvención pues que tengamos ahí
             dos botones: uno de editar y el otro para eliminarla si queremos
             12. Que la tabla ocupe lo q tenga q ocupar y ponerle overflow
