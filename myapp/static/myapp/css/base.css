@@ -706,3 +706,8 @@ ul#id_se_relaciona_con {
     text-align: left;
 }
 .detailed-subv-actions div { padding-bottom: 20px; }
+
+/** Table actions pdf, print, excel ... **/
+.dt-button-collection li {
+  list-style-type: none;
+}

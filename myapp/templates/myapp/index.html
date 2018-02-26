@@ -66,7 +66,7 @@
                         <th class="table_th_estado">ESTADO</th>
                         <th>COMENTARIOS</th>
                         <th>GESTIONA</th>
-                        <th><i class="fa fa-tasks" aria-hidden="true"></i></th>
+                        <!--<th><i class="fa fa-tasks" aria-hidden="true"></i></th>-->
                     </tr>
                 </thead>
 
@@ -111,9 +111,9 @@
                                     <a href="{{ subvencion.drive }}" target="_blank">Drive</a>
                                 {% endif %}
                             </td>
-                            <td>
+                            <!--<td>
                                 <a href="{% url 'myapp:edit_subvencion' slug=subvencion.slug %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                            </td>
+                            </td>-->
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -134,6 +134,18 @@
     -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
     <script src="{% static 'myapp/js/datetime-moment.js' %}"></script>
+    <script src="{% static 'myapp/datatables/Buttons-1.5.1/js/dataTables.buttons.js' %}"></script>
+    <script src="{% static 'myapp/datatables/Buttons-1.5.1/js/buttons.flash.js' %}"></script>
+    <script src="{% static 'myapp/datatables/Buttons-1.5.1/js/buttons.bootstrap4.js' %}"></script>
+    <script src="{% static 'myapp/datatables/Buttons-1.5.1/js/buttons.colVis.js' %}"></script>
+    <script src="{% static 'myapp/datatables/Buttons-1.5.1/js/buttons.foundation.js' %}"></script>
+    <script src="{% static 'myapp/datatables/Buttons-1.5.1/js/buttons.html5.js' %}"></script>
+    <script src="{% static 'myapp/datatables/Buttons-1.5.1/js/buttons.jqueryui.js' %}"></script>
+    <script src="{% static 'myapp/datatables/Buttons-1.5.1/js/buttons.print.js' %}"></script>
+    <script src="{% static 'myapp/datatables/Buttons-1.5.1/js/buttons.semanticui.js' %}"></script>
+    <script src="{% static 'myapp/datatables/jszip.min.js' %}"></script>
+    <script src="{% static 'myapp/datatables/pdfmake.min.js' %}"></script>
+    <script src="{% static 'myapp/datatables/vfs_fonts.js' %}"></script>
     <script>
         $(document).ready(function() {
             $('[data-toggle="popover"]').popover();
@@ -142,9 +154,24 @@
                 "language": {
                     url: "/static/myapp/location/es_ES.json"
                 },
-                "lengthMenu": [[50, -1], [50, "Todas"]]
+                //"lengthMenu": [[50, -1], [50, "Todas"]],
+                //if I want to show the lengthMenu also do this: Blfrtip
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'collection',
+                        text: 'Acciones',
+                        buttons: [
+                            {extend: 'copy', orientation: 'landscape', pageSize: 'LEGAL'},
+                            {extend: 'excel', orientation: 'landscape', pageSize: 'LEGAL'},
+                            {extend: 'csv', orientation: 'landscape', pageSize: 'LEGAL'},
+                            {extend: 'pdf', orientation: 'landscape', pageSize: 'LEGAL'},
+                            {extend: 'print', orientation: 'landscape', pageSize: 'LEGAL'}
+                        ]
+                    }
+                ]
             });
-
+            
             //Notifications script
             $(".notification-box-list .delete-notification").click(function()
             {
