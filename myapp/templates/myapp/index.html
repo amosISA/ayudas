@@ -1,7 +1,7 @@
 {% extends "myapp/base.html" %}
 
 {% block title %}
-    {% if estado %}{{ estado.etapa }}{% elif diputacion %}{{ diputacion.nombre }}{% elif generalitat %}{{ generalitat.nombre }}{% else %}Subvenciones{% endif %}
+    {% if estado %}{{ estado.etapa }}{% elif diputacion %}{{ diputacion.nombre }}{% elif user %}{{ user.responsable }}{% elif generalitat %}{{ generalitat.nombre }}{% else %}Subvenciones{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -83,7 +83,7 @@
                                     <a class="dep_gene_dip" href="{{ subvencion.generalitat.get_absolute_url }}">{{ subvencion.generalitat }}</a>
                                 {% endif %}
                             </td>
-                            <td>
+                            <td class="table_name_td">
                                 <a href="{{ subvencion.get_absolute_url }}" target="_blank">
                                     {{ subvencion.nombre|safe }}
                                 </a>
@@ -165,7 +165,13 @@
                         text: 'Acciones',
                         buttons: [
                             {extend: 'copy', orientation: 'landscape', pageSize: 'LEGAL'},
-                            {extend: 'excel', orientation: 'landscape', pageSize: 'LEGAL'},
+                            {extend: 'excel', orientation: 'landscape', pageSize: 'LEGAL',
+                                customize: function( xlsx ) {
+                                    var sheet = xlsx.xl.worksheets['sheet1.xml'];
+
+                                    $('row c[r^="C"]', sheet).attr( 's', '2' );
+                                }
+                            },
                             {extend: 'csv', orientation: 'landscape', pageSize: 'LEGAL'},
                             {extend: 'pdf', orientation: 'landscape', pageSize: 'LEGAL'},
                             {extend: 'print', orientation: 'landscape', pageSize: 'LEGAL'}

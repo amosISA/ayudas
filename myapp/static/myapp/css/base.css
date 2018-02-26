@@ -679,6 +679,7 @@ ul#id_se_relaciona_con {
 #subv_table_ordering thead .table_th_dep { width: 20px; }
 #subv_table_ordering thead .table_th_nombre { width: 400px; }
 #subv_table_ordering thead .table_th_estado { width: 70px; }
+#subv_table_ordering tbody .table_name_td a { font-size: 1rem; }
 
 /*** Override bootstrap cols padding ***/
 .subv-table-row .nopadding, .subv-row-departamentos .nopadding {

@@ -42,7 +42,6 @@
                         - Particulares
                         - Ayuntamientos y mancomunidades
 
-            7. Pulsar sobre nombre y listar
             9. En relaciona con al crear y editar la subvención:
                 - Que se filtre por mismo si la subvención que yo creo le pongo el dep aguas hídricas,
                 pues que aparezcan esas subvenciones relacionadas con ese departamento
