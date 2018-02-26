@@ -26,6 +26,6 @@ urlpatterns = [
     url(r'^edit/(?P<slug>[\w-]+)/$', views.SubvencionUpdateView.as_view(), name='edit_subvencion'),
     url(r'^delete/(?P<slug>[\w-]+)/$', views.SubvencionDeleteView.as_view(), name='delete_subvencion'),
     url(r'^$', views.index, name='index'),
-    url(r'^(?P<estado_slug>[-\w]+)/$', views.index, name='subvencion_by_category'),
+    url(r'^(?P<estado_slug>[-\w ]+)/$', views.index, name='subvencion_by_category'),
     url(r'^(?P<id>\d+)/(?P<slug>[-\w]+)/$', views.subvencion_detail, name='subvencion_detail'),
 ]

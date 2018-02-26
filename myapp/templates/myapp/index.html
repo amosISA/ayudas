@@ -95,7 +95,9 @@
                             <td>{{ subvencion.cuantia|safe }}</td>
                             <td>
                                 {% for responsable in subvencion.responsable.all %}
-                                    <span class="badge badge-pill badge-{% if responsable|split_value == 'MV' %}danger{% elif responsable|split_value == 'T' %}primary{% elif responsable|split_value == 'JC' %}warning{% elif responsable|split_value == 'R' %}info{% elif responsable|split_value == 'M' %}success{% elif responsable|split_value == 'JM' %}inverse{% else %}default{% endif %}" tabindex="0" data-toggle="popover" data-trigger="hover" data-content="{{ responsable }}">{{ responsable|split_value }}</span>
+                                    <span class="badge badge-pill badge-{% if responsable|split_value == 'MV' %}danger{% elif responsable|split_value == 'T' %}primary{% elif responsable|split_value == 'JC' %}warning{% elif responsable|split_value == 'R' %}info{% elif responsable|split_value == 'M' %}success{% elif responsable|split_value == 'JM' %}inverse{% else %}default{% endif %}" tabindex="0" data-toggle="popover" data-trigger="hover" data-content="{{ responsable }}">
+                                        <a style="color:inherit;" href="{% url 'myapp:subvencion_by_category' estado_slug=responsable.responsable %}">{{ responsable|split_value }}</a>
+                                    </span>
                                 {% endfor %}
                             </td>
                             <td class="estadocss" style="background-color:{{ subvencion.estado.font_color }};">
@@ -154,7 +156,7 @@
                 "language": {
                     url: "/static/myapp/location/es_ES.json"
                 },
-                //"lengthMenu": [[50, -1], [50, "Todas"]],
+                "lengthMenu": [[50, -1], [50, "Todas"]],
                 //if I want to show the lengthMenu also do this: Blfrtip
                 dom: 'Bfrtip',
                 buttons: [
@@ -171,7 +173,7 @@
                     }
                 ]
             });
-            
+
             //Notifications script
             $(".notification-box-list .delete-notification").click(function()
             {

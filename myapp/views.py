@@ -23,6 +23,7 @@ def index(request, estado_slug=None):
     estado = None
     diputacion = None
     generalitat = None
+    user = None
     estados = Estado.objects.all().annotate(number_stats=Count('subvencion'))
     subvenciones = Subvencion.objects.all()
 
@@ -36,6 +37,10 @@ def index(request, estado_slug=None):
         elif Generalitat.objects.filter(slug=estado_slug).exists():
             generalitat = get_object_or_404(Generalitat, slug=estado_slug)
             subvenciones = subvenciones.filter(generalitat=generalitat)
+        # To make it work for spaces in string(estado_slug=Juan Carlos) i modified url => r'^(?P<estado_slug>[-\w ]+)/$' => space in -\w
+        elif Responsable.objects.filter(responsable=estado_slug).exists():
+            user = get_object_or_404(Responsable, responsable=estado_slug)
+            subvenciones = subvenciones.filter(responsable__responsable=user)
         else:
             subvenciones = Subvencion.objects.all()
 
@@ -47,6 +52,7 @@ def index(request, estado_slug=None):
                   {'estado': estado,
                    'diputacion': diputacion,
                    'generalitat': generalitat,
+                   'user': user,
                    'estados': estados,
                    'subvenciones': subvenciones,
                    'days_until_estado': days_until_estado,
