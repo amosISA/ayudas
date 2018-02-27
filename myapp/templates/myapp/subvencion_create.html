@@ -243,33 +243,75 @@
             //quit checkbox attr formcontrol
             $("#id_se_relaciona_con li label input, #id_responsable li label input").removeClass("form-control");
 
-            /*$('#id_inicio').change(function() {
-                var numAdd = 30;
-                var dataAvui = new Date($(this).val());
-                console.log(dataAvui);
-                for (var i=1;i<=numAdd;i++)
-                {
-                    var dataTemp = dataAvui;
-                    //console.dir(dataTemp.toString())
-                    dataTemp.setDate(dataTemp.getDate() + 1)
-                    if(dataTemp.getDay() == 6){
-                        dataTemp.setDate(dataTemp.getDate() + 2)
-                    }else if(dataTemp.getDay() == 0){
-                        dataTemp.setDate(dataTemp.getDate() + 1)
-                    }
+            /* Date bussiness days 30, 25, 10 */
+            var id_date_inicio = $('#id_inicio');
+            var id_date_fin = $('#id_fin');
+            var content_div_fin = '<div class="id_date_fin_anchors_bussines_day"><a href="#" onClick="businessDays(15);">+ 15 días hábiles</a><a href="#" onClick="businessDays(20);">+ 20 días hábiles</a><a href="#" onClick="businessDays(30);">+ 30 días hábiles</a></div>'
 
-                    dataAvui = dataTemp;
-                    $("#id_fin").val(dataAvui.toInputFormat());
+            id_date_inicio.change(function() {
+                if (id_date_inicio.val()) {
+                    if (!$('.id_date_fin_anchors_bussines_day').length) {
+                        id_date_fin.after(content_div_fin);
+                    }
+                } else {
+                    console.log('error');
+                    $('.id_date_fin_anchors_bussines_day').remove();
                 }
             });
-
-            Date.prototype.toInputFormat = function() {
-               var yyyy = this.getFullYear().toString();
-               var mm = (this.getMonth()+1).toString(); // getMonth() is zero-based
-               var dd  = this.getDate().toString();
-               return yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-" + (dd[1]?dd:"0"+dd[0]); // padding
-            };*/
         }
+
+        function businessDays(days) {
+            /*var data = {
+                "ano_nuevo": "01/01/2018",
+                "reyes": "06/01/2018",
+                "pascua": "2018/03/30",
+                "dia_del_trabajo": "01/05/2018",
+                "asuncion_virgen": "2018/08/15",
+                "hispanidad": "12/08/2018",
+                "santos": "01/11/2018",
+                "constitucion": "06/12/2018",
+                "inmaculada": "08/12/2018",
+                "navidad": "2018/12/25",
+                "hoy": "2018/02/27"
+            };
+
+            var items = [];
+            $.each( data, function( key, val ) {
+                items.push(new Date(val));
+            });
+
+            var national_days = [];
+            $.each(items, function(key, value) {
+                national_days.push(value.toString().split(" ", 4).join(" "));
+            });
+            console.log(national_days);*/
+
+            var dataAvui = new Date($('#id_inicio').val());
+            for (var i=1;i<=days;i++)
+            {
+                var dataTemp = dataAvui;
+                //console.log(dataTemp.toString());
+                dataTemp.setDate(dataTemp.getDate() + 1);
+                if(dataTemp.getDay() == 6){
+                    dataTemp.setDate(dataTemp.getDate() + 2);
+                }else if(dataTemp.getDay() == 0){
+                    dataTemp.setDate(dataTemp.getDate() + 1);
+                }/*else if($.inArray(dataTemp.toString().split(" ", 4).join(" "), national_days) != -1) {
+                    console.log("fecha_calend " + dataTemp.toString().split(" ", 4).join(" ") + " fecha_nacional " + national_days[i]);
+                }
+                console.log(dataTemp.toString().split(" ", 4).join(" "));*/
+
+                dataAvui = dataTemp;
+                $("#id_fin").val(dataAvui.toInputFormat());
+            }
+        }
+
+        Date.prototype.toInputFormat = function() {
+           var yyyy = this.getFullYear().toString();
+           var mm = (this.getMonth()+1).toString(); // getMonth() is zero-based
+           var dd  = this.getDate().toString();
+           return yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-" + (dd[1]?dd:"0"+dd[0]); // padding
+        };
     </script>
     <!-- For the admin site -->
     <script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>

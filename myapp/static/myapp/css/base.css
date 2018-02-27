@@ -545,8 +545,10 @@ a.alert_message:hover{color: grey;}
 
 /*** Juan Carlos styles for form ****/
 .ag_create_post_wrapper .h1 {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     text-align: left;
+    color: #000;
+    font-weight: 900;
 }
 
 .forms_act_crea {
@@ -679,6 +681,8 @@ ul#id_se_relaciona_con {
 #subv_table_ordering thead .table_th_dep { width: 20px; }
 #subv_table_ordering thead .table_th_nombre { width: 400px; }
 #subv_table_ordering thead .table_th_estado { width: 70px; }
+#subv_table_ordering thead .table_th_inicio { width: 70px; }
+#subv_table_ordering thead .table_th_fin { width: 70px; }
 #subv_table_ordering tbody .table_name_td a { font-size: 1rem; }
 
 /*** Override bootstrap cols padding ***/
@@ -711,4 +715,17 @@ ul#id_se_relaciona_con {
 /** Table actions pdf, print, excel ... **/
 .dt-button-collection li {
   list-style-type: none;
+}
+
+/** Span description **/
+.subv-span-desc-inside-name {
+  display:block;
+  color: #666;
+  text-align: justify;
+}
+
+/** Syles for bussiness days **/
+.id_date_fin_anchors_bussines_day a {
+  font-size: 0.7rem;
+  display:block;
 }

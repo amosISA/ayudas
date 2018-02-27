@@ -57,10 +57,10 @@
             <table id="subv_table_ordering" class="table" width="100%">
                 <thead class="thead-subv-table">
                     <tr class="table-active">
-                        <th>INICIO</th>
+                        <th class="table_th_inicio">INICIO</th>
                         <th class="table_th_dep">DEPARTAMENTO</th>
                         <th class="table_th_nombre">NOMBRE</th>
-                        <th>FIN</th>
+                        <th class="table_th_fin">FIN</th>
                         <th>CUANTÍA</th>
                         <th>RESPONSABLES</th>
                         <th class="table_th_estado">ESTADO</th>
@@ -87,7 +87,7 @@
                                 <a href="{{ subvencion.get_absolute_url }}" target="_blank">
                                     {{ subvencion.nombre|safe }}
                                 </a>
-                                <span style="display:block;">{{ subvencion.descripcion }}</span>
+                                <span class="subv-span-desc-inside-name">{{ subvencion.descripcion }}</span>
                             </td>
                             <td class="estadocss" style="{% if subvencion.fin|daysuntil in days_until_estado %}background-color:#ff0000;color:#fff;{% elif subvencion.fin|daysuntil == 'passed days' %}background-color:{{ subvencion.estado.font_color }};{% else %}background-color:#fff;{% endif %}">
                                 {{ subvencion.fin|date:"d/m/Y" }}
