@@ -93,6 +93,24 @@ class Estado(models.Model):
     def count_subsidies(self):
         return Subvencion.objects.filter(estado=self.etapa)
 
+class Colectivo(models.Model):
+    nombre = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=250, unique=True, default=None, blank=True, null=True)
+
+    def __unicode__(self):
+        return '{}'.format(self.nombre)
+
+    class Meta:
+        ordering = ["nombre"]
+
+    def save(self):
+        self.slug = slugify(self.nombre)
+        super(Colectivo, self).save()
+
+    def get_absolute_url(self):
+        return reverse('myapp:subvencion_by_category',
+                       args=[self.slug])
+
 class Subvencion(models.Model):
     user = models.ForeignKey(User, blank=True, null=True)
     inicio = models.DateField(blank=True, null=True)
@@ -131,6 +149,7 @@ class Subvencion(models.Model):
                                            help_text="Número de expediente del Gestiona",
                                            default="-")
     se_relaciona_con = models.ManyToManyField('self', blank=True, default='')
+    colectivo = models.ForeignKey(Colectivo, on_delete=models.CASCADE, default=None, blank=True, null=True)
 
     class Meta:
         ordering = ["-created"]

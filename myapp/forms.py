@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from django.contrib.admin.widgets import RelatedFieldWidgetWrapper
+from django.db.models import Q
 
 from .models import Subvencion, Responsable, Diputacion, Generalitat, Estado, ColorField
 from .sites import my_admin_site
@@ -64,3 +65,9 @@ class SubvencionForm(forms.ModelForm):
             'responsable': forms.CheckboxSelectMultiple(),
         }
         exclude = ('slug',)
+
+    # def __init__(self, *args, **kwargs):
+    #     super(SubvencionForm, self).__init__(*args, **kwargs)
+    #     # access object through self.instance...
+    #     self.fields['se_relaciona_con'].queryset = Subvencion.objects.filter(Q(diputacion=self.instance.diputacion) |
+    #                                                                          Q(generalitat=self.instance.generalitat))

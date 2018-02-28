@@ -21,6 +21,8 @@
             no tiene slug ese dep y por tanto vamos al backend y seleccionamos ese dep y lo guardamos para q se le guarde un
             dep. Y luego de hacer eso volver a guardar las fixtures para que se guarde los slug de cada uno.
 
+            4. En el input fecha inicio los días festivos del array de js hay que ir actualizándolos está válido hasta diciembre de 2019.
+
 
 
        - ERRORS TO FIX:
@@ -45,13 +47,10 @@
             9. En relaciona con al crear y editar la subvención:
                 - Que se filtre por mismo si la subvención que yo creo le pongo el dep aguas hídricas,
                 pues que aparezcan esas subvenciones relacionadas con ese departamento
+                - Pero si en generalitat tmb hay un dep q es aguas hídricas, que aparezcan tmb esas subvenciones
+                q tengan ese dep de generalitat
             11. Quitar la columna de editar y cuando entremos en el detalle de la subvención pues que tengamos ahí
             dos botones: uno de editar y el otro para eliminarla si queremos
             12. Que la tabla ocupe lo q tenga q ocupar y ponerle overflow
-            13. En la fecha fin al crear subsidies: poner una opción dentro del ui de jquery calendar q sea:
-                + 30 días hábiles
-                + 25 días hábiles
-                + 15 días hábiles
-                *** Aun falta añadir los días festivos nacionales, intentar coger de alguna api pero no he encontrado,
-                de manera que hay que ir actualizándolo
             14. En detalles de la subv siempre saca que la ha creado el usuario logeado
+            15. Otro choice Gobierno de España

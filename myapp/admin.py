@@ -8,7 +8,7 @@ from django.contrib.admin.options import ModelAdmin
 from django.core.mail import send_mail
 from django import forms
 from django.utils.html import format_html
-from .models import Subvencion, Responsable, Estado, Diputacion, Generalitat
+from .models import Subvencion, Responsable, Estado, Diputacion, Generalitat, Colectivo
 from notify.signals import notify
 from .sites import my_admin_site
 
@@ -67,6 +67,10 @@ class SubvencionAdmin(admin.ModelAdmin):
 
     class Media:
         js = ('/static/admin/js/assets_admin.js',)
+
+    def save_model(self, request, obj, form, change):
+        obj.user = request.user
+        super(SubvencionAdmin, self).save_model(request, obj, form, change)
 my_admin_site.register(Subvencion, SubvencionAdmin)
 admin.site.register(Subvencion, SubvencionAdmin)
 
@@ -87,13 +91,26 @@ class EstadoAdmin(admin.ModelAdmin):
 admin.site.register(Estado, EstadoAdmin)
 
 class DiputacionAdmin(admin.ModelAdmin):
+    exclude = ('slug',)
+
     def save_model(self, request, obj, form, change):
         email_notify(request, form, message='departamento (Diputación)', name_field='nombre')
         super(DiputacionAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Diputacion, DiputacionAdmin)
 
 class GeneralitatAdmin(admin.ModelAdmin):
+    exclude = ('slug',)
+
     def save_model(self, request, obj, form, change):
         email_notify(request, form, message='departamento (Generalitat)', name_field='nombre')
         super(GeneralitatAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Generalitat, GeneralitatAdmin)
+
+class ColectivoAdmin(admin.ModelAdmin):
+    exclude = ('slug',)
+
+    def save_model(self, request, obj, form, change):
+        email_notify(request, form, message='colectivo', name_field='nombre')
+        super(ColectivoAdmin, self).save_model(request, obj, form, change)
+
+admin.site.register(Colectivo, ColectivoAdmin)
