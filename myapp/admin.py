@@ -8,7 +8,7 @@ from django.contrib.admin.options import ModelAdmin
 from django.core.mail import send_mail
 from django import forms
 from django.utils.html import format_html
-from .models import Subvencion, Responsable, Estado, Diputacion, Generalitat, Colectivo
+from .models import Subvencion, Responsable, Estado, Diputacion, Generalitat, Colectivo, Gobierno
 from notify.signals import notify
 from .sites import my_admin_site
 
@@ -32,7 +32,7 @@ def email_notify(request, form, message, name_field):
 class SubvencionAdmin(admin.ModelAdmin):
     list_display = ['inicio', 'nombre', 'fin', 'cuantia',
                     'estado', 'Gestiona', 'gestiona_expediente', 'user']
-    list_filter = ['nombre', 'estado', 'generalitat', 'diputacion', 'responsable']
+    list_filter = ['nombre', 'estado', 'generalitat', 'diputacion', 'responsable', 'colectivo', 'gobierno']
     search_fields = ('nombre',)
     empty_value_display = '-' # para los campos vacios se pone eso
     list_display_links = ('nombre',) # que campo aparece como un link para editar el registro
@@ -106,11 +106,18 @@ class GeneralitatAdmin(admin.ModelAdmin):
         super(GeneralitatAdmin, self).save_model(request, obj, form, change)
 admin.site.register(Generalitat, GeneralitatAdmin)
 
+class GobiernoAdmin(admin.ModelAdmin):
+    exclude = ('slug',)
+
+    def save_model(self, request, obj, form, change):
+        email_notify(request, form, message='departamento (Gobierno de España)', name_field='nombre')
+        super(GobiernoAdmin, self).save_model(request, obj, form, change)
+admin.site.register(Gobierno, GobiernoAdmin)
+
 class ColectivoAdmin(admin.ModelAdmin):
     exclude = ('slug',)
 
     def save_model(self, request, obj, form, change):
         email_notify(request, form, message='colectivo', name_field='nombre')
         super(ColectivoAdmin, self).save_model(request, obj, form, change)
-
 admin.site.register(Colectivo, ColectivoAdmin)

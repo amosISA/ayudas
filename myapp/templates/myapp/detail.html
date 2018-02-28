@@ -53,19 +53,31 @@
                             </div>
                         </div>
 
-                        {% if subvencion.generalitat == None %}
+                        {% if subvencion.generalitat == None and subvencion.gobierno == None %}
                             <!-- Diputacion -->
                             <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                                 <label for="id_diputacion">Departamento (Diputación de Alicante):</label>
                                 <textarea id="id_diputacion" rows="1" cols="20" class="form-control" readonly>{{ subvencion.diputacion }}</textarea>
                             </div>
-                        {% else %}
+                        {% elif subvencion.diputacion == None and subvencion.gobierno == None %}
                             <!-- Generalitat -->
                             <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                                 <label for="id_generalitat">Departamento (Generalitat Valenciana):</label>
                                 <textarea id="id_generalitat" rows="1" cols="20" class="form-control" readonly>{{ subvencion.generalitat }}</textarea>
                             </div>
+                        {% elif subvencion.diputacion == None and subvencion.diputacion == None %}
+                            <!-- Gobierno -->
+                            <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                                <label for="id_gobierno">Departamento (Gobierno de España):</label>
+                                <textarea id="id_gobierno" rows="1" cols="20" class="form-control" readonly>{{ subvencion.gobierno }}</textarea>
+                            </div>
                         {% endif %}
+
+                        <!-- Colectivo -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            <label for="id_colectivo">Colectivo:</label>
+                            <input type="text" value="{{ subvencion.colectivo }}" id="id_colectivo" class="form-control" readonly>
+                        </div>
 
                         <!-- Estado -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
@@ -115,13 +127,13 @@
                         <!-- Descripcion -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                             <label for="id_descripcion">Descripción:</label>
-                            <textarea id="id_descripcion" disabled rows="9" cols="20" class="form-control">{{ subvencion.descripcion|safe }}</textarea>
+                            <textarea id="id_descripcion" disabled rows="12" cols="20" class="form-control">{{ subvencion.descripcion|safe }}</textarea>
                         </div>
 
                         <!-- Comentarios -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                             <label for="id_comentarios">Comentarios:</label>
-                            <textarea id="id_comentarios" disabled rows="9" cols="20" class="form-control">{{ subvencion.comentarios|safe }}</textarea>
+                            <textarea id="id_comentarios" disabled rows="12" cols="20" class="form-control">{{ subvencion.comentarios|safe }}</textarea>
                         </div>
                     </div>
 

@@ -70,6 +70,25 @@ class Generalitat(models.Model):
         return reverse('myapp:subvencion_by_category',
                        args=[self.slug])
 
+class Gobierno(models.Model):
+    nombre = models.CharField(max_length=250)
+    font_color = ColorField(blank=True)
+    slug = models.SlugField(max_length=250, unique=True, default=None, blank=True, null=True)
+
+    def __unicode__(self):
+        return '{}'.format(self.nombre)
+
+    class Meta:
+        ordering = ["nombre"]
+
+    def save(self):
+        self.slug = slugify(self.nombre)
+        super(Gobierno, self).save()
+
+    def get_absolute_url(self):
+        return reverse('myapp:subvencion_by_category',
+                       args=[self.slug])
+
 class Estado(models.Model):
     etapa = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True, default=None, blank=True, null=True)
@@ -131,11 +150,13 @@ class Subvencion(models.Model):
     ENTE_CHOICES = (
         ('DA', 'Diputación de Alicante'),
         ('GV', 'Generalitat Valenciana'),
+        ('GE', 'Gobierno de España'),
     )
 
     ente = models.CharField(max_length=255, choices=ENTE_CHOICES, default=None)
     diputacion = models.ForeignKey(Diputacion, on_delete=models.CASCADE, default=None, blank=True, null=True)
     generalitat = models.ForeignKey(Generalitat, on_delete=models.CASCADE, default=None, blank=True, null=True)
+    gobierno = models.ForeignKey(Gobierno, on_delete=models.CASCADE, default=None, blank=True, null=True)
 
     cuantia = models.TextField(blank=True)
     descripcion = models.TextField(blank=True)

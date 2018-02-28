@@ -3,7 +3,7 @@ from django import forms
 from django.contrib.admin.widgets import RelatedFieldWidgetWrapper
 from django.db.models import Q
 
-from .models import Subvencion, Responsable, Diputacion, Generalitat, Estado, ColorField
+from .models import Subvencion, Responsable, Diputacion, Generalitat, Estado, ColorField, Gobierno
 from .sites import my_admin_site
 
 class DiputacionForm(forms.ModelForm):
@@ -14,6 +14,11 @@ class DiputacionForm(forms.ModelForm):
 class GeneralitatForm(forms.ModelForm):
     class Meta:
         model = Generalitat
+        fields = ["nombre", "font_color"]
+
+class GobiernoForm(forms.ModelForm):
+    class Meta:
+        model = Gobierno
         fields = ["nombre", "font_color"]
 
 class EstadoForm(forms.ModelForm):
@@ -46,6 +51,12 @@ class SubvencionForm(forms.ModelForm):
             'generalitat': RelatedFieldWidgetWrapper(
                 Subvencion._meta.get_field('generalitat').formfield().widget,
                 Subvencion._meta.get_field('generalitat').rel,
+                my_admin_site,
+                can_add_related=True
+            ),
+            'gobierno': RelatedFieldWidgetWrapper(
+                Subvencion._meta.get_field('gobierno').formfield().widget,
+                Subvencion._meta.get_field('gobierno').rel,
                 my_admin_site,
                 can_add_related=True
             ),

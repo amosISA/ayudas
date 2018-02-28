@@ -35,15 +35,6 @@
             3. Al crear subvención se envía el email pero el link de la misma no es el que corresponde.
                Mirar en el proyecto de sharing_things lo de sites, sin ver como hacerlo.
 
-            5. Nuevas reglas JC:
-                - Nuevo campo (select):
-                    - Colectivo de uno a muchos
-                        - Ayuntamiento (por defecto)
-                        - Mancomunidad
-                        - Asociaciones
-                        - Particulares
-                        - Ayuntamientos y mancomunidades
-
             9. En relaciona con al crear y editar la subvención:
                 - Que se filtre por mismo si la subvención que yo creo le pongo el dep aguas hídricas,
                 pues que aparezcan esas subvenciones relacionadas con ese departamento

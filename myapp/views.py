@@ -14,7 +14,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.template import loader
 
 from notify.signals import notify
-from .models import Subvencion, Estado, Diputacion, Generalitat, Responsable
+from .models import Subvencion, Estado, Diputacion, Generalitat, Responsable, Gobierno
 from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm
 
 # Create your views here.
@@ -23,6 +23,7 @@ def index(request, estado_slug=None):
     estado = None
     diputacion = None
     generalitat = None
+    gobierno = None
     user = None
     estados = Estado.objects.all().annotate(number_stats=Count('subvencion'))
     subvenciones = Subvencion.objects.all()
@@ -37,6 +38,9 @@ def index(request, estado_slug=None):
         elif Generalitat.objects.filter(slug=estado_slug).exists():
             generalitat = get_object_or_404(Generalitat, slug=estado_slug)
             subvenciones = subvenciones.filter(generalitat=generalitat)
+        elif Gobierno.objects.filter(slug=estado_slug).exists():
+            gobierno = get_object_or_404(Gobierno, slug=estado_slug)
+            subvenciones = subvenciones.filter(gobierno=gobierno)
         # To make it work for spaces in string(estado_slug=Juan Carlos) i modified url => r'^(?P<estado_slug>[-\w ]+)/$' => space in -\w
         elif Responsable.objects.filter(responsable=estado_slug).exists():
             user = get_object_or_404(Responsable, responsable=estado_slug)
@@ -52,6 +56,7 @@ def index(request, estado_slug=None):
                   {'estado': estado,
                    'diputacion': diputacion,
                    'generalitat': generalitat,
+                   'gobierno': gobierno,
                    'user': user,
                    'estados': estados,
                    'subvenciones': subvenciones,

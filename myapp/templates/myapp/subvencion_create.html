@@ -82,6 +82,11 @@
                             {{ form.generalitat|htmlattributes:"class:form-control" }}
                         </div>
 
+                        <!-- Gobierno -->
+                        <div class="title-create_post field-gobierno">
+                            {{ form.gobierno|htmlattributes:"class:form-control" }}
+                        </div>
+
                         <!-- Colectivo -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                             {{ form.colectivo.label_tag }}
@@ -177,11 +182,16 @@
                 var ente_value = ente.options[ente.selectedIndex].value;
                 var diputacion = document.getElementsByClassName('field-diputacion');
                 var generalitat = document.getElementsByClassName('field-generalitat');
+                var gobierno = document.getElementsByClassName('field-gobierno');
 
                 if(ente_value == 'DA') {
                    for (var i=0; i<generalitat.length; i+=1){
                       generalitat[i].style.display = 'none';
                       document.getElementById("id_generalitat").selectedIndex = 0;
+                   }
+                   for (var i=0; i<gobierno.length; i+=1){
+                      gobierno[i].style.display = 'none';
+                      document.getElementById("id_gobierno").selectedIndex = 0;
                    }
                    for (var i=0; i<diputacion.length; i+=1){
                       diputacion[i].style.display = 'block';
@@ -189,16 +199,38 @@
                    }
                    $('#add_id_diputacion').css('display', 'block').insertAfter($('label[for="id_ente"]'));
                    $('#add_id_generalitat').css('display', 'none');
+                   $('#add_id_gobierno').css('display', 'none');
                 } else if (ente_value == 'GV') {
                     for (var i=0; i<diputacion.length; i+=1){
                       diputacion[i].style.display = 'none';
                       document.getElementById("id_diputacion").selectedIndex = 0;
+                    }
+                    for (var i=0; i<gobierno.length; i+=1){
+                      gobierno[i].style.display = 'none';
+                      document.getElementById("id_gobierno").selectedIndex = 0;
                     }
                     for (var i=0; i<generalitat.length; i+=1){
                       generalitat[i].style.display = 'block';
                       document.getElementById("id_generalitat").selectedIndex = 0;
                     }
                     $('#add_id_generalitat').css('display', 'block').insertAfter($('label[for="id_ente"]'));
+                    $('#add_id_diputacion').css('display', 'none');
+                    $('#add_id_gobierno').css('display', 'none');
+                } else if (ente_value == 'GE') {
+                    for (var i=0; i<diputacion.length; i+=1){
+                      diputacion[i].style.display = 'none';
+                      document.getElementById("id_diputacion").selectedIndex = 0;
+                    }
+                    for (var i=0; i<generalitat.length; i+=1){
+                      generalitat[i].style.display = 'none';
+                      document.getElementById("id_generalitat").selectedIndex = 0;
+                    }
+                    for (var i=0; i<gobierno.length; i+=1){
+                      gobierno[i].style.display = 'block';
+                      document.getElementById("id_gobierno").selectedIndex = 0;
+                    }
+                    $('#add_id_gobierno').css('display', 'block').insertAfter($('label[for="id_ente"]'));
+                    $('#add_id_generalitat').css('display', 'none');
                     $('#add_id_diputacion').css('display', 'none');
                 }
             }
@@ -207,14 +239,32 @@
                 for (var i=0; i<document.getElementsByClassName('field-generalitat').length; i+=1){
                   document.getElementsByClassName('field-generalitat')[i].style.display = 'none';
                 }
+                for (var i=0; i<document.getElementsByClassName('field-gobierno').length; i+=1){
+                  document.getElementsByClassName('field-gobierno')[i].style.display = 'none';
+                }
                 $('#add_id_diputacion').css('display', 'block').insertAfter($('label[for="id_ente"]'));
                 $('#add_id_generalitat').css('display', 'none');
+                $('#add_id_gobierno').css('display', 'none');
             } else if (ente.options[ente.selectedIndex].value == 'GV') {
                 for (var i=0; i<document.getElementsByClassName('field-diputacion').length; i+=1){
                   document.getElementsByClassName('field-diputacion')[i].style.display = 'none';
                 }
+                for (var i=0; i<document.getElementsByClassName('field-gobierno').length; i+=1){
+                  document.getElementsByClassName('field-gobierno')[i].style.display = 'none';
+                }
                 $('#add_id_generalitat').css('display', 'block').insertAfter($('label[for="id_ente"]'));
                 $('#add_id_diputacion').css('display', 'none');
+                $('#add_id_gobierno').css('display', 'none');
+            } else if (ente.options[ente.selectedIndex].value == 'GE') {
+                for (var i=0; i<document.getElementsByClassName('field-diputacion').length; i+=1){
+                  document.getElementsByClassName('field-diputacion')[i].style.display = 'none';
+                }
+                for (var i=0; i<document.getElementsByClassName('field-generalitat').length; i+=1){
+                  document.getElementsByClassName('field-generalitat')[i].style.display = 'none';
+                }
+                $('#add_id_gobierno').css('display', 'block').insertAfter($('label[for="id_ente"]'));
+                $('#add_id_diputacion').css('display', 'none');
+                $('#add_id_generalitat').css('display', 'none');
             }
 
             // Convert input text inicio and fin into datepickers!!!
@@ -222,8 +272,8 @@
 
             // Change textarea cols
             $("textarea[name='drive'], textarea[name='bases'], textarea[name='solicitud'], textarea[name='observaciones'], textarea[name='nombre']").attr({'cols': '20', 'rows': '1'});
-            $("textarea[name='descripcion']").attr({'cols': '20', 'rows': '9'});
-            $("textarea[name='comentarios']").attr({'cols': '20', 'rows': '9'});
+            $("textarea[name='descripcion']").attr({'cols': '20', 'rows': '12'});
+            $("textarea[name='comentarios']").attr({'cols': '20', 'rows': '12'});
             $("textarea[name='cuantia']").attr({'cols': '20', 'rows': '1'});
 
             // Admin plus

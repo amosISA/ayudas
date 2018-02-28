@@ -1,7 +1,7 @@
 {% extends "myapp/base.html" %}
 
 {% block title %}
-    {% if estado %}{{ estado.etapa }}{% elif diputacion %}{{ diputacion.nombre }}{% elif user %}{{ user.responsable }}{% elif generalitat %}{{ generalitat.nombre }}{% else %}Subvenciones{% endif %}
+    {% if estado %}{{ estado.etapa }}{% elif diputacion %}{{ diputacion.nombre }}{% elif gobierno %}{{ gobierno.nombre }}{% elif user %}{{ user.responsable }}{% elif generalitat %}{{ generalitat.nombre }}{% else %}Subvenciones{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -77,10 +77,12 @@
                                 {{ subvencion.inicio|date:"d/m/Y" }}
                             </td>
                             <td class="estadocss2" style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
-                                {% if subvencion.generalitat == None %}
-                                <a class="dep_gene_dip" href="{{ subvencion.diputacion.get_absolute_url }}">{{ subvencion.diputacion }}</a>
-                                {% else %}
+                                {% if subvencion.generalitat == None and subvencion.gobierno == None %}
+                                    <a class="dep_gene_dip" href="{{ subvencion.diputacion.get_absolute_url }}">{{ subvencion.diputacion }}</a>
+                                {% elif subvencion.diputacion == None and subvencion.gobierno == None %}
                                     <a class="dep_gene_dip" href="{{ subvencion.generalitat.get_absolute_url }}">{{ subvencion.generalitat }}</a>
+                                {% elif subvencion.diputacion == None and subvencion.diputacion == None %}
+                                    <a class="dep_gene_dip" href="{{ subvencion.gobierno.get_absolute_url }}">{{ subvencion.gobierno }}</a>
                                 {% endif %}
                             </td>
                             <td class="table_name_td">
