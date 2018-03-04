@@ -32,16 +32,13 @@
                 - Añadir las subvenciones del excel
                 - Hacer script para copia de seguridad de bbdd (tanto de phpmyadmin como de fixtures) y añadir exportar a excel desde el admin
 
-            3. Al crear subvención se envía el email pero el link de la misma no es el que corresponde.
-               Mirar en el proyecto de sharing_things lo de sites, sin ver como hacerlo.
-
-            9. En relaciona con al crear y editar la subvención:
+            3. En relaciona con al crear y editar la subvención:
                 - Que se filtre por mismo si la subvención que yo creo le pongo el dep aguas hídricas,
                 pues que aparezcan esas subvenciones relacionadas con ese departamento
                 - Pero si en generalitat tmb hay un dep q es aguas hídricas, que aparezcan tmb esas subvenciones
                 q tengan ese dep de generalitat
-            11. Quitar la columna de editar y cuando entremos en el detalle de la subvención pues que tengamos ahí
-            dos botones: uno de editar y el otro para eliminarla si queremos
-            12. Que la tabla ocupe lo q tenga q ocupar y ponerle overflow
-            14. En detalles de la subv siempre saca que la ha creado el usuario logeado
-            15. Otro choice Gobierno de España
+
+            4. En index cuando le de en algun estado y luego en el select de al lado de acciones q se acumulen las querys mismo le doy
+            en aprobada y luego en el ente, pues todas las subvenciones de ese ente que tengan ese estado! Et voilà.
+
+            5. Añadir collapse accordion a los estados y las notificaciones

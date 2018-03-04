@@ -9,6 +9,7 @@
 {% load staticfiles %}
 {% load notification_tags %}
 
+
 <div class="row subv-row-departamentos">
     <div class="col-md-3 col-lg-3 col-departamentos nopadding">
         {% for e in estados %}
@@ -22,6 +23,10 @@
                 <span>{{ e.number_stats }}</span>
             </div>
         {% endfor %}
+        <div class="div-dep" style="border-left-style: solid;border-left-width: 15px;border-left-color:#ff0017;">
+            <a href="{% url 'myapp:index' %}">Todas las subvenciones</a>
+            <span>{{ subvenciones.count }}</span>
+        </div>
     </div>
 
     {% if notifications %}

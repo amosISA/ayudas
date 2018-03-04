@@ -187,6 +187,9 @@ class Subvencion(models.Model):
         return reverse('myapp:subvencion_detail',
                        args=[self.id, self.slug])
 
+    def ente_verbose(self):
+        return dict(Subvencion.ENTE_CHOICES)[self.ente]
+
 # Function that do something before the model is saved => save()
 def pre_save_post_receiver(sender, instance, *args, **kwargs):
     # Lo q slugify hace es si el titulo es: coche item 1
