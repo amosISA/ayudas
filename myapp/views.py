@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.core import serializers
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse, reverse_lazy
-from django.db.models import Count
-from django.http import HttpResponse, HttpResponseRedirect, Http404
+from django.db.models import Count, Q
+from django.http import HttpResponse, HttpResponseRedirect, Http404, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.template import loader
@@ -18,6 +19,31 @@ from .models import Subvencion, Estado, Diputacion, Generalitat, Responsable, Go
 from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm
 
 # Create your views here.
+####### AJAX REQUEST SE RELACIONA CON ######
+def ajax_se_relaciona_con(request):
+    diputacion = request.GET.getlist('diputacion_ajax[]', '99999')
+    generalitat = request.GET.getlist('generalitat_ajax[]', '99999')
+    gobierno = request.GET.getlist('gobierno_ajax[]', '99999')
+
+    query = Subvencion.objects.all().filter(Q(diputacion__pk__in=diputacion) |
+                                      Q(generalitat__pk__in=generalitat) |
+                                      Q(gobierno__pk__in=gobierno))
+    data = serializers.serialize('json', query)
+    return HttpResponse(data, content_type="application/json")
+
+def subsidies_for_ajax_loop(request):
+    subvenciones = Subvencion.objects.all()
+    diputacion = Diputacion.objects.all()
+    generalitat = Generalitat.objects.all()
+    gobierno = Gobierno.objects.all()
+
+    return render(request,
+                  'myapp/ajax_se_relaciona_con_modal.html',
+                  {'subvenciones':subvenciones,
+                   'diputacion':diputacion,
+                   'generalitat':generalitat,
+                   'gobierno':gobierno})
+
 @login_required()
 def index(request, estado_slug=None):
     estado = None

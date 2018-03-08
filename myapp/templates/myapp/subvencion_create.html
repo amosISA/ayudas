@@ -147,8 +147,13 @@
                     </div>
 
                     <div class="col-lg-3">
-                        <!-- Se relacion con -->
+                        <!-- Ajax filter -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            <label>Subvenciones relacionadas:</label><br>
+                            <a class="ajax_relation_anchor" data-toggle="modal" data-target="#ajaxRelationFilterModal" href="{% url 'myapp:ajax_loop_departments' %}">Filtrar</a>
+                        </div>
+                        <!-- Se relacion con -->
+                        <div class="form-group title-create_post se_relaciona_con_ajax_div" style="text-align:justify;font-weight:bold;">
                             {{ form.se_relaciona_con.label_tag }}
                             {{ form.se_relaciona_con|htmlattributes:"placeholder: Expediente, class:form-control" }}
                         </div>
@@ -161,6 +166,25 @@
                     <input class="button_submit_create_form" type="submit" value="Actualizar Subvención" />
                 {% endif %}
             </form>
+
+            <!-- Modal -->
+            <div class="modal fade" id="ajaxRelationFilterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Filtrar por departamentos</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button id="modal_ajax_button_filter_subsidies" type="button" class="btn btn-default" data-dismiss="modal">Filtrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="col" style="display:none;">
@@ -377,6 +401,134 @@
            return yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-" + (dd[1]?dd:"0"+dd[0]); // padding
         };
     </script>
+
+    {% if request.path != '/new/' %}
+        <script>
+            // WHEN EDIT SUBSIDIE
+            $(document).ready(function() {
+                // AJAX FOR SELECT DEPARTMENT AND FILL SE RELACIONA CON
+                $('ul#id_se_relaciona_con input:checkbox').each(function() {
+                    var checkbox = $(this);
+                    if(checkbox.is(':checked')){}else{checkbox.parent().remove();}
+                });
+
+                $('.ajax_relation_anchor').on('click', function(e){
+                    e.preventDefault();
+                    $('#ajaxRelationFilterModal').modal('show').find('.modal-body').load($(this).attr('href'));
+                });
+
+                $('#modal_ajax_button_filter_subsidies').click(function() {
+                    var dip_list = [];
+                    var gene_list = [];
+                    var gob_list = [];
+                    $("input[name='diputacion_ajax']:checked").each( function () {
+                       dip_list.push(parseInt($(this).val()));
+                    });
+                    $("input[name='generalitat_ajax']:checked").each( function () {
+                       gene_list.push(parseInt($(this).val()));
+                    });
+                    $("input[name='gobierno_ajax']:checked").each( function () {
+                       gob_list.push(parseInt($(this).val()));
+                    });
+
+                    $.ajax({
+                        method: 'GET',
+                        url: '{% url "myapp:ajax_se_relaciona_con" %}',
+                        data: {
+                            'diputacion_ajax': dip_list,
+                            'generalitat_ajax': gene_list,
+                            'gobierno_ajax': gob_list
+                        },
+                        dataType: 'json',
+                        success: function (data) {
+                            $('ul#id_se_relaciona_con input:checkbox').each(function() {
+                                var checkbox = $(this);
+                                if(checkbox.is(':checked')){}else{checkbox.parent().remove();}
+                            });
+
+                            $.each(data, function(key, value){
+                                $('ul#id_se_relaciona_con').append("<li><label for='id_se_relaciona_con_"+key+"'><input type='checkbox' name='se_relaciona_con' value='"+value.pk+"' class='' id='id_se_relaciona_con_"+key+"'>"+value.fields['nombre']+"</label></li>");
+                            });
+
+                            var inputs_checkbox = {};
+                            $('ul#id_se_relaciona_con input:checkbox').each(function() {
+                                var checkbox = $(this).val();
+                                if(inputs_checkbox[checkbox]) {
+                                    $(this).parent().remove();
+                                } else {
+                                    inputs_checkbox[checkbox] = true;
+                                }
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
+    {% else %}
+        <script>
+            // WHEN ADD SUBSIDIE
+            $(document).ready(function() {
+                // AJAX FOR SELECT DEPARTMENT AND FILL SE RELACIONA CON
+                $('.se_relaciona_con_ajax_div').css('display', 'none');
+                $('.ajax_relation_anchor').on('click', function(e){
+                    e.preventDefault();
+                    $('#ajaxRelationFilterModal').modal('show').find('.modal-body').load($(this).attr('href'));
+                });
+
+                $('#modal_ajax_button_filter_subsidies').click(function() {
+                    var dip_list = [];
+                    var gene_list = [];
+                    var gob_list = [];
+                    $("input[name='diputacion_ajax']:checked").each( function () {
+                       dip_list.push(parseInt($(this).val()));
+                    });
+                    $("input[name='generalitat_ajax']:checked").each( function () {
+                       gene_list.push(parseInt($(this).val()));
+                    });
+                    $("input[name='gobierno_ajax']:checked").each( function () {
+                       gob_list.push(parseInt($(this).val()));
+                    });
+
+                    $.ajax({
+                        method: 'GET',
+                        url: '{% url "myapp:ajax_se_relaciona_con" %}',
+                        data: {
+                            'diputacion_ajax': dip_list,
+                            'generalitat_ajax': gene_list,
+                            'gobierno_ajax': gob_list
+                        },
+                        dataType: 'json',
+                        success: function (data) {
+                            $('.se_relaciona_con_ajax_div').css('display', 'block');
+                            //var ul_li = $('#id_se_relaciona_con');
+                            //ul_li.text('');
+                            //console.log(data);
+
+                            $('ul#id_se_relaciona_con input:checkbox').each(function() {
+                                var checkbox = $(this);
+                                if(checkbox.is(':checked')){}else{checkbox.parent().remove();}
+                            });
+
+                            $.each(data, function(key, value){
+                                $('ul#id_se_relaciona_con').append("<li><label for='id_se_relaciona_con_"+key+"'><input type='checkbox' name='se_relaciona_con' value='"+value.pk+"' class='' id='id_se_relaciona_con_"+key+"'>"+value.fields['nombre']+"</label></li>");
+                            });
+
+                            var inputs_checkbox = {};
+                            $('ul#id_se_relaciona_con input:checkbox').each(function() {
+                                var checkbox = $(this).val();
+                                if(inputs_checkbox[checkbox]) {
+                                    $(this).parent().remove();
+                                } else {
+                                    inputs_checkbox[checkbox] = true;
+                                }
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
+    {% endif %}
+
     <!-- For the admin site -->
     <script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
     <script src="{% static 'admin/js/core.js' %}"></script>
