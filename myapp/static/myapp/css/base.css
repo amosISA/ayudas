@@ -588,25 +588,25 @@ ul#id_se_relaciona_con {
   overflow: auto;
 }
 
-#id_se_relaciona_con li, #id_responsable li {
+#id_se_relaciona_con li, #id_responsable li, #id_colectivo li {
     list-style-type: none;
 }
 
-#id_se_relaciona_con li:nth-child(odd), #id_responsable li:nth-child(odd) {
+#id_se_relaciona_con li:nth-child(odd), #id_responsable li:nth-child(odd), #id_colectivo li:nth-child(odd) {
     background-color: #ffd6d6;
 }
 
-#id_se_relaciona_con li:nth-child(even), #id_responsable li:nth-child(even) {
+#id_se_relaciona_con li:nth-child(even), #id_responsable li:nth-child(even), #id_colectivo li:nth-child(even) {
     background-color: #fff3d6;
 }
 
-#id_se_relaciona_con li label, #id_responsable li label {
+#id_se_relaciona_con li label, #id_responsable li label, #id_colectivo li label {
     display: block;
     padding-left:10px;
     padding-bottom:5px;
 }
 
-#id_se_relaciona_con li label:hover, #id_responsable li label:hover {
+#id_se_relaciona_con li label:hover, #id_responsable li label:hover, #id_colectivo li label:hover {
     cursor:pointer;
 }
 
@@ -660,6 +660,10 @@ ul#id_se_relaciona_con {
 /*** Change badges colors every time a new responsable is added ***/
 .badge-inverse {
     background-color: #333333;
+    color: #fff;
+}
+.badge-fernando {
+    background-color: #0c48b9;
     color: #fff;
 }
 
@@ -728,4 +732,13 @@ ul#id_se_relaciona_con {
 .id_date_fin_anchors_bussines_day a {
   font-size: 0.7rem;
   display:block;
+}
+
+.subv_webapp_container .subv-row-departamentos {
+    padding-top: 1rem;
+    background: #ccc;
+    padding-right: 2rem;
+}
+.notification-box-list {
+    height: 210px;
 }

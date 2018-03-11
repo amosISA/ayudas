@@ -23,6 +23,14 @@
 
             4. En el input fecha inicio los días festivos del array de js hay que ir actualizándolos está válido hasta diciembre de 2019.
 
+            5. Si se añade un nuevo responsable, hay que atribuirle un nuevo color en index.html en badges así:
+                {% elif responsable|split_value == 'F' %}fernando
+                Luego en base.css lo modificamos así:
+                .badge-fernando {
+                    background-color: #0c48b9;
+                    color: #fff;
+                }
+
 
 
        - ERRORS TO FIX:

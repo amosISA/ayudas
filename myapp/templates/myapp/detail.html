@@ -75,8 +75,16 @@
 
                         <!-- Colectivo -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
-                            <label for="id_colectivo">Colectivo:</label>
-                            <input type="text" value="{{ subvencion.colectivo }}" id="id_colectivo" class="form-control" readonly>
+                            <label>Colectivo:</label>
+                            <ul id="id_colectivo" class="form-control">
+                                {% for colectivo in subvencion.colectivo.all %}
+                                <li>
+                                    <label for="id_colectivo_{{ colectivo.id }}"><input checked onclick="return false;" type="checkbox" value="{{ colectivo.id }}" id="id_colectivo_{{ colectivo.id }}">
+                                        {{ colectivo.nombre }}
+                                    </label>
+                                </li>
+                                {% endfor %}
+                            </ul>
                         </div>
 
                         <!-- Estado -->

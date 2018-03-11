@@ -74,6 +74,7 @@ class SubvencionForm(forms.ModelForm):
             ),
             'se_relaciona_con': forms.CheckboxSelectMultiple(),
             'responsable': forms.CheckboxSelectMultiple(),
+            'colectivo': forms.CheckboxSelectMultiple(),
         }
         exclude = ('slug',)
 

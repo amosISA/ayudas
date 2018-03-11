@@ -170,7 +170,7 @@ class Subvencion(models.Model):
                                            help_text="Número de expediente del Gestiona",
                                            default="-")
     se_relaciona_con = models.ManyToManyField('self', blank=True, default='')
-    colectivo = models.ForeignKey(Colectivo, on_delete=models.CASCADE, default=None, blank=True, null=True)
+    colectivo = models.ManyToManyField(Colectivo, blank=True)
 
     class Meta:
         ordering = ["-created"]

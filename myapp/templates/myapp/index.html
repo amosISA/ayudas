@@ -102,7 +102,7 @@
                             <td>{{ subvencion.cuantia|safe }}</td>
                             <td>
                                 {% for responsable in subvencion.responsable.all %}
-                                    <span class="badge badge-pill badge-{% if responsable|split_value == 'MV' %}danger{% elif responsable|split_value == 'T' %}primary{% elif responsable|split_value == 'JC' %}warning{% elif responsable|split_value == 'R' %}info{% elif responsable|split_value == 'M' %}success{% elif responsable|split_value == 'JM' %}inverse{% else %}default{% endif %}" tabindex="0" data-toggle="popover" data-trigger="hover" data-content="{{ responsable }}">
+                                    <span class="badge badge-pill badge-{% if responsable|split_value == 'MV' %}danger{% elif responsable|split_value == 'T' %}primary{% elif responsable|split_value == 'F' %}fernando{% elif responsable|split_value == 'JC' %}warning{% elif responsable|split_value == 'R' %}info{% elif responsable|split_value == 'M' %}success{% elif responsable|split_value == 'JM' %}inverse{% else %}default{% endif %}" tabindex="0" data-toggle="popover" data-trigger="hover" data-content="{{ responsable }}">
                                         <a style="color:inherit;" href="{% url 'myapp:subvencion_by_category' estado_slug=responsable.responsable %}">{{ responsable|split_value }}</a>
                                     </span>
                                 {% endfor %}
