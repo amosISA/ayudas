@@ -49,6 +49,13 @@
   }
 },
 {
+  "model": "myapp.responsable",
+  "pk": 9,
+  "fields": {
+    "responsable": "Fernando"
+  }
+},
+{
   "model": "myapp.diputacion",
   "pk": 1,
   "fields": {
@@ -139,6 +146,60 @@
   }
 },
 {
+  "model": "myapp.generalitat",
+  "pk": 8,
+  "fields": {
+    "nombre": "Conselleria de Hacienda y Modelo Econ\u00f3mico",
+    "font_color": "#800080",
+    "slug": "conselleria-de-hacienda-y-modelo-economico"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 9,
+  "fields": {
+    "nombre": "Institut Valenci\u00e0 de la Joventut",
+    "font_color": "#ffff00",
+    "slug": "institut-valencia-de-la-joventut"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 10,
+  "fields": {
+    "nombre": "Consejo de C\u00e1maras de Comercio, Industria, Servicios y Navegaci\u00f3n",
+    "font_color": "#c0c0c0",
+    "slug": "consejo-de-camaras-de-comercio-industria-servicios-y-navegacion"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 11,
+  "fields": {
+    "nombre": "SERVEF",
+    "font_color": "#ccffff",
+    "slug": "servef"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 12,
+  "fields": {
+    "nombre": "Conselleria de Justicia, Administraci\u00f3n P\u00fablica, Reformas Democr\u00e1ticas y Libertades P\u00fablicas",
+    "font_color": "#00ccff",
+    "slug": "conselleria-de-justicia-administracion-publica-reformas-democraticas-y-libertades-publicas"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 13,
+  "fields": {
+    "nombre": "Educaci\u00f3n, Investigaci\u00f3n, Cultura y Deporte",
+    "font_color": "#33cccc",
+    "slug": "educacion-investigacion-cultura-y-deporte"
+  }
+},
+{
   "model": "myapp.estado",
   "pk": 1,
   "fields": {
@@ -211,15 +272,55 @@
   }
 },
 {
+  "model": "myapp.colectivo",
+  "pk": 1,
+  "fields": {
+    "nombre": "Ayuntamiento",
+    "slug": "ayuntamiento"
+  }
+},
+{
+  "model": "myapp.colectivo",
+  "pk": 2,
+  "fields": {
+    "nombre": "Mancomunidad",
+    "slug": "mancomunidad"
+  }
+},
+{
+  "model": "myapp.colectivo",
+  "pk": 3,
+  "fields": {
+    "nombre": "Asociaciones",
+    "slug": "asociaciones"
+  }
+},
+{
+  "model": "myapp.colectivo",
+  "pk": 4,
+  "fields": {
+    "nombre": "Particulares",
+    "slug": "particulares"
+  }
+},
+{
+  "model": "myapp.colectivo",
+  "pk": 5,
+  "fields": {
+    "nombre": "Ayuntamientos y mancomunidades",
+    "slug": "ayuntamientos-y-mancomunidades"
+  }
+},
+{
   "model": "myapp.subvencion",
   "pk": 1,
   "fields": {
-    "user": 1,
+    "user": null,
     "inicio": "2018-01-03",
     "fin": "2018-02-02",
     "created": "2018-02-02T18:49:48Z",
-    "updated": "2018-02-25T14:57:46Z",
-    "slug": "lW9Re2",
+    "updated": "2018-02-28T17:13:37Z",
+    "slug": "UC0Vb1",
     "nombre": "Fomento de la lengua y cultura popular valenciana",
     "bases": "https://drive.google.com/open?id=1Ikp-oJkMl4AjZqFWPVf6yi7alcUpjZgU",
     "solicitud": "https://drive.google.com/open?id=14aRHxdySpvPDQQp7ZnnQrnKvO7aPpWON",
@@ -227,12 +328,14 @@
     "ente": "DA",
     "diputacion": 1,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "1500 \u20ac",
     "descripcion": "Subvenciones para realizar actividades de fomento de la lengua y cultura popular valenciana, ya realizadas o por realizar entre el 01 de octubre de 2017 y 30 de septiembre de 2018.",
     "estado": 1,
     "comentarios": "Se ha pedido la maquetaci\u00f3n del inventario de fuentes",
     "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsdkE4dHUzRXVpM0E",
-    "gestiona_expediente": "1111",
+    "gestiona_expediente": "3/2018 EXP 1",
+    "colectivo": null,
     "responsable": [
       1,
       2
@@ -257,12 +360,14 @@
     "ente": "DA",
     "diputacion": 1,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "-",
     "descripcion": "Subvencionar actividades culturalres de especial relieve realizadas entre el 01 de octubre de 2017 a 30 de septiembre de 2018",
     "estado": 1,
     "comentarios": "FESTA PARLAR DEL SA _ SUBVENCION AL 40 %",
     "drive": "--",
     "gestiona_expediente": "--",
+    "colectivo": null,
     "responsable": [
       2,
       3,
@@ -288,12 +393,14 @@
     "ente": "DA",
     "diputacion": 1,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "--",
     "descripcion": "Difusi\u00f3n cultural mediante la interpretaci\u00f3n de conciertos en local o lugar p\u00fablico, en su municipio o en otro de la provincia, por las bandas de m\u00fasica de las Sociedades Musicales de la provincia de Alicante pertenecientes a la Federaci\u00f3n de Sociedades Musicales de la Comunidad Valenciana",
     "estado": 8,
     "comentarios": "",
     "drive": "--",
     "gestiona_expediente": "--",
+    "colectivo": null,
     "responsable": [
       2,
       3,
@@ -319,12 +426,14 @@
     "ente": "DA",
     "diputacion": 1,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "--",
     "descripcion": "Subvenciones para actividades culturales, musicales y esc\u00e9nicas 2018",
     "estado": 1,
     "comentarios": "ESPECTACULOS CULTURALES Y MUSICALES PARA LA FERIA DURANTE LOS DIAS 21 Y 22 DE JULIO.",
     "drive": "--",
     "gestiona_expediente": "3/2018 EXP 3",
+    "colectivo": null,
     "responsable": [
       2,
       3,
@@ -350,12 +459,14 @@
     "ente": "DA",
     "diputacion": 1,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "7000 \u20ac\r\n80%",
     "descripcion": "Se pidi\u00f3 el a\u00f1o 2016. As\u00ed que este a\u00f1o se puede pedir\r\n\r\nColaborar econ\u00f3micamente con los Ayuntamientos al objeto de mejorar las instalaciones para la prestaci\u00f3n a los usuarios de sus servicios culturales.\r\n\r\nA estos efectos ser\u00e1n subvencionables inversiones tales como adquisici\u00f3n de mobiliario, (mesas, sillas, armarios), equipos de audiovisuales e inform\u00e1ticos, fotocopiadoras y equipos multifunci\u00f3n, equipos audiovisuales e inform\u00e1ticos, fotocopiadoras y equipos multifunci\u00f3n, equipos de climatizaci\u00f3n (aire acondicionado). Y no ser\u00e1n subvencionables las adquisiciones de equipamiento no inventariable (mesa/silla pegables...).",
     "estado": 1,
     "comentarios": "Se podr\u00eda usar para cambiar los aires acondicionados en el sal\u00f3n de plenos.\r\nO a\u00f1adirlos en ses vivendes. IMPORTANTE HAY QUE ARREGLAR EL AIRE ACONDICIONADO DE LA SALA DE LA CASA DE CULTURA - YA HAY UN PRESUPUESTO Y HAY QUE PEDIR OTROS\r\n\r\n-Un ordenador para ses vivendes, servidor de la biblioteca y para usuario final (dos)\r\nLe he pedido dos ordenadores como los que pedimos para Maril\u00f3 y MariaVicenta. Podr\u00edan usarse para amics des museu y ses vivendes (jovenes)\r\n\r\n- en la casa de cultura, un escenario fijo. \r\ntengo el plano que me ha hecho josemi. Faltar\u00eda enviar los planos a http://guil-staging.com\r\n\r\n- Una barra donde poner el proyector luces y altavoces.\r\nle he pedido un presupuesto a Mateu para una barra para focos, unos focos y unos altavoces fijos para la sala\r\n\r\n22-02-2018 - al final se env\u00edan dos presupuestos de material inform\u00e1tico y focos y material para el escenario casa cultura",
     "drive": "--",
     "gestiona_expediente": "3/2018 EXP 7",
+    "colectivo": null,
     "responsable": [
       1,
       2
@@ -382,12 +493,14 @@
     "ente": "DA",
     "diputacion": 1,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "--",
     "descripcion": "",
     "estado": 2,
     "comentarios": "Este a\u00f1o no se pod\u00eda optar a ella. Por haberla pedido el a\u00f1o pasado.",
     "drive": "--",
     "gestiona_expediente": "3/2018 EXP 7",
+    "colectivo": null,
     "responsable": [
       1,
       2
@@ -414,12 +527,14 @@
     "ente": "GV",
     "diputacion": null,
     "generalitat": 3,
+    "gobierno": null,
     "cuantia": "4.000 - 10.000",
     "descripcion": "Concesi\u00f3n de ayuda para la realizaci\u00f3n de inversiones destinadas al desarrollo de zonas forestales y a la mejora de la viabilidad de los bosques, basadas en la gesti\u00f3n sostenible y multifuncional de los mismos:\r\n\r\n- Operaci\u00f3n 8.5.1. Instrumentos de gesti\u00f3n forestal sostenible;\r\n- Operaci\u00f3n 8.5.2. Gesti\u00f3n forestal sostenible para la mejora ambiental, paisaj\u00edstica y fomento de los ecosistemas forestales;\r\n- Operaci\u00f3n 8.6.1. Inversiones para la transformaci\u00f3n y comercializaci\u00f3n de productos forestales.",
     "estado": 4,
     "comentarios": "",
     "drive": "https://drive.google.com/drive/folders/12_uxQDIZmPqmWpCTgEyii_Ow5yN8sqbc?usp=sharing",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       1
     ],
@@ -445,12 +560,14 @@
     "ente": "GV",
     "diputacion": null,
     "generalitat": 3,
+    "gobierno": null,
     "cuantia": "3.500",
     "descripcion": "Revisi\u00f3n de plan local de prevenci\u00f3n de incendios forestales.\r\nEn todo el periodo 2014-2020 s\u00f3lo se podr\u00e1 percibir ayuda una sola vez para el mismo concepto.",
     "estado": 4,
     "comentarios": "",
     "drive": "-",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       1
     ],
@@ -476,12 +593,14 @@
     "ente": "DA",
     "diputacion": 6,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "3.000",
     "descripcion": "Colaborar con asociaciones y entidades sin fin de lucro en el \u00e1mbito de los Servicios Sociales para la realizaci\u00f3n de proyectos de car\u00e1cter formativo, terap\u00e9utico y/o rehabilitador dirigidos tanto a las personas afectadas como a sus familiares, personal cuidador, voluntariado y profesionales de dichas entidades con la finalidad de mejorar la calidad de vida y la reinserci\u00f3n social de las personas afectadas. Asimismo se incluye la realizaci\u00f3n de proyectos de sensibilizaci\u00f3n dirigidos a mejorar la percepci\u00f3n de la ciudadan\u00eda sobre la situaci\u00f3n de estos colectivos sociales.",
     "estado": 4,
     "comentarios": "",
     "drive": "-",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       1,
       2
@@ -509,12 +628,14 @@
     "ente": "DA",
     "diputacion": 6,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "3.000",
     "descripcion": "Sufragar el coste de los desplazamientos que realicen las entidades solicitantes para la realizaci\u00f3n de actividades de ocio y tiempo libre, orientadas a la promoci\u00f3n de la convivencia de los colectivos destinatarios del servicio\r\nDestinatarios\tEntidades sin \u00e1nimo de lucro con sede social o delegaci\u00f3n estable en la provincia de Alicante y cuya actuaci\u00f3n se desarrolle en los sectores de discapacidad, enfermedad mental, adicciones, poblaci\u00f3n vulnerable y/o en riesgo de exclusi\u00f3n social y colectivos sociosanitarios",
     "estado": 4,
     "comentarios": "",
     "drive": "-",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       1,
       2,
@@ -543,12 +664,14 @@
     "ente": "DA",
     "diputacion": 3,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "5.000",
     "descripcion": "Convocatoria anticipada de ayudas no dinerarias a favor de Ayuntamientos y Entidades locales de la Provincia de Alicante con poblaci\u00f3n inferior a 5.000 habitantes, para reparaciones y conservaci\u00f3n de caminos de titularidad no provincial a ejecutar por la Diputaci\u00f3n provincial de Alicante. A\u00f1o 2018.\r\nDestinatarios\tAyuntamientos y entidades locales de la provincia de Alicante con poblaci\u00f3n inferior a 5.000 habitantes.",
     "estado": 1,
     "comentarios": "Se pidi\u00f3 el camino de bijouca - garx",
     "drive": "-",
     "gestiona_expediente": "3/2018 EXP 8",
+    "colectivo": null,
     "responsable": [
       1,
       2
@@ -560,12 +683,12 @@
   "model": "myapp.subvencion",
   "pk": 14,
   "fields": {
-    "user": 5,
+    "user": null,
     "inicio": "2018-02-17",
     "fin": "2018-03-13",
     "created": "2018-02-20T17:09:00Z",
-    "updated": "2018-02-25T14:56:23Z",
-    "slug": "2FkYMw",
+    "updated": "2018-02-28T17:16:49Z",
+    "slug": "9NtVLL",
     "nombre": "Subvenciones destinadas a ayuntamientos y mancomunidades para la realizaci\u00f3n de actividades de promoci\u00f3n social dirigidas a colectivos vulnerables y para la adquisici\u00f3n de equipamiento destinado a centros y otros espacios municipales de uso social",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00054.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00050.pdf",
@@ -573,12 +696,14 @@
     "ente": "DA",
     "diputacion": 6,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": ">12.000",
     "descripcion": "Colaborar en el desarrollo de proyectos y actividades que faciliten la inserci\u00f3n, la promoci\u00f3n social y la prevenci\u00f3n de riesgos de colectivos vulnerables atendidos desde los Servicios Sociales Municipales y en la compra de equipamiento de diferente tipo destinado a espacios municipales de uso social con el fin de facilitar el desarrollo de actividades dirigidas a mejorar la calidad de vida de las personas residente en el Municipio.",
     "estado": 4,
     "comentarios": "",
     "drive": "-",
-    "gestiona_expediente": "-",
+    "gestiona_expediente": "3/2018 EXP 10",
+    "colectivo": null,
     "responsable": [
       1,
       2
@@ -606,12 +731,14 @@
     "ente": "DA",
     "diputacion": 2,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "<50.000 80%",
     "descripcion": "Subvenciones a favor de entidades de riego de la provincia de Alicante para la realizaci\u00f3n y mejora de infraestructuras e instalaciones hidr\u00e1ulicas y otras inversiones que incrementen la eficiencia del uso del agua en regad\u00edo a ejecutar por la Diputaci\u00f3n de Alicante.",
     "estado": 2,
     "comentarios": "",
     "drive": "-",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       2,
       3
@@ -638,12 +765,14 @@
     "ente": "DA",
     "diputacion": 2,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "",
     "descripcion": "Redacci\u00f3n por el Ciclo H\u00eddrico de documentos t\u00e9cnicos, solicitados por las entidades locales y Entidades de Riego de la provincia de Alicante, referentes a actuaciones relativas al Ciclo H\u00eddrico municipal y provincial, tales como proyectos de infraestructuras e instalaciones hidr\u00e1ulicas de competencia local y utilizaci\u00f3n p\u00fablica.",
     "estado": 8,
     "comentarios": "",
     "drive": "-",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       3
     ],
@@ -660,8 +789,8 @@
     "inicio": "2017-12-27",
     "fin": "2018-09-17",
     "created": "2018-02-20T17:29:12Z",
-    "updated": "2018-02-25T14:55:45Z",
-    "slug": "YaDDK2",
+    "updated": "2018-02-28T16:35:15Z",
+    "slug": "lGcEPN",
     "nombre": "Subvenciones a favor Entidades Locales para coadyugar en la financiaci\u00f3n de infraestructuras hidr\u00e1ulicas de abastecimiento y saneamiento. IACH 2018",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00041.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00037.pdf",
@@ -669,12 +798,14 @@
     "ente": "DA",
     "diputacion": 2,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "< 60.000 95%",
     "descripcion": "Subvenciones en 2018 a favor de entidades locales de la provincia de Alicante para coadyuvar en la financiaci\u00f3n de infraestructuras hidr\u00e1ulicas de abastecimiento y saneamiento que ejecuten o hubiesen ejecutado las mismas. IACH 2018",
-    "estado": 4,
+    "estado": 1,
     "comentarios": "TUBERIA SA FOIA",
     "drive": "-",
     "gestiona_expediente": "2/2017 EXP 38",
+    "colectivo": null,
     "responsable": [
       3
     ],
@@ -698,12 +829,14 @@
     "ente": "DA",
     "diputacion": 2,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "> 60.000 95%",
     "descripcion": "Subvenciones a favor de entidades locales de la provincia de Alicante para la realizaci\u00f3n y mejora de infraestructuras hidr\u00e1ulicas de abastecimiento y saneamiento a ejecutar por la Diputaci\u00f3n. IDCH 2018",
     "estado": 4,
     "comentarios": "CONTADORES",
     "drive": "-",
     "gestiona_expediente": "2/2017 EXP 38",
+    "colectivo": null,
     "responsable": [
       3,
       6
@@ -728,12 +861,14 @@
     "ente": "GV",
     "diputacion": null,
     "generalitat": 4,
+    "gobierno": null,
     "cuantia": "",
     "descripcion": "",
     "estado": 2,
     "comentarios": "",
     "drive": "-",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       1
     ],
@@ -748,8 +883,8 @@
     "inicio": "2017-12-20",
     "fin": "2018-05-31",
     "created": "2018-02-21T07:59:34Z",
-    "updated": "2018-02-25T14:54:52Z",
-    "slug": "Ag0wua",
+    "updated": "2018-02-28T17:09:07Z",
+    "slug": "yzMjDi",
     "nombre": "Reparaci\u00f3n de infraestructuras hidr\u00e1ulicas a ejecutar por los municipios. RACH 2018",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00039.pdf",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00035.pdf",
@@ -757,12 +892,14 @@
     "ente": "DA",
     "diputacion": 2,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "",
     "descripcion": "Reparaci\u00f3n de infraestructuras hidr\u00e1ulicas a ejecutar por los municipios.RACH 2018",
     "estado": 4,
     "comentarios": "TUBERIA RAFALET FRAN\u00c7OIS",
     "drive": "-",
-    "gestiona_expediente": "-",
+    "gestiona_expediente": "2/2017 EXP 38",
+    "colectivo": null,
     "responsable": [
       3,
       6
@@ -787,12 +924,14 @@
     "ente": "DA",
     "diputacion": 6,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "",
     "descripcion": "Ayudas econ\u00f3micas para la adquisici\u00f3n de equipamiento general (mobiliario, equipos inform\u00e1ticos, maquinaria de oficina\u2026) y de equipamiento espec\u00edfico (material t\u00e9cnico-rehabilitador).",
     "estado": 2,
     "comentarios": "",
     "drive": "-",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       1
     ],
@@ -816,12 +955,14 @@
     "ente": "DA",
     "diputacion": 6,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "",
     "descripcion": "Ayudas econ\u00f3micas para la adquisici\u00f3n de equipamiento general (mobiliario, equipos inform\u00e1ticos, maquinaria de oficina\u2026) y de equipamiento espec\u00edfico (material t\u00e9cnico-rehabilitador).\r\n\r\nDestinatarios\r\nEntidades privadas sin fin de lucro pertenecientes al \u00e1mbito del Bienestar Social",
     "estado": 2,
     "comentarios": "",
     "drive": "-",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       1
     ],
@@ -845,12 +986,14 @@
     "ente": "GV",
     "diputacion": null,
     "generalitat": 5,
+    "gobierno": null,
     "cuantia": "100.000",
     "descripcion": "Coadyuvar al desarrollo integral de las mancomunidades de municipios de la Comunitat Valenciana, a trav\u00e9s de la financiaci\u00f3n de sus gastos corrientes en bienes y servicios.",
     "estado": 4,
     "comentarios": "",
     "drive": "",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       1
     ],
@@ -874,12 +1017,14 @@
     "ente": "DA",
     "diputacion": 7,
     "generalitat": null,
+    "gobierno": null,
     "cuantia": "",
     "descripcion": "Deportistas. Deportistas discapacitados. J\u00f3venes valores que no superen la edad de 17 a\u00f1os, al 31 de diciembre del a\u00f1o al que se refiere la convocatoria. T\u00e9cnicos Deportivos. Todos ellos deben ser naturales de la Provincia de Alicante, o acreditar su residencia continuada en la misma, al menos en los tres \u00faltimos a\u00f1os. Clubes Deportivos que, legalmente constituidos e inscritos en el registro correspondiente, est\u00e9n radicados en la Provincia de Alicante, y desarrollen una o varias disciplinas deportivas y se hallen adscritos a la correspondiente Federaci\u00f3n.",
     "estado": 2,
     "comentarios": "",
     "drive": "",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       1
     ],
@@ -903,12 +1048,14 @@
     "ente": "GV",
     "diputacion": null,
     "generalitat": 7,
+    "gobierno": null,
     "cuantia": "200 \u20ac persona",
     "descripcion": "La Generalitat contribuir\u00e1 a la financiaci\u00f3n del coste de las plazas con una aportaci\u00f3n m\u00e1xima de 126,5 euros IVA incluido para temporada alta y 200 euros IVA incluido para temporada baja, por plaza a cada uno de los/as beneficiarios/as del programa, abonando dicha cantidad al establecimiento receptor y corriendo por cuenta del la persona beneficiaria, el resto del importe conforme con los precios que se indican en el anexo I de la convocatoria.",
     "estado": 4,
     "comentarios": "Se convocan 10.378 plazas en dos temporadas\r\n\r\nUna vez comprobado el cumplimiento de los requisitos, la adjudicaci\u00f3n de plazas se realizar\u00e1 seg\u00fan el orden de presentaci\u00f3n de solicitudes que servir\u00e1 como criterio \u00fanico en la mencionada adjudicaci\u00f3n, as\u00ed como en el orden de reserva de las personas que no obtengan plaza directa.",
     "drive": "",
     "gestiona_expediente": "-",
+    "colectivo": null,
     "responsable": [
       1
     ],
@@ -919,12 +1066,12 @@
   "model": "myapp.subvencion",
   "pk": 27,
   "fields": {
-    "user": 5,
+    "user": null,
     "inicio": "2018-02-22",
     "fin": "2018-03-22",
     "created": "2018-02-24T18:11:57Z",
-    "updated": "2018-02-25T10:16:20Z",
-    "slug": "bZXqEI",
+    "updated": "2018-03-01T12:56:49Z",
+    "slug": "vikJuu",
     "nombre": "EMERGE 2018. Programa de subvenciones Iniciativa Social, destinadas a la contrataci\u00f3n, para la realizaci\u00f3n de acciones previstas en planes o procedimientos de emergencias en el \u00e1mbito forestal",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=19132",
     "solicitud": "http://www.dogv.gva.es/datos/2018/02/22/pdf/2018_1711.pdf",
@@ -932,12 +1079,517 @@
     "ente": "GV",
     "diputacion": null,
     "generalitat": 6,
+    "gobierno": null,
     "cuantia": "66.000",
     "descripcion": "El objeto de estas subvenciones es la contrataci\u00f3n de personas desempleadas por corporaciones locales de la Comunitat Valenciana para la realizaci\u00f3n de acciones previstas en planes o procedimientos de emergencias en el \u00e1mbito forestal .",
+    "estado": 3,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": null,
+    "responsable": [
+      1,
+      5
+    ],
+    "se_relaciona_con": [
+      35,
+      31,
+      28
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 28,
+  "fields": {
+    "user": null,
+    "inicio": "2018-02-26",
+    "fin": "2018-03-26",
+    "created": "2018-02-26T18:14:23Z",
+    "updated": "2018-02-28T13:13:49Z",
+    "slug": "Bu1e7k",
+    "nombre": "Red COMDES - Solicitud de autorizaci\u00f3n para el uso de la Red de Comunicaciones M\u00f3viles Digitales de Emergencias y Seguridad de la Comunitat Valenciana",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18815&version=amp",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 8,
+    "gobierno": null,
+    "cuantia": "--",
+    "descripcion": "Procedimiento de solicitud de autorizaci\u00f3n temporal para el uso de la Red COMDES. \r\n\r\nLa autorizaci\u00f3n que se emita en respuesta a esta solicitud habilitar\u00e1 para el uso de la red COMDES con car\u00e1cter temporal hasta que se apruebe la nueva regulaci\u00f3n del uso de la red COMDES, momento en que se proceder\u00e1 a la autorizaci\u00f3n definitiva seg\u00fan esta regulaci\u00f3n establezca.",
+    "estado": 4,
+    "comentarios": "Hay en rellenar el formulario este\r\nhttp://www.gva.es/downloads/publicados/IN/07246_BI.pdf\r\na trav\u00e9s de certificado electr\u00f3nico",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 1,
+    "responsable": [
+      1,
+      3,
+      5
+    ],
+    "se_relaciona_con": [
+      27
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 29,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-02-26",
+    "fin": "2018-03-31",
+    "created": "2018-02-26T20:03:53Z",
+    "updated": "2018-02-26T20:03:53Z",
+    "slug": "m4RMg4",
+    "nombre": "PIMA Residuos y PEMAR",
+    "bases": "https://drive.google.com/open?id=1TsrLBMyTOKSF3p-579QTmUwNvVlBzElu",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 3,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Promover actuaciones que permitan reducir las emisiones de gases de efecto invernadero (GEI) y avanzar en la consecuci\u00f3n de los\r\nobjetivos de la Directiva 2008/98/CE de Residuos, de la Ley 22/2011, de 28 de julio, de residuos y suelos contaminados, del Plan Estatal Marco de Gesti\u00f3n de Residuos (PEMAR), as\u00ed como en el cumplimiento de los objetivos relativos a las energ\u00edas renovables.\r\nCon estas ayudas se promueve especialmente la implantaci\u00f3n de proyectos innovadores por parte de entidades locales que est\u00e1n lejos todav\u00eda de alcanzar los objetivos comunitarios.",
+    "estado": 4,
+    "comentarios": "Compostadores dom\u00e9sticos\r\nCompostadores para viviendas unifamiliares con jard\u00edn o huerto en los que se los depositen y se composten los biorresiduos. Deber\u00e1n incorporar, como m\u00ednimo, la identificaci\u00f3n (con una pegatina o serigraf\u00eda) de los materiales que se pueden depositar en su interior.\r\n80 \u20ac/compostador\r\n\r\nActuaciones de formaci\u00f3n y seguimiento del proyecto\r\nLas actuaciones de formaci\u00f3n y seguimiento deber\u00e1n incluir un plan de trabajo. En el caso de compostaje comunitario tambi\u00e9n incluir\u00e1n una gu\u00eda que detalle los biorresiduos objeto de compostaje para cada vivienda participante. En el caso de compostaje dom\u00e9stico tambi\u00e9n incluir\u00e1n un manual de compostaje para cada vivienda participante.\r\n12 \u20ac/habitante\r\n\r\nContenedores para la v\u00eda p\u00fablica (molar\u00eda con tarjeta)\r\nLos contenedores para la recogida separada de biorresiduos en la v\u00eda p\u00fablica deber\u00e1n ser, parcial o totalmente, de color marr\u00f3n o incorporar una identificaci\u00f3n de color marr\u00f3n. La resistencia de los contenedores ser\u00e1 la equivalente al peso del contenedor lleno de materia org\u00e1nica y \u00e9stos deber\u00e1n permitir la incorporaci\u00f3n de sistemas de identificaci\u00f3n y pesado. El contenedor incluir\u00e1 una impresi\u00f3n permanente de los materiales que pueden ser depositados en su interior.\r\n5 \u20ac/habitante atendido",
+    "drive": "https://drive.google.com/open?id=1i3uHArLXE5Ph29lfLWQ2rf_eydNBcMnM",
+    "gestiona_expediente": "-",
+    "colectivo": null,
+    "responsable": [
+      1,
+      3,
+      6
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 30,
+  "fields": {
+    "user": 3,
+    "inicio": "2018-02-22",
+    "fin": "2018-10-31",
+    "created": "2018-02-28T17:28:41Z",
+    "updated": "2018-02-28T17:28:41Z",
+    "slug": "ziN1fK",
+    "nombre": "CAMPA\u00d1A DE MUSICA Y TEATRO 2018",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios?id=76",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 1,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "3/2018 EXP 11",
+    "colectivo": 1,
+    "responsable": [
+      2,
+      4
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 31,
+  "fields": {
+    "user": null,
+    "inicio": "2018-03-01",
+    "fin": "2018-03-22",
+    "created": "2018-02-28T18:22:46Z",
+    "updated": "2018-02-28T18:24:34Z",
+    "slug": "XDUC7R",
+    "nombre": "programa\r\nDe incentivos a la contrataci\u00f3n de personas j\u00f3venes por entidades locales, en el marco del Sistema Nacional de Garant\u00eda Juvenil",
+    "bases": "",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 6,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Esta convocatoria tiene por objeto la concesi\u00f3n de subvenciones por la contrataci\u00f3n de las personas j\u00f3venes, que figuren inscritas en el fichero del Sistema Nacional de Garant\u00eda Juvenil en el \u00e1mbito territorial\r\nde la Comunitat Valenciana.",
+    "estado": 4,
+    "comentarios": "no aparece todav\u00eda en la web de conseller\u00eda, aunque en el Diario Oficila ya aparecen las resolluciones y los extractos. para EMPUJU y EMCUJU\r\n\r\nEMCUJU - con cualificaci\u00f3n\r\nhttp://www.dogv.gva.es/datos/2018/02/28/pdf/2018_1909.pdf\r\nhttp://www.dogv.gva.es/datos/2018/02/28/pdf/2018_1939.pdf\r\n\r\nEMPUJU\r\nhttp://www.dogv.gva.es/datos/2018/02/28/pdf/2018_1908.pdf\r\nhttp://www.dogv.gva.es/datos/2018/02/28/pdf/2018_1938.pdf",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 1,
+    "responsable": [
+      1,
+      3,
+      5,
+      9
+    ],
+    "se_relaciona_con": [
+      27
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 32,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-03-02",
+    "fin": "2018-03-15",
+    "created": "2018-03-02T12:43:13Z",
+    "updated": "2018-03-02T12:43:13Z",
+    "slug": "AqytPd",
+    "nombre": "Campamentos de verano para j\u00f3venes durante el verano de 2018, modalidad A, dirigida a ayuntamientos de la Comunitat Valenciana, dentro de la campa\u00f1a Viu L'Estiu.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=19258",
+    "solicitud": "http://www.dogv.gva.es/datos/2018/02/28/pdf/2018_1901.pdf",
+    "observaciones": "http://www.ivaj.gva.es/campamentos",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 9,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Ofrecer plazas a los ayuntamientos de la Comunitat Valenciana en el programa Campamentos de verano, dirigido a j\u00f3venes, entre 12 y 17 a\u00f1os, con la finalidad de facilitar a estas entidades la elaboraci\u00f3n de programas de ocio educativo donde se promuevan h\u00e1bitos de vida saludables y actividades de tiempo libre educativo para romper, si procede, din\u00e1micas de desigualdad.\r\n\r\nServicios que se ofrecen:\r\n- Un programa de actividades de multiaventura, tiempo libre, actividades de ocio educativo, formativo y convivencial. En algunos se incluyen actividades n\u00e1uticas e ingl\u00e9s. La duraci\u00f3n depende de la actividad elegida.\r\n- Alojamiento en albergues juveniles de la Comunitat Valenciana o de otras comunidades aut\u00f3nomas.\r\n- Alimentaci\u00f3n en r\u00e9gimen de pensi\u00f3n completa, en el que se incluye el desayuno, comida, merienda y cena.\r\n- Servicio especializado de animaci\u00f3n sociocultural, en actividades n\u00e1uticas y de multiaventura.\r\n- Material necesario para realizar las actividades.\r\n- Seguro de responsabilidad civil y de accidentes.\r\n\r\nEn las actividades en otras comunidades aut\u00f3nomas, se incluye el transporte desde Valencia, Alicante o Castell\u00f3n hasta el albergue donde se alojen. En las actividades que se realizan en la Comunitat Valenciana, el o la joven que participe habr\u00e1 de llegar por sus propios medios al albergue.",
     "estado": 4,
     "comentarios": "",
     "drive": "",
     "gestiona_expediente": "-",
+    "colectivo": 1,
+    "responsable": [
+      1,
+      2,
+      3
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 33,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-03-02",
+    "fin": "2018-09-15",
+    "created": "2018-03-02T12:55:29Z",
+    "updated": "2018-03-02T12:55:29Z",
+    "slug": "xDGHjV",
+    "nombre": "Convocatoria de ayudas econ\u00f3micas para j\u00f3venes interesados en realizar una estancia de movilidad en pa\u00edses de la Uni\u00f3n Europea. Anualidad 2017.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=19296",
+    "solicitud": "http://www.dogv.gva.es/datos/2018/02/28/pdf/2018_1507.pdf",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 10,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "El objeto del Plan de movilidad es fomentar la movilidad transnacional y mejorar el nivel de empleabilidad entre los j\u00f3venes beneficiarios del Sistema Nacional de Garant\u00eda Juvenil.\r\n\r\nEstas ayudas estar\u00e1n cofinanciadas por el Fondo Social Euro-peo (FSE) y la Iniciativa de Empleo Juvenil (IEJ) dentro del Programa operativo de empleo juvenil 2014-2020",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 4,
+    "responsable": [
+      1,
+      3
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 34,
+  "fields": {
+    "user": null,
+    "inicio": "2018-03-01",
+    "fin": "2018-03-22",
+    "created": "2018-03-02T13:28:28Z",
+    "updated": "2018-03-03T15:48:20Z",
+    "slug": "TwIIev",
+    "nombre": "EMCUJU- Programa de subvenciones de empleo destinadas a la contrataci\u00f3n de personas j\u00f3venes cualificadas por entidades locales, en el marco del Sistema Nacional de Garant\u00eda Juvenil, para el ejercicio 2018 (SERVEF)",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18598",
+    "solicitud": "",
+    "observaciones": "http://www.dogv.gva.es/datos/2018/02/28/pdf/2018_1909.pdf",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 11,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "La concesi\u00f3n de subvenciones para la contrataci\u00f3n de las personas j\u00f3venes, que figuren inscritas en el fichero del Sistema Nacional de Garant\u00eda Juvenil en el \u00e1mbito territorial de la Comunitat Valenciana.",
+    "estado": 4,
+    "comentarios": "La concesi\u00f3n de estas subvenciones se tramitar\u00e1 en r\u00e9gimen de concurrencia competitiva.\r\n\r\nson la gente con formaci\u00f3n, por ahora ten\u00eda claro un par de puestos:\r\n- Mireia, est\u00e1 terminando Integraci\u00f3n Social, http://www.todofp.es/que-como-y-donde-estudiar/que-estudiar/familia/loe/servicios-socioculturales-comunidad/integracion-social.html\r\n\r\n- Amos podr\u00eda venir de inform\u00e1tico. Miquel, el hijo de Miquelo, est\u00e1 tambi\u00e9n estudiando inform\u00e1tica, no s\u00e9 si lo tiene terminado o como lo lleva. Consultar a Amos.\r\n\r\n- dependiendo del periodo en el que empieze pensar de nuevo en Eloi\r\n\r\nmirarlo en Benidorm\r\n- Mantenimiento de Instalaciones T\u00e9rmicas y de Fluidos. (fajardo mendoza) \r\n- gu\u00eda, informaci\u00f3n y asistencia tur\u00edsticas. (IES MEDITERRANIA, l'Almadrava)",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 1,
+    "responsable": [
+      1,
+      3,
+      5,
+      9
+    ],
+    "se_relaciona_con": [
+      35
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 35,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-03-01",
+    "fin": "2018-03-22",
+    "created": "2018-03-03T15:47:28Z",
+    "updated": "2018-03-03T15:47:28Z",
+    "slug": "Eo7nVV",
+    "nombre": "EMPUJU-Programa de subvenciones de empleo destinadas a la contrataci\u00f3n de personas j\u00f3venes por entidades locales, en el marco del Sistema Nacional de Garant\u00eda Juvenil, para el ejercicio 2018. (SERVEF)",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18617",
+    "solicitud": "http://www.dogv.gva.es/datos/2018/02/28/pdf/2018_1908.pdf",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 11,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "La concesi\u00f3n de subvenciones para la contrataci\u00f3n de las personas j\u00f3venes, que figuren inscritas en el fichero del Sistema Nacional de Garant\u00eda Juvenil en el \u00e1mbito territorial de la Comunitat Valenciana.",
+    "estado": 4,
+    "comentarios": "La concesi\u00f3n de estas subvenciones se tramitar\u00e1 en r\u00e9gimen de concurrencia competitiva.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 5,
+    "responsable": [
+      1,
+      3,
+      5,
+      9
+    ],
+    "se_relaciona_con": [
+      34,
+      27
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 36,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-03-07",
+    "fin": "2018-04-04",
+    "created": "2018-03-07T09:02:33Z",
+    "updated": "2018-03-07T09:02:33Z",
+    "slug": "M5llcE",
+    "nombre": "Subvenciones para la realizaci\u00f3n de proyectos e iniciativas en materia de recuperaci\u00f3n de la memoria hist\u00f3rica en aras a la promoci\u00f3n de la convivencia democr\u00e1tica, desarrolladas por AYUNTAMIENTOS y MANCOMUNIDADES de la Comunitat Valenciana. A\u00f1o 2018.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos;jsessionid=lf2WhfpDJSSQ18TjjJ0ZJRvqn2y09f3l20y9qWL3LFwTCnlbBp21!2111063921!1520413155929?id_proc=18172#p_3",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 12,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Salvaguardar, el conocimiento y difusi\u00f3n de la historia de la lucha de los valencianos y valencianas por sus derechos y libertades democr\u00e1ticas en el per\u00edodo que abarca desde la proclamaci\u00f3n de la Segunda Rep\u00fablica, el 14 de abril de 1931, hasta la entrada en vigor del Estatut d' Autonomia, el 10 de julio de 1982, en aras a la promoci\u00f3n de la convivencia y del aumento en la calidad de la vida democr\u00e1tica, desarrolladas por ayuntamientos y mancomunidades de la Comunitat Valenciana.",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 5,
+    "responsable": [
+      1,
+      3
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 37,
+  "fields": {
+    "user": null,
+    "inicio": "2018-03-06",
+    "fin": "2018-04-10",
+    "created": "2018-03-07T09:05:52Z",
+    "updated": "2018-03-07T09:06:18Z",
+    "slug": "vW9WHJ",
+    "nombre": "TECG - Solicitud de subvenciones destinadas a la realizaci\u00f3n de actividades de voluntariado ambiental en prevenci\u00f3n de incendios forestales para el ejercicio 2018.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=661",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 3,
+    "gobierno": null,
+    "cuantia": ">10.000",
+    "descripcion": "Ser\u00e1n subvencionables las actividades de voluntariado ambiental en materia de prevenci\u00f3n de incendios forestales, campa\u00f1as de sensibilizaci\u00f3n, de educaci\u00f3n y concienciaci\u00f3n a los visitantes en espacios naturales y forestales, mediante acciones dirigidas a la informaci\u00f3n a los visitantes acerca del cumplimiento de las distintas normativas aplicables, a la vigilancia disuasoria, y a la aplicaci\u00f3n de programas de educaci\u00f3n ambiental con especial incidencia en el conocimiento del medio forestal.\r\nLas actividades podr\u00e1n desarrollarse a lo largo de todo el ejercicio 2018. En el caso de actividades realizadas con anterioridad a la presente convocatoria, para ser subvencionables deber\u00e1n haberse realizado conforme lo establecido en las bases y constar el conocimiento y autorizaci\u00f3n por parte de la Conselleria de Agricultura , Medio Ambiente, Cambio Clim\u00e1tico y Desarrollo Rural.",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 3,
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 38,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-03-08",
+    "fin": "2018-03-28",
+    "created": "2018-03-08T12:43:18Z",
+    "updated": "2018-03-08T12:43:18Z",
+    "slug": "XuEQRT",
+    "nombre": "Subvenciones a escuelas de danza dependientes de corporaciones locales o de entidades privadas sin \u00e1nimo de lucro de la Comunitat Valenciana para el ejercicio 2018",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18146",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 13,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Convocar subvenciones a escuelas de danza de la Comunitat Valenciana, para contribuir a la financiaci\u00f3n parcial de estos centros durante el curso acad\u00e9mico 2017-2018.",
+    "estado": 2,
+    "comentarios": "- Figurar inscritas como tales en la secci\u00f3n espec\u00edfica del Registro de Centros Docentes de la Comunitat Valenciana. Las escuelas deben haber solicitado la inscripci\u00f3n antes de la finalizaci\u00f3n del a\u00f1o de inicio del curso escolar de referencia en la convocatoria de subvenci\u00f3n.\r\n- Que el primer d\u00eda h\u00e1bil del mes de noviembre del a\u00f1o de inicio del curso escolar de referencia en la convocatoria de subvenci\u00f3n, est\u00e9 iniciada la actividad de la escuela.\r\n- Disponer del n\u00famero m\u00ednimo de profesorado establecido en la normativa vigente reguladora de estos centros. A la hora de otorgar la subvenci\u00f3n solo se considerar\u00e1 el profesorado contratado y dado de alta en la Seguridad Social con efecto, al menos, del primer d\u00eda h\u00e1bil del mes de noviembre del a\u00f1o de inicio del curso escolar de referencia en la convocatoria de subvenci\u00f3n. El profesorado contratado que ejerza otro puesto de trabajo en otro servicio p\u00fablico deber\u00e1 cumplir con lo que se establece en la normativa vigente sobre incompatibilidades del personal al servicio de las Administraciones P\u00fablicas.\r\n- Que el profesorado disponga del requisito de titulaci\u00f3n se\u00f1alado en la normativa vigente reguladora de estos centros.\r\n- Cumplir con todo aquello que establezca la normativa vigente reguladora de estos centros.\r\n- Que la entidad solicitante se encuentra al corriente en el cumplimiento de las obligaciones tributarias y ante la Seguridad Social.\r\n-----",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 3,
+    "responsable": [
+      1,
+      3,
+      4
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 39,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-03-08",
+    "fin": "2018-03-28",
+    "created": "2018-03-08T12:46:49Z",
+    "updated": "2018-03-08T12:46:49Z",
+    "slug": "6qC2c1",
+    "nombre": "Subvenciones destinadas a escuelas de m\u00fasica y escuelas de m\u00fasica y danza, dependientes de corporaciones locales o de entidades privadas sin \u00e1nimo de lucro de la Comunitat Valenciana para el ejercicio 2018.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=230",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 13,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "- Figurar inscritas como tales en la secci\u00f3n espec\u00edfica del Registro de Centros Docentes de la Comunitat Valenciana. Las escuelas deben haber solicitado la inscripci\u00f3n antes de la finalizaci\u00f3n del a\u00f1o de inicio del curso escolar de referencia en la convocatoria de subvenci\u00f3n.\r\n\r\n- Que el primer d\u00eda h\u00e1bil del mes de noviembre del a\u00f1o de inicio del curso escolar de referencia en la convocatoria de subvenci\u00f3n, est\u00e9 iniciada la actividad de la escuela.\r\n\r\n- Disponer del n\u00famero m\u00ednimo de profesorado establecido en la normativa vigente reguladora de estos centros. A la hora de otorgar la subvenci\u00f3n solo se considerar\u00e1 el profesorado contratado y dado de alta en la Seguridad Social con efecto, al menos, del primer d\u00eda h\u00e1bil del mes de noviembre del a\u00f1o de inicio del curso escolar de referencia en la convocatoria de subvenci\u00f3n. El profesorado contratado que ejerza otro puesto de trabajo en otro servicio p\u00fablico deber\u00e1 cumplir con lo que se establece en la normativa vigente sobre incompatibilidades del personal al servicio de las Administraciones P\u00fablicas.\r\n\r\n- Que el profesorado disponga del requisito de titulaci\u00f3n se\u00f1alado en la normativa vigente reguladora de estos centros.\r\n\r\n- Cumplir con todo aquello que establezca la normativa vigente reguladora de estos centros.\r\n\r\n- Que la entidad solicitante se encuentra al corriente en el cumplimiento de las obligaciones tributarias y ante la Seguridad Social.",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 3,
+    "responsable": [
+      2,
+      3,
+      4
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 40,
+  "fields": {
+    "user": null,
+    "inicio": "2018-03-01",
+    "fin": "2018-04-03",
+    "created": "2018-03-08T12:54:49Z",
+    "updated": "2018-03-08T12:56:39Z",
+    "slug": "VoD7ha",
+    "nombre": "Plan Ayudas a Ayuntamientos de la Provincia, EATIM y Entidades Deportivas Municipales dependientes de los mismos.",
+    "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00060.pdf",
+    "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00058.pdf",
+    "observaciones": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=94",
+    "ente": "DA",
+    "diputacion": 7,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "2.250,00 \u20ac",
+    "descripcion": "Ayudas econ\u00f3micas a los Ayuntamientos y/o Entidades Locales de la Provincia de Alicante, as\u00ed como a las Entidades Deportivas Ayuntamientos, EATIM, Entidades Deportivas Municipales, dependientes de los mismos (Patronatos, Organismos Aut\u00f3nomos Fundaciones Deportivas, etc.), para la realizaci\u00f3n de actividades deportivas o para el funcionamiento de escuelas deportivas municipales.",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 1,
+    "responsable": [
+      1,
+      2
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 41,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-03-01",
+    "fin": "2018-03-20",
+    "created": "2018-03-08T13:20:27Z",
+    "updated": "2018-03-08T13:20:27Z",
+    "slug": "D4Z6Oj",
+    "nombre": "Programa de Actividad F\u00edsica para Mayores",
+    "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00058.pdf",
+    "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00060.pdf",
+    "observaciones": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=99",
+    "ente": "DA",
+    "diputacion": 7,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "< 1.200 \u20ac",
+    "descripcion": "Realizaci\u00f3n de cursos de actividad f\u00edsica moderada en todos los municipios de la Provincia de Alicante con menos de 5000 habitantes, y cuya finalidad ser\u00e1 la de impulsar la pr\u00e1ctica estable de actividades f\u00edsico-deportivas entre la poblaci\u00f3n de m\u00e1s edad, contribuyendo a una mejor calidad de vida y mejora de la salud de nuestros mayores.",
+    "estado": 4,
+    "comentarios": "Personas, preferentemente, mayores de 60 a\u00f1os, residentes en Municipios de la Provincia de Alicante con menos de 5000 habitantes",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 1,
+    "responsable": [
+      1,
+      5
+    ],
+    "se_relaciona_con": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 42,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-03-01",
+    "fin": "2018-03-20",
+    "created": "2018-03-08T13:23:57Z",
+    "updated": "2018-03-08T13:23:57Z",
+    "slug": "neAEkh",
+    "nombre": "Ayudas para la promoci\u00f3n de cursos de nataci\u00f3n.",
+    "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00063.pdf",
+    "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00056.pdf",
+    "observaciones": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=206",
+    "ente": "DA",
+    "diputacion": 7,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "< 1.200 \u20ac",
+    "descripcion": "Ayuda a Ayuntamientos y EATIM, menores de 5.000 habitantes, para la realizaci\u00f3n de Cursos de Nataci\u00f3n - niveles de Iniciaci\u00f3n y Perfeccionamiento-.\r\n\r\nNi\u00f1os de los municipios de Alicante menores de 5.000 habitantes, con edades comprendidas entre 4 y 14 a\u00f1os sea la ense\u00f1anza de la nataci\u00f3n en sus diferentes fases de aprendizaje: principios b\u00e1sicos, iniciaci\u00f3n a los diferentes estilos y perfeccionamiento t\u00e9cnico.",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "colectivo": 1,
     "responsable": [
       1,
       5
