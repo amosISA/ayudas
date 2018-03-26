@@ -402,6 +402,10 @@
            return yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-" + (dd[1]?dd:"0"+dd[0]); // padding
         };
 
+        // Make estado and ayuntamiento selected by default
+        $('#id_estado option[value="4"]').attr("selected",true);
+        $('#id_colectivo_1').prop('checked', true);
+
         // Unsaved changes leaving page
         var form = $('#some-form'),
         original = form.serialize();

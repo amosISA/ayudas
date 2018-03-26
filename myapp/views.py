@@ -53,6 +53,7 @@ def index(request, estado_slug=None):
     user = None
     estados = Estado.objects.all().annotate(number_stats=Count('subvencion'))
     subvenciones = Subvencion.objects.all()
+    total_subvenciones = Subvencion.objects.count()
 
     if estado_slug:
         if Diputacion.objects.filter(slug=estado_slug).exists():
@@ -87,7 +88,8 @@ def index(request, estado_slug=None):
                    'estados': estados,
                    'subvenciones': subvenciones,
                    'days_until_estado': days_until_estado,
-                   'notifications': notification_list})
+                   'notifications': notification_list,
+                   'total_subvenciones': total_subvenciones})
 
 @login_required()
 def subvencion_by_user(request, name_slug):
