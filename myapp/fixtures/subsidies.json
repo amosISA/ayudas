@@ -539,12 +539,12 @@
   "model": "myapp.subvencion",
   "pk": 9,
   "fields": {
-    "user": 5,
+    "user": null,
     "inicio": "2018-02-13",
     "fin": "2018-04-13",
     "created": "2018-02-18T17:25:59Z",
-    "updated": "2018-02-25T14:57:22Z",
-    "slug": "skQEvy",
+    "updated": "2018-03-24T10:38:10Z",
+    "slug": "W7Qouo",
     "nombre": "Ayudas para la aplicaci\u00f3n de medidas de gesti\u00f3n forestal sostenible en el marco del Programa de Desarrollo Rural de la Comunitat Valenciana 2014-2020",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18518",
     "solicitud": "https://www.dogv.gva.es/datos/2017/09/05/pdf/2017_7675.pdf",
@@ -553,10 +553,10 @@
     "diputacion": null,
     "generalitat": 3,
     "gobierno": null,
-    "cuantia": "4.000 - 10.000",
+    "cuantia": "4.000 - 10.000 \u20ac",
     "descripcion": "Concesi\u00f3n de ayuda para la realizaci\u00f3n de inversiones destinadas al desarrollo de zonas forestales y a la mejora de la viabilidad de los bosques, basadas en la gesti\u00f3n sostenible y multifuncional de los mismos:\r\n\r\n- Operaci\u00f3n 8.5.1. Instrumentos de gesti\u00f3n forestal sostenible;\r\n- Operaci\u00f3n 8.5.2. Gesti\u00f3n forestal sostenible para la mejora ambiental, paisaj\u00edstica y fomento de los ecosistemas forestales;\r\n- Operaci\u00f3n 8.6.1. Inversiones para la transformaci\u00f3n y comercializaci\u00f3n de productos forestales.",
     "estado": 4,
-    "comentarios": "",
+    "comentarios": "(24-03-2018)- le voy a proponer a Raimon P\u00e9rez que nos centremos en esta ayuda y descartemos la de planes contra incendios.",
     "drive": "https://drive.google.com/drive/folders/12_uxQDIZmPqmWpCTgEyii_Ow5yN8sqbc?usp=sharing",
     "gestiona_expediente": "-",
     "responsable": [
@@ -565,19 +565,21 @@
     "se_relaciona_con": [
       10
     ],
-    "colectivo": []
+    "colectivo": [
+      1
+    ]
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 10,
   "fields": {
-    "user": 5,
+    "user": null,
     "inicio": "2018-02-15",
     "fin": "2018-03-28",
     "created": "2018-02-20T07:32:41Z",
-    "updated": "2018-02-25T14:57:18Z",
-    "slug": "24uvYb",
+    "updated": "2018-03-24T10:46:02Z",
+    "slug": "S6NLyo",
     "nombre": "Ayudas destinadas para la redacci\u00f3n de nuevos Planes Locales de Prevenci\u00f3n de Incendios Forestales (PLPIF) o para la revisi\u00f3n de los ya aprobados",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18692",
     "solicitud": "https://www.dogv.gva.es/datos/2017/09/29/pdf/2017_8442.pdf",
@@ -586,10 +588,10 @@
     "diputacion": null,
     "generalitat": 3,
     "gobierno": null,
-    "cuantia": "3.500",
+    "cuantia": "3.500 \u20ac",
     "descripcion": "Revisi\u00f3n de plan local de prevenci\u00f3n de incendios forestales.\r\nEn todo el periodo 2014-2020 s\u00f3lo se podr\u00e1 percibir ayuda una sola vez para el mismo concepto.",
     "estado": 4,
-    "comentarios": "",
+    "comentarios": "Me pongo en contacto con Raimon, un chico de Callosa. Me comenta que podemos pedirla pero por los pelos, ya que en primera 2:\r\nc) Se considera revisi\u00f3n de un PLPIF a los efectos de esta subvenci\u00f3n, cuando este cuente con una resoluci\u00f3n aprobatoria de la conselleria competente en prevenci\u00f3n de incendios forestales y:\r\n\u2013 Ha cumplido la vigencia aprobada.\r\n\u2013 Deba adaptarse a una planificaci\u00f3n de rango superior vigente, a la que est\u00e1 subordinada. \r\n\r\na este segundo punto, el de adaptaci\u00f3n, podr\u00edamos acogernos porque parece que el a\u00f1o pasado cambiaron las normas t\u00e9cnicas.\r\nCreo que de todas maneras, podr\u00edamos dejarlo pasar, porque el plan fue aprobado hace poco m\u00e1s de un a\u00f1o. Podemos seguir con \u00e9l y quiz\u00e1s para el a\u00f1o que viene o el 2020 pedir esta revisi\u00f3n. As\u00ed tambi\u00e9n apretamos en otras subvenciones, como la de \"gesti\u00f3n forestal sostenible\".",
     "drive": "-",
     "gestiona_expediente": "-",
     "responsable": [
@@ -598,7 +600,9 @@
     "se_relaciona_con": [
       9
     ],
-    "colectivo": []
+    "colectivo": [
+      1
+    ]
   }
 },
 {
@@ -1133,12 +1137,12 @@
   "model": "myapp.subvencion",
   "pk": 28,
   "fields": {
-    "user": 2,
+    "user": null,
     "inicio": "2018-02-26",
     "fin": "2018-03-26",
     "created": "2018-02-26T18:14:23Z",
-    "updated": "2018-03-11T12:38:20Z",
-    "slug": "vykcU1",
+    "updated": "2018-03-23T19:44:46Z",
+    "slug": "2txvZt",
     "nombre": "Red COMDES - Solicitud de autorizaci\u00f3n para el uso de la Red de Comunicaciones M\u00f3viles Digitales de Emergencias y Seguridad de la Comunitat Valenciana",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18815&version=amp",
     "solicitud": "",
@@ -1150,7 +1154,7 @@
     "cuantia": "--",
     "descripcion": "Procedimiento de solicitud de autorizaci\u00f3n temporal para el uso de la Red COMDES. \r\n\r\nLa autorizaci\u00f3n que se emita en respuesta a esta solicitud habilitar\u00e1 para el uso de la red COMDES con car\u00e1cter temporal hasta que se apruebe la nueva regulaci\u00f3n del uso de la red COMDES, momento en que se proceder\u00e1 a la autorizaci\u00f3n definitiva seg\u00fan esta regulaci\u00f3n establezca.",
     "estado": 4,
-    "comentarios": "Hay en rellenar el formulario este\r\nhttp://www.gva.es/downloads/publicados/IN/07246_BI.pdf\r\na trav\u00e9s de certificado electr\u00f3nico",
+    "comentarios": "Hay en rellenar el formulario este\r\nhttp://www.gva.es/downloads/publicados/IN/07246_BI.pdf\r\na trav\u00e9s de certificado electr\u00f3nico\r\n\r\n\u00bfQu\u00e9 documentaci\u00f3n se debe presentar?\r\n- Solicitud de autorizaci\u00f3n de la entidad solicitante conforme al impreso normalizado debidamente cumplimentado.\r\n\r\n- Se debe adjuntar a la solicitud uno de los dos siguientes documentos en funci\u00f3n del tipo de entidad solicitante:\r\n\r\na) Para administraciones titulares de servicios de intervenci\u00f3n ante emergencias: acto administrativo que acredite que la administraci\u00f3n aprueba solicitar la autorizaci\u00f3n para el uso de la red COMDES de la Generalitat, y persona a la que se faculta para ello.\r\n\r\nb) Para consorcios: copia del acuerdo de sus \u00f3rganos de gobierno que acredite que aprueban solicitar la autorizaci\u00f3n para el uso de la red COMDES de la Generalitat y persona a la que se faculta para ello.\r\n\r\nLa Administraci\u00f3n o el consorcio acepta con su solicitud que las prestaciones y funcionalidades de los servicios de comunicaciones que ofrece la Red COMDES, en particular la cobertura y la capacidad, son adecuadas para la operativa de los servicios de intervenci\u00f3n que dependen de la misma. Para ello podr\u00e1 requerir al operador de Red informaci\u00f3n sobre dichos servicios, y realizar pruebas de funcionamiento con car\u00e1cter previo a la solicitud de autorizaci\u00f3n para el uso de la Red.",
     "drive": "",
     "gestiona_expediente": "-",
     "responsable": [
@@ -1340,8 +1344,8 @@
     "inicio": "2018-03-01",
     "fin": "2018-03-22",
     "created": "2018-03-03T15:47:28Z",
-    "updated": "2018-03-21T22:12:35Z",
-    "slug": "L547Nd",
+    "updated": "2018-03-23T19:30:44Z",
+    "slug": "DNvFYE",
     "nombre": "EMPUJU-Programa de subvenciones de empleo destinadas a la contrataci\u00f3n de personas j\u00f3venes por entidades locales, en el marco del Sistema Nacional de Garant\u00eda Juvenil, para el ejercicio 2018. (SERVEF)",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18617",
     "solicitud": "http://www.dogv.gva.es/datos/2018/02/28/pdf/2018_1908.pdf",
@@ -1352,7 +1356,7 @@
     "gobierno": null,
     "cuantia": "56130 \u20ac",
     "descripcion": "La concesi\u00f3n de subvenciones para la contrataci\u00f3n de las personas j\u00f3venes, que figuren inscritas en el fichero del Sistema Nacional de Garant\u00eda Juvenil en el \u00e1mbito territorial de la Comunitat Valenciana.",
-    "estado": 4,
+    "estado": 3,
     "comentarios": "21-03-2018\r\nSeleccionamos tres.\r\nhttps://docs.google.com/document/d/1RN7e4dyRIOLQ2rvm3tuAUtxqErTPStl-izeVvSVz0s8/edit?usp=sharing\r\n\r\n-----\r\nLa concesi\u00f3n de estas subvenciones se tramitar\u00e1 en r\u00e9gimen de concurrencia competitiva.",
     "drive": "",
     "gestiona_expediente": "-",
