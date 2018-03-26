@@ -22,7 +22,7 @@
                 {% endfor %}
             {% endif %}
 
-            <form class="form-horizontal" method="post" enctype="multipart/form-data" action="">{% csrf_token %}
+            <form id="some-form" class="form-horizontal" method="post" enctype="multipart/form-data" action="">{% csrf_token %}
 
                 {% if form.errors %}
                     <div class="ag_form_login_message_error">
@@ -161,7 +161,8 @@
                 </div>
 
                 {% if request.path == '/new/' %}
-                    <input onclick="this.disabled=true,this.form.submit();" class="button_submit_create_form" type="submit" value="Crear Subvención" />
+                    <!--onclick="this.disabled=true,this.form.submit();"-->
+                    <input class="button_submit_create_form" type="submit" value="Crear Subvención" />
                 {% else %}
                     <input class="button_submit_create_form" type="submit" value="Actualizar Subvención" />
                 {% endif %}
@@ -399,6 +400,19 @@
            var mm = (this.getMonth()+1).toString(); // getMonth() is zero-based
            var dd  = this.getDate().toString();
            return yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-" + (dd[1]?dd:"0"+dd[0]); // padding
+        };
+
+        // Unsaved changes leaving page
+        var form = $('#some-form'),
+        original = form.serialize();
+
+        form.submit(function(){
+            window.onbeforeunload = null
+        });
+
+        window.onbeforeunload = function(){
+            if (form.serialize() != original)
+                return 'Are you sure you want to leave?'
         };
     </script>
 
