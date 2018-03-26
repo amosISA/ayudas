@@ -37,8 +37,9 @@ class SubvencionAdmin(admin.ModelAdmin):
     empty_value_display = '-' # para los campos vacios se pone eso
     list_display_links = ('nombre',) # que campo aparece como un link para editar el registro
     #raw_id_fields = ["departamento"]
-    prepopulated_fields = {'slug': ('nombre',)}
+    #prepopulated_fields = {'slug': ('nombre',)}
     show_full_result_count = True
+    exclude = ('slug',)
 
     def Responsable(self, obj):
         return format_html('<br>'.join([str(i.responsable) for i in obj.responsable.all()]))

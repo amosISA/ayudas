@@ -13,6 +13,8 @@ from django.template.defaultfilters import slugify
 from notify.signals import notify
 from .utils import unique_slug_generator
 from .widgets import ColorPickerWidget
+import random
+import string
 
 User = settings.AUTH_USER_MODEL
 
@@ -190,14 +192,17 @@ class Subvencion(models.Model):
     def ente_verbose(self):
         return dict(Subvencion.ENTE_CHOICES)[self.ente]
 
+    # def save(self, *args, **kwargs):
+    #     super(Subvencion, self).save(*args, **kwargs)
+    #     if not self.slug:
+    #         self.slug = "0000" + str(self.id)
+
 # Function that do something before the model is saved => save()
 def pre_save_post_receiver(sender, instance, *args, **kwargs):
     # Lo q slugify hace es si el titulo es: coche item 1
     # Lo devuelve como (con los guiones): tesla-item-1
     #instance.slug = slugify(instance.title)
     if not instance.slug:
-        instance.slug = unique_slug_generator(instance)
-    else:
         instance.slug = unique_slug_generator(instance)
 
 pre_save.connect(pre_save_post_receiver, sender=Subvencion)
