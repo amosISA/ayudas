@@ -588,7 +588,12 @@ ul#id_se_relaciona_con {
   overflow: auto;
 }
 
-#id_se_relaciona_con li, #id_responsable li, #id_colectivo li {
+#content_ajax_list {
+  text-align: left;
+  background-color: papayawhip;
+}
+
+#id_se_relaciona_con li, #id_responsable li, #id_colectivo li, #content_ajax_list {
     list-style-type: none;
 }
 
@@ -606,7 +611,7 @@ ul#id_se_relaciona_con {
     padding-bottom:5px;
 }
 
-#id_se_relaciona_con li label:hover, #id_responsable li label:hover, #id_colectivo li label:hover {
+#id_se_relaciona_con li label:hover, #id_responsable li label:hover, #id_colectivo li label:hover, #content_ajax_list li label:hover {
     cursor:pointer;
 }
 
@@ -741,4 +746,22 @@ ul#id_se_relaciona_con {
 }
 .notification-box-list {
     height: 210px;
+}
+
+/* MODAL FILTER FULL WIDTH */
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: 60px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-content {
+  height: auto;
+  width: 1200px;
+  min-height: 100%;
+  border-radius: 0;
 }
