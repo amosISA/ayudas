@@ -96,7 +96,7 @@
                                 </a>
                                 <span class="subv-span-desc-inside-name">{{ subvencion.descripcion }}</span>
                             </td>
-                            <td class="estadocss" style="{% if subvencion.fin|daysuntil in days_until_estado %}background-color:#ff0000;color:#fff;{% elif subvencion.fin|daysuntil == 'passed days' %}background-color:{{ subvencion.estado.font_color }};{% else %}background-color:#fff;{% endif %}">
+                            <td class="estadocss date-end" style="{% if subvencion.fin|daysuntil in days_until_estado %}background-color:#ff0000;color:#fff;{% elif subvencion.fin|daysuntil == 'passed days' %}background-color:{{ subvencion.estado.font_color }};{% else %}background-color:#fff;{% endif %}">
                                 {{ subvencion.fin|date:"d/m/Y" }}
                             </td>
                             <td>{{ subvencion.cuantia|safe }}</td>
@@ -163,7 +163,8 @@
                 "language": {
                     url: "/static/myapp/location/es_ES.json"
                 },
-                "lengthMenu": [[50, -1], [50, "Todas"]],
+                "aaSorting": [[ 3, "asc" ]], // sort by fin
+                "lengthMenu": [[10000, -1], [10000, "Todas"]],
                 //if I want to show the lengthMenu also do this: Blfrtip
                 dom: 'Bfrtip',
                 buttons: [
@@ -226,6 +227,21 @@
             /*$('.notification-box-list .notification a').each(function() {
                 $(this).text($(this).text().trim().replace(/None/i, "").replace(/\s+$/, ''));
             });*/
+
+            // Scroll to subsidie that have the actual day and blink the subsidies that have as end date the actual day
+            var CurrentDate = new Date();
+            var dataFormated = ('0' + CurrentDate.getDate()).slice(-2)+"/"+('0'+(CurrentDate.getMonth()+1)).slice(-2)+"/"+CurrentDate.getFullYear();
+
+            $(window).on('load', function(){
+                $('.date-end').each(function() {
+                    if ($.trim($(this).text()) == dataFormated) {
+                        $('html, body').animate({
+                            scrollTop: $(this).parent().offset().top
+                        }, 100);
+                        $(this).parent().fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+                    }
+                });
+            });
         });
     </script>
     <script src="{% static 'notify/notifyX.js' %}"></script>

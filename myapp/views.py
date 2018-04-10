@@ -13,6 +13,8 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404, JsonRespons
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.template import loader
+from django.db.models import IntegerField
+from django.db.models.functions import Cast
 
 from notify.signals import notify
 from .models import Subvencion, Estado, Diputacion, Generalitat, Responsable, Gobierno

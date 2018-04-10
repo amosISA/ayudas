@@ -175,7 +175,7 @@ class Subvencion(models.Model):
     colectivo = models.ManyToManyField(Colectivo, blank=True)
 
     class Meta:
-        ordering = ["-created"]
+        ordering = ["fin"]
         verbose_name = 'Subvencion'
         verbose_name_plural = "Subvenciones"
 
