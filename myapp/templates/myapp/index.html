@@ -12,39 +12,41 @@
 <!-- BACK TO TOP -->
 <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 
-<div class="row subv-row-departamentos">
-    <div class="col-md-3 col-lg-3 col-departamentos nopadding">
-        {% for e in estados %}
-            <div class="div-dep" style="border-left-style: solid;border-left-width: 15px;border-left-color:{{ e.font_color }};">
-                <a href="{{ e.get_absolute_url }}">{{ e.etapa }}</a>
-                <!--
-                    In order to get the number of estados that each subsidie has i took this from:
-                    https://stackoverflow.com/questions/13145254/django-annotate-count-with-a-distinct-field
-                    also defined in my index view
-                -->
-                <span>{{ e.number_stats }}</span>
+<div class="row position-fixed subv-row-departamentos collapse" id="dep-notif-collapse">
+    <div class="col-md-12 col-lg-12 col-departamentos nopadding">
+        <div class="col-md-3 col-xs-3 row-for-estados">
+            {% for e in estados %}
+                <div class="div-dep" style="border-left-style: solid;border-left-width: 15px;border-left-color:{{ e.font_color }};">
+                    <a href="{{ e.get_absolute_url }}">{{ e.etapa }}</a>
+                    <!--
+                        In order to get the number of estados that each subsidie has i took this from:
+                        https://stackoverflow.com/questions/13145254/django-annotate-count-with-a-distinct-field
+                        also defined in my index view
+                    -->
+                    <span>{{ e.number_stats }}</span>
+                </div>
+            {% endfor %}
+            <div class="div-dep" style="border-left-style: solid;border-left-width: 15px;border-left-color:#ff0017;">
+                <a href="{% url 'myapp:index' %}">Todas las subvenciones</a>
+                <span>{{ total_subvenciones }}</span>
             </div>
-        {% endfor %}
-        <div class="div-dep" style="border-left-style: solid;border-left-width: 15px;border-left-color:#ff0017;">
-            <a href="{% url 'myapp:index' %}">Todas las subvenciones</a>
-            <span>{{ total_subvenciones }}</span>
         </div>
-    </div>
 
-    {% if notifications %}
-        <div class="col-md-9 col-lg-9 row-user-notifications nopadding">
+        {% if notifications %}
+        <div class="col-md-12 col-xs-9 row-user-notifications nopadding">
             <div class="card">
                 <div class="card-header">
                     Notificaciones
                 </div>
 
-                <div class="notification-box-list" style="height:150px;overflow:auto;">
+                <div class="notification-box-list" style="overflow:auto;">
                     {% user_notifications %}
                     {% include_notify_js_variables %}
                 </div>
             </div>
         </div>
-{% endif %}
+        {% endif %}
+    </div>
 </div>
 
 <div class="row align-items-center subv-table-row">
@@ -107,7 +109,7 @@
                             <td>{{ subvencion.cuantia|safe }}</td>
                             <td>
                                 {% for responsable in subvencion.responsable.all %}
-                                    <span class="badge badge-pill badge-{% if responsable|split_value == 'MV' %}danger{% elif responsable|split_value == 'T' %}primary{% elif responsable|split_value == 'F' %}fernando{% elif responsable|split_value == 'JC' %}warning{% elif responsable|split_value == 'R' %}info{% elif responsable|split_value == 'M' %}success{% elif responsable|split_value == 'JM' %}inverse{% else %}default{% endif %}" tabindex="0" data-toggle="popover" data-trigger="hover" data-content="{{ responsable }}">
+                                    <span class="badge badge-pill badge-{% if responsable|split_value == 'MV' %}danger{% elif responsable|split_value == 'T' %}primary{% elif responsable|split_value == 'F' %}fernando{% elif responsable|split_value == 'JC' %}warning{% elif responsable|split_value == 'A' %}agnieszka{% elif responsable|split_value == 'R' %}info{% elif responsable|split_value == 'M' %}success{% elif responsable|split_value == 'JM' %}inverse{% else %}default{% endif %}" tabindex="0" data-toggle="popover" data-trigger="hover" data-content="{{ responsable }}">
                                         <a style="color:inherit;" href="{% url 'myapp:subvencion_by_category' estado_slug=responsable.responsable %}">{{ responsable|split_value }}</a>
                                     </span>
                                 {% endfor %}

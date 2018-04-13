@@ -34,14 +34,24 @@
 .subv_webapp_container .subv-sidebar .subv-list-items ul li a {
     color: white;
 }
-
 .subv_webapp_container .subv-row-departamentos {
-    /*margin-top: 30px;
-    text-align:center;*/
   padding-top: 1rem;
+  z-index: 999;
+  margin-top: -21px;
+  margin-right: -34px!important;
+}
+.row-for-estados {
+  float:left;
+  padding-bottom: 10px;
+  background-color: #dddddd;
+  padding-top: 27px;
+  position: relative;
+  z-index: 10;
 }
 .subv_webapp_container .subv-row-departamentos .col-departamentos {
-    margin-bottom:10px;
+  margin-bottom:10px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2.5px 5px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid #bababa;
 }
 
 .subv_webapp_container .subv-row-departamentos .col-departamentos .div-dep {
@@ -554,6 +564,7 @@ a.alert_message:hover{color: grey;}
 .forms_act_crea {
   padding: 0.2rem 1.5rem;
   text-align: center;
+  margin-top: 55px;
 }
 
 .forms_act_crea .ag_create_post_wrapper label {
@@ -634,9 +645,9 @@ ul#id_se_relaciona_con {
 	border-radius: .25rem;
 }
 .row-user-notifications .card-header {
-    padding: 0.1rem;
+    padding: 10px;
 	margin-bottom: 0;
-	background-color: #fff;
+	background-color: #bbb;
 }
 .row-user-notifications .alert-info, .row-user-notifications .alert-success {
 	color: #0c5460;
@@ -644,7 +655,7 @@ ul#id_se_relaciona_con {
 	border-color: #ddd;
 	border: 0px solid transparent;
 }
-.row-user-notifications .alert {margin-bottom: 0.1rem;}
+.row-user-notifications .alert {margin: 0; padding: 3px; border-radius: 0; padding-left: 10px;}
 .row-user-notifications .close {
     float: right;
     font-size: 1.0rem;
@@ -669,6 +680,10 @@ ul#id_se_relaciona_con {
 }
 .badge-fernando {
     background-color: #0c48b9;
+    color: #fff;
+}
+.badge-agnieszka {
+    background-color: #0bb9b8;
     color: #fff;
 }
 
@@ -741,11 +756,11 @@ ul#id_se_relaciona_con {
 
 .subv_webapp_container .subv-row-departamentos {
     padding-top: 1rem;
-    background: #ccc;
+    /*background: #ccc;*/
     padding-right: 2rem;
 }
 .notification-box-list {
-    height: 210px;
+    height: 294px;
 }
 
 /* MODAL FILTER FULL WIDTH */
@@ -769,15 +784,15 @@ ul#id_se_relaciona_con {
 /*** BACK TO TOP ***/
 a#back-to-top {
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 5px;
+    right: 5px;
     z-index: 9999;
     width: 32px;
     height: 32px;
     text-align: center;
     line-height: 30px;
-    background: #f5f5f5;
-    color: #444;
+    background: #07889A;
+    color: #fff;
     cursor: pointer;
     border: 0;
     border-radius: 2px;
@@ -786,7 +801,7 @@ a#back-to-top {
     opacity: 0;
 }
 a#back-to-top:hover {
-    background: #e9ebec;
+    background: #07acd4;
 }
 a#back-to-top.show {
     opacity: 1;
