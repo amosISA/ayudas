@@ -9,6 +9,8 @@
 {% load staticfiles %}
 {% load notification_tags %}
 
+<!-- BACK TO TOP -->
+<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 
 <div class="row subv-row-departamentos">
     <div class="col-md-3 col-lg-3 col-departamentos nopadding">
@@ -79,7 +81,10 @@
                     {% for subvencion in subvenciones %}
                         <tr>
                             <td>
-                                {{ subvencion.inicio|date:"d/m/Y" }}
+                                {{ subvencion.inicio|date:"d/m/Y" }}<br>
+                                {% for colectivo in subvencion.colectivo.all %}
+                                    {{ colectivo }}
+                                {% endfor %}
                             </td>
                             <td class="estadocss2" style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
                                 {% if subvencion.generalitat == None and subvencion.gobierno == None %}
@@ -242,6 +247,29 @@
                     }
                 });
             });
+
+            // Back to to functionality
+            if ($('#back-to-top').length) {
+                var scrollTrigger = 100, // px
+                    backToTop = function () {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop > scrollTrigger) {
+                            $('#back-to-top').addClass('show');
+                        } else {
+                            $('#back-to-top').removeClass('show');
+                        }
+                    };
+                backToTop();
+                $(window).on('scroll', function () {
+                    backToTop();
+                });
+                $('#back-to-top').on('click', function (e) {
+                    e.preventDefault();
+                    $('html,body').animate({
+                        scrollTop: 0
+                    }, 700);
+                });
+            }
         });
     </script>
     <script src="{% static 'notify/notifyX.js' %}"></script>
