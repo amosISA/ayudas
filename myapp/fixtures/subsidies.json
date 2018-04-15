@@ -56,6 +56,13 @@
   }
 },
 {
+  "model": "myapp.responsable",
+  "pk": 10,
+  "fields": {
+    "responsable": "Agnieszka"
+  }
+},
+{
   "model": "myapp.diputacion",
   "pk": 1,
   "fields": {
@@ -143,6 +150,33 @@
     "nombre": "Instituto Juan Gil-Albert",
     "font_color": "#99ccff",
     "slug": "instituto-juan-gil-albert"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 13,
+  "fields": {
+    "nombre": "Promoci\u00f3n y desarrollo local",
+    "font_color": "#000080",
+    "slug": "promocion-y-desarrollo-local"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 14,
+  "fields": {
+    "nombre": "Servicio Asistencia a Municipios",
+    "font_color": "#ff99cc",
+    "slug": "servicio-asistencia-a-municipios"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 15,
+  "fields": {
+    "nombre": "Residuos S\u00f3lidos Urbanos",
+    "font_color": "#ff6600",
+    "slug": "residuos-solidos-urbanos"
   }
 },
 {
@@ -260,6 +294,33 @@
     "nombre": "Conselleria de Sanidad Universal y Salud P\u00fablica",
     "font_color": "#FFFFFF",
     "slug": "conselleria-de-sanidad-universal-y-salud-publica"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 16,
+  "fields": {
+    "nombre": "Ag\u00e8ncia Valenciana del Turisme",
+    "font_color": "#008080",
+    "slug": "agencia-valenciana-del-turisme"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 17,
+  "fields": {
+    "nombre": "IVAJ",
+    "font_color": "#3366ff",
+    "slug": "ivaj"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 18,
+  "fields": {
+    "nombre": "Conselleria de Vivienda, Obras P\u00fablicas y Vertebraci\u00f3n del Territorio",
+    "font_color": "#ffff00",
+    "slug": "conselleria-de-vivienda-obras-publicas-y-vertebracion-del-territorio"
   }
 },
 {
@@ -556,8 +617,7 @@
       2
     ],
     "se_relaciona_con": [
-      43,
-      6
+      43
     ],
     "colectivo": [
       1
@@ -568,13 +628,13 @@
   "model": "myapp.subvencion",
   "pk": 6,
   "fields": {
-    "user": 2,
+    "user": null,
     "inicio": "2016-12-30",
     "fin": "2017-01-30",
     "created": "2018-02-02T20:45:20Z",
-    "updated": "2018-03-26T10:56:47Z",
+    "updated": "2018-04-13T19:59:13Z",
     "slug": "g32pEc",
-    "nombre": "equipamiento instalaciones culturales municipales",
+    "nombre": "Equipamiento instalaciones culturales municipales, 2017",
     "bases": "--",
     "solicitud": "--",
     "observaciones": "",
@@ -584,17 +644,16 @@
     "gobierno": null,
     "cuantia": "--",
     "descripcion": "",
-    "estado": 2,
+    "estado": 10,
     "comentarios": "Este a\u00f1o no se pod\u00eda optar a ella. Por haberla pedido el a\u00f1o pasado.",
-    "drive": "--",
-    "gestiona_expediente": "3/2018 EXP 7",
+    "drive": "",
+    "gestiona_expediente": "-",
     "responsable": [
       1,
       2
     ],
     "se_relaciona_con": [
-      43,
-      5
+      45
     ],
     "colectivo": [
       1
@@ -629,7 +688,8 @@
       1
     ],
     "se_relaciona_con": [
-      10
+      10,
+      68
     ],
     "colectivo": [
       1
@@ -700,8 +760,8 @@
       2
     ],
     "se_relaciona_con": [
-      14,
-      12
+      12,
+      14
     ],
     "colectivo": []
   }
@@ -736,8 +796,8 @@
       3
     ],
     "se_relaciona_con": [
-      14,
-      11
+      11,
+      14
     ],
     "colectivo": []
   }
@@ -807,8 +867,8 @@
       2
     ],
     "se_relaciona_con": [
-      12,
-      11
+      11,
+      12
     ],
     "colectivo": []
   }
@@ -982,7 +1042,7 @@
     "inicio": "2017-12-20",
     "fin": "2018-05-31",
     "created": "2018-02-21T07:59:34Z",
-    "updated": "2018-02-28T17:09:07Z",
+    "updated": "2018-04-10T10:28:06Z",
     "slug": "yzMjDi",
     "nombre": "Reparaci\u00f3n de infraestructuras hidr\u00e1ulicas a ejecutar por los municipios. RACH 2018",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00039.pdf",
@@ -995,15 +1055,19 @@
     "cuantia": "",
     "descripcion": "Reparaci\u00f3n de infraestructuras hidr\u00e1ulicas a ejecutar por los municipios.RACH 2018",
     "estado": 4,
-    "comentarios": "TUBERIA RAFALET FRAN\u00c7OIS",
+    "comentarios": "JC: 10-04-2018: Estoy gestionando la ayuda de conselleria sobre caminos (ver en subvenciones relacionadas). Estar\u00eda bien sincronizarlo para hacer primero la tuber\u00eda y despu\u00e9s asfaltar el camino.\r\n\r\nTUBERIA RAFALET FRAN\u00c7OIS",
     "drive": "-",
     "gestiona_expediente": "2/2017 EXP 38",
     "responsable": [
       3,
       6
     ],
-    "se_relaciona_con": [],
-    "colectivo": []
+    "se_relaciona_con": [
+      45
+    ],
+    "colectivo": [
+      1
+    ]
   }
 },
 {
@@ -1244,7 +1308,7 @@
     "inicio": "2018-02-26",
     "fin": "2018-03-31",
     "created": "2018-02-26T20:03:53Z",
-    "updated": "2018-04-06T12:22:55Z",
+    "updated": "2018-04-13T05:49:50Z",
     "slug": "m4RMg4",
     "nombre": "PIMA Residuos y PEMAR",
     "bases": "https://drive.google.com/open?id=1TsrLBMyTOKSF3p-579QTmUwNvVlBzElu",
@@ -1256,16 +1320,18 @@
     "gobierno": null,
     "cuantia": "",
     "descripcion": "Promover actuaciones que permitan reducir las emisiones de gases de efecto invernadero (GEI) y avanzar en la consecuci\u00f3n de los\r\nobjetivos de la Directiva 2008/98/CE de Residuos, de la Ley 22/2011, de 28 de julio, de residuos y suelos contaminados, del Plan Estatal Marco de Gesti\u00f3n de Residuos (PEMAR), as\u00ed como en el cumplimiento de los objetivos relativos a las energ\u00edas renovables.\r\nCon estas ayudas se promueve especialmente la implantaci\u00f3n de proyectos innovadores por parte de entidades locales que est\u00e1n lejos todav\u00eda de alcanzar los objetivos comunitarios.",
-    "estado": 4,
-    "comentarios": "JC - 06/04/2018 - estoy a punto de lanzar la subvenci\u00f3n. La subo al gestiona. y bueno, no s\u00e9 si el lunes podremos enviarla. Ya veremos. sino, pues ya tenemos avanzado el tema para otro a\u00f1o.\r\n\r\n\r\nCompostadores dom\u00e9sticos\r\nCompostadores para viviendas unifamiliares con jard\u00edn o huerto en los que se los depositen y se composten los biorresiduos. Deber\u00e1n incorporar, como m\u00ednimo, la identificaci\u00f3n (con una pegatina o serigraf\u00eda) de los materiales que se pueden depositar en su interior.\r\n80 \u20ac/compostador\r\n\r\nActuaciones de formaci\u00f3n y seguimiento del proyecto\r\nLas actuaciones de formaci\u00f3n y seguimiento deber\u00e1n incluir un plan de trabajo. En el caso de compostaje comunitario tambi\u00e9n incluir\u00e1n una gu\u00eda que detalle los biorresiduos objeto de compostaje para cada vivienda participante. En el caso de compostaje dom\u00e9stico tambi\u00e9n incluir\u00e1n un manual de compostaje para cada vivienda participante.\r\n12 \u20ac/habitante\r\n\r\nContenedores para la v\u00eda p\u00fablica (molar\u00eda con tarjeta)\r\nLos contenedores para la recogida separada de biorresiduos en la v\u00eda p\u00fablica deber\u00e1n ser, parcial o totalmente, de color marr\u00f3n o incorporar una identificaci\u00f3n de color marr\u00f3n. La resistencia de los contenedores ser\u00e1 la equivalente al peso del contenedor lleno de materia org\u00e1nica y \u00e9stos deber\u00e1n permitir la incorporaci\u00f3n de sistemas de identificaci\u00f3n y pesado. El contenedor incluir\u00e1 una impresi\u00f3n permanente de los materiales que pueden ser depositados en su interior.\r\n5 \u20ac/habitante atendido\r\n\r\n29-03-2018 - He hablado con Patricia de Spora.\r\nLes env\u00edo presupuesto con varias cosas. La semana que viene hablaremos.",
+    "estado": 3,
+    "comentarios": "JC - 13-04-2018: La envi\u00e9 finalmente por correo a Piquer. No tengo noticias. La semana que viene lo volvemos a mirar.\r\n\r\nJC - 06/04/2018 - estoy a punto de lanzar la subvenci\u00f3n. La subo al gestiona. y bueno, no s\u00e9 si el lunes podremos enviarla. Ya veremos. sino, pues ya tenemos avanzado el tema para otro a\u00f1o.\r\n\r\n\r\nCompostadores dom\u00e9sticos\r\nCompostadores para viviendas unifamiliares con jard\u00edn o huerto en los que se los depositen y se composten los biorresiduos. Deber\u00e1n incorporar, como m\u00ednimo, la identificaci\u00f3n (con una pegatina o serigraf\u00eda) de los materiales que se pueden depositar en su interior.\r\n80 \u20ac/compostador\r\n\r\nActuaciones de formaci\u00f3n y seguimiento del proyecto\r\nLas actuaciones de formaci\u00f3n y seguimiento deber\u00e1n incluir un plan de trabajo. En el caso de compostaje comunitario tambi\u00e9n incluir\u00e1n una gu\u00eda que detalle los biorresiduos objeto de compostaje para cada vivienda participante. En el caso de compostaje dom\u00e9stico tambi\u00e9n incluir\u00e1n un manual de compostaje para cada vivienda participante.\r\n12 \u20ac/habitante\r\n\r\nContenedores para la v\u00eda p\u00fablica (molar\u00eda con tarjeta)\r\nLos contenedores para la recogida separada de biorresiduos en la v\u00eda p\u00fablica deber\u00e1n ser, parcial o totalmente, de color marr\u00f3n o incorporar una identificaci\u00f3n de color marr\u00f3n. La resistencia de los contenedores ser\u00e1 la equivalente al peso del contenedor lleno de materia org\u00e1nica y \u00e9stos deber\u00e1n permitir la incorporaci\u00f3n de sistemas de identificaci\u00f3n y pesado. El contenedor incluir\u00e1 una impresi\u00f3n permanente de los materiales que pueden ser depositados en su interior.\r\n5 \u20ac/habitante atendido\r\n\r\n29-03-2018 - He hablado con Patricia de Spora.\r\nLes env\u00edo presupuesto con varias cosas. La semana que viene hablaremos.",
     "drive": "https://drive.google.com/open?id=1i3uHArLXE5Ph29lfLWQ2rf_eydNBcMnM",
-    "gestiona_expediente": "22",
+    "gestiona_expediente": "3/2018 EXP. 22",
     "responsable": [
       1,
       3,
       6
     ],
-    "se_relaciona_con": [],
+    "se_relaciona_con": [
+      68
+    ],
     "colectivo": [
       1
     ]
@@ -1439,8 +1505,8 @@
       9
     ],
     "se_relaciona_con": [
-      34,
-      27
+      27,
+      34
     ],
     "colectivo": [
       1
@@ -1489,7 +1555,7 @@
     "inicio": "2018-03-06",
     "fin": "2018-04-10",
     "created": "2018-03-07T09:05:52Z",
-    "updated": "2018-04-03T21:59:01Z",
+    "updated": "2018-04-09T19:31:09Z",
     "slug": "vW9WHJ",
     "nombre": "TECG - Solicitud de subvenciones destinadas a la realizaci\u00f3n de actividades de voluntariado ambiental en prevenci\u00f3n de incendios forestales para el ejercicio 2018.",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=661",
@@ -1544,8 +1610,8 @@
       4
     ],
     "se_relaciona_con": [
-      39,
-      38
+      38,
+      39
     ],
     "colectivo": []
   }
@@ -1617,7 +1683,9 @@
       1,
       2
     ],
-    "se_relaciona_con": [],
+    "se_relaciona_con": [
+      71
+    ],
     "colectivo": [
       1
     ]
@@ -1721,10 +1789,10 @@
       4
     ],
     "se_relaciona_con": [
-      39,
-      6,
+      3,
       5,
-      3
+      39,
+      45
     ],
     "colectivo": [
       3
@@ -1778,7 +1846,7 @@
     "inicio": "2018-03-16",
     "fin": "2018-04-27",
     "created": "2018-03-16T07:47:42Z",
-    "updated": "2018-04-06T21:05:33Z",
+    "updated": "2018-04-10T10:53:57Z",
     "slug": "khEIdA",
     "nombre": "TECG - Solicitud de ayudas para obras de acondicionamiento de caminos rurales de titularidad de los municipios y entidades locales menores de la Comunidad Valenciana.",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=796",
@@ -1791,16 +1859,19 @@
     "cuantia": "< 160.000 80%",
     "descripcion": "La subvenci\u00f3n tiene la finalidad de mejorar la infraestructura viaria rural de titularidad municipal\r\nSer\u00e1n obras subvencionables todas aquellas que signifiquen una mejora permanente de la superestructura de los caminos rurales, bien con firme asf\u00e1ltico, de hormig\u00f3n o de material granular.\r\nQuedan exceptuados los proyectos que contemplen exclusivamente obras aisladas no incluidas en las de superestructura, y trabajos como los de desyerbe o limpieza de caminos, bacheos y rasanteos aislados.\r\nAdem\u00e1s, se considerar\u00e1 una inversi\u00f3n desproporcionada a los fines de la ayuda, aquella en que el presupuesto de la mejora de la superestructura de los caminos rurales sea inferior al 60% del presupuesto total de la obra. estas solicitudes, podr\u00e1 ser reducidas o denegadas.\r\nNo ser\u00e1n auxiliables las mejoras ofertadas por los contratistas.\r\n* Una vez presentada la solicitud, en caso de querer aportar documentos al expediente (AGMIA) se podr\u00e1 hacer a trav\u00e9s del enlace que aparece en el apartado de Informaci\u00f3n complementaria.",
     "estado": 4,
-    "comentarios": "Menos de 2000 habitantes: 80%.\r\nRafalet\r\n\r\nEl expediente del camino del buscarr\u00f3 13/2015\r\nHaciendo una extrapolaci\u00f3n: El camino del buscarr\u00f3 cost\u00f3 60.000 ya con todos los gastos e impuesto, sindo 1316 metros.\r\nEn Rafalet, el tramo m\u00ednimo a realizar ser\u00eda (1001 + 724). desde coll de sa Creu a la curva de Malagana. Y haciendo una regla de tres me sale 80.000\u20ac, siendo 15.000 el 20%",
+    "comentarios": "JC: 10/04/2018: hablo con Josemi. Creo expediente en gestiona y empiezo a mirar que nos har\u00e1 falta. Estos es la documentaci\u00f3n a presentar:\r\n\r\n- Certificado del municipio o de la entidad local menor, seg\u00fan la naturaleza del solicitante, en modelo normalizado.\r\n\r\n- Memoria valorada, firmada digitalmente por persona t\u00e9cnica competente, con un tama\u00f1o m\u00e1ximo de 5 MB. En vez de la memoria valorada, tambi\u00e9n podr\u00e1 presentarse un proyecto t\u00e9cnico, firmado digitalmente, aunque \u00e9ste s\u00f3lo ser\u00e1 exigible, posteriormente, a aquellas solicitudes que resulten seleccionadas para su aprobaci\u00f3n. Ambos documentos se ajustar\u00e1n a lo indicado en la Orden 9/2016, de 22 de abril de 2016, de la Conselleria de Agricultura, Medioambiente, Cambio Clim\u00e1tico y Desarrollo Rural, por la que se establece el formato digital para la presentaci\u00f3n de proyectos t\u00e9cnicos.\r\n\r\n- Memoria acreditativa de la necesidad de la obra, firmada digitalmente, con un tama\u00f1o m\u00e1ximo de 5 MB. Como m\u00ednimo, declarar\u00e1 y acreditar\u00e1 suficientemente la informaci\u00f3n necesaria para poder valorar los siguientes apartados para la priorizaci\u00f3n de la solicitud:\r\na) Indicar si la solicitud contempla \u00fanicamente inversiones en caminos intermunicipales o en caminos que den servicio directo a zonas de cultivo o explotaci\u00f3n en com\u00fan.\r\nb) Indicar si se da acceso directo a explotaciones ganaderas o a industrias agroalimentarias (bodegas, cooperativas).\r\nc) Indicar si existe coherencia con otras l\u00edneas de subvenci\u00f3n o actuaciones directas de la Conselleria, tales como modernizaci\u00f3n de regad\u00edos, mejora de infraestructuras ganaderas o cualesquiera otras\r\nd) Detallar la necesidad de la obra en base a la poblaci\u00f3n rural y las producciones de la zona a que da servicio el camino o caminos, o cualquier otro factor que contribuya al desarrollo rural de la zona.\r\n\r\n- En caso de que alg\u00fan camino objeto de la solicitud, discurra por cualquier zona de afecci\u00f3n (v\u00eda pecuaria, dominio p\u00fablico hidr\u00e1ulico, carreteras, espacios de la red Natura 2000 o parajes naturales declarados, etc) se adjuntar\u00e1 la autorizaci\u00f3n de ejecuci\u00f3n de la obra, expedida por el \u00f3rgano competente.\r\n\r\n- En caso de que la cuenta indicada para el pago de la ayuda no est\u00e9 dada de alta en la Generalitat, modelo de domiciliaci\u00f3n bancaria, firmado digitalmente, en modelo normalizado\r\n\r\n------------------------------------------------------------------------------------------------------------\r\n\r\nMenos de 2000 habitantes: 80%.\r\nRafalet\r\n\r\nEl expediente del camino del buscarr\u00f3 13/2015\r\nHaciendo una extrapolaci\u00f3n: El camino del buscarr\u00f3 cost\u00f3 60.000 ya con todos los gastos e impuesto, sindo 1316 metros.\r\nEn Rafalet, el tramo m\u00ednimo a realizar ser\u00eda (1001 + 724). desde coll de sa Creu a la curva de Malagana. Y haciendo una regla de tres me sale 80.000\u20ac, siendo 15.000 el 20%",
     "drive": "",
-    "gestiona_expediente": "-",
+    "gestiona_expediente": "3/2018 - 23",
     "responsable": [
       1,
       3,
       6
     ],
     "se_relaciona_con": [
-      13
+      43,
+      6,
+      13,
+      21
     ],
     "colectivo": [
       1
@@ -1836,7 +1907,9 @@
       3,
       6
     ],
-    "se_relaciona_con": [],
+    "se_relaciona_con": [
+      68
+    ],
     "colectivo": [
       1
     ]
@@ -1850,7 +1923,7 @@
     "inicio": "2018-03-08",
     "fin": "2018-03-29",
     "created": "2018-03-16T09:10:15Z",
-    "updated": "2018-03-26T12:37:53Z",
+    "updated": "2018-04-14T11:05:24Z",
     "slug": "Bj75Zr",
     "nombre": "Subvenciones a Ayuntamientos y Entidades de \u00e1mbito territorial inferior al municipio (E.A.T.I.M.) para actividades y programas dirigidos a la juventud",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00072.pdf",
@@ -1862,8 +1935,8 @@
     "gobierno": null,
     "cuantia": "< 3000 \u20ac",
     "descripcion": "Ser\u00e1n objeto de subvenci\u00f3n de la presente convocatoria, todas aquellas actividades y\r\nprogramas que vayan dirigidos exclusivamente a la juventud, entendi\u00e9ndose como tal la\r\nfranja de poblaci\u00f3n comprendida entre los 12 y los 30 a\u00f1os.",
-    "estado": 4,
-    "comentarios": "el a\u00f1o pasado se pidi\u00f3 el tema de la escalada.\r\nsigo pensando en que Girado podr\u00eda iniciar una escuela deportiva.\r\n\r\n26-03-2018, llamar a Girado\r\nenviar memoria a Maril\u00f3",
+    "estado": 3,
+    "comentarios": "el 29/03/2018 parece que se envi\u00f3 la subvenci\u00f3n pero no encuentro minuta en el gestiona.\r\n\r\nel a\u00f1o pasado se pidi\u00f3 el tema de la escalada.\r\nsigo pensando en que Girado podr\u00eda iniciar una escuela deportiva.\r\n\r\n26-03-2018, llamar a Girado\r\nenviar memoria a Maril\u00f3",
     "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsZlhOQnZHSFpoZFk",
     "gestiona_expediente": "3/2018 - 16",
     "responsable": [
@@ -1905,7 +1978,8 @@
       5
     ],
     "se_relaciona_con": [
-      50
+      50,
+      69
     ],
     "colectivo": [
       1
@@ -1916,11 +1990,11 @@
   "model": "myapp.subvencion",
   "pk": 49,
   "fields": {
-    "user": 5,
+    "user": null,
     "inicio": "2018-03-26",
     "fin": "2018-04-18",
     "created": "2018-03-28T09:38:24Z",
-    "updated": "2018-03-28T09:38:24Z",
+    "updated": "2018-04-10T19:19:24Z",
     "slug": "U29zRm",
     "nombre": "Subvenciones a Ayuntamientos para actividades en materia de ciudadanos extranjeros",
     "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=64",
@@ -1933,8 +2007,8 @@
     "cuantia": "3.500 \u20ac",
     "descripcion": "Subvencionar actividades y programas destinados a integrar al colectivo de extranjeros en los municipios en los que residen.",
     "estado": 4,
-    "comentarios": "28-03-2018. \r\nEl a\u00f1o pasado se pidi\u00f3 el curso de valenciano. La verdad es que al final los extranjeros lo han ido dejando porque no les gust\u00f3 el m\u00e9todo de la profesora. \r\n\r\ntendr\u00edamos dos opciones:\r\n- Ser\u00eda interesante saber cuanto ha durado el curso de valenciano.\r\n- por otro lado podr\u00edamos usar esta subvenci\u00f3n para el huerto ecol\u00f3gico. Aunque tambi\u00e9n podr\u00edamos esperar a que saliera la de agricultura.",
-    "drive": "",
+    "comentarios": "JC: 10-04-2018: le pido a Agnieszka que haga una memoria de las actividades que hemos ido desarrollando. La idea es seguir contando con TEO. Viniendo un d\u00eda todas las semanas del a\u00f1o sale 2240 \u20ac+iva. Teniendo en cuenta que se subvenciona 3500. es una buena opci\u00f3n.\r\n\r\n28-03-2018. \r\nEl a\u00f1o pasado se pidi\u00f3 el curso de valenciano. La verdad es que al final los extranjeros lo han ido dejando porque no les gust\u00f3 el m\u00e9todo de la profesora. \r\n\r\ntendr\u00edamos dos opciones:\r\n- Ser\u00eda interesante saber cuanto ha durado el curso de valenciano.\r\n- por otro lado podr\u00edamos usar esta subvenci\u00f3n para el huerto ecol\u00f3gico. Aunque tambi\u00e9n podr\u00edamos esperar a que saliera la de agricultura.",
+    "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsYWxFN0l0S2N4QlE",
     "gestiona_expediente": "-",
     "responsable": [
       1,
@@ -1974,7 +2048,8 @@
       1
     ],
     "se_relaciona_con": [
-      48
+      48,
+      69
     ],
     "colectivo": [
       2
@@ -1985,11 +2060,11 @@
   "model": "myapp.subvencion",
   "pk": 51,
   "fields": {
-    "user": 5,
+    "user": null,
     "inicio": "2018-03-17",
-    "fin": "2018-04-16",
+    "fin": "2018-05-16",
     "created": "2018-03-28T10:21:26Z",
-    "updated": "2018-03-28T10:21:26Z",
+    "updated": "2018-04-10T17:49:29Z",
     "slug": "vfwmlE",
     "nombre": "Ayudas a las Obras y Servicios de Competencia Municipal para 2019",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00078.pdf",
@@ -2024,7 +2099,7 @@
     "inicio": "2018-03-17",
     "fin": "2018-04-05",
     "created": "2018-03-28T10:31:25Z",
-    "updated": "2018-04-03T21:42:57Z",
+    "updated": "2018-04-10T06:51:49Z",
     "slug": "L40Mjc",
     "nombre": "Ayudas a municipios de la provincia de Alicante, Promoci\u00f3n Tur\u00edstica de la Costa Blanca, anualidad 2018",
     "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00077.pdf",
@@ -2036,10 +2111,10 @@
     "gobierno": null,
     "cuantia": "",
     "descripcion": "Regular el procedimiento en r\u00e9gimen de concurrencia competitiva ordinaria para la concesi\u00f3n de subvenciones destinada a coadyuvar en la financiaci\u00f3n de los gastos derivados en la promoci\u00f3n tur\u00edstica de la Costa Blanca",
-    "estado": 1,
+    "estado": 4,
     "comentarios": "se suele pedir radio, carteles, tr\u00edptico. el a\u00f1o pasado se concedi\u00f3 1921,77 \u20ac (64,06%)\r\n\r\ncreo que podemos seguir pidiendo lo mismo y complicarnos la vida\r\n\r\n28-03-2018 - le pregunto a MVicenta a ver como lo lleva?\r\n\r\nJC: 03-04-2018: lanza finalmente la subvenci\u00f3n como el a\u00f1o anterior.",
     "drive": "",
-    "gestiona_expediente": "-",
+    "gestiona_expediente": "3/2018 - 19",
     "responsable": [
       1,
       2
@@ -2112,7 +2187,9 @@
       1,
       3
     ],
-    "se_relaciona_con": [],
+    "se_relaciona_con": [
+      68
+    ],
     "colectivo": [
       3,
       1
@@ -2367,12 +2444,12 @@
     "inicio": "2018-03-30",
     "fin": "2018-04-18",
     "created": "2018-03-29T08:44:14Z",
-    "updated": "2018-04-03T22:16:10Z",
+    "updated": "2018-04-13T12:15:24Z",
     "slug": "kXCux9",
     "nombre": "plan ayudas a municipios de la provincia de alicante con poblaci\u00f3n inferior a 5000 hab. para adquisici\u00f3n de equipamiento y material deportivo 2018",
     "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=222",
     "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00084.pdf",
-    "observaciones": "",
+    "observaciones": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00079.pdf",
     "ente": "DA",
     "diputacion": 7,
     "generalitat": null,
@@ -2380,15 +2457,18 @@
     "cuantia": "< 3000 \u20ac",
     "descripcion": "adquisici\u00f3n, durante la anualidad 2018, de equipamiento y/o material deportivo necesarios para el desarrollo del deporte y la pr\u00e1ctica de la actividad f\u00edsica en sus diferentes espacios deportivos",
     "estado": 4,
-    "comentarios": "juego de canastas fijas o m\u00f3viles homologadas de diversas modalidades deportivas, juego de porter\u00edas con\r\nredes fijas o m\u00f3viles homologadas de diversas modalidades deportivas, postes y redes fijos o m\u00f3viles homologados de diversas modalidades deportivas, mesas homologadas de tenis de mesa, mesas anti vand\u00e1licas de exterior para tenis de mesa y ajedrez, tatamis y colchonetas para artes marciales, tapices para gimnasia, corcheras para piscina, aparatos de cardio para gimnasios, material y equipos de musculaci\u00f3n,\r\naparatos de gimnasia, etc. y otros elementos anexos a estos como contrapesos, conjunto de tableros y aro de baloncesto, redes de protecci\u00f3n, banquillo para jugadores, marcadores electr\u00f3nicos, desfibriladores, etc.), incluyendo el necesario para dar un servicio adecuado en espacios anexos como los vestuarios (taquillas, bancos, etc.).\r\n\r\n\r\nPARA LA PISCINA:\r\n- 2 bancos de esos con perchas\r\n- 4 bancos peque\u00f1os para dentro de los vestidores\r\n\r\nPARA PISTA DEPORTIVA COLEGIO\r\n- 2 canastas grandes\r\n- 2 porter\u00edas futbito\r\n\r\nPARA PISTA DEPORTIVA CASA CULTURA\r\n- 2 porterias futbito",
-    "drive": "",
-    "gestiona_expediente": "-",
+    "comentarios": "JC: 9-03-2018 -  enviada propuesta a cuatro empresas.\r\n\r\nFinanciable: \r\njuego de canastas fijas o m\u00f3viles homologadas de diversas modalidades deportivas, juego de porter\u00edas conredes fijas o m\u00f3viles homologadas de diversas modalidades deportivas, postes y redes fijos o m\u00f3viles homologados de diversas modalidades deportivas, mesas homologadas de tenis de mesa, mesas anti vand\u00e1licas de exterior para tenis de mesa y ajedrez, tatamis y colchonetas para artes marciales, tapices para gimnasia, corcheras para piscina, aparatos de cardio para gimnasios, material y equipos de musculaci\u00f3n, aparatos de gimnasia, etc. y otros elementos anexos a estos como contrapesos, conjunto de tableros y aro de baloncesto, redes de protecci\u00f3n, banquillo para jugadores, marcadores electr\u00f3nicos, desfibriladores, etc.), incluyendo el necesario para dar un servicio adecuado en espacios anexos como los vestuarios (taquillas, bancos, etc.).\r\n----\r\na\u00f1o 2017\r\n2646 \u20ac ( 63,04 % - 4197,20 \u20ac)\r\nCarmen. MVicenta\r\nAPROBADA. 2 bicicletas est\u00e1ticas .\r\n----\r\nPARA LA PISCINA:\r\n- 2 bancos de esos con perchas\r\n- 4 bancos peque\u00f1os para dentro de los vestidores\r\n\r\nPARA PISTA DEPORTIVA COLEGIO\r\n- 2 canastas grandes\r\n- 2 porter\u00edas futbito\r\n\r\nPARA PISTA DEPORTIVA CASA CULTURA\r\n- 2 porterias futbito",
+    "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsVTBXbHBiNEljZ0k",
+    "gestiona_expediente": "3/2018 EXP. 25",
     "responsable": [
       1,
       2,
-      3
+      3,
+      10
     ],
-    "se_relaciona_con": [],
+    "se_relaciona_con": [
+      71
+    ],
     "colectivo": [
       1
     ]
@@ -2433,11 +2513,11 @@
   "model": "myapp.subvencion",
   "pk": 64,
   "fields": {
-    "user": 5,
+    "user": null,
     "inicio": "2018-03-27",
     "fin": "2018-04-24",
     "created": "2018-04-06T12:33:33Z",
-    "updated": "2018-04-06T12:33:33Z",
+    "updated": "2018-04-10T19:51:15Z",
     "slug": "bpin9u",
     "nombre": "Subvenciones destinadas a las entidades locales de la Comunitat Valenciana hasta 5.000 habitantes, para el fomento de la participaci\u00f3n ciudadana, la transparencia y el acceso a la informaci\u00f3n p\u00fablica, durante el ejercicio 2018",
     "bases": "http://www.gva.es/es/inicio/procedimientos;jsessionid=hlw6h7yhNfmGfxM2XhFcbMjyWHZbvk3X2JhM2TlKJlVx03CHWHZ1!295945142!1522217498940?id_proc=19282",
@@ -2450,7 +2530,7 @@
     "cuantia": "5.000 \u20ac",
     "descripcion": "Facilitar el cumplimiento de los objetivos establecidos tanto en la ley estatal 19/2013 de 9 de diciembre, de Transparencia, Acceso a la Informaci\u00f3n P\u00fablica y Buen Gobierno, como en la ley auton\u00f3mica 2/2015 de 2 de abril, de Transparencia, Buen Gobierno y Participaci\u00f3n Ciudadana, mediante la realizaci\u00f3n de proyectos o actuaciones concretas que promuevan la participaci\u00f3n local ciudadana, tanto individual como colectiva, el fomento del asociacionismo, la transparencia de la actividad p\u00fablica y el acceso de la ciudadan\u00eda a la informaci\u00f3n p\u00fablica.",
     "estado": 4,
-    "comentarios": "a) Proyectos y actuaciones que fomenten la participaci\u00f3n ciudadana y el fortalecimiento del tejido asociativo (modalidad 1).\r\n\r\npara la asociaci\u00f3n de j\u00f3venes. pintar un mural en donde el blanco.",
+    "comentarios": "JC: 10-04-2018: Se me ocurre que la subvenci\u00f3n podr\u00eda ir por otra vertiente:\r\n- MODALIDAD 2 (entre otras)\r\n\u00b7 la elaboraci\u00f3n de otras herramientas que potencien la transparencia y el acceso de los ciudadanos a la informaci\u00f3n p\u00fablica\r\n\u00b7 elaboraci\u00f3n de procedimientos telem\u00e1ticos para garantizar el libre acceso de los ciudadanos/as a la informaci\u00f3n\r\nPodr\u00eda pagarnos un 40% de la n\u00f3mina de Amos.\r\nVamos generando interfaces y \r\n\r\n-MODALIDAD 1\r\n\u00b7 Proyectos y actuaciones que fomenten la participaci\u00f3n ciudadana y el fortalecimiento del tejido asociativo (modalidad 1).\r\n\u00b7 para la asociaci\u00f3n de j\u00f3venes. pintar un mural en donde el blanco. Juntar esto con los participantes del curso de pintura y Toni Ferri y agitamos. \r\n\r\nEnv\u00edo correo @ferri para ver si puede coordinar con el resto de pintores del pueblo unas jornadas de convivencia y pintar un mural.\r\n\r\nAs\u00ed que hay que optar por las dos",
     "drive": "",
     "gestiona_expediente": "-",
     "responsable": [
@@ -2556,6 +2636,534 @@
     "drive": "",
     "gestiona_expediente": "-",
     "responsable": [],
+    "se_relaciona_con": [
+      68
+    ],
+    "colectivo": [
+      1
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 68,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-04",
+    "fin": "2018-05-17",
+    "created": "2018-04-09T20:09:51Z",
+    "updated": "2018-04-09T20:09:51Z",
+    "slug": "zIfFbE",
+    "nombre": "Ayudas destinadas a la promoci\u00f3n de la econom\u00eda sostenible en la Comunitat Valenciana 2018. Econom\u00eda.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18212",
+    "solicitud": "http://www.dogv.gva.es/datos/2018/04/03/pdf/2018_3025.pdf",
+    "observaciones": "http://www.dogv.gva.es/datos/2017/02/06/pdf/2017_902.pdf",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 6,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "La concesi\u00f3n de subvenciones destinadas a contribuir a la promoci\u00f3n de la econom\u00eda sostenible en la Comunitat Valenciana, a trav\u00e9s de la financiaci\u00f3n de actuaciones de fomento y difusi\u00f3n de la cultura y pr\u00e1cticas de las empresas sociales y de la Econom\u00eda del Bien Com\u00fan (EBC).",
+    "estado": 4,
+    "comentarios": "1.- Actividades de formaci\u00f3n, fomento y difusi\u00f3n de la cultura y pr\u00e1cticas de la empresa social y de la EBC en la Comunitat Valenciana REALIZADAS POR ASOCIACIONES, FUNDACIONES Y OTRAS ENTIDADES Y ORGANIZACIONES SIN \u00c1NIMO DE LUCRO que tengan entre sus fines la promoci\u00f3n y fomento de los principios vinculados a la empresa social y/o de la EBC, en cualquiera de las siguientes modalidades:\r\na) Actividades de fomento de estudios de aspectos relacionados con la empresa social y con la EBC, como la realizaci\u00f3n de talleres, coloquios, charlas, congresos, encuentros, mesas redondas, simposios, jornadas, seminarios y otras actividades similares, que tengan como finalidad la divulgaci\u00f3n y el intercambio de conocimientos y mejores pr\u00e1cticas entre profesionales y expertos en esas materias.\r\nb) Actividades de difusi\u00f3n para mejorar la visibilidad de la empresa social y de la EBC y el impacto que tienen en la sociedad, entendi\u00e9ndose por tales aquellas cuyo objeto sea dar a conocer o divulgar entre la poblaci\u00f3n en general o a colectivos espec\u00edficos la cultura y pr\u00e1ctica de la empresa social y de la EBC, mediante campa\u00f1as de informaci\u00f3n y difusi\u00f3n en medios de comunicaci\u00f3n social, edici\u00f3n de publicaciones y dem\u00e1s documentaci\u00f3n did\u00e1ctica, actividades de \u00edndole art\u00edstica (exposiciones, ciclos de cine, m\u00fasica, etc) y cualquier otra actividad que contribuya a esta finalidad.\r\nc) Actuaciones de innovaci\u00f3n social y emprendimiento social positivos que permitan promover y apoyar ideas que, de manera simult\u00e1nea, resuelvan las necesidades sociales, creen nuevas relaciones sociales y refuercen la creaci\u00f3n de valor econ\u00f3mico.\r\nd) Actividades de promoci\u00f3n del emprendimiento social en todos los niveles educativos.\r\n\r\n2.- Actuaciones REALIZADAS POR PEQUE\u00d1AS Y MEDIANAS EMPRESAS (PYMES) para la implantaci\u00f3n de la cultura y pr\u00e1ctica de la empresa social y de la EBC, consistentes en la elaboraci\u00f3n e implantaci\u00f3n de una memoria de sostenibilidad que contribuya a medir, supervisar y gestionar el rendimiento de las empresas y su impacto en la sociedad en la triple vertiente social, econ\u00f3mica y medioambiental, permitiendo medir el \u00e9xito \u00e9tico de la organizaci\u00f3n y su contribuci\u00f3n al bien com\u00fan, tales como el Balance del Bien Com\u00fan, memoria de responsabilidad social, estado no financiero u otras herramientas similares.\r\nLa memoria de sostenibilidad y su auditor\u00eda social externa deber\u00e1n ajustarse a lo previsto en los apartados 2, 3 y 4 del art\u00edculo 19 de la Orden 2/2017 y en los apartados 2 y 3 del resuelvo quinto de la Resoluci\u00f3n de convocatoria 2018.\r\n\r\n3.- Actividades de los CENTROS, INSTITUTOS Y ENTES UNIVERSITARIOS dirigidas a financiar los gastos derivados de actividades de investigaci\u00f3n b\u00e1sica sobre la EBC, la empresa social y el emprendimiento e innovaci\u00f3n social, as\u00ed como destinados al impulso de la investigaci\u00f3n aplicada en esas materias, en cualquiera de las siguientes modalidades:\r\na) Investigaci\u00f3n dirigida a profundizar en los conceptos y valores que rigen estos modelos.\r\nb) Aplicaci\u00f3n pr\u00e1ctica y desarrollo de las herramientas que llevan impl\u00edcitos estos modelos, como la metodolog\u00eda para la medici\u00f3n de la contribuci\u00f3n de las empresas al bien com\u00fan, elaboraci\u00f3n del Balance del Bien Com\u00fan, y otras herramientas similares.\r\nc) Investigaciones y estudios sobre la contribuci\u00f3n real de las empresas sociales y de la EBC a los principales agregados macroecon\u00f3micos, as\u00ed como su valor a\u00f1adido en comparaci\u00f3n con otros modelos empresariales, sus efectos sobre la resiliencia y sus relaciones con la innovaci\u00f3n social y el emprendimiento.\r\nd) Recopilaci\u00f3n de estad\u00edsticas y construcci\u00f3n de indicadores que doten de mayor reconocimiento y visibilidad a las empresas sociales y al emprendimiento social, y permitan una mejor comprensi\u00f3n de sus modelos, profesionalidad y su papel en la sociedad.\r\ne) Formaci\u00f3n especializada en materia de emprendimiento e innovaci\u00f3n social y/o EBC.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      3
+    ],
+    "se_relaciona_con": [
+      46,
+      29,
+      54,
+      9,
+      67
+    ],
+    "colectivo": [
+      3,
+      1
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 69,
+  "fields": {
+    "user": null,
+    "inicio": "2018-03-29",
+    "fin": "2018-04-19",
+    "created": "2018-04-10T09:03:37Z",
+    "updated": "2018-04-10T18:23:33Z",
+    "slug": "H6vAsW",
+    "nombre": "Subvenciones Ayuntamientos y EATIM para la elaboraci\u00f3n y evaluaci\u00f3n de Planes de Igualdad de G\u00e9nero",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=221",
+    "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00083.pdf",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 9,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "< 3.000 \u20ac",
+    "descripcion": "para coadyuvar a los gastos derivados de los proyectos de elaboraci\u00f3n y evaluaci\u00f3n de planes de igualdad de g\u00e9nero a ejecutar desde el 1 de octubre de 2017 al 30 de septiembre de 2018.",
+    "estado": 4,
+    "comentarios": "Ser\u00e1n subvencionables los proyectos que tengan como finalidad:\r\n4.1.- La elaboraci\u00f3n de un plan de igualdad de g\u00e9nero, ya sea por vez primera o se trate de un segundo o posterior plan.",
+    "drive": "https://drive.google.com/open?id=1Zaw_1a2vKEdF2-H_tJDmO32wkz6-4yIE",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      3
+    ],
+    "se_relaciona_con": [
+      50,
+      48
+    ],
+    "colectivo": [
+      1
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 70,
+  "fields": {
+    "user": 5,
+    "inicio": "2017-12-14",
+    "fin": "2018-02-14",
+    "created": "2018-04-10T12:33:38Z",
+    "updated": "2018-04-10T12:33:38Z",
+    "slug": "vwMMGp",
+    "nombre": "Programa 1: Inversi\u00f3n en adecuaci\u00f3n y mejora de los servicios y recursos tur\u00edsticos",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=2688",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 16,
+    "gobierno": null,
+    "cuantia": "< 40.000 \u20ac",
+    "descripcion": "Inversi\u00f3n en adecuaci\u00f3n y mejora de los servicios y recursos tur\u00edsticos",
+    "estado": 1,
+    "comentarios": "JC: 10-04-2018: Haciendo una revisi\u00f3n de las subvenciones.... he llamado a Jordi para ver que puede decirnos de la subvenci\u00f3n.\r\nLa doy de alta en esta herramienta. Se envi\u00f3 el 14/02/2018",
+    "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsZ3FYTkN2eGpmOWc",
+    "gestiona_expediente": "3/2018 - EXP 9",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      1
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 71,
+  "fields": {
+    "user": 5,
+    "inicio": "2017-12-07",
+    "fin": "2018-01-31",
+    "created": "2018-04-10T17:59:37Z",
+    "updated": "2018-04-10T17:59:37Z",
+    "slug": "ICPmM8",
+    "nombre": "Convocatoria de subvenciones destinadas a la mejora, ampliaci\u00f3n o reparaci\u00f3n de instalaciones deportivas en municipios de la comunidad valenciana",
+    "bases": "http://www.presidencia.gva.es/web/administracion-local/noticias?p_p_id=101_INSTANCE_x1NrD8krzxri&p_p_lifecycle=0&p_p_col_id=column-2&p_p_col_pos=2&p_p_col_count=3&_101_INSTANCE_x1NrD8krzxri_struts_action=%2Fasset_publisher%2Fview_content&_101_INSTANCE_x1NrD8krzxri_assetEntryId=165129810&_101_INSTANCE_x1NrD8krzxri_type=content&_101_INSTANCE_x1NrD8krzxri_groupId=80292207&_101_INSTANCE_x1NrD8krzxri_urlTitle=convocatoria-de-subvenciones-destinadas-a-la-mejora-ampliacion-o-reparacion-de-instalaciones-deportivas-en-municipios-de-la-comunidad-valenciana-",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 13,
+    "gobierno": null,
+    "cuantia": "100.000 \u20ac",
+    "descripcion": "- Tipo A: mejora, ampliaci\u00f3n o reparaci\u00f3n de instalaciones deportivas en municipios de la Comunidad Valenciana hasta 5000 habitantes.",
+    "estado": 1,
+    "comentarios": "JC: 10-04-2018: se env\u00eda el 20 de enero de 2018, a las 9:12 horas.\r\nllamo hoy para interesarme (hice alguna llamada en d\u00edas anteriores) y me dicen que no tienen constancia de nuestra petici\u00f3n.\r\nLo hablo con @tierry y me dice el expediente y que existe la minuta del env\u00edo.\r\nLlamar\u00e9 Concepci\u00f3n Lazaro que es con quien habl\u00e9.",
+    "drive": "https://drive.google.com/drive/folders/0B-6ZND28b8BsWExBMXNuTlVMaDg?usp=sharing",
+    "gestiona_expediente": "2/2017 CULTURA Y DEPORTES EXP. 37",
+    "responsable": [
+      1,
+      3,
+      6
+    ],
+    "se_relaciona_con": [
+      40,
+      62
+    ],
+    "colectivo": [
+      1
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 72,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-11",
+    "fin": "2018-05-24",
+    "created": "2018-04-12T05:44:52Z",
+    "updated": "2018-04-12T05:44:52Z",
+    "slug": "cS7kxt",
+    "nombre": "Actuaciones para la conservaci\u00f3n y mejora de los Parajes Naturales",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=230",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 8,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Concesi\u00f3n de subvenciones para los gastos derivados de la ejecuci\u00f3n por los beneficiarios de las actuaciones de conservaci\u00f3n y mejora de los Parajes Naturales Municipales.",
+    "estado": 4,
+    "comentarios": "JC: 12-04-2018: Pues esta subvenci\u00f3n sali\u00f3 hace dos a\u00f1os. por lo que entiendo que es bianual. Es solo para municipios que tengan declarado un paraje natural. en la provincia de Alicante no debe haber m\u00e1s de una docena. El m\u00e1s cercano el arcs de Castells. \r\nYa lo habl\u00e9 con Sendra, que ellos nos dar\u00edan asistencia t\u00e9cnica para declarar alguna zona de T\u00e1rbena como Paraje Natural Municipal, pero es algo a lo que todav\u00eda no he llegado. Puede que despu\u00e9s de las pr\u00e1cticas que haga en el ayto saquemos algo en claro. Ya hay una tesis universitaria que abre las puertas a esta figura de protecci\u00f3n.",
+    "drive": "",
+    "gestiona_expediente": "3/2018 - EXP 24",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      1
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 73,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-13",
+    "fin": "2018-05-28",
+    "created": "2018-04-13T05:33:59Z",
+    "updated": "2018-04-13T05:33:59Z",
+    "slug": "mxxznN",
+    "nombre": "TECG- Ayudas a actuaciones que promuevan la integraci\u00f3n de la mujer en el \u00e1mbito rural.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=1376",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 3,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Se conceder\u00e1n ayudas para las actividades que se indican en el apartado \"Informaci\u00f3n Complementaria\", que promuevan la integraci\u00f3n y la igualdad de oportunidades de la mujer en el \u00e1mbito rural.",
+    "estado": 2,
+    "comentarios": "Solo para organizaciones profesionales agrarias que integren organizaciones de mujeres, u organizaciones de mujeres con personalidad jur\u00eddica propia.\r\n\r\nACTIVIDADES SUBVENCIONABLES\r\n- Actividades de participaci\u00f3n y fomento del asociacionismo. Se consideran como tales la celebraci\u00f3n de conferencias y charlas, la realizaci\u00f3n de jornadas y congresos y la concurrencia a exposiciones y ferias, actividades realizadas por la propia organizaci\u00f3n en el \u00e1mbito de la Comunidad Valenciana.\r\n- Asistencia a jornadas o actos por representantes de las organizaciones solicitantes, cuando \u00e9stos se celebren fuera de la Comunidad Valenciana.\r\nEn la celebraci\u00f3n de conferencias y charlas, as\u00ed como la realizaci\u00f3n de jornadas y congresos, y la concurrencia a exposiciones y ferias, la subvenci\u00f3n podr\u00e1 ser hasta un m\u00e1ximo del 100% por lo que respecta al pago de los gastos correspondientes a ponentes externos a la organizaci\u00f3n, y hasta un m\u00e1ximo del 70% para el resto de las actividades, sin que pueda superar en el c\u00f3mputo de subvenci\u00f3n concedida por las actividades propuestas de este concepto el 80% de los gastos.\r\n- Viajes de estudio e intercambio en otras zonas geogr\u00e1ficas (\u00e1mbito espa\u00f1ol o superior).\r\nPor la realizaci\u00f3n de viajes de estudio e intercambio en otras zonas geogr\u00e1ficas la subvenci\u00f3n ser\u00e1 hasta un m\u00e1ximo del 70% del coste.\r\n- Actividades de promoci\u00f3n. Realizaci\u00f3n de cursos, talleres de trabajo y edici\u00f3n de material de divulgaci\u00f3n y su distribuci\u00f3n.\r\nLa subvenci\u00f3n ser\u00e1 hasta de un m\u00e1ximo del 80% del coste cuando se trate de la edici\u00f3n de material divulgativo y su distribuci\u00f3n, y hasta un m\u00e1ximo del 70% por cualquier otro tipo de actividad dentro de este concepto.\r\n- Actividades complementarias. Aquellas relacionadas con el fomento del turismo rural, medio ambiente, la artesan\u00eda, o la promoci\u00f3n de los productos agroalimentarios propios.\r\nLa subvenci\u00f3n ser\u00e1 hasta de un m\u00e1ximo del 50% del coste.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      3
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      3
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 74,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-10",
+    "fin": "2018-04-24",
+    "created": "2018-04-13T05:41:50Z",
+    "updated": "2018-04-13T05:41:50Z",
+    "slug": "WglPXf",
+    "nombre": "Ayudas a asociaciones juveniles y entidades prestadoras de servicios a la juventud con \u00e1mbito de actuaci\u00f3n en la Comunitat Valenciana para el a\u00f1o 2018 (IVAJ)",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=221",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 17,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Ayudas a asociaciones juveniles y entidades prestadoras de servicios a la juventud con \u00e1mbito de actuaci\u00f3n en la Comunitat Valenciana para el a\u00f1o 2018 (IVAJ)",
+    "estado": 2,
+    "comentarios": "Requisitos\r\n\r\nPodr\u00e1n obtener la condici\u00f3n de beneficiarios de estas ayudas las asociaciones juveniles y las entidades prestadoras de servicios a la juventud que cumplan con los siguientes requisitos:\r\n- Tener una implantaci\u00f3n territorial en, al menos, quince localidades de dos provincias de la Comunitat Valenciana.\r\n- Estar inscritas en el Censo de Asociaciones Juveniles y Entidades Prestadoras de Servicios a la Juventud de la Comunitat Valenciana.\r\nDicha inscripci\u00f3n deber\u00e1 haberse producido con anterioridad a la fecha de finalizaci\u00f3n del plazo de presentaci\u00f3n de solicitudes.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      3
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 75,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-13",
+    "fin": "2018-05-28",
+    "created": "2018-04-13T05:52:42Z",
+    "updated": "2018-04-13T05:52:42Z",
+    "slug": "vltGKd",
+    "nombre": "TECG - Solicitud de ayudas para las comunidades de regantes y otras entidades de riego en relaci\u00f3n con el fomento de la utilizaci\u00f3n racional del agua en aprovechamientos hidr\u00e1ulicos y regad\u00edos.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=562",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 3,
+    "gobierno": null,
+    "cuantia": "50 %",
+    "descripcion": "Consolidar y modernizar los regad\u00edos de la Comunitat Valenciana, al tiempo que se promueven pr\u00e1cticas de cultivo en com\u00fan.\r\n\r\nSer\u00e1n obras subvencionables todas aquellas que contribuyan a la optimizaci\u00f3n del uso y gesti\u00f3n de los recursos h\u00eddricos, mediante la implantaci\u00f3n del riego localizado, incremento de la capacidad de embalse, ahorro de agua, aumento de la eficiencia en su utilizaci\u00f3n y mejora de la rentabilidad de las explotaciones agrarias.",
+    "estado": 10,
+    "comentarios": "Habr\u00eda que despestar a las asociaciones de regantes, que creo que hay hasta tres en el pueblo.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      3
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 76,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-12",
+    "fin": "2018-05-25",
+    "created": "2018-04-13T19:28:25Z",
+    "updated": "2018-04-13T19:28:25Z",
+    "slug": "uJXLrs",
+    "nombre": "TECG - Ayudas a las asociaciones de protecci\u00f3n y defensa de los animales.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos;jsessionid=pRRChRGN254VtvmhGRLtsGfNpp3pJxy2kVq3w5vzh5RTRWs2fhPB!1094503321!1523647597692?id_proc=861",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": null,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "7.200 \u20ac",
+    "descripcion": "Asociaciones de protecci\u00f3n y defensa de los animales sin \u00e1nimo de lucro, legalmente constituidas e inscritas en el Registro de Asociaciones de la Conselleria de Justicia, Administraci\u00f3n P\u00fablica, Reformas Democr\u00e1ticas y Libertades P\u00fablicas, y que tengan por principal finalidad la defensa y protecci\u00f3n de los animales y desarrollen algunas de las actividades relacionadas en el apartado de 'Informaci\u00f3n Complementaria', en el \u00e1mbito territorial de la Comunitat Valenciana.",
+    "estado": 2,
+    "comentarios": "Las ayudas por beneficiario ser\u00e1n del 60% del coste global presupuestado, para el conjunto de las actividades para las que soliciten ayudas de gastos de funcionamiento, con una cuant\u00eda m\u00e1xima por beneficiario de 7.200 euros, y del 80% del coste global presupuestado para las inversiones referentes a construcci\u00f3n y adecuaci\u00f3n de instalaciones con una cuant\u00eda m\u00e1xima de la ayuda por beneficiario de 12.000 euros.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      3
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      3
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 77,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-12",
+    "fin": "2018-05-11",
+    "created": "2018-04-13T19:31:57Z",
+    "updated": "2018-04-13T19:31:57Z",
+    "slug": "C56v6w",
+    "nombre": "TECG - Subvenciones destinadas a programas y proyectos educativos y de formaci\u00f3n y divulgaci\u00f3n para estrategias de dinamizaci\u00f3n agroecol\u00f3gicas en el \u00e1mbito de la Comunitat Valenciana (modalidad A y modalidad B)",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18691",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 3,
+    "gobierno": null,
+    "cuantia": "< 60.000 \u20ac",
+    "descripcion": "Podr\u00e1n solicitar las subvenciones objeto de regulaci\u00f3n, aquellas Entidades Asociativas Agrarias, Asociaciones, Fundaciones y empresas del sector agroalimentario que cumplan y acrediten los requisitos para obtener la condici\u00f3n de beneficiario seg\u00fan lo establecido en la base segunda y tercera de la de la Orden 32/2017, de 29 de diciembre.",
+    "estado": 4,
+    "comentarios": "JC: Podr\u00eda funcionar para IMO o TEO.\r\n\r\nLos objetivos espec\u00edficos a los que habr\u00e1n de adecuarse los proyectos y programas de la modalidad A son:\r\n- Proyecto que promuevan los procesos educativos y actividades pedag\u00f3gicas para trabajar los objetivos de un consumo ecol\u00f3gico y responsable, en y desde las instituciones y centros educativos, p\u00fablicos o sostenidos con fondos p\u00fablicos,\r\n- Proyecto que promuevan en el alumnado y en el conjunto de la comunidad educativa conocimientos, valores y actitudes capaces de generar una cultura del consumo ecol\u00f3gico y responsable comprometida con la lucha contra el cambio clim\u00e1tico,\r\n- Proyecto que promuevan la transici\u00f3n hacia un nuevo modelo agroalimentario incluyente, equitativo y sostenible.\r\n\r\nLos objetivos espec\u00edficos a los que habr\u00e1n de adecuarse los proyectos y programas de la modalidad B son:\r\n- Intervenciones orientadas a la sensibilizaci\u00f3n de la sociedad en su conjunto, o determinados sectores de la misma en particular, que promuevan y aumenten la concienciaci\u00f3n y el compromiso ciudadano solidario con la consecuci\u00f3n del consumo ecol\u00f3gico y responsable comprometido con la lucha contra el cambio clim\u00e1tico, as\u00ed como con la transici\u00f3n hacia un nuevo modelo agroalimentario incluyente, equitativo y sostenible.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [
+      78
+    ],
+    "colectivo": [
+      3
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 78,
+  "fields": {
+    "user": null,
+    "inicio": "2017-02-01",
+    "fin": "2017-02-20",
+    "created": "2018-04-13T19:47:01Z",
+    "updated": "2018-04-14T13:58:54Z",
+    "slug": "rpvdTy",
+    "nombre": "Gasto corriente agricultura y sostenimiento medio rural",
+    "bases": "",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 13,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "< 2.500",
+    "descripcion": "Limpieza y conservaci\u00f3n mediante desbroce y roturaci\u00f3n de terrenos de titularidad municipal destinados a cultivo. Desbroce o limpieza de m\u00e1rgenes de accesos a zonas rurales o agr\u00edcolas de titularidad municipal o a t\u00edtulo de due\u00f1o. Reparaci\u00f3n simple, conservaci\u00f3n o mantenimiento de acequias, m\u00e1rgenes, muretes, construcciones agr\u00edcolas tradicionales, conducciones de regad\u00edo en\r\ncanal abierto y redes de drenaje y avenamiento de titularidad municipal o a t\u00edtulo de due\u00f1o.\r\nActuaciones formativas en materia de: agricultura ecol\u00f3gica, producci\u00f3n integrada, comercializaci\u00f3n de productos agr\u00edcolas, pr\u00e1cticas culturales (plantaci\u00f3n, riego, poda, injertos, labrado, post-cosecha, tratamientos fitosanitarios) y obtenci\u00f3n del cam\u00e9 oficial de manipulador de plaguicidas de uso fitosanitario de nivel b\u00e1sico, conforme a las especificaciones del Decreto 3012015 de 06 de marzo por el que se desarrollan determinados aspectos administrativos relativos a los productos fitosanitarios en la Comunitat Valenciana.",
+    "estado": 7,
+    "comentarios": "JC: 13-04-2018: pensar para la subvenci\u00f3n de este a\u00f1o en el coraz\u00f3n verde y el carnet fitosanitario.\r\n\r\nDesbroce y limpieza de m\u00e1rgenes del Cam\u00ed Picassaries y actuaciones formativas \" Curso de Introducci\u00f3n a la agricultura ecol\u00f3gica y tradicional\" y \"curso de pr\u00e1cticas culturales; plantaci\u00f3n, riego, poda, injertos, labrado, postcosecha, tratamientos\"  ( 4987,76 \u20ac ) (  750 \u20ac por curso y 1000 \u20ac por el resto ) .\r\n\r\nel plazo para presentar la justificaci\u00f3n y abono es el 31 de octubre.\r\n\r\nrealmente el desbroce ahora mismo no es prioritario. tengo que hablar con Montllor para ver como hacemos lo del curso. Creo que lo intenresante ser\u00eda ampliar el de agricultura ecol\u00f3gica, pero para eso necesitar\u00edamos un bancal con agua lo suficientemente grande. Tengo que llamarle para m\u00e1s detalles.",
+    "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsNlZzNFFNd2hBTEE",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      2
+    ],
+    "se_relaciona_con": [
+      77
+    ],
+    "colectivo": [
+      1
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 79,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-11",
+    "fin": "2018-04-25",
+    "created": "2018-04-13T20:19:30Z",
+    "updated": "2018-04-13T20:19:30Z",
+    "slug": "XWcu5R",
+    "nombre": "Subvenciones para el fomento del valenciano para las instituciones, entidades y asociaciones sin finalidad lucrativa y para las personas jur\u00eddicas p\u00fablicas y privadas que realicen proyectos singulares de fomento del multiling\u00fcismo en el \u00e1mbito social.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=276",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 13,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Para Amics des Museu o el CERM\r\nConvocar, para 2018, las subvenciones para el fomento del valenciano para asociaciones c\u00edvicas sin finalidad lucrativa, sindicatos, asociaciones profesionales, universidades, redes universitarias y otras entidades sin \u00e1nimo de lucro, entidades del exterior de la Comunitat Valenciana y para las personas jur\u00eddicas, p\u00fablicas y privadas, que realicen proyectos singulares de fomento del multiling\u00fcismo en el \u00e1mbito social.",
+    "estado": 4,
+    "comentarios": "El importe en concepto de ayudas para esta modalidad ser\u00e1 de 980.000 euros. El importe ser\u00e1 con cargo a la l\u00ednea S0091000, \u00abAyudas al fomento del valenciano y a proyectos singulares de fomento del multiling\u00fcismo en el \u00e1mbito social\u00bb, del presupuesto de 2018 de la Generalitat Valenciana.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      5,
+      10
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      3
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 80,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-11",
+    "fin": "2018-07-10",
+    "created": "2018-04-13T20:29:30Z",
+    "updated": "2018-04-13T20:29:30Z",
+    "slug": "89fqan",
+    "nombre": "TECE - Solicitud de subvenciones para la mejora de las condiciones del interior de las viviendas, en el marco del Plan de Reforma Interior de Vivienda. Plan RENHATA.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18507",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 18,
+    "gobierno": null,
+    "cuantia": "> 2.000 \u20ac",
+    "descripcion": "Cualquier persona f\u00edsica, propietaria, usufructuaria o arrendataria de una vivienda situada en la Comunitat Valenciana. \r\n\r\n1. Reforma de los cuartos h\u00famedos (cocinas, ba\u00f1os, etc...), con el fin de adecuarlos a las condiciones actuales de habitabilidad, incluyendo, si es necesario, la adaptaci\u00f3n de las instalaciones a la normativa vigente.\r\n\r\n2. Reforma de la vivienda para adaptarla a personas con diversidad funcional y movilidad reducida.",
+    "estado": 4,
+    "comentarios": "1. El edificio en el momento de la solicitud debe tener una antig\u00fcedad superior a 20 a\u00f1os. No ser\u00e1 necesario cumplir esta condici\u00f3n en el caso de actuaciones de adaptaci\u00f3n de la vivienda para personas con diversidad funcional con un grado de discapacidad superior al 50%.\r\n\r\n2. Que la vivienda se destine a residencia habitual y permanente de su propietario, inquilino o usufructuario. Lo que se considerar\u00e1 acreditado al estar empadronado con anterioridad a la solicitud de las ayudas.\r\n\r\nLas obras subvencionables podr\u00e1n recibir las siguientes subvenciones:\r\n\r\na) Una subvenci\u00f3n b\u00e1sica, para todos los solicitantes que cumplan los requisitos para recibir las ayudas y aporten toda la documentaci\u00f3n requerida, del 5 por 100 del presupuesto protegible de las obras, con un m\u00e1ximo de 600 euros.\r\n\r\nb) Una subvenci\u00f3n adicional, en funci\u00f3n de los puntos obtenidos en el baremaci\u00f3n de las solicitudes, con los porcentajes y las cuant\u00edas m\u00e1ximas siguientes:\r\n\r\n- Puntuaci\u00f3n: entre 1 y 5 puntos; porcentaje sobre presupuesto protegido: 25%; cuant\u00eda m\u00e1xima subvenci\u00f3n adicional: 3.000 euros.\r\n- Puntuaci\u00f3n: entre 6 y 10 puntos; porcentaje sobre presupuesto protegido: 30%; cuant\u00eda m\u00e1xima subvenci\u00f3n adicional: 3.600 euros.\r\n- Puntuaci\u00f3n: entre 11 y 15 puntos; porcentaje sobre presupuesto protegido: 35%; cuant\u00eda m\u00e1xima subvenci\u00f3n adicional: 4.200 euros.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      3,
+      6
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      4
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 81,
+  "fields": {
+    "user": null,
+    "inicio": "2018-04-09",
+    "fin": "2018-04-30",
+    "created": "2018-04-13T21:20:32Z",
+    "updated": "2018-04-13T21:25:32Z",
+    "slug": "y1R5L3",
+    "nombre": "Subvenciones para inversiones en restauraci\u00f3n de zonas degradadas por el vertido incontrolado de residuos",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=229",
+    "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00087.pdf",
+    "observaciones": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00081.pdf",
+    "ente": "DA",
+    "diputacion": 15,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "< 20.000 \u20ac",
+    "descripcion": "A efectos de esta convocatoria, se entiende como restauraci\u00f3n de zonas degradadas por el vertido incontrolado de residuos la adecuaci\u00f3n de aquellas zonas de acceso libre en las que se haya producido vertido de residuos sin autorizaci\u00f3n, a fin de retirar los residuos vertidos y acondicionar la zona para su integraci\u00f3n paisaj\u00edstica y erradicaci\u00f3n del foco de vertido",
+    "estado": 4,
+    "comentarios": "Las actuaciones subvencionadas ser\u00e1n ejecutadas por la Excma. Diputaci\u00f3n Provincial de Alicante, que se encargar\u00e1 tambi\u00e9n de la redacci\u00f3n de los proyectos simplificados o memorias valoradas, de acuerdo con lo establecido en la normativa de contrataci\u00f3n de las Administraciones P\u00fablicas, junto con la documentaci\u00f3n complementaria que los Servicios T\u00e9cnicos estimen realizar para la adecuada\r\ntramitaci\u00f3n del expediente, as\u00ed como de la coordinaci\u00f3n de seguridad y salud de la obra. Por tanto, la Excma. Diputaci\u00f3n Provincial de Alicante subvencionara en el 100% las actuaciones. Asimismo, la Excma. Diputaci\u00f3n se encargar\u00e1 de la contrataci\u00f3n y direcci\u00f3n de las obras necesarias.",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      1
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 82,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-09",
+    "fin": "2018-05-07",
+    "created": "2018-04-13T21:24:48Z",
+    "updated": "2018-04-13T21:24:48Z",
+    "slug": "fWz9YY",
+    "nombre": "Asistencia en la gesti\u00f3n del inventario de bienes y derechos de las Entidades Locales",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=159",
+    "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00086.pdf",
+    "observaciones": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00080.pdf",
+    "ente": "DA",
+    "diputacion": 14,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "La implantaci\u00f3n de un sistema de gesti\u00f3n patrimonial e instalaci\u00f3n del programa de gesti\u00f3n del patrimonio vinculado a la contabilidad",
+    "estado": 4,
+    "comentarios": "JC: 13-04-2018: preguntar a Fernando si lo necesita o lo ve interesante",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      3,
+      5,
+      9
+    ],
     "se_relaciona_con": [],
     "colectivo": [
       1
