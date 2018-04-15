@@ -13,8 +13,7 @@ from django.template.defaultfilters import slugify
 from notify.signals import notify
 from .utils import unique_slug_generator
 from .widgets import ColorPickerWidget
-import random
-import string
+from tinymce.models import HTMLField
 
 User = settings.AUTH_USER_MODEL
 
@@ -163,7 +162,7 @@ class Subvencion(models.Model):
     cuantia = models.TextField(blank=True)
     descripcion = models.TextField(blank=True)
     estado = models.ForeignKey(Estado, on_delete=models.CASCADE, default="Estado")
-    comentarios = models.TextField(blank=True)
+    comentarios = HTMLField(blank=True)
 
     # Link y numero de expediente GESTIONA
     drive = models.TextField(blank=True,
