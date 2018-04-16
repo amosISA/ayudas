@@ -91,7 +91,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="departamento estadocss2" style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
+                                <div class="departamento depart{{ subvencion.id }}" style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
                                     {% if subvencion.generalitat == None and subvencion.gobierno == None %}
                                     <a class="dep_gene_dip" href="{{ subvencion.diputacion.get_absolute_url }}">{{ subvencion.diputacion }}</a>
                                     {% elif subvencion.diputacion == None and subvencion.gobierno == None %}
