@@ -20,6 +20,7 @@ from . import views
 urlpatterns = [
     url(r'^ajaxdepartments/$', views.subsidies_for_ajax_loop, name='ajax_loop_departments'),
     url(r'^ajaxrelation/$', views.ajax_se_relaciona_con, name='ajax_se_relaciona_con'),
+    url(r'^ajaxusers/$', views.ajax_users, name='ajax_get_users'),
     url(r'^new/$', views.SubvencionCreateView.as_view(), name='new_subvencion'),
     url(r'^new/responsable/$', views.ResponsableCreateView.as_view(), name='new_responsable'),
     url(r'^new/diputacion/$', views.DiputacionCreateView.as_view(), name='new_diputacion'),

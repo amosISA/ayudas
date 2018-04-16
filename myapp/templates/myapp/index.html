@@ -66,70 +66,75 @@
             <table id="subv_table_ordering" class="table" width="100%">
                 <thead class="thead-subv-table">
                     <tr class="table-active">
-                        <th class="table_th_inicio">INICIO</th>
-                        <th class="table_th_dep">DEPARTAMENTO</th>
-                        <th class="table_th_nombre">NOMBRE</th>
-                        <th class="table_th_fin">FIN</th>
-                        <th>CUANTÍA</th>
-                        <th>RESPONSABLES</th>
-                        <th class="table_th_estado">ESTADO</th>
-                        <th>COMENTARIOS</th>
-                        <th>GESTIONA</th>
-                        <!--<th><i class="fa fa-tasks" aria-hidden="true"></i></th>-->
+                        <th>Inicio</th>
+                        <th>Nombre y descripción</th>
+                        <th>Vencimiento</th>
+                        <th>Comentarios</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     {% for subvencion in subvenciones %}
                         <tr>
-                            <td>
-                                {{ subvencion.inicio|date:"d/m/Y" }}<br>
-                                {% for colectivo in subvencion.colectivo.all %}
-                                    {{ colectivo }}
-                                {% endfor %}
-                            </td>
-                            <td class="estadocss2" style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
-                                {% if subvencion.generalitat == None and subvencion.gobierno == None %}
+                            <td class="td1 {% if subvencion.generalitat == None and subvencion.gobierno == None %}diputacion{% elif subvencion.diputacion == None and subvencion.gobierno == None %}conselleria{% elif subvencion.diputacion == None and subvencion.diputacion == None %}gobierno{% endif %}">
+                                <div class="bloque01">
+                                    <div class="fechaInicio">{{ subvencion.inicio|date:"d/m/Y" }}</div>
+                                    <div class="colectivo">
+                                        <ul>
+                                            {% for colectivo in colectivos %}
+                                                {% if colectivo in subvencion.colectivo.all %}
+                                                        <li>{{ colectivo }}</li>
+                                                {% else %}
+                                                    <li class="apagado">{{ colectivo }}</li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="departamento estadocss2" style="background-color:{% if subvencion.generalitat == None %}{{ subvencion.diputacion.font_color }}{% else %}{{ subvencion.generalitat.font_color }}{% endif %};">
+                                    {% if subvencion.generalitat == None and subvencion.gobierno == None %}
                                     <a class="dep_gene_dip" href="{{ subvencion.diputacion.get_absolute_url }}">{{ subvencion.diputacion }}</a>
-                                {% elif subvencion.diputacion == None and subvencion.gobierno == None %}
-                                    <a class="dep_gene_dip" href="{{ subvencion.generalitat.get_absolute_url }}">{{ subvencion.generalitat }}</a>
-                                {% elif subvencion.diputacion == None and subvencion.diputacion == None %}
-                                    <a class="dep_gene_dip" href="{{ subvencion.gobierno.get_absolute_url }}">{{ subvencion.gobierno }}</a>
-                                {% endif %}
+                                    {% elif subvencion.diputacion == None and subvencion.gobierno == None %}
+                                        <a class="dep_gene_dip" href="{{ subvencion.generalitat.get_absolute_url }}">{{ subvencion.generalitat }}</a>
+                                    {% elif subvencion.diputacion == None and subvencion.diputacion == None %}
+                                        <a class="dep_gene_dip" href="{{ subvencion.gobierno.get_absolute_url }}">{{ subvencion.gobierno }}</a>
+                                    {% endif %}
+                                </div>
+                                <div class="repositorios">
+                                    <div class="drive"><i class="fab fa-google-drive"></i>
+
+                                        {% if not subvencion.drive %}
+                                        {% else %}
+                                            <a href="{{ subvencion.drive }}" target="_blank">Drive</a>
+                                        {% endif %}
+                                    </div>
+                                    <div class="gestiona"><i class="fas fa-university"></i> {{ subvencion.gestiona_expediente }}</div>
+                                </div>
                             </td>
-                            <td class="table_name_td">
-                                <a href="{{ subvencion.get_absolute_url }}" target="_blank">
-                                    {{ subvencion.nombre|safe }}
-                                </a>
-                                <span class="subv-span-desc-inside-name">{{ subvencion.descripcion }}</span>
+                            <td class="td2">
+                                <b>
+                                    <a href="{{ subvencion.get_absolute_url }}" target="_blank">
+                                        {{ subvencion.nombre|safe }}
+                                    </a>
+                                </b>
+                                <br />
+                                {{ subvencion.descripcion }}
                             </td>
-                            <td class="estadocss date-end" style="{% if subvencion.fin|daysuntil in days_until_estado %}background-color:#ff0000;color:#fff;{% elif subvencion.fin|daysuntil == 'passed days' %}background-color:{{ subvencion.estado.font_color }};{% else %}background-color:#fff;{% endif %}">
-                                {{ subvencion.fin|date:"d/m/Y" }}
+                            <td class="td3 estadocss" style="{% if subvencion.fin|daysuntil in days_until_estado %}background-color:#ff0000;color:#fff;{% elif subvencion.fin|daysuntil == 'passed days' %}background-color:{{ subvencion.estado.font_color }};{% else %}background-color:#fff;{% endif %}">
+                                <div class="fechaInicio date-end">{{ subvencion.fin|date:"d/m/Y" }}</div>
+					            <div class="estadoBloque estado estadocss" style="background-color:{{ subvencion.estado.font_color }};">{{ subvencion.estado }}</div>
+                                <div class="responsables">
+                                    {% for responsable in subvencion.responsable.all %}
+                                        <span class="badge badge-pill badge-inverse" tabindex="0" data-toggle="popover" data-trigger="hover" data-content="{{ responsable }}">
+                                            <a style="color:inherit;" href="{% url 'myapp:subvencion_by_category' estado_slug=responsable.responsable %}">{{ responsable|split_value }}</a>
+                                        </span>
+                                    {% endfor %}
+                                </div>
+					            <div class="cuantia"><i class="fas fa-euro-sign"></i> {{ subvencion.cuantia|safe }}</div>
                             </td>
-                            <td>{{ subvencion.cuantia|safe }}</td>
-                            <td>
-                                {% for responsable in subvencion.responsable.all %}
-                                    <span class="badge badge-pill badge-{% if responsable|split_value == 'MV' %}danger{% elif responsable|split_value == 'T' %}primary{% elif responsable|split_value == 'F' %}fernando{% elif responsable|split_value == 'JC' %}warning{% elif responsable|split_value == 'A' %}agnieszka{% elif responsable|split_value == 'R' %}info{% elif responsable|split_value == 'M' %}success{% elif responsable|split_value == 'JM' %}inverse{% else %}default{% endif %}" tabindex="0" data-toggle="popover" data-trigger="hover" data-content="{{ responsable }}">
-                                        <a style="color:inherit;" href="{% url 'myapp:subvencion_by_category' estado_slug=responsable.responsable %}">{{ responsable|split_value }}</a>
-                                    </span>
-                                {% endfor %}
+                            <td class="td4">
+                                {{ subvencion.comentarios|safe }}
                             </td>
-                            <td class="estadocss" style="background-color:{{ subvencion.estado.font_color }};">
-                                {{ subvencion.estado }}
-                            </td>
-                            <td {% if subvencion.comentarios %}tabindex="0" data-toggle="popover" data-trigger="hover" title="Comentarios" data-content="{{ subvencion.comentarios|safe }}"{% endif %}>
-                                {{ subvencion.comentarios|truncatewords:3|safe }}
-                            </td>
-                            <td>
-                                {{ subvencion.gestiona_expediente }}<br>
-                                {% if not subvencion.drive %}
-                                {% else %}
-                                    <a href="{{ subvencion.drive }}" target="_blank">Drive</a>
-                                {% endif %}
-                            </td>
-                            <!--<td>
-                                <a href="{% url 'myapp:edit_subvencion' slug=subvencion.slug %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                            </td>-->
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -224,7 +229,7 @@
             // Columns when ascending or descending change color
             $('#subv_table_ordering thead th').click(function() {
                 if ($(this).attr("aria-sort") == 'ascending') {
-                    $(this).css("background-color", "darkgrey");
+                    $(this).css("background-color", "#666");
                 } else {
                     $(this).css("background-color", "#000");
                 }
@@ -241,11 +246,12 @@
 
             $(window).on('load', function(){
                 $('.date-end').each(function() {
+                    console.log($(this).text());
                     if ($.trim($(this).text()) == dataFormated) {
                         $('html, body').animate({
                             scrollTop: $(this).parent().offset().top
                         }, 100);
-                        $(this).parent().fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+                        $(this).parent().parent().fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
                     }
                 });
             });

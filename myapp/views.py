@@ -17,10 +17,18 @@ from django.db.models import IntegerField
 from django.db.models.functions import Cast
 
 from notify.signals import notify
-from .models import Subvencion, Estado, Diputacion, Generalitat, Responsable, Gobierno
+from .models import Subvencion, Estado, Diputacion, Generalitat, Responsable, Gobierno, Colectivo
 from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm
 
 # Create your views here.
+####### AJAX USERS MENTIONS IN TINYMCE ######
+def ajax_users(request):
+    users = User.objects.all()
+
+    return render(request,
+                  '',
+                  {'users': users})
+
 ####### AJAX REQUEST SE RELACIONA CON ######
 def ajax_se_relaciona_con(request):
     diputacion = request.GET.getlist('diputacion_ajax[]', '99999')
@@ -56,6 +64,7 @@ def index(request, estado_slug=None):
     estados = Estado.objects.all().annotate(number_stats=Count('subvencion'))
     subvenciones = Subvencion.objects.all()
     total_subvenciones = Subvencion.objects.count()
+    colectivos = Colectivo.objects.all()
 
     if estado_slug:
         if Diputacion.objects.filter(slug=estado_slug).exists():
@@ -91,7 +100,8 @@ def index(request, estado_slug=None):
                    'subvenciones': subvenciones,
                    'days_until_estado': days_until_estado,
                    'notifications': notification_list,
-                   'total_subvenciones': total_subvenciones})
+                   'total_subvenciones': total_subvenciones,
+                   'colectivos': colectivos})
 
 @login_required()
 def subvencion_by_user(request, name_slug):

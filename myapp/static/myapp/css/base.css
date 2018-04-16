@@ -1,3 +1,168 @@
+/******* NEW HOME JUAN CARLOS *******/
+body {
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  color: #666;
+  font-weight: 400;
+  line-height: 1.5;
+}
+table#subv_table_ordering {
+  border-collapse: collapse!important;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  color: #666;
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+table#subv_table_ordering thead tr {
+  padding: 5px 0px;
+  border-top: 1px solid #000;
+}
+table#subv_table_ordering thead tr th {
+  background: #666;
+  color: white;
+  font-size: 1em;
+  padding: 10px;
+  text-align: center;
+}
+table, th, td {
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  color: #666;
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+table#subv_table_ordering th {background:#666; color: white; font-size: 1em;padding: 10px;}
+table#subv_table_ordering tr {padding: 5px 0px; border-top: 1px solid #000;}
+table#subv_table_ordering .fechaInicio {float: left; display: block; background-color: rgba(255, 255, 255, 0.9); margin: 2px;border-radius: 1px; padding: 3px 7px; width: 110px; color: #000;}
+table#subv_table_ordering .estadoBloque {float: left; display: block; background: #ddd; margin: 2px; border-radius: 1px; padding: 3px 7px; width: 110px;}
+table#subv_table_ordering .colectivo {
+  float: left;
+  display: block;
+  /* background: #fff; */
+  margin: 2px;
+  border-radius: 2px;
+  padding: 3px 7px;
+  width: 110px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+table#subv_table_ordering .departamento {
+  float: left;
+  display: block;
+  background: #ddd;
+  margin: 2px;
+  border-radius: 2px;
+  padding: 3px 7px;
+  width: 110px;
+  background: #ccc;
+  height: 126px;
+  color: #000;
+  font-weight: bold;
+}
+table#subv_table_ordering .diputacion {border-left: 5px solid blue;}
+table#subv_table_ordering .conselleria {border-left: 5px solid red;}
+table#subv_table_ordering .colectivo ul {padding: 0; margin: 0; list-style: none;}
+table#subv_table_ordering .apagado {color: #eee;}
+table#subv_table_ordering .td1 {width: 258px; padding: 5px}
+table#subv_table_ordering .bloque01 {
+  float: right;
+  display: block;
+  width: 128px;
+  background: transparent;
+  padding: 1px;
+  margin: 0px;
+}
+table#subv_table_ordering .repositorios {
+width: 250px;
+float: left;
+display: block;}
+table#subv_table_ordering .drive {
+  background-color: rgba(255, 255, 255, 0.9);
+  float: left;
+  display: block;
+  margin: 2px;
+  border-radius: 1px;
+  padding: 3px 7px;
+  width: 96%;
+  color: #000;
+}
+table#subv_table_ordering .gestiona {
+  float: left;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 2px;
+  border-radius: 1px;
+  padding: 5px 7px;
+  width: 96%;
+  color: #000;
+}
+table#subv_table_ordering .cuantia {
+  float: left;
+  display: block;
+  background: rgba(255,255,255,0.3);
+  margin: 2px;
+  border-radius: 1px;
+  padding: 3px 7px;
+  width: 110px;
+  color: #555;
+}
+table#subv_table_ordering .td2 {
+  width: 45%;
+  padding: 9px 18px;
+  vertical-align: top;
+  background: #fff;
+  text-align: justify;
+  font-size: 1.0em;
+}
+table#subv_table_ordering .td2 b a {color: #000;}
+table#subv_table_ordering .td3 {
+  padding: 2px;
+  vertical-align: top;
+  /*width: 130px;*/
+}
+table#subv_table_ordering .td3 .estado {
+  height: 77px;
+  background-color:rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  font-weight: bold;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.22), 0px -0.5px 7px 0px rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+table#subv_table_ordering .odd {background: #f6f6f6; border-top: 10px solid #ddd;border-bottom: 10px solid #ddd;}
+table#subv_table_ordering .even {border-top: 10px solid #333;background: #f6f6f6;}
+table#subv_table_ordering .td4 {padding: 4px 7px; vertical-align: top;}
+.badge {
+  background: rgba(255,255,255,0.6);
+  padding-right: 3px;
+  padding-left: 3px;
+  border-radius: 4px;
+  width: 15px;
+  float: left;
+  display: block;
+
+  height: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 5px 5px 5px 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2.5px 5px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid #444;
+}
+table#subv_table_ordering .badge a {text-decoration: none;}
+/************************************/
+/************************************/
+/************************************/
+
 .starter-template {
   /*padding: 3rem 1.5rem;
   text-align: center;*/
@@ -688,17 +853,17 @@ ul#id_se_relaciona_con {
 }
 
 /*** Estilos JC HOME ***/
-#subv_table_ordering td, #subv_table_ordering th {
-    padding: .2rem;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
-}
+/*#subv_table_ordering td, #subv_table_ordering th {*/
+    /*padding: .2rem;*/
+    /*vertical-align: top;*/
+    /*border-top: 1px solid #dee2e6;*/
+/*}*/
 
-#subv_table_ordering thead th {
-    vertical-align: bottom;
-    border-bottom: 0;
-    background: darkgrey;
-}
+/*#subv_table_ordering thead th {*/
+    /*vertical-align: bottom;*/
+    /*border-bottom: 0;*/
+    /*background: darkgrey;*/
+/*}*/
 
 #subv_table_ordering thead th:before { content:none; }
 #subv_table_ordering thead th:after { content:none; }
