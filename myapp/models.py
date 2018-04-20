@@ -20,6 +20,7 @@ User = settings.AUTH_USER_MODEL
 # Create your models here.
 class Responsable(models.Model):
     responsable = models.CharField(max_length=250)
+    user = models.ForeignKey(User, blank=True, null=True)
 
     def __unicode__(self):
         return '{}'.format(self.responsable)

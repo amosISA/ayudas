@@ -62,7 +62,13 @@ def index(request, estado_slug=None):
     gobierno = None
     user = None
     estados = Estado.objects.all().annotate(number_stats=Count('subvencion'))
-    subvenciones = Subvencion.objects.all()
+    
+    # If is superuser: list all subsidies, if not, only the related to the respective user
+    if request.user.is_superuser:
+        subvenciones = Subvencion.objects.all()
+    else:
+        subvenciones = Subvencion.objects.all().filter(responsable__user=request.user)
+
     total_subvenciones = Subvencion.objects.count()
     colectivos = Colectivo.objects.all()
 
