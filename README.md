@@ -16,8 +16,10 @@ Thing to keep in mind when deploying the application
 * I can load users from auth model successfully
 * But when I try to load subsidies.json: python .\manage.py loaddata subsidies.json it gives me a problem to fix it: 
 * To solve it i go to myapp/models.py and I comment:
-* def send_email_created_updates => the whole function
-* and: post_save.connect(send_email_created_updates, sender=Subvencion)
+```
+def send_email_created_updates => the whole function
+and: post_save.connect(send_email_created_updates, sender=Subvencion)
+```
 
 ##### Departments 
 [EN] Sometimes when you click on the department for listing for that one and in the url appears None is because that one doesn't have 
