@@ -170,15 +170,22 @@
     <script>
         $(document).ready(function() {
             $('[data-toggle="popover"]').popover();
-            $.fn.dataTable.moment('D/M/YYYY');
+            //$.fn.dataTable.moment('D/M/YYYY');
             $('#subv_table_ordering').DataTable({
+                "ordering": false,
                 "language": {
                     url: "/static/myapp/location/es_ES.json"
                 },
-                "aaSorting": [[ 3, "asc" ]], // sort by fin
+                //"aaSorting": [[ 2, "asc" ]], // sort by fin
                 "lengthMenu": [[10000, -1], [10000, "Todas"]],
                 //if I want to show the lengthMenu also do this: Blfrtip
                 dom: 'Bfrtip',
+                columns: [
+                    { "orderable": false },
+                    { "orderable": false },
+                    { "orderable": false },
+                    { "orderable": false }
+                ],
                 buttons: [
                     {
                         extend: 'collection',
@@ -227,13 +234,13 @@
             });
 
             // Columns when ascending or descending change color
-            $('#subv_table_ordering thead th').click(function() {
-                if ($(this).attr("aria-sort") == 'ascending') {
-                    $(this).css("background-color", "#666");
-                } else {
-                    $(this).css("background-color", "#000");
-                }
-            });
+            // $('#subv_table_ordering thead th').click(function() {
+            //     if ($(this).attr("aria-sort") == 'ascending') {
+            //         $(this).css("background-color", "#666");
+            //     } else {
+            //         $(this).css("background-color", "#000");
+            //     }
+            // });
 
             //Remove None from notifications and also the last space
             /*$('.notification-box-list .notification a').each(function() {
@@ -246,17 +253,17 @@
 
             $(window).on('load', function(){
                 $('.date-end').each(function() {
-                    console.log($(this).text());
+                    //console.log($(this).text());
                     if ($.trim($(this).text()) == dataFormated) {
                         $('html, body').animate({
-                            scrollTop: $(this).parent().offset().top
+                            scrollTop: $(this).parent().offset().top=($(this).parent().offset().top)-($(this).parent().outerHeight())
                         }, 100);
                         $(this).parent().parent().fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
                     }
                 });
             });
 
-            // Back to to functionality
+            // Back to top functionality
             if ($('#back-to-top').length) {
                 var scrollTrigger = 100, // px
                     backToTop = function () {

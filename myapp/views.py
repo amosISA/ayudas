@@ -13,8 +13,7 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404, JsonRespons
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.template import loader
-from django.db.models import IntegerField
-from django.db.models.functions import Cast
+from django.db.models import DateField, Expression, F
 
 from notify.signals import notify
 from .models import Subvencion, Estado, Diputacion, Generalitat, Responsable, Gobierno, Colectivo
@@ -54,6 +53,15 @@ def subsidies_for_ajax_loop(request):
                    'generalitat':generalitat,
                    'gobierno':gobierno})
 
+class CastToDate(Expression):
+    template = 'CAST( %(expressions)s AS DATE )'
+
+    def __init__(self, expressions, output_field=None, **extra):
+        output_field = output_field or DateField()
+        super(CastToDate, self).__init__(expressions, **extra)
+        if len(expressions) != 1:
+            raise ValueError('expressions must have exactly 1 element')
+
 @login_required()
 def index(request, estado_slug=None):
     estado = None
@@ -62,10 +70,11 @@ def index(request, estado_slug=None):
     gobierno = None
     user = None
     estados = Estado.objects.all().annotate(number_stats=Count('subvencion'))
-    
+
     # If is superuser: list all subsidies, if not, only the related to the respective user
     if request.user.is_superuser:
-        subvenciones = Subvencion.objects.all()
+        subvenciones = Subvencion.objects.extra(select={"day_mod": "date(fin)"}).order_by('day_mod')
+        print subvenciones
     else:
         subvenciones = Subvencion.objects.all().filter(responsable__user=request.user)
 
