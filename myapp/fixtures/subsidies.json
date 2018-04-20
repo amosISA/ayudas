@@ -3,63 +3,72 @@
   "model": "myapp.responsable",
   "pk": 1,
   "fields": {
-    "responsable": "Juan Carlos"
+    "responsable": "Juan Carlos",
+    "user": 5
   }
 },
 {
   "model": "myapp.responsable",
   "pk": 2,
   "fields": {
-    "responsable": "Mar\u00eda Vicenta"
+    "responsable": "Mar\u00eda Vicenta",
+    "user": null
   }
 },
 {
   "model": "myapp.responsable",
   "pk": 3,
   "fields": {
-    "responsable": "Thierry"
+    "responsable": "Thierry",
+    "user": 3
   }
 },
 {
   "model": "myapp.responsable",
   "pk": 4,
   "fields": {
-    "responsable": "Rafa"
+    "responsable": "Rafa",
+    "user": null
   }
 },
 {
   "model": "myapp.responsable",
   "pk": 5,
   "fields": {
-    "responsable": "Maril\u00f3"
+    "responsable": "Maril\u00f3",
+    "user": null
   }
 },
 {
   "model": "myapp.responsable",
   "pk": 6,
   "fields": {
-    "responsable": "Jose Mi"
+    "responsable": "Jose Mi",
+    "user": 7
   }
 },
 {
   "model": "myapp.responsable",
   "pk": 8,
   "fields": {
-    "responsable": "Personal"
+    "responsable": "Personal",
+    "user": null
   }
 },
 {
   "model": "myapp.responsable",
   "pk": 9,
   "fields": {
-    "responsable": "Fernando"
+    "responsable": "Fernando",
+    "user": 4
   }
 },
 {
   "model": "myapp.responsable",
   "pk": 10,
   "fields": {
-    "responsable": "Agnieszka"
+    "responsable": "Agnieszka",
+    "user": 6
   }
 },
 {
@@ -443,6 +452,14 @@
   "fields": {
     "nombre": "Particulares",
     "slug": "particulares"
+  }
+},
+{
+  "model": "myapp.colectivo",
+  "pk": 5,
+  "fields": {
+    "nombre": "Otros",
+    "slug": "otros"
   }
 },
 {
