@@ -644,8 +644,17 @@ table#subv_table_ordering .badge a {text-decoration: none;}
 .ag_create_post_wrapper .smalls_for_departments { display: block; text-align: left; }
 
 /* NAVBAR */
+.navbar { padding:0; }
 .navbar-custom {
     background-color: #07889B;
+}
+
+.navbar .navbar-brand {
+  background-color: #044a54;
+      padding-top: 0.6rem;
+    padding-right: 1.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1.7rem;
 }
 
 /* change the brand and text color */
@@ -984,4 +993,18 @@ table.mceLayout, textarea.tinyMCE {
     table.mceLayout, textarea.richEditor {
        width: 600px !important;
     }
+}
+
+/* Hide search in datatables and use from navigation */
+.dataTables_wrapper .dataTables_filter {
+  float: right;
+  text-align: right;
+  visibility: hidden;
+}
+
+#search-on-navigation {
+  display: block;
+  background-color: #92cbd3;
+  border: 0;
+  margin-top: 7px;
 }

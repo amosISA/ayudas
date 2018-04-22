@@ -171,8 +171,9 @@
         $(document).ready(function() {
             $('[data-toggle="popover"]').popover();
             //$.fn.dataTable.moment('D/M/YYYY');
-            $('#subv_table_ordering').DataTable({
+            oTable= $('#subv_table_ordering').DataTable({
                 "ordering": false,
+                //"searching": false,
                 "language": {
                     url: "/static/myapp/location/es_ES.json"
                 },
@@ -205,6 +206,10 @@
                         ]
                     }
                 ]
+            });
+
+            $('#search-on-navigation').keyup(function(){
+                  oTable.search($(this).val()).draw();
             });
 
             //Notifications script
