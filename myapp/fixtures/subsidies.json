@@ -189,6 +189,15 @@
   }
 },
 {
+  "model": "myapp.diputacion",
+  "pk": 16,
+  "fields": {
+    "nombre": "Fomento y desarrollo",
+    "font_color": "#FFFFFF",
+    "slug": "fomento-y-desarrollo"
+  }
+},
+{
   "model": "myapp.generalitat",
   "pk": 3,
   "fields": {
@@ -2029,7 +2038,7 @@
     "inicio": "2018-03-26",
     "fin": "2018-04-18",
     "created": "2018-03-28T09:38:24Z",
-    "updated": "2018-04-17T21:50:35Z",
+    "updated": "2018-04-20T16:19:29Z",
     "slug": "U29zRm",
     "nombre": "Subvenciones a Ayuntamientos para actividades en materia de ciudadanos extranjeros",
     "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=64",
@@ -2041,8 +2050,8 @@
     "gobierno": null,
     "cuantia": "3.500 \u20ac",
     "descripcion": "Subvencionar actividades y programas destinados a integrar al colectivo de extranjeros en los municipios en los que residen.",
-    "estado": 4,
-    "comentarios": "<p>JC: 17-04-2018: a falta del presupuesto subimos a gestiona el pdf de la memoria y de la solicitud. veo que hay un l&iacute;mite de rango fechas gastos hasta el 1 de octubre. Pido nuevo presupuesto, pero subo el antiguo por si acaso al gestiona.</p>\r\n<p>JC:16-04-2018: Agnieszka redacta la memoria y rellena el formulario de solicitud. Yo hago calculos para el presupuesto y le mando propuesta a Julian. Quemos a la espera para enviar la solicitud ma&ntilde;ana.</p>\r\n<p>JC: 10-04-2018: le pido a Agnieszka que haga una memoria de las actividades que hemos ido desarrollando. La idea es seguir contando con TEO. Viniendo un d&iacute;a todas las semanas del a&ntilde;o sale 2240 &euro;+iva. Teniendo en cuenta que se subvenciona 3500. es una buena opci&oacute;n. 28-03-2018. El a&ntilde;o pasado se pidi&oacute; el curso de valenciano. La verdad es que al final los extranjeros lo han ido dejando porque no les gust&oacute; el m&eacute;todo de la profesora. tendr&iacute;amos dos opciones: - Ser&iacute;a interesante saber cuanto ha durado el curso de valenciano. - por otro lado podr&iacute;amos usar esta subvenci&oacute;n para el huerto ecol&oacute;gico. Aunque tambi&eacute;n podr&iacute;amos esperar a que saliera la de agricultura.</p>",
+    "estado": 1,
+    "comentarios": "<p>JC: 20-04-2018: se env&iacute;a a las 12:17 del 18.-04-2018</p>\r\n<p>JC: 17-04-2018: a falta del presupuesto subimos a gestiona el pdf de la memoria y de la solicitud. veo que hay un l&iacute;mite de rango fechas gastos hasta el 1 de octubre. Pido nuevo presupuesto, pero subo el antiguo por si acaso al gestiona.</p>\r\n<p>JC:16-04-2018: Agnieszka redacta la memoria y rellena el formulario de solicitud. Yo hago calculos para el presupuesto y le mando propuesta a Julian. Quemos a la espera para enviar la solicitud ma&ntilde;ana.</p>\r\n<p>JC: 10-04-2018: le pido a Agnieszka que haga una memoria de las actividades que hemos ido desarrollando. La idea es seguir contando con TEO. Viniendo un d&iacute;a todas las semanas del a&ntilde;o sale 2240 &euro;+iva. Teniendo en cuenta que se subvenciona 3500. es una buena opci&oacute;n. 28-03-2018. El a&ntilde;o pasado se pidi&oacute; el curso de valenciano. La verdad es que al final los extranjeros lo han ido dejando porque no les gust&oacute; el m&eacute;todo de la profesora. tendr&iacute;amos dos opciones: - Ser&iacute;a interesante saber cuanto ha durado el curso de valenciano. - por otro lado podr&iacute;amos usar esta subvenci&oacute;n para el huerto ecol&oacute;gico. Aunque tambi&eacute;n podr&iacute;amos esperar a que saliera la de agricultura.</p>",
     "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsYWxFN0l0S2N4QlE",
     "gestiona_expediente": "3/2018 EXP. 20",
     "responsable": [
@@ -2480,7 +2489,7 @@
     "inicio": "2018-03-30",
     "fin": "2018-04-18",
     "created": "2018-03-29T08:44:14Z",
-    "updated": "2018-04-17T10:33:12Z",
+    "updated": "2018-04-20T16:23:29Z",
     "slug": "kXCux9",
     "nombre": "plan ayudas a municipios de la provincia de alicante con poblaci\u00f3n inferior a 5000 hab. para adquisici\u00f3n de equipamiento y material deportivo 2018",
     "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=222",
@@ -2492,8 +2501,8 @@
     "gobierno": null,
     "cuantia": "< 3000 \u20ac",
     "descripcion": "adquisici\u00f3n, durante la anualidad 2018, de equipamiento y/o material deportivo necesarios para el desarrollo del deporte y la pr\u00e1ctica de la actividad f\u00edsica en sus diferentes espacios deportivos",
-    "estado": 4,
-    "comentarios": "<p>JC: 17-04-2018: Enviado a firmar por MVicenta.</p>\r\n<p>JC: 16-04-2018: Agnieszka termina la memor&iacute;a deportiva y rellena el formulario de solicitud. Ma&ntilde;ana tengo que pedir a MVicenta que lo suba a gestiona y pase por firma.</p>\r\n<p>JC: 9-03-2018 - enviada propuesta a cuatro empresas. Financiable: juego de canastas fijas o m&oacute;viles homologadas de diversas modalidades deportivas, juego de porter&iacute;as conredes fijas o m&oacute;viles homologadas de diversas modalidades deportivas, postes y redes fijos o m&oacute;viles homologados de diversas modalidades deportivas, mesas homologadas de tenis de mesa, mesas anti vand&aacute;licas de exterior para tenis de mesa y ajedrez, tatamis y colchonetas para artes marciales, tapices para gimnasia, corcheras para piscina, aparatos de cardio para gimnasios, material y equipos de musculaci&oacute;n, aparatos de gimnasia, etc. y otros elementos anexos a estos como contrapesos, conjunto de tableros y aro de baloncesto, redes de protecci&oacute;n, banquillo para jugadores, marcadores electr&oacute;nicos, desfibriladores, etc.), incluyendo el necesario para dar un servicio adecuado en espacios anexos como los vestuarios (taquillas, bancos, etc.). ---- a&ntilde;o 2017 2646 &euro; ( 63,04 % - 4197,20 &euro;) Carmen. MVicenta APROBADA. 2 bicicletas est&aacute;ticas . ---- PARA LA PISCINA: - 2 bancos de esos con perchas - 4 bancos peque&ntilde;os para dentro de los vestidores PARA PISTA DEPORTIVA COLEGIO - 2 canastas grandes - 2 porter&iacute;as futbito PARA PISTA DEPORTIVA CASA CULTURA - 2 porterias futbito</p>",
+    "estado": 3,
+    "comentarios": "<p>JC: 20-04-2018: enviado el d&iacute;a 18 a las 9:46. De todas maneras lo pongo con detalles por definir, porque ha aparecido una porter&iacute;a y por tanto puede que <strong>solo necesitemos comprar dos</strong>. y por tanto necesitaremos <strong>cambiar</strong> el presupuesto <strong>por otra cosa</strong>.</p>\r\n<p>JC: 17-04-2018: Enviado a firmar por MVicenta.</p>\r\n<p>JC: 16-04-2018: Agnieszka termina la memor&iacute;a deportiva y rellena el formulario de solicitud. Ma&ntilde;ana tengo que pedir a MVicenta que lo suba a gestiona y pase por firma.</p>\r\n<p>JC: 9-03-2018 - enviada propuesta a cuatro empresas. Financiable: juego de canastas fijas o m&oacute;viles homologadas de diversas modalidades deportivas, juego de porter&iacute;as conredes fijas o m&oacute;viles homologadas de diversas modalidades deportivas, postes y redes fijos o m&oacute;viles homologados de diversas modalidades deportivas, mesas homologadas de tenis de mesa, mesas anti vand&aacute;licas de exterior para tenis de mesa y ajedrez, tatamis y colchonetas para artes marciales, tapices para gimnasia, corcheras para piscina, aparatos de cardio para gimnasios, material y equipos de musculaci&oacute;n, aparatos de gimnasia, etc. y otros elementos anexos a estos como contrapesos, conjunto de tableros y aro de baloncesto, redes de protecci&oacute;n, banquillo para jugadores, marcadores electr&oacute;nicos, desfibriladores, etc.), incluyendo el necesario para dar un servicio adecuado en espacios anexos como los vestuarios (taquillas, bancos, etc.). ---- a&ntilde;o 2017 2646 &euro; ( 63,04 % - 4197,20 &euro;) Carmen. MVicenta APROBADA. 2 bicicletas est&aacute;ticas . ---- PARA LA PISCINA: - 2 bancos de esos con perchas - 4 bancos peque&ntilde;os para dentro de los vestidores PARA PISTA DEPORTIVA COLEGIO - 2 canastas grandes - 2 porter&iacute;as futbito PARA PISTA DEPORTIVA CASA CULTURA - 2 porterias futbito</p>",
     "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsVTBXbHBiNEljZ0k",
     "gestiona_expediente": "3/2018 EXP. 25",
     "responsable": [
@@ -2553,7 +2562,7 @@
     "inicio": "2018-03-27",
     "fin": "2018-04-24",
     "created": "2018-04-06T12:33:33Z",
-    "updated": "2018-04-10T19:51:15Z",
+    "updated": "2018-04-20T21:02:31Z",
     "slug": "bpin9u",
     "nombre": "Subvenciones destinadas a las entidades locales de la Comunitat Valenciana hasta 5.000 habitantes, para el fomento de la participaci\u00f3n ciudadana, la transparencia y el acceso a la informaci\u00f3n p\u00fablica, durante el ejercicio 2018",
     "bases": "http://www.gva.es/es/inicio/procedimientos;jsessionid=hlw6h7yhNfmGfxM2XhFcbMjyWHZbvk3X2JhM2TlKJlVx03CHWHZ1!295945142!1522217498940?id_proc=19282",
@@ -2566,15 +2575,17 @@
     "cuantia": "5.000 \u20ac",
     "descripcion": "Facilitar el cumplimiento de los objetivos establecidos tanto en la ley estatal 19/2013 de 9 de diciembre, de Transparencia, Acceso a la Informaci\u00f3n P\u00fablica y Buen Gobierno, como en la ley auton\u00f3mica 2/2015 de 2 de abril, de Transparencia, Buen Gobierno y Participaci\u00f3n Ciudadana, mediante la realizaci\u00f3n de proyectos o actuaciones concretas que promuevan la participaci\u00f3n local ciudadana, tanto individual como colectiva, el fomento del asociacionismo, la transparencia de la actividad p\u00fablica y el acceso de la ciudadan\u00eda a la informaci\u00f3n p\u00fablica.",
     "estado": 4,
-    "comentarios": "JC: 10-04-2018: Se me ocurre que la subvenci\u00f3n podr\u00eda ir por otra vertiente:\r\n- MODALIDAD 2 (entre otras)\r\n\u00b7 la elaboraci\u00f3n de otras herramientas que potencien la transparencia y el acceso de los ciudadanos a la informaci\u00f3n p\u00fablica\r\n\u00b7 elaboraci\u00f3n de procedimientos telem\u00e1ticos para garantizar el libre acceso de los ciudadanos/as a la informaci\u00f3n\r\nPodr\u00eda pagarnos un 40% de la n\u00f3mina de Amos.\r\nVamos generando interfaces y \r\n\r\n-MODALIDAD 1\r\n\u00b7 Proyectos y actuaciones que fomenten la participaci\u00f3n ciudadana y el fortalecimiento del tejido asociativo (modalidad 1).\r\n\u00b7 para la asociaci\u00f3n de j\u00f3venes. pintar un mural en donde el blanco. Juntar esto con los participantes del curso de pintura y Toni Ferri y agitamos. \r\n\r\nEnv\u00edo correo @ferri para ver si puede coordinar con el resto de pintores del pueblo unas jornadas de convivencia y pintar un mural.\r\n\r\nAs\u00ed que hay que optar por las dos",
-    "drive": "",
+    "comentarios": "<p>JC: 20-04-2018: me he leido la ORDEN 4/2016, de 3 de junio de 2016. Est&aacute; un poco cogido con pinzas lo del mural sino involucramos a las distintas asociaciones: amas de casa, j&oacute;venes, amics des museu, empresarios. Esto al menos para la modalidad I. Para redondearlo tendr&iacute;amos que traer a alg&uacute;n experto en asociaciones como el amigo de Angela del Campello.&nbsp;</p>\r\n<p>Respecto a la modalidad II, aunque las especifciaciones ponen m&aacute;s enfasis en la transparencia, bien podr&iacute;amos reforzar los cuatro puntos de la nueva pol&iacute;tica: transparentcia, reutilizaci&oacute;n datos, buen gobierno y toma de decisiones.</p>\r\n<p>JC: 10-04-2018: Se me ocurre que la subvenci&oacute;n podr&iacute;a ir por otra vertiente: - MODALIDAD 2 (entre otras) &middot; la elaboraci&oacute;n de otras herramientas que potencien la transparencia y el acceso de los ciudadanos a la informaci&oacute;n p&uacute;blica &middot; elaboraci&oacute;n de procedimientos telem&aacute;ticos para garantizar el libre acceso de los ciudadanos/as a la informaci&oacute;n Podr&iacute;a pagarnos un 40% de la n&oacute;mina de Amos. Vamos generando interfaces y -MODALIDAD 1 &middot; Proyectos y actuaciones que fomenten la participaci&oacute;n ciudadana y el fortalecimiento del tejido asociativo (modalidad 1). &middot; para la asociaci&oacute;n de j&oacute;venes. pintar un mural en donde el blanco. Juntar esto con los participantes del curso de pintura y Toni Ferri y agitamos. Env&iacute;o correo @ferri para ver si puede coordinar con el resto de pintores del pueblo unas jornadas de convivencia y pintar un mural. As&iacute; que hay que optar por las dos</p>",
+    "drive": "https://drive.google.com/open?id=1JzmsyTiY7_3IqPGndm--alCVQXeobUGW",
     "gestiona_expediente": "-",
     "responsable": [
       1
     ],
     "se_relaciona_con": [],
     "colectivo": [
-      1
+      3,
+      1,
+      2
     ]
   }
 },
@@ -2737,7 +2748,7 @@
     "inicio": "2018-03-29",
     "fin": "2018-04-19",
     "created": "2018-04-10T09:03:37Z",
-    "updated": "2018-04-17T12:10:18Z",
+    "updated": "2018-04-20T16:34:22Z",
     "slug": "H6vAsW",
     "nombre": "Subvenciones Ayuntamientos y EATIM para la elaboraci\u00f3n y evaluaci\u00f3n de Planes de Igualdad de G\u00e9nero",
     "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=221",
@@ -2749,10 +2760,10 @@
     "gobierno": null,
     "cuantia": "< 3.000 \u20ac",
     "descripcion": "para coadyuvar a los gastos derivados de los proyectos de elaboraci\u00f3n y evaluaci\u00f3n de planes de igualdad de g\u00e9nero a ejecutar desde el 1 de octubre de 2017 al 30 de septiembre de 2018.",
-    "estado": 4,
-    "comentarios": "<p>JC: 17-4-2018: La semana anterior ya estuve hablando con las personas que conoc&iacute;a que me pod&iacute;an explicar un poco de lo que iba esto de los planes de igualdad. Me recomendaron que me pusiera en contacto con MC Formaci&oacute;n. As&iacute; lo hice, habl&eacute; con una chica que me dijo que me enviar&iacute;a una propuesta (que guardo en Drive). Ahora env&iacute;o correo a Thierry y que sea &eacute;l quien decida. Por mi parte me parece interesante solicitarlo porque parece que en un futuro pr&oacute;ximo, el tener el plan, ser&aacute; requisito imprescindible para acceder a subvenciones.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Ser&aacute;n subvencionables los proyectos que tengan como finalidad: 4.1.- La elaboraci&oacute;n de un plan de igualdad de g&eacute;nero, ya sea por vez primera o se trate de un segundo o posterior plan.</p>",
+    "estado": 2,
+    "comentarios": "<p>JC: 20-04-2018: Tras conversaci&oacute;n con MVicenta me entero de que ya tenemos plan de igualdad. Se aprob&oacute; en pleno el 3/2017, pero no se ha llevado a cabo ninguna acci&oacute;n. Me descargo documento y lo subo a drive</p>\r\n<p>&nbsp;</p>\r\n<p>JC: 17-4-2018: La semana anterior ya estuve hablando con las personas que conoc&iacute;a que me pod&iacute;an explicar un poco de lo que iba esto de los planes de igualdad. Me recomendaron que me pusiera en contacto con MC Formaci&oacute;n. As&iacute; lo hice, habl&eacute; con una chica que me dijo que me enviar&iacute;a una propuesta (que guardo en Drive). Ahora env&iacute;o correo a Thierry y que sea &eacute;l quien decida. Por mi parte me parece interesante solicitarlo porque parece que en un futuro pr&oacute;ximo, el tener el plan, ser&aacute; requisito imprescindible para acceder a subvenciones.</p>\r\n<p>&nbsp;--</p>\r\n<p>Ser&aacute;n subvencionables los proyectos que tengan como finalidad: 4.1.- La elaboraci&oacute;n de un plan de igualdad de g&eacute;nero, ya sea por vez primera o se trate de un segundo o posterior plan.</p>",
     "drive": "https://drive.google.com/open?id=1Zaw_1a2vKEdF2-H_tJDmO32wkz6-4yIE",
-    "gestiona_expediente": "-",
+    "gestiona_expediente": "15/2016 EXP. 18",
     "responsable": [
       1,
       3
@@ -3187,11 +3198,11 @@
   "model": "myapp.subvencion",
   "pk": 82,
   "fields": {
-    "user": 5,
+    "user": null,
     "inicio": "2018-04-09",
-    "fin": "2018-05-07",
+    "fin": "2018-04-30",
     "created": "2018-04-13T21:24:48Z",
-    "updated": "2018-04-13T21:24:48Z",
+    "updated": "2018-04-20T12:17:12Z",
     "slug": "fWz9YY",
     "nombre": "Asistencia en la gesti\u00f3n del inventario de bienes y derechos de las Entidades Locales",
     "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=159",
@@ -3204,7 +3215,7 @@
     "cuantia": "",
     "descripcion": "La implantaci\u00f3n de un sistema de gesti\u00f3n patrimonial e instalaci\u00f3n del programa de gesti\u00f3n del patrimonio vinculado a la contabilidad",
     "estado": 4,
-    "comentarios": "JC: 13-04-2018: preguntar a Fernando si lo necesita o lo ve interesante",
+    "comentarios": "<p>JC: 13-04-2018: preguntar a Fernando si lo necesita o lo ve interesante</p>",
     "drive": "",
     "gestiona_expediente": "-",
     "responsable": [
@@ -3318,6 +3329,74 @@
     "colectivo": [
       1,
       4
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 86,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-19",
+    "fin": "2018-04-10",
+    "created": "2018-04-20T12:14:31Z",
+    "updated": "2018-04-20T12:14:31Z",
+    "slug": "ApynmW",
+    "nombre": "Subvenciones a ayuntamientos y E.A.T.I.M. para actividades en materia de prevenci\u00f3n de conductas adictivas",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=232",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 9,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Otros a\u00f1os han sido 1500 \u20ac",
+    "estado": 4,
+    "comentarios": "<p>JC: 20-04-2018 : El a&ntilde;o pasado se pidi&oacute; curso de pintura con Toni Ferri, se solicitaron 1500 &euro; y se termin&oacute; cobrando 819,53 El a&ntilde;o anterior se pidi&oacute; Cer&aacute;mica.&nbsp;</p>\r\n<p>Este a&ntilde;o se pedir&aacute; <strong>Cer&aacute;mica para los ni&ntilde;os, pintura para los adultos</strong></p>\r\n<p>APROBADO 819,53 &euro; - USO ADECUADO DE LAS TECNOLOGIAS Y PREVENCION DEL JUEGO DE APUESTAS . Ver que se hizo otros a&ntilde;os. otros a&ntilde;os la cer&aacute;mica. Vamos a pedir uno nuevo de pintura.</p>\r\n<p>Se pide uso adecuado de las tecnologias= curso pintura a Ferri. Solicitado. 1500&euro;</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      2
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      1
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 87,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-16",
+    "fin": "2018-05-05",
+    "created": "2018-04-20T16:15:21Z",
+    "updated": "2018-04-20T16:15:21Z",
+    "slug": "TZptIs",
+    "nombre": "Fomento y desarrollo - L\u00ednea 1.- Ferias y otros eventos comerciales.",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=103",
+    "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00090.pdf",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 16,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "< 6000 \u20ac",
+    "descripcion": "Podr\u00e1n solicitar las subvenciones objeto de la presente l\u00ednea los Ayuntamientos y Entidades locales menores de la provincia de Alicante con poblaci\u00f3n inferior a 50.000 habitantes.",
+    "estado": 4,
+    "comentarios": "<p>Son subvencionables dentro de esta l&iacute;nea, las actuaciones de gasto corriente para la realizaci&oacute;n de ferias y otros eventos comerciales que se especifican a continuaci&oacute;n:<br />- Asistencia t&eacute;cnica para la organizaci&oacute;n y montaje de la totalidad de la feria o evento comercial. Cuando se contrate la totalidad de la feria con un &uacute;nico proveedor.<br />Cuando la feria se organice desde la propia entidad:<br />- Alquiler de stands y/o carpas.<br />- Publicidad y promoci&oacute;n de la feria o evento comercial.<br />- Alquiler de iluminaci&oacute;n de la feria o evento comercial.<br />- Sonido y megafon&iacute;a de la feria o evento comercial.<br />- Realizaci&oacute;n de degustaciones de productos aut&oacute;ctonos locales y cuya cuant&iacute;a no podr&aacute; superar el 10% del resupuesto total de la feria o evento comercial.<br />- Actividades complementarias como por ejemplo representaciones art&iacute;sticas y musicales, ludotecas e hinchables, que se desarrollen dentro de la feria o evento comercial, como parte integrante del evento principal y cuya cuant&iacute;a<br />no podr&aacute; superar el 30% del presupuesto total del mismo.<br />- Decoraci&oacute;n.<br />No ser&aacute;n subvencionables<br />- Gastos de personal al servicio de las entidades peticionarias,<br />- Gastos de material de oficina, ni los gastos generales de funcionamiento de la entidad.<br />- Alquiler de mesas y sillas.<br />- Alquiler de WC<br />- Servicios de vigilancia.<br />- Servicios de limpieza.<br />- Comidas y bebidas que no entren en la categor&iacute;a de productos aut&oacute;ctonos locales (productos t&iacute;picos de la zona)</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      2
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      1
     ]
   }
 }
