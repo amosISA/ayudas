@@ -272,9 +272,11 @@
                     $('.date-end').each(function() {
                         //console.log($(this).text());
                         if ($.trim($(this).text()) == dataFormated) {
+                            console.log("estoy dentro del if");
                             $('html, body').animate({
                                 scrollTop: $(this).parent().offset().top=($(this).parent().offset().top)-($(this).parent().outerHeight())
                             }, 100);
+                            console.log("ya he hecho la animación");
                             $(this).parent().parent().fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
                         }
                     });
