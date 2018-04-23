@@ -1007,4 +1007,15 @@ table.mceLayout, textarea.tinyMCE {
   background-color: #92cbd3;
   border: 0;
   margin-top: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+/* Button navigation get actual subsidie */
+#button-actual-subsidie-navigation {
+  color: #000;
+}
+#button-actual-subsidie-navigation:hover {
+  cursor: pointer;
+  color: #044a54;
 }
