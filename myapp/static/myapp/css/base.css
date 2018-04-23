@@ -647,6 +647,7 @@ table#subv_table_ordering .badge a {text-decoration: none;}
 .navbar { padding:0; }
 .navbar-custom {
     background-color: #07889B;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 2.5px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
 .navbar .navbar-brand {
@@ -1018,4 +1019,11 @@ table.mceLayout, textarea.tinyMCE {
 #button-actual-subsidie-navigation:hover {
   cursor: pointer;
   color: #fff;
+}
+
+/* Badge likes navigation */
+#badge-count-likes {
+  float:right;
+  margin-left:5px;
+  margin-top:2px;
 }

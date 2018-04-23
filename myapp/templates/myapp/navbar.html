@@ -17,8 +17,32 @@
                 <a class="nav-link" href="{% url 'myapp:new_subvencion' %}"> <i class="far fa-file"></i> Crear subvención</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> <i class="far fa-bookmark"></i> Ver favoritos</a>
+                <!-- Index, Cuando creas y cuando pinchas en favoritos aparecerá el contador de cuántas favortias tengo -->
+                <!-- También Diputación, Estado, Gobierno, Generalitat, Responsable -->
+                {% url 'myapp:subvencion_by_category' estado.slug as estado %}
+                {% url 'myapp:subvencion_by_category' diputacion.slug as diputacion %}
+                {% url 'myapp:subvencion_by_category' generalitat.slug as generalitat %}
+                {% url 'myapp:subvencion_by_category' gobierno.slug as gobierno %}
+                {% url 'myapp:subvencion_by_category' responsable.responsable as responsable %}
+
+                {% url 'myapp:subvencion_detail' subvencion.id subvencion.slug as detail %}
+                {% url 'myapp:edit_subvencion' subvencion.slug as editsubv %}
+                {% url 'myapp:delete_subvencion' subvencion.slug as delsubv %}
+                {% if request.path == '/' or request.path == '/new/' or request.path == '/favourites/' or request.path == estado or request.path == diputacion or request.path == generalitat or request.path == gobierno or request.get_full_path == responsable %}
+                    <a id="indexFavouritesButton" class="nav-link" href="{% url 'myapp:favourites' %}">
+                        <span id="badge-count-likes" class="badge">{{ userlikes.count }}</span>
+                        <i class="far fa-bookmark"></i> Ver favoritos
+                    </a>
+                <!-- En detalles, al editar, borrar la subvención aparecerá como favorita o no -->
+                {% else %}
+                    {% with total_likes=subvencion.users_like.count users_like=subvencion.users_like.all %}
+                        <a class="nav-link like-button-details" href="#" data-id="{{ subvencion.id }}" data-action="{% if request.user in users_like %}un{% endif %}like">
+                            <i class="likes_heart {% if request.user in users_like %}fas{% else %}far{% endif %} fa-bookmark"></i> Ver favoritos
+                        </a>
+                    {% endwith %}
+                {% endif %}
             </li>
+            <li>{{ responsable }}</li>
             <!--<li class="nav-item">
                 <a href="#" id="news" class="nav-link">
                     <i class="fa fa-bell"></i>

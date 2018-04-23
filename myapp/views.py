@@ -9,17 +9,36 @@ from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse, reverse_lazy
 from django.db.models import Count, Q
+from django.db.models import DateField, Expression, F
 from django.http import HttpResponse, HttpResponseRedirect, Http404, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.decorators.http import require_POST
 from django.template import loader
-from django.db.models import DateField, Expression, F
 
 from notify.signals import notify
 from .models import Subvencion, Estado, Diputacion, Generalitat, Responsable, Gobierno, Colectivo
 from .forms import SubvencionForm, ResponsableForm, DiputacionForm, GeneralitatForm, EstadoForm
 
 # Create your views here.
+@login_required
+@require_POST
+def subsidie_like(request):
+    subsidie_id = request.POST.get('id')
+    action = request.POST.get('action')
+
+    if subsidie_id and action:
+        try:
+            subsidie = Subvencion.objects.get(id=subsidie_id)
+            if action == 'like':
+                subsidie.users_like.add(request.user)
+            else:
+                subsidie.users_like.remove(request.user)
+            return JsonResponse({'status':'ok'})
+        except:
+            pass
+        return JsonResponse({'status':'ko'})
+
 ####### AJAX USERS MENTIONS IN TINYMCE ######
 def ajax_users(request):
     users = User.objects.all()
@@ -74,10 +93,10 @@ def index(request, estado_slug=None):
     # If is superuser: list all subsidies, if not, only the related to the respective user
     if request.user.is_superuser:
         subvenciones = Subvencion.objects.extra(select={"day_mod": "date(fin)"}).order_by('day_mod')
-        print subvenciones
     else:
         subvenciones = Subvencion.objects.all().filter(responsable__user=request.user)
 
+    userlikes = Subvencion.objects.filter(users_like__in=[request.user])
     total_subvenciones = Subvencion.objects.count()
     colectivos = Colectivo.objects.all()
 
@@ -116,7 +135,62 @@ def index(request, estado_slug=None):
                    'days_until_estado': days_until_estado,
                    'notifications': notification_list,
                    'total_subvenciones': total_subvenciones,
-                   'colectivos': colectivos})
+                   'colectivos': colectivos,
+                   'userlikes': userlikes})
+
+# Favourites subsidies on each user
+@login_required()
+def favourites(request, estado_slug=None):
+    estado = None
+    diputacion = None
+    generalitat = None
+    gobierno = None
+    user = None
+    estados = Estado.objects.all().annotate(number_stats=Count('subvencion'))
+
+    total_subvenciones = Subvencion.objects.count()
+    colectivos = Colectivo.objects.all()
+
+    subvenciones = Subvencion.objects.filter(users_like__in=[request.user])
+    userlikes = Subvencion.objects.filter(users_like__in=[request.user])
+
+    if estado_slug:
+        if Diputacion.objects.filter(slug=estado_slug).exists():
+            diputacion = get_object_or_404(Diputacion, slug=estado_slug)
+            subvenciones = subvenciones.filter(diputacion=diputacion)
+        elif Estado.objects.filter(slug=estado_slug).exists():
+            estado = get_object_or_404(Estado, slug=estado_slug)
+            subvenciones = subvenciones.filter(estado=estado)
+        elif Generalitat.objects.filter(slug=estado_slug).exists():
+            generalitat = get_object_or_404(Generalitat, slug=estado_slug)
+            subvenciones = subvenciones.filter(generalitat=generalitat)
+        elif Gobierno.objects.filter(slug=estado_slug).exists():
+            gobierno = get_object_or_404(Gobierno, slug=estado_slug)
+            subvenciones = subvenciones.filter(gobierno=gobierno)
+        # To make it work for spaces in string(estado_slug=Juan Carlos) i modified url => r'^(?P<estado_slug>[-\w ]+)/$' => space in -\w
+        elif Responsable.objects.filter(responsable=estado_slug).exists():
+            user = get_object_or_404(Responsable, responsable=estado_slug)
+            subvenciones = subvenciones.filter(responsable__responsable=user)
+        else:
+            subvenciones = Subvencion.objects.all()
+
+    notification_list = request.user.notifications.active().prefetch()
+    days_until_estado = ['7d', '6d', '5d', '4d', '3d', '2d', '1d', 'expires today', 'expired']
+
+    return render(request,
+                  'myapp/index.html',
+                  {'estado': estado,
+                   'diputacion': diputacion,
+                   'generalitat': generalitat,
+                   'gobierno': gobierno,
+                   'user': user,
+                   'estados': estados,
+                   'days_until_estado': days_until_estado,
+                   'notifications': notification_list,
+                   'total_subvenciones': total_subvenciones,
+                   'colectivos': colectivos,
+                   'subvenciones': subvenciones,
+                   'userlikes': userlikes})
 
 @login_required()
 def subvencion_by_user(request, name_slug):
@@ -142,6 +216,7 @@ def subvencion_by_user(request, name_slug):
 
 @login_required()
 def subvencion_detail(request, id, slug):
+    userlikes = Subvencion.objects.filter(users_like__in=[request.user])
     subvencion = get_object_or_404(Subvencion,
                                    id=id,
                                    slug=slug)
@@ -151,7 +226,8 @@ def subvencion_detail(request, id, slug):
     return render(request,
                   'myapp/detail.html',
                   {'subvencion': subvencion,
-                   'days_until_estado': days_until_estado})
+                   'days_until_estado': days_until_estado,
+                   'userlikes':userlikes})
 
 # --------------- Create New Subsidie --------------- #
 class SubvencionCreateView(LoginRequiredMixin, CreateView):
@@ -170,6 +246,12 @@ class SubvencionCreateView(LoginRequiredMixin, CreateView):
         instance.user = self.request.user
         messages.success(self.request, 'Subvención añadida correctamente!')
         return super(SubvencionCreateView, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        userlikes = Subvencion.objects.filter(users_like__in=[self.request.user])
+        ctx = super(SubvencionCreateView, self).get_context_data(**kwargs)
+        ctx['userlikes'] = userlikes
+        return ctx
 
 # --------------- Edit Subsidie --------------- #
 class SubvencionUpdateView(LoginRequiredMixin, UpdateView):

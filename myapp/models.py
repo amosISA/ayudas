@@ -174,6 +174,8 @@ class Subvencion(models.Model):
     se_relaciona_con = models.ManyToManyField('self', blank=True, default='')
     colectivo = models.ManyToManyField(Colectivo, blank=True)
 
+    users_like = models.ManyToManyField(User, related_name='subsidies_liked', blank=True)
+
     class Meta:
         ordering = ["fin"]
         verbose_name = 'Subvencion'

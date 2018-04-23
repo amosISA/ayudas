@@ -4,6 +4,10 @@
     Subs: {{ subvencion.nombre }}
 {% endblock %}
 
+{% block navbar %}
+    {% include 'myapp/navbar.html' %}
+{% endblock %}
+
 {% block content %}
 {% load tags %}
     <div class="row forms_act_crea">
@@ -197,6 +201,28 @@
             $("select#id_responsable").attr('size', '10');
             var select_resp = document.getElementById('id_responsable');
             select_resp.size = select_resp.length;
+
+            // AJAX FOR LIKES
+            $('a.like-button-details').click(function(e) {
+                e.preventDefault();
+                $.post('{% url "myapp:like" %}',
+                    {
+                        id: $(this).data('id'),
+                        action: $(this).data('action')
+                    },
+                    function(data) {
+                        if(data['status'] == 'ok')
+                        {
+                            var button_likes = $('a.like-button-details');
+                            var previous_action = button_likes.data('action');
+                            //toggle data-action
+                            button_likes.data('action', previous_action == 'like' ? 'unlike' : 'like');
+                            //toggle link text
+                            $('.likes_heart').addClass(previous_action == 'like' ? $('.likes_heart').addClass("fas") : $('.likes_heart').removeClass('fas'));
+                        }
+                    }
+                );
+            });
         });
     </script>
 {% endblock %}

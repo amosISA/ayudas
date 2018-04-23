@@ -8,6 +8,10 @@
     {% endif %}
 {% endblock %}
 
+{% block navbar %}
+    {% include 'myapp/navbar.html' %}
+{% endblock %}
+
 {% block content %}
 
     {% load staticfiles %}
@@ -550,6 +554,28 @@
                         }
                     });
                     $j('#id_se_relaciona_con input:checkbox').prop('checked', true);
+                });
+
+                // AJAX FOR LIKES
+                $j('a.like-button-details').click(function(e) {
+                    e.preventDefault();
+                    $j.post('{% url "myapp:like" %}',
+                        {
+                            id: $j(this).data('id'),
+                            action: $j(this).data('action')
+                        },
+                        function(data) {
+                            if(data['status'] == 'ok')
+                            {
+                                var button_likes = $j('a.like-button-details');
+                                var previous_action = button_likes.data('action');
+                                //toggle data-action
+                                button_likes.data('action', previous_action == 'like' ? 'unlike' : 'like');
+                                //toggle link text
+                                $j('.likes_heart').addClass(previous_action == 'like' ? $j('.likes_heart').addClass("fas") : $j('.likes_heart').removeClass('fas'));
+                            }
+                        }
+                    );
                 });
             });
         </script>
