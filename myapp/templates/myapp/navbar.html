@@ -17,7 +17,7 @@
                 <a class="nav-link" href="{% url 'myapp:new_subvencion' %}"> <i class="far fa-file"></i> Crear subvención</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> <i class="far fa-heart"></i> Añadir a favoritos</a>
+                <a class="nav-link" href="#"> <i class="far fa-bookmark"></i> Ver favoritos</a>
             </li>
             <!--<li class="nav-item">
                 <a href="#" id="news" class="nav-link">
@@ -38,7 +38,7 @@
         <ul class="navbar-nav" style="margin-right:30px;">
             {% if request.user.is_authenticated %}
                 <li class="nav-item" style="margin-right:20px;margin-top: 8px;">
-                    <span id="button-actual-subsidie-navigation">⥈</span>
+                    <span id="button-actual-subsidie-navigation"><i class="fas fa-exchange-alt"></i></span>
                 </li>
                 <li class="nav-item" style="margin-right:20px;">
                     <input type="text" id="search-on-navigation">

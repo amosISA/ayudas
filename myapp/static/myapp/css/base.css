@@ -1013,9 +1013,9 @@ table.mceLayout, textarea.tinyMCE {
 
 /* Button navigation get actual subsidie */
 #button-actual-subsidie-navigation {
-  color: #000;
+  color: rgba(255,255,255,.5);
 }
 #button-actual-subsidie-navigation:hover {
   cursor: pointer;
-  color: #044a54;
+  color: #fff;
 }
