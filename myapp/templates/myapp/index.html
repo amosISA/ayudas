@@ -255,8 +255,8 @@
             // Scroll to subsidie that have the actual day and blink the subsidies that have as end date the actual day
             var CurrentDate = new Date();
             var dataFormated = ('0' + CurrentDate.getDate()).slice(-2)+"/"+('0'+(CurrentDate.getMonth()+1)).slice(-2)+"/"+CurrentDate.getFullYear();
-            
-            $('.date-end').each(function() {
+
+            /*$('.date-end').each(function() {
                 //console.log($(this).text());
                 if ($.trim($(this).text()) == dataFormated) {
                     $('html, body').animate({
@@ -264,20 +264,16 @@
                     }, 100);
                     $(this).parent().parent().fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
                 }
-            });
+            });*/
 
             // Navigation click on button that is left to the search box for scrolling to actual subsidie
             $('#button-actual-subsidie-navigation').click(function() {
-                console.log("click en el span");
                 $('.date-end').each(function() {
-                    console.log("estoy dentro de cada fecha fin");
                     //console.log($(this).text());
                     if ($.trim($(this).text()) == dataFormated) {
-                        console.log("estoy dentro del if");
                         $('html, body').animate({
                             scrollTop: $(this).parent().offset().top=($(this).parent().offset().top)-($(this).parent().outerHeight())
                         }, 100);
-                        console.log("ya he hecho la animación");
                         $(this).parent().parent().fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
                     }
                 });
