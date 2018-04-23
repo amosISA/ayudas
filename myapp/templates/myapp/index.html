@@ -269,7 +269,9 @@
 
                 // Navigation click on button that is left to the search box for scrolling to actual subsidie
                 $('#button-actual-subsidie-navigation').click(function() {
+                    console.log("click en el span");
                     $('.date-end').each(function() {
+                        console.log("estoy dentro de cada fecha fin");
                         //console.log($(this).text());
                         if ($.trim($(this).text()) == dataFormated) {
                             console.log("estoy dentro del if");
