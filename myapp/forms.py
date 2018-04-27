@@ -76,7 +76,7 @@ class SubvencionForm(forms.ModelForm):
             'responsable': forms.CheckboxSelectMultiple(),
             'colectivo': forms.CheckboxSelectMultiple(),
         }
-        exclude = ('slug',)
+        exclude = ('slug', 'users_like',)
 
     # def __init__(self, *args, **kwargs):
     #     super(SubvencionForm, self).__init__(*args, **kwargs)
