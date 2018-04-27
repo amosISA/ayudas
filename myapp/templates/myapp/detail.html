@@ -126,13 +126,13 @@
                         <div class="row">
                             <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
                                 <!-- Procedimiento -->
-                                <label for="id_bases">procedimiento:</label>
-                                <textarea id="id_bases" rows="1" cols="20" class="form-control" readonly {% if subvencion.procedimiento %}tabindex="0" data-toggle="popover" data-trigger="hover" data-html="true" title="Procedimiento" data-content="<a href='{{ subvencion.procedimiento }}' target='_blank'>{{ subvencion.procedimiento }}</a>"{% endif %}>{{ subvencion.procedimiento }}</textarea>
+                                <label for="id_procedimiento">procedimiento:</label>
+                                <textarea id="id_procedimiento" rows="1" cols="20" class="form-control" readonly {% if subvencion.procedimiento %}tabindex="0" data-toggle="popover" data-trigger="hover" data-html="true" title="Procedimiento" data-content="<a href='{{ subvencion.procedimiento }}' target='_blank'>{{ subvencion.procedimiento }}</a>"{% endif %}>{{ subvencion.procedimiento }}</textarea>
                             </div>
                             <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
-                                <!-- Solicitud -->
-                                <label for="id_solicitud">Solicitud:</label>
-                                <textarea id="id_solicitud" rows="1" cols="20" class="form-control" readonly {% if subvencion.solicitud %}tabindex="0" data-toggle="popover" data-trigger="hover" data-html="true" title="Solicitud" data-content="<a href='{{ subvencion.solicitud }}' target='_blank'>{{ subvencion.solicitud }}</a>"{% endif %}>{{ subvencion.solicitud }}</textarea>
+                                <!-- Bases -->
+                                <label for="id_bases">Bases:</label>
+                                <textarea id="id_bases" rows="1" cols="20" class="form-control" readonly {% if subvencion.bases %}tabindex="0" data-toggle="popover" data-trigger="hover" data-html="true" title="Bases" data-content="<a href='{{ subvencion.bases }}' target='_blank'>{{ subvencion.bases }}</a>"{% endif %}>{{ subvencion.bases }}</textarea>
                             </div>
                         </div>
 

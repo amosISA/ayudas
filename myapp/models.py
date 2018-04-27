@@ -144,8 +144,8 @@ class Subvencion(models.Model):
 
     nombre = models.TextField(blank=False, default="")
     procedimiento = models.TextField(blank=True,
-                             help_text="Enlace para las bases")
-    solicitud = models.TextField(blank=True,
+                             help_text="Enlace para los bases")
+    bases = models.TextField(blank=True,
                                  help_text="Enlace para la solicitud")
     observaciones = models.TextField(blank=True,
                                      help_text="Enlace para observaciones")
