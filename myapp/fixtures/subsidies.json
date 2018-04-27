@@ -12,7 +12,7 @@
   "pk": 2,
   "fields": {
     "responsable": "Mar\u00eda Vicenta",
-    "user": null
+    "user": 10
   }
 },
 {
@@ -36,14 +36,14 @@
   "pk": 5,
   "fields": {
     "responsable": "Maril\u00f3",
-    "user": null
+    "user": 11
   }
 },
 {
   "model": "myapp.responsable",
   "pk": 6,
   "fields": {
-    "responsable": "Jose Mi",
+    "responsable": "Josemi",
     "user": 7
   }
 },
@@ -69,6 +69,22 @@
   "fields": {
     "responsable": "Agnieszka",
     "user": 6
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 12,
+  "fields": {
+    "responsable": "Angel",
+    "user": 8
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 13,
+  "fields": {
+    "responsable": "Mar\u00eda Teresa",
+    "user": 9
   }
 },
 {
@@ -475,7 +491,7 @@
   "model": "myapp.subvencion",
   "pk": 1,
   "fields": {
-    "user": 2,
+    "user": 5,
     "inicio": "2018-01-03",
     "fin": "2018-02-02",
     "created": "2018-02-02T18:49:48Z",
@@ -504,14 +520,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 2,
   "fields": {
-    "user": 2,
+    "user": 5,
     "inicio": "2018-01-03",
     "fin": "2018-02-02",
     "created": "2018-02-02T19:05:51Z",
@@ -539,14 +556,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 3,
   "fields": {
-    "user": 2,
+    "user": 5,
     "inicio": "2018-01-03",
     "fin": "2018-02-02",
     "created": "2018-02-02T19:09:41Z",
@@ -576,14 +594,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 4,
   "fields": {
-    "user": 2,
+    "user": 5,
     "inicio": "2018-02-06",
     "fin": "2018-02-05",
     "created": "2018-02-02T19:15:45Z",
@@ -611,14 +630,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 5,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-01-23",
     "fin": "2018-02-22",
     "created": "2018-02-02T20:24:00Z",
@@ -647,14 +667,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 6,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2016-12-30",
     "fin": "2017-01-30",
     "created": "2018-02-02T20:45:20Z",
@@ -679,10 +700,15 @@
       2
     ],
     "se_relaciona_con": [
-      45
+      45,
+      81,
+      98
     ],
     "colectivo": [
       1
+    ],
+    "users_like": [
+      2
     ]
   }
 },
@@ -690,11 +716,11 @@
   "model": "myapp.subvencion",
   "pk": 9,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-13",
     "fin": "2018-05-16",
     "created": "2018-02-18T17:25:59Z",
-    "updated": "2018-04-16T19:13:08Z",
+    "updated": "2018-04-25T12:27:27Z",
     "slug": "W7Qouo",
     "nombre": "Ayudas para la aplicaci\u00f3n de medidas de gesti\u00f3n forestal sostenible en el marco del Programa de Desarrollo Rural de la Comunitat Valenciana 2014-2020",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18518",
@@ -707,19 +733,23 @@
     "cuantia": "4.000 - 10.000 \u20ac",
     "descripcion": "Concesi\u00f3n de ayuda para la realizaci\u00f3n de inversiones destinadas al desarrollo de zonas forestales y a la mejora de la viabilidad de los bosques, basadas en la gesti\u00f3n sostenible y multifuncional de los mismos:\r\n\r\n- Operaci\u00f3n 8.5.1. Instrumentos de gesti\u00f3n forestal sostenible;\r\n- Operaci\u00f3n 8.5.2. Gesti\u00f3n forestal sostenible para la mejora ambiental, paisaj\u00edstica y fomento de los ecosistemas forestales;\r\n- Operaci\u00f3n 8.6.1. Inversiones para la transformaci\u00f3n y comercializaci\u00f3n de productos forestales.",
     "estado": 4,
-    "comentarios": "<p>JC: 16-04-2018: Se amplia el plazo hasta el 16 de mayo. Carmen no contesta. Hay que mirar el presupuesto.</p>\r\n<p>28-03-2018 - tras reuni&oacute;n el d&iacute;a de ayer con Raimon seguimos trabajando en el asunto. Visito registro de la propiedad y sigo pista del \"certificado catastral\" y lo consigo. Hoy hablar&eacute; con alguno de los propietarios colindantes a ver que opinan. (24-03-2018)- le voy a proponer a Raimon P&eacute;rez que nos centremos en esta ayuda y descartemos la de planes contra incendios.</p>",
+    "comentarios": "<p>JC: 25-04-2018: Pues todo ha ido bien estos d&iacute;as. Se pusieron en contacto conmigo, en concreto Juan R. Gazquez, Jefe de la Secci&oacute;n Forestal. Que pusiermos las hect&aacute;reas con el arbolado que hubiera actualmente. Hablo seguidamente con Raimon para transmitirle la informaci&oacute;n. M&aacute;s tarde me env&iacute;a la nueva propuesta (de palabra) que significa que no tendr&iacute;amos que poner dinero para la redacci&oacute;n del Plan. Le pido a @MVicenta que me vaya sacando los certificados catastrales. Los tengo encima de mi mesa en papel. Ahora env&iacute;o correo a @MVicenta para que me pase los pdf y subirlos al expediente que acabo de crear. El viernes hablar&eacute; con Raimon.</p>\r\n<p>JC: 16-04-2018: Se amplia el plazo hasta el 16 de mayo. Carmen no contesta. Hay que mirar el presupuesto.</p>\r\n<p>28-03-2018 - tras reuni&oacute;n el d&iacute;a de ayer con Raimon seguimos trabajando en el asunto. Visito registro de la propiedad y sigo pista del \"certificado catastral\" y lo consigo. Hoy hablar&eacute; con alguno de los propietarios colindantes a ver que opinan. (24-03-2018)- le voy a proponer a Raimon P&eacute;rez que nos centremos en esta ayuda y descartemos la de planes contra incendios.</p>",
     "drive": "https://drive.google.com/open?id=1r1tyYh1YhZ3IVvq-3AKaP_-Mmpi3FvTr",
-    "gestiona_expediente": "-",
+    "gestiona_expediente": "3/2018 EXP. 32",
     "responsable": [
       1
     ],
     "se_relaciona_con": [
       10,
       67,
-      68
+      68,
+      95
     ],
     "colectivo": [
       1
+    ],
+    "users_like": [
+      5
     ]
   }
 },
@@ -727,7 +757,7 @@
   "model": "myapp.subvencion",
   "pk": 10,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-15",
     "fin": "2018-03-28",
     "created": "2018-02-20T07:32:41Z",
@@ -752,18 +782,20 @@
     ],
     "se_relaciona_con": [
       67,
+      95,
       9
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 11,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-14",
     "fin": "2018-03-12",
     "created": "2018-02-20T08:21:01Z",
@@ -793,14 +825,15 @@
     ],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 12,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-14",
     "fin": "2018-03-12",
     "created": "2018-02-20T08:52:36Z",
@@ -832,14 +865,15 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 13,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2017-12-27",
     "fin": "2018-05-31",
     "created": "2018-02-20T09:04:54Z",
@@ -868,14 +902,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 14,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-17",
     "fin": "2018-03-13",
     "created": "2018-02-20T17:09:00Z",
@@ -906,14 +941,15 @@
     "colectivo": [
       1,
       2
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 15,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-01-20",
     "fin": "2018-05-31",
     "created": "2018-02-20T17:19:19Z",
@@ -940,7 +976,8 @@
     "se_relaciona_con": [
       16
     ],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
@@ -973,14 +1010,15 @@
     "se_relaciona_con": [
       15
     ],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 18,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2017-12-27",
     "fin": "2018-09-17",
     "created": "2018-02-20T17:29:12Z",
@@ -1004,14 +1042,15 @@
       3
     ],
     "se_relaciona_con": [],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 19,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2017-12-27",
     "fin": "2018-06-15",
     "created": "2018-02-20T17:46:26Z",
@@ -1036,7 +1075,8 @@
       6
     ],
     "se_relaciona_con": [],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
@@ -1067,14 +1107,15 @@
       1
     ],
     "se_relaciona_con": [],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 21,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2017-12-20",
     "fin": "2018-05-31",
     "created": "2018-02-21T07:59:34Z",
@@ -1103,14 +1144,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 22,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-17",
     "fin": "2018-03-13",
     "created": "2018-02-21T08:08:12Z",
@@ -1136,7 +1178,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -1167,14 +1210,15 @@
       1
     ],
     "se_relaciona_con": [],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 24,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-08",
     "fin": "2018-03-26",
     "created": "2018-02-22T10:45:15Z",
@@ -1200,14 +1244,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       2
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 25,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-22",
     "fin": "2018-03-13",
     "created": "2018-02-22T19:20:06Z",
@@ -1233,7 +1278,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       4
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -1264,14 +1310,15 @@
       1
     ],
     "se_relaciona_con": [],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 27,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-22",
     "fin": "2018-03-22",
     "created": "2018-02-24T18:11:57Z",
@@ -1303,14 +1350,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 28,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-26",
     "fin": "2018-03-26",
     "created": "2018-02-26T18:14:23Z",
@@ -1338,18 +1386,19 @@
     "se_relaciona_con": [
       27
     ],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 29,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-26",
     "fin": "2018-03-31",
     "created": "2018-02-26T20:03:53Z",
-    "updated": "2018-04-13T05:49:50Z",
+    "updated": "2018-04-24T08:25:58Z",
     "slug": "m4RMg4",
     "nombre": "PIMA Residuos y PEMAR",
     "bases": "https://drive.google.com/open?id=1TsrLBMyTOKSF3p-579QTmUwNvVlBzElu",
@@ -1362,7 +1411,7 @@
     "cuantia": "",
     "descripcion": "Promover actuaciones que permitan reducir las emisiones de gases de efecto invernadero (GEI) y avanzar en la consecuci\u00f3n de los\r\nobjetivos de la Directiva 2008/98/CE de Residuos, de la Ley 22/2011, de 28 de julio, de residuos y suelos contaminados, del Plan Estatal Marco de Gesti\u00f3n de Residuos (PEMAR), as\u00ed como en el cumplimiento de los objetivos relativos a las energ\u00edas renovables.\r\nCon estas ayudas se promueve especialmente la implantaci\u00f3n de proyectos innovadores por parte de entidades locales que est\u00e1n lejos todav\u00eda de alcanzar los objetivos comunitarios.",
     "estado": 3,
-    "comentarios": "JC - 13-04-2018: La envi\u00e9 finalmente por correo a Piquer. No tengo noticias. La semana que viene lo volvemos a mirar.\r\n\r\nJC - 06/04/2018 - estoy a punto de lanzar la subvenci\u00f3n. La subo al gestiona. y bueno, no s\u00e9 si el lunes podremos enviarla. Ya veremos. sino, pues ya tenemos avanzado el tema para otro a\u00f1o.\r\n\r\n\r\nCompostadores dom\u00e9sticos\r\nCompostadores para viviendas unifamiliares con jard\u00edn o huerto en los que se los depositen y se composten los biorresiduos. Deber\u00e1n incorporar, como m\u00ednimo, la identificaci\u00f3n (con una pegatina o serigraf\u00eda) de los materiales que se pueden depositar en su interior.\r\n80 \u20ac/compostador\r\n\r\nActuaciones de formaci\u00f3n y seguimiento del proyecto\r\nLas actuaciones de formaci\u00f3n y seguimiento deber\u00e1n incluir un plan de trabajo. En el caso de compostaje comunitario tambi\u00e9n incluir\u00e1n una gu\u00eda que detalle los biorresiduos objeto de compostaje para cada vivienda participante. En el caso de compostaje dom\u00e9stico tambi\u00e9n incluir\u00e1n un manual de compostaje para cada vivienda participante.\r\n12 \u20ac/habitante\r\n\r\nContenedores para la v\u00eda p\u00fablica (molar\u00eda con tarjeta)\r\nLos contenedores para la recogida separada de biorresiduos en la v\u00eda p\u00fablica deber\u00e1n ser, parcial o totalmente, de color marr\u00f3n o incorporar una identificaci\u00f3n de color marr\u00f3n. La resistencia de los contenedores ser\u00e1 la equivalente al peso del contenedor lleno de materia org\u00e1nica y \u00e9stos deber\u00e1n permitir la incorporaci\u00f3n de sistemas de identificaci\u00f3n y pesado. El contenedor incluir\u00e1 una impresi\u00f3n permanente de los materiales que pueden ser depositados en su interior.\r\n5 \u20ac/habitante atendido\r\n\r\n29-03-2018 - He hablado con Patricia de Spora.\r\nLes env\u00edo presupuesto con varias cosas. La semana que viene hablaremos.",
+    "comentarios": "<p>JC: 23-04-2018: La semana anterior visito al Jefe servicio residuos Emili Gombau, me confirma que se pudo enviar la subvenci&oacute;n al ministerio. Tambi&eacute;n hoy mismo Joan Piquer me lo confirma.</p>\r\n<p>JC - 13-04-2018: La envi&eacute; finalmente por correo a Piquer. No tengo noticias. La semana que viene lo volvemos a mirar. JC - 06/04/2018 - estoy a punto de lanzar la subvenci&oacute;n. La subo al gestiona. y bueno, no s&eacute; si el lunes podremos enviarla. Ya veremos. sino, pues ya tenemos avanzado el tema para otro a&ntilde;o. Compostadores dom&eacute;sticos Compostadores para viviendas unifamiliares con jard&iacute;n o huerto en los que se los depositen y se composten los biorresiduos. Deber&aacute;n incorporar, como m&iacute;nimo, la identificaci&oacute;n (con una pegatina o serigraf&iacute;a) de los materiales que se pueden depositar en su interior. 80 &euro;/compostador Actuaciones de formaci&oacute;n y seguimiento del proyecto Las actuaciones de formaci&oacute;n y seguimiento deber&aacute;n incluir un plan de trabajo. En el caso de compostaje comunitario tambi&eacute;n incluir&aacute;n una gu&iacute;a que detalle los biorresiduos objeto de compostaje para cada vivienda participante. En el caso de compostaje dom&eacute;stico tambi&eacute;n incluir&aacute;n un manual de compostaje para cada vivienda participante. 12 &euro;/habitante Contenedores para la v&iacute;a p&uacute;blica (molar&iacute;a con tarjeta) Los contenedores para la recogida separada de biorresiduos en la v&iacute;a p&uacute;blica deber&aacute;n ser, parcial o totalmente, de color marr&oacute;n o incorporar una identificaci&oacute;n de color marr&oacute;n. La resistencia de los contenedores ser&aacute; la equivalente al peso del contenedor lleno de materia org&aacute;nica y &eacute;stos deber&aacute;n permitir la incorporaci&oacute;n de sistemas de identificaci&oacute;n y pesado. El contenedor incluir&aacute; una impresi&oacute;n permanente de los materiales que pueden ser depositados en su interior. 5 &euro;/habitante atendido 29-03-2018 - He hablado con Patricia de Spora. Les env&iacute;o presupuesto con varias cosas. La semana que viene hablaremos.</p>",
     "drive": "https://drive.google.com/open?id=1i3uHArLXE5Ph29lfLWQ2rf_eydNBcMnM",
     "gestiona_expediente": "3/2018 EXP. 22",
     "responsable": [
@@ -1372,18 +1421,20 @@
     ],
     "se_relaciona_con": [
       67,
-      68
+      68,
+      93
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 30,
   "fields": {
-    "user": 3,
+    "user": 5,
     "inicio": "2018-02-22",
     "fin": "2018-10-31",
     "created": "2018-02-28T17:28:41Z",
@@ -1408,14 +1459,15 @@
       4
     ],
     "se_relaciona_con": [],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 32,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-02",
     "fin": "2018-03-15",
     "created": "2018-03-02T12:43:13Z",
@@ -1443,7 +1495,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -1475,14 +1528,15 @@
       3
     ],
     "se_relaciona_con": [],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 34,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-01",
     "fin": "2018-03-22",
     "created": "2018-03-02T13:28:28Z",
@@ -1513,14 +1567,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 35,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-01",
     "fin": "2018-03-22",
     "created": "2018-03-03T15:47:28Z",
@@ -1552,14 +1607,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 36,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-07",
     "fin": "2018-04-04",
     "created": "2018-03-07T09:02:33Z",
@@ -1586,14 +1642,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 37,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-06",
     "fin": "2018-04-10",
     "created": "2018-03-07T09:05:52Z",
@@ -1619,14 +1676,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 38,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-08",
     "fin": "2018-03-28",
     "created": "2018-03-08T12:43:18Z",
@@ -1655,14 +1713,15 @@
       38,
       39
     ],
-    "colectivo": []
+    "colectivo": [],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 39,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-08",
     "fin": "2018-03-28",
     "created": "2018-03-08T12:46:49Z",
@@ -1694,14 +1753,15 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 40,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-01",
     "fin": "2018-04-03",
     "created": "2018-03-08T12:54:49Z",
@@ -1726,18 +1786,20 @@
       2
     ],
     "se_relaciona_con": [
-      71
+      71,
+      97
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 41,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-01",
     "fin": "2018-03-20",
     "created": "2018-03-08T13:20:27Z",
@@ -1761,17 +1823,20 @@
       1,
       5
     ],
-    "se_relaciona_con": [],
+    "se_relaciona_con": [
+      97
+    ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 42,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-01",
     "fin": "2018-03-20",
     "created": "2018-03-08T13:23:57Z",
@@ -1798,14 +1863,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 43,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-13",
     "fin": "2018-04-03",
     "created": "2018-03-14T06:38:24Z",
@@ -1839,18 +1905,19 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 44,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-15",
     "fin": "2018-03-30",
     "created": "2018-03-15T07:12:31Z",
-    "updated": "2018-04-03T21:24:02Z",
+    "updated": "2018-04-27T05:45:36Z",
     "slug": "8x2yJz",
     "nombre": "Solicitud de ayudas destinadas a ayuntamientos, mancomunidades de municipios y entidades locales menores de la Comunidad Valenciana y de El Carche que realizan actividades de promoci\u00f3n del uso del valenciano.",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=3219",
@@ -1862,15 +1929,16 @@
     "gobierno": null,
     "cuantia": "",
     "descripcion": "Las ayudas van dirigidas a subvencionar la realizaci\u00f3n de programas y actividades de promoci\u00f3n del uso oficial y social del valenciano en el per\u00edodo comprendido entre el 9 de noviembre de 2017, fecha de finalizaci\u00f3n de la justificaci\u00f3n de la convocatoria de subvenciones del a\u00f1o 2017, hasta el 31 de diciembre de 2018.\r\n\r\n2. Programas solicitados.\r\na) Rotulaciones y se\u00f1alizaciones.\r\nb) Cursos de valenciano.\r\nc) Campa\u00f1as y acciones de voluntariado ling\u00fc\u00edstico.\r\nd) Campa\u00f1as y acciones de acogida ling\u00fc\u00edstica a reci\u00e9n llegados.\r\ne) Actividades culturales.\r\nf) Acciones, actividades y campa\u00f1as municipales de sensibilizaci\u00f3n y promoci\u00f3n del uso del valenciano.\r\ng) Creaci\u00f3n y funcionamiento de oficinas o servicios de promoci\u00f3n del valenciano.\r\nh) Cl\u00e1usulas sociales. Disponer de un plan de igualdad y de integraci\u00f3n social.\r\ni) Programa del uso del valenciano en las redes sociales de la entidad.",
-    "estado": 9,
-    "comentarios": "JC: 3-4-2018: Podr\u00edamos haber pedido un curso de valenciano y actividades culturales en general, pero... \u00bfalguien sabe algo del concejal de cultura?\r\n\r\nyo no puedo gestionar todas las subvenciones\r\n\r\n-----",
+    "estado": 4,
+    "comentarios": "<p>JC: 3-4-2018: Podr&iacute;amos haber pedido un curso de valenciano y actividades culturales en general, pero... &iquest;alguien sabe algo del concejal de cultura? yo no puedo gestionar todas las subvenciones -----</p>",
     "drive": "",
     "gestiona_expediente": "-",
     "responsable": [
       1,
       2,
       3,
-      5
+      5,
+      13
     ],
     "se_relaciona_con": [
       1
@@ -1878,14 +1946,15 @@
     "colectivo": [
       1,
       2
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 45,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-16",
     "fin": "2018-04-27",
     "created": "2018-03-16T07:47:42Z",
@@ -1913,12 +1982,14 @@
     "se_relaciona_con": [
       6,
       43,
+      95,
       13,
       21
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -1956,14 +2027,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 47,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-08",
     "fin": "2018-03-29",
     "created": "2018-03-16T09:10:15Z",
@@ -1990,14 +2062,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 48,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-09",
     "fin": "2018-04-03",
     "created": "2018-03-16T09:23:13Z",
@@ -2027,14 +2100,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 49,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-26",
     "fin": "2018-04-18",
     "created": "2018-03-28T09:38:24Z",
@@ -2061,7 +2135,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -2097,14 +2172,15 @@
     ],
     "colectivo": [
       2
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 51,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-17",
     "fin": "2018-05-16",
     "created": "2018-03-28T10:21:26Z",
@@ -2132,14 +2208,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 52,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-17",
     "fin": "2018-04-05",
     "created": "2018-03-28T10:31:25Z",
@@ -2166,14 +2243,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 53,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-06",
     "fin": "2018-05-10",
     "created": "2018-03-28T11:17:32Z",
@@ -2201,14 +2279,15 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 54,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-06",
     "fin": "2018-04-04",
     "created": "2018-03-28T11:20:54Z",
@@ -2238,7 +2317,8 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -2271,14 +2351,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 56,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-08",
     "fin": "2018-03-29",
     "created": "2018-03-28T11:27:42Z",
@@ -2306,7 +2387,8 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -2339,14 +2421,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 58,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-09",
     "fin": "2018-04-03",
     "created": "2018-03-28T11:40:55Z",
@@ -2373,14 +2456,15 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 59,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-21",
     "fin": "2018-04-04",
     "created": "2018-03-28T11:43:56Z",
@@ -2408,14 +2492,15 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 60,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-17",
     "fin": "2018-04-05",
     "created": "2018-03-28T11:47:21Z",
@@ -2443,14 +2528,15 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 61,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-02-22",
     "fin": "2018-04-16",
     "created": "2018-03-28T11:49:34Z",
@@ -2478,14 +2564,15 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 62,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-30",
     "fin": "2018-04-18",
     "created": "2018-03-29T08:44:14Z",
@@ -2516,18 +2603,19 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 63,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-28",
     "fin": "2018-04-25",
     "created": "2018-04-06T12:27:09Z",
-    "updated": "2018-04-06T21:27:45Z",
+    "updated": "2018-04-25T06:46:31Z",
     "slug": "ikO42a",
     "nombre": "cursos del \u00e1rea de emergencias, para el a\u00f1o 2018 del personal de los servicios de intervenci\u00f3n frente a emergencias contemplados en la Ley 13/2010, de 23 de noviembre, de la Generalitat, de Protecci\u00f3n Civil y Emergencias",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=15178",
@@ -2539,8 +2627,8 @@
     "gobierno": null,
     "cuantia": "",
     "descripcion": "Se podr\u00e1n formular las solicitudes de forma individual, salvo en los casos de los cursos destinados a Bomberos Voluntarios, miembros de las Agrupaciones Locales de Voluntarios de Protecci\u00f3n Civil y miembros de asociaciones y de entidades que colaboren en las labores de protecci\u00f3n civil, donde ser\u00e1n los Consorcios Provinciales de Bomberos, los ayuntamientos y las entidades de que dependa, quienes formulen las solicitudes.",
-    "estado": 4,
-    "comentarios": "Los objetivos generales de los diferentes cursos que se convocan, son los siguientes:\r\n\r\na) Dotar al alumnado participante en los cursos de un adecuado y actualizado nivel de conocimientos profesionales.\r\nb) Proporcionar al alumnado participante las herramientas necesarias para llevar a la pr\u00e1ctica los conocimientos te\u00f3ricos impartidos.\r\nc) Adiestrar a los destinatarios participantes en los cometidos de la gesti\u00f3n de emergencias.\r\nd) Actualizar los conocimientos t\u00e9cnicos, normativos y legislativos en las distintas \u00e1reas para llevar a cabo sus funciones con eficacia y garant\u00eda jur\u00eddica.\r\ne) Sensibilizar a los participantes respecto a los diferentes factores que condicionan la eficacia del trabajo.\r\nf) Desarrollar los conocimientos y habilidades necesarios para optimizar las relaciones interpersonales en su trabajo y conocer y practicar estrategias y t\u00e1cticas de comunicaci\u00f3n interpersonal que permitan resolver, de manera eficaz, las situaciones de crisis.\r\ng) Entrenar al alumnado en h\u00e1bitos para intervenciones profesionales haciendo un uso correcto de sus capacidades.\r\nh) Dar a conocer los instrumentos necesarios que permitan el procesamiento de informaci\u00f3n y documentaci\u00f3n b\u00e1sicas de la gesti\u00f3n de emergencias, as\u00ed como las habilidades para el manejo de las nuevas telecomunicaciones.",
+    "estado": 10,
+    "comentarios": "<p>JC: 25-04-2018: tenemos que seguir insistiendo con el tema de crear un grupo de voluntarios de protecci&oacute;n civil.</p>\r\n<p>Los objetivos generales de los diferentes cursos que se convocan, son los siguientes: a) Dotar al alumnado participante en los cursos de un adecuado y actualizado nivel de conocimientos profesionales. b) Proporcionar al alumnado participante las herramientas necesarias para llevar a la pr&aacute;ctica los conocimientos te&oacute;ricos impartidos. c) Adiestrar a los destinatarios participantes en los cometidos de la gesti&oacute;n de emergencias. d) Actualizar los conocimientos t&eacute;cnicos, normativos y legislativos en las distintas &aacute;reas para llevar a cabo sus funciones con eficacia y garant&iacute;a jur&iacute;dica. e) Sensibilizar a los participantes respecto a los diferentes factores que condicionan la eficacia del trabajo. f) Desarrollar los conocimientos y habilidades necesarios para optimizar las relaciones interpersonales en su trabajo y conocer y practicar estrategias y t&aacute;cticas de comunicaci&oacute;n interpersonal que permitan resolver, de manera eficaz, las situaciones de crisis. g) Entrenar al alumnado en h&aacute;bitos para intervenciones profesionales haciendo un uso correcto de sus capacidades. h) Dar a conocer los instrumentos necesarios que permitan el procesamiento de informaci&oacute;n y documentaci&oacute;n b&aacute;sicas de la gesti&oacute;n de emergencias, as&iacute; como las habilidades para el manejo de las nuevas telecomunicaciones.</p>",
     "drive": "",
     "gestiona_expediente": "-",
     "responsable": [
@@ -2550,19 +2638,21 @@
     "se_relaciona_con": [],
     "colectivo": [
       3,
-      1
-    ]
+      1,
+      4
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 64,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-27",
-    "fin": "2018-04-24",
+    "fin": "2018-04-26",
     "created": "2018-04-06T12:33:33Z",
-    "updated": "2018-04-20T21:02:31Z",
+    "updated": "2018-04-27T08:26:21Z",
     "slug": "bpin9u",
     "nombre": "Subvenciones destinadas a las entidades locales de la Comunitat Valenciana hasta 5.000 habitantes, para el fomento de la participaci\u00f3n ciudadana, la transparencia y el acceso a la informaci\u00f3n p\u00fablica, durante el ejercicio 2018",
     "bases": "http://www.gva.es/es/inicio/procedimientos;jsessionid=hlw6h7yhNfmGfxM2XhFcbMjyWHZbvk3X2JhM2TlKJlVx03CHWHZ1!295945142!1522217498940?id_proc=19282",
@@ -2575,17 +2665,21 @@
     "cuantia": "5.000 \u20ac",
     "descripcion": "Facilitar el cumplimiento de los objetivos establecidos tanto en la ley estatal 19/2013 de 9 de diciembre, de Transparencia, Acceso a la Informaci\u00f3n P\u00fablica y Buen Gobierno, como en la ley auton\u00f3mica 2/2015 de 2 de abril, de Transparencia, Buen Gobierno y Participaci\u00f3n Ciudadana, mediante la realizaci\u00f3n de proyectos o actuaciones concretas que promuevan la participaci\u00f3n local ciudadana, tanto individual como colectiva, el fomento del asociacionismo, la transparencia de la actividad p\u00fablica y el acceso de la ciudadan\u00eda a la informaci\u00f3n p\u00fablica.",
     "estado": 4,
-    "comentarios": "<p>JC: 20-04-2018: me he leido la ORDEN 4/2016, de 3 de junio de 2016. Est&aacute; un poco cogido con pinzas lo del mural sino involucramos a las distintas asociaciones: amas de casa, j&oacute;venes, amics des museu, empresarios. Esto al menos para la modalidad I. Para redondearlo tendr&iacute;amos que traer a alg&uacute;n experto en asociaciones como el amigo de Angela del Campello.&nbsp;</p>\r\n<p>Respecto a la modalidad II, aunque las especifciaciones ponen m&aacute;s enfasis en la transparencia, bien podr&iacute;amos reforzar los cuatro puntos de la nueva pol&iacute;tica: transparentcia, reutilizaci&oacute;n datos, buen gobierno y toma de decisiones.</p>\r\n<p>JC: 10-04-2018: Se me ocurre que la subvenci&oacute;n podr&iacute;a ir por otra vertiente: - MODALIDAD 2 (entre otras) &middot; la elaboraci&oacute;n de otras herramientas que potencien la transparencia y el acceso de los ciudadanos a la informaci&oacute;n p&uacute;blica &middot; elaboraci&oacute;n de procedimientos telem&aacute;ticos para garantizar el libre acceso de los ciudadanos/as a la informaci&oacute;n Podr&iacute;a pagarnos un 40% de la n&oacute;mina de Amos. Vamos generando interfaces y -MODALIDAD 1 &middot; Proyectos y actuaciones que fomenten la participaci&oacute;n ciudadana y el fortalecimiento del tejido asociativo (modalidad 1). &middot; para la asociaci&oacute;n de j&oacute;venes. pintar un mural en donde el blanco. Juntar esto con los participantes del curso de pintura y Toni Ferri y agitamos. Env&iacute;o correo @ferri para ver si puede coordinar con el resto de pintores del pueblo unas jornadas de convivencia y pintar un mural. As&iacute; que hay que optar por las dos</p>",
+    "comentarios": "<p>JC: 27-04-2018: se firma y se env&iacute;a telem&aacute;ticamente. 26/04/2018 14.07.54 GVRTE - GV13SUGUS</p>\r\n<p>JC: 26-04-2018: terminamos de rellenar los formularios y los enviamos a Thierry para que firme. Llamo a Thierry para que firme.&nbsp;</p>\r\n<p>JC: 25/04/2018: estuve hablando con Irene, su segunda. Me explic&oacute; como poner los conceptos monetarios. Esta tarde he terminado de rellenar el formulario de presentaci&oacute;n del proyecto. Modalidad 2. Lo he subido al gestiona y env&iacute;o correo a @MVicenta para que ma&ntilde;ana lo terminemos y lo enviemos.</p>\r\n<p>JC: 24/04/2018: llamo a Ana Rodenas. Me llamar&aacute; su responsable de Participaci&oacute;n ciudadana.</p>\r\n<p>JC: 22/04/2018: a lo largo del fin de semana he ido rellenando el formulario de la modalidad 2. Hoy espero recibir la propuesta de la modalidad 2. Tengo que hablar con @MVicenta a ver si tenemos todo el papeleo necesario para poderla enviar.</p>\r\n<p>JC: 20-04-2018: me he leido la ORDEN 4/2016, de 3 de junio de 2016. Est&aacute; un poco cogido con pinzas lo del mural sino involucramos a las distintas asociaciones: amas de casa, j&oacute;venes, amics des museu, empresarios. Esto al menos para la modalidad I. Para redondearlo tendr&iacute;amos que traer a alg&uacute;n experto en asociaciones como el amigo de Angela del Campello.&nbsp;</p>\r\n<p>Respecto a la modalidad II, aunque las especifciaciones ponen m&aacute;s enfasis en la transparencia, bien podr&iacute;amos reforzar los cuatro puntos de la nueva pol&iacute;tica: transparentcia, reutilizaci&oacute;n datos, buen gobierno y toma de decisiones.</p>\r\n<p>JC: 10-04-2018: Se me ocurre que la subvenci&oacute;n podr&iacute;a ir por otra vertiente: - MODALIDAD 2 (entre otras) &middot; la elaboraci&oacute;n de otras herramientas que potencien la transparencia y el acceso de los ciudadanos a la informaci&oacute;n p&uacute;blica &middot; elaboraci&oacute;n de procedimientos telem&aacute;ticos para garantizar el libre acceso de los ciudadanos/as a la informaci&oacute;n Podr&iacute;a pagarnos un 40% de la n&oacute;mina de Amos. Vamos generando interfaces y -MODALIDAD 1 &middot; Proyectos y actuaciones que fomenten la participaci&oacute;n ciudadana y el fortalecimiento del tejido asociativo (modalidad 1). &middot; para la asociaci&oacute;n de j&oacute;venes. pintar un mural en donde el blanco. Juntar esto con los participantes del curso de pintura y Toni Ferri y agitamos. Env&iacute;o correo @ferri para ver si puede coordinar con el resto de pintores del pueblo unas jornadas de convivencia y pintar un mural. As&iacute; que hay que optar por las dos</p>",
     "drive": "https://drive.google.com/open?id=1JzmsyTiY7_3IqPGndm--alCVQXeobUGW",
-    "gestiona_expediente": "-",
+    "gestiona_expediente": "3/2018 EXP. 30",
     "responsable": [
-      1
+      1,
+      2
     ],
     "se_relaciona_con": [],
     "colectivo": [
       3,
       1,
       2
+    ],
+    "users_like": [
+      5
     ]
   }
 },
@@ -2593,11 +2687,11 @@
   "model": "myapp.subvencion",
   "pk": 65,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-29",
     "fin": "2018-04-23",
     "created": "2018-04-06T21:35:46Z",
-    "updated": "2018-04-20T05:56:18Z",
+    "updated": "2018-04-23T07:31:03Z",
     "slug": "zD3lJz",
     "nombre": "Solicitud de ayudas del programa mixto de empleo-formaci\u00f3n Talleres de Empleo para el ejercicio 2018",
     "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=19286",
@@ -2610,7 +2704,7 @@
     "cuantia": "",
     "descripcion": "El programa de Talleres de Empleo se configura como un programa mixto de empleo y formaci\u00f3n que tiene por objeto mejorar la empleabilidad de las personas desempleadas a las que va dirigido, mediante la realizaci\u00f3n de obras o servicios de inter\u00e9s general y/o social que posibiliten al alumnado/trabajador la realizaci\u00f3n de un trabajo efectivo mediante el contrato para la formaci\u00f3n y el aprendizaje, que junto con la formaci\u00f3n profesional para el empleo recibida, procure su cualificaci\u00f3n profesional y favorezca su inserci\u00f3n laboral.",
     "estado": 10,
-    "comentarios": "<p>DESTINATARIOS: Las personas destinatarias de este programa deber&aacute;n cumplir los siguientes requisitos m&iacute;nimos: a) Ser mayor de 25 a&ntilde;os. b) Ser desempleadas, entendi&eacute;ndose como tales a las demandantes de empleo no ocupadas, registradas en un servicio p&uacute;blico de empleo. c) Cumplir los requisitos establecidos en la normativa de aplicaci&oacute;n para formalizar un contrato para la formaci&oacute;n y el aprendizaje. Con car&aacute;cter general, y siempre que cumplan los requisitos m&iacute;nimos exigidos, tendr&aacute;n la consideraci&oacute;n de colectivos prioritarios: las mujeres, en especial las v&iacute;ctimas de violencia de g&eacute;nero, las personas con discapacidad, las personas en situaci&oacute;n o riesgo de exclusi&oacute;n social, las personas mayores de 55 a&ntilde;os, las personas con baja cualificaci&oacute;n y las personas en paro de larga duraci&oacute;n.</p>",
+    "comentarios": "<p>JC: 23/04/2018: seguimos sin tiempo para definir toda la documentaci&oacute;n necesaria, adem&aacute;s seguimos sin local para el proyecto. Afortunadamente tenemos suficientes operarios para ir tirando. Probamos para la edici&oacute;n 2019.</p>\r\n<p>DESTINATARIOS: Las personas destinatarias de este programa deber&aacute;n cumplir los siguientes requisitos m&iacute;nimos: a) Ser mayor de 25 a&ntilde;os. b) Ser desempleadas, entendi&eacute;ndose como tales a las demandantes de empleo no ocupadas, registradas en un servicio p&uacute;blico de empleo. c) Cumplir los requisitos establecidos en la normativa de aplicaci&oacute;n para formalizar un contrato para la formaci&oacute;n y el aprendizaje. Con car&aacute;cter general, y siempre que cumplan los requisitos m&iacute;nimos exigidos, tendr&aacute;n la consideraci&oacute;n de colectivos prioritarios: las mujeres, en especial las v&iacute;ctimas de violencia de g&eacute;nero, las personas con discapacidad, las personas en situaci&oacute;n o riesgo de exclusi&oacute;n social, las personas mayores de 55 a&ntilde;os, las personas con baja cualificaci&oacute;n y las personas en paro de larga duraci&oacute;n.</p>",
     "drive": "",
     "gestiona_expediente": "-",
     "responsable": [
@@ -2620,7 +2714,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -2655,14 +2750,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 67,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-02",
     "fin": "2018-04-20",
     "created": "2018-04-06T21:50:17Z",
@@ -2697,14 +2793,15 @@
     "colectivo": [
       1,
       4
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 68,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-04-04",
     "fin": "2018-05-04",
     "created": "2018-04-09T20:09:51Z",
@@ -2737,14 +2834,15 @@
     "colectivo": [
       3,
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 69,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-03-29",
     "fin": "2018-04-19",
     "created": "2018-04-10T09:03:37Z",
@@ -2774,14 +2872,15 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 70,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2017-12-14",
     "fin": "2018-02-14",
     "created": "2018-04-10T12:33:38Z",
@@ -2808,14 +2907,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 71,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2017-12-07",
     "fin": "2018-01-31",
     "created": "2018-04-10T17:59:37Z",
@@ -2846,7 +2946,8 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -2877,11 +2978,13 @@
       1
     ],
     "se_relaciona_con": [
-      67
+      67,
+      95
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -2915,7 +3018,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -2948,7 +3052,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -2981,7 +3086,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -3015,7 +3121,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -3046,18 +3153,21 @@
       1
     ],
     "se_relaciona_con": [
-      78
+      78,
+      94,
+      93
     ],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 78,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2017-02-01",
     "fin": "2017-02-20",
     "created": "2018-04-13T19:47:01Z",
@@ -3086,7 +3196,8 @@
     ],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -3121,7 +3232,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -3156,18 +3268,19 @@
     "se_relaciona_con": [],
     "colectivo": [
       4
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 81,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-04-09",
     "fin": "2018-04-30",
     "created": "2018-04-13T21:20:32Z",
-    "updated": "2018-04-17T20:56:58Z",
+    "updated": "2018-04-27T07:05:07Z",
     "slug": "y1R5L3",
     "nombre": "Subvenciones para inversiones en restauraci\u00f3n de zonas degradadas por el vertido incontrolado de residuos",
     "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=229",
@@ -3180,17 +3293,25 @@
     "cuantia": "< 20.000 \u20ac",
     "descripcion": "A efectos de esta convocatoria, se entiende como restauraci\u00f3n de zonas degradadas por el vertido incontrolado de residuos la adecuaci\u00f3n de aquellas zonas de acceso libre en las que se haya producido vertido de residuos sin autorizaci\u00f3n, a fin de retirar los residuos vertidos y acondicionar la zona para su integraci\u00f3n paisaj\u00edstica y erradicaci\u00f3n del foco de vertido",
     "estado": 4,
-    "comentarios": "<p>JC: 17-04-2018: Leo las bases y es para vertidos:</p>\r\n<p>17 RESIDUOS DE LA CONSTRUCCION Y DEMOLICION (INCLUIDA LA TIERRA EXCAVADA DE ZONAS CONTAMINADAS)</p>\r\n<p>20 RESIDUOS MUNICIPALES (RESIDUOS DOMESTICOS Y RESIDUOS ASIMILABLES PROCEDENTES DE LOS COMERCIOS, INDUSTRIAS E INSTITUCIONES), INCLUIDAS LAS FRACCIONES RECOGIDAS SELECTIVAMENTE</p>\r\n<p>Y siguiendo leyendo se podr&iacute;a decir que tenemos todo lo necesario. Lo que si que tendr&aacute; que ver Josemi y Fernando es:</p>\r\n<p>-Acreditativo de la clasificaci&oacute;n y calificaci&oacute;n urban&iacute;stica de la parcela y/o parcelas afectadas por la actuaci&oacute;n.<br />- Acreditativo de la titularidad y disponibilidad de los terrenos y su puesta a disposici&oacute;n de esta Excma. Diputaci&oacute;n Provincial para la ejecuci&oacute;n de la actuaci&oacute;n.<br />- Acreditativo de estar en posesi&oacute;n de las autorizaciones o concesiones administrativas y de particulares que fueran precisas para permitir la iniciaci&oacute;n de la obra, si bien, en el caso de que no sean necesarias, deber&aacute; certificarse en dicho<br />t&eacute;rmino.<br />- Acreditativo de que las actuaciones previstas se adaptan al planeamiento urban&iacute;stico de dicha zona.</p>\r\n<p>----</p>\r\n<p>Las actuaciones subvencionadas ser&aacute;n ejecutadas por la Excma. Diputaci&oacute;n Provincial de Alicante, que se encargar&aacute; tambi&eacute;n de la redacci&oacute;n de los proyectos simplificados o memorias valoradas, de acuerdo con lo establecido en la normativa de contrataci&oacute;n de las Administraciones P&uacute;blicas, junto con la documentaci&oacute;n complementaria que los Servicios T&eacute;cnicos estimen realizar para la adecuada tramitaci&oacute;n del expediente, as&iacute; como de la coordinaci&oacute;n de seguridad y salud de la obra. Por tanto, la Excma. Diputaci&oacute;n Provincial de Alicante subvencionara en el 100% las actuaciones. Asimismo, la Excma. Diputaci&oacute;n se encargar&aacute; de la contrataci&oacute;n y direcci&oacute;n de las obras necesarias.</p>",
+    "comentarios": "<p>JC: 25-04-2018: Hablo con Maril&oacute;, que me remite a Fernando, para que me haga un documento de cesi&oacute;n. Viene a firmarlo Jos&eacute; Molines. Lo dejo en la mesa de @Thierry para que lo firme. El viernes que lo firme @Maril&oacute; y lanzamo la subvenci&oacute;n</p>\r\n<p>JC: 17-04-2018: Leo las bases y es para vertidos:</p>\r\n<p>17 RESIDUOS DE LA CONSTRUCCION Y DEMOLICION (INCLUIDA LA TIERRA EXCAVADA DE ZONAS CONTAMINADAS)</p>\r\n<p>20 RESIDUOS MUNICIPALES (RESIDUOS DOMESTICOS Y RESIDUOS ASIMILABLES PROCEDENTES DE LOS COMERCIOS, INDUSTRIAS E INSTITUCIONES), INCLUIDAS LAS FRACCIONES RECOGIDAS SELECTIVAMENTE</p>\r\n<p>Y siguiendo leyendo se podr&iacute;a decir que tenemos todo lo necesario. Lo que si que tendr&aacute; que ver Josemi y Fernando es:</p>\r\n<p>-Acreditativo de la clasificaci&oacute;n y calificaci&oacute;n urban&iacute;stica de la parcela y/o parcelas afectadas por la actuaci&oacute;n.<br />- Acreditativo de la titularidad y disponibilidad de los terrenos y su puesta a disposici&oacute;n de esta Excma. Diputaci&oacute;n Provincial para la ejecuci&oacute;n de la actuaci&oacute;n.<br />- Acreditativo de estar en posesi&oacute;n de las autorizaciones o concesiones administrativas y de particulares que fueran precisas para permitir la iniciaci&oacute;n de la obra, si bien, en el caso de que no sean necesarias, deber&aacute; certificarse en dicho<br />t&eacute;rmino.<br />- Acreditativo de que las actuaciones previstas se adaptan al planeamiento urban&iacute;stico de dicha zona.</p>\r\n<p>----</p>\r\n<p>Las actuaciones subvencionadas ser&aacute;n ejecutadas por la Excma. Diputaci&oacute;n Provincial de Alicante, que se encargar&aacute; tambi&eacute;n de la redacci&oacute;n de los proyectos simplificados o memorias valoradas, de acuerdo con lo establecido en la normativa de contrataci&oacute;n de las Administraciones P&uacute;blicas, junto con la documentaci&oacute;n complementaria que los Servicios T&eacute;cnicos estimen realizar para la adecuada tramitaci&oacute;n del expediente, as&iacute; como de la coordinaci&oacute;n de seguridad y salud de la obra. Por tanto, la Excma. Diputaci&oacute;n Provincial de Alicante subvencionara en el 100% las actuaciones. Asimismo, la Excma. Diputaci&oacute;n se encargar&aacute; de la contrataci&oacute;n y direcci&oacute;n de las obras necesarias.</p>",
     "drive": "https://drive.google.com/drive/folders/0B-6ZND28b8BsNjNJQkFpS3EyLVk?usp=sharing",
     "gestiona_expediente": "3/2018 EXP. 27",
     "responsable": [
       1,
+      2,
+      5,
       6,
       9
     ],
-    "se_relaciona_con": [],
+    "se_relaciona_con": [
+      6,
+      93
+    ],
     "colectivo": [
       1
+    ],
+    "users_like": [
+      5
     ]
   }
 },
@@ -3198,7 +3319,7 @@
   "model": "myapp.subvencion",
   "pk": 82,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-04-09",
     "fin": "2018-04-30",
     "created": "2018-04-13T21:24:48Z",
@@ -3227,7 +3348,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -3261,7 +3383,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -3294,14 +3417,15 @@
     "se_relaciona_con": [],
     "colectivo": [
       3
-    ]
+    ],
+    "users_like": []
   }
 },
 {
   "model": "myapp.subvencion",
   "pk": 85,
   "fields": {
-    "user": null,
+    "user": 5,
     "inicio": "2018-04-19",
     "fin": "2018-05-21",
     "created": "2018-04-19T11:04:01Z",
@@ -3329,7 +3453,8 @@
     "colectivo": [
       1,
       4
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -3363,7 +3488,8 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
-    ]
+    ],
+    "users_like": []
   }
 },
 {
@@ -3374,7 +3500,7 @@
     "inicio": "2018-04-16",
     "fin": "2018-05-05",
     "created": "2018-04-20T16:15:21Z",
-    "updated": "2018-04-20T16:15:21Z",
+    "updated": "2018-04-23T16:14:39Z",
     "slug": "TZptIs",
     "nombre": "Fomento y desarrollo - L\u00ednea 1.- Ferias y otros eventos comerciales.",
     "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=103",
@@ -3387,7 +3513,7 @@
     "cuantia": "< 6000 \u20ac",
     "descripcion": "Podr\u00e1n solicitar las subvenciones objeto de la presente l\u00ednea los Ayuntamientos y Entidades locales menores de la provincia de Alicante con poblaci\u00f3n inferior a 50.000 habitantes.",
     "estado": 4,
-    "comentarios": "<p>Son subvencionables dentro de esta l&iacute;nea, las actuaciones de gasto corriente para la realizaci&oacute;n de ferias y otros eventos comerciales que se especifican a continuaci&oacute;n:<br />- Asistencia t&eacute;cnica para la organizaci&oacute;n y montaje de la totalidad de la feria o evento comercial. Cuando se contrate la totalidad de la feria con un &uacute;nico proveedor.<br />Cuando la feria se organice desde la propia entidad:<br />- Alquiler de stands y/o carpas.<br />- Publicidad y promoci&oacute;n de la feria o evento comercial.<br />- Alquiler de iluminaci&oacute;n de la feria o evento comercial.<br />- Sonido y megafon&iacute;a de la feria o evento comercial.<br />- Realizaci&oacute;n de degustaciones de productos aut&oacute;ctonos locales y cuya cuant&iacute;a no podr&aacute; superar el 10% del resupuesto total de la feria o evento comercial.<br />- Actividades complementarias como por ejemplo representaciones art&iacute;sticas y musicales, ludotecas e hinchables, que se desarrollen dentro de la feria o evento comercial, como parte integrante del evento principal y cuya cuant&iacute;a<br />no podr&aacute; superar el 30% del presupuesto total del mismo.<br />- Decoraci&oacute;n.<br />No ser&aacute;n subvencionables<br />- Gastos de personal al servicio de las entidades peticionarias,<br />- Gastos de material de oficina, ni los gastos generales de funcionamiento de la entidad.<br />- Alquiler de mesas y sillas.<br />- Alquiler de WC<br />- Servicios de vigilancia.<br />- Servicios de limpieza.<br />- Comidas y bebidas que no entren en la categor&iacute;a de productos aut&oacute;ctonos locales (productos t&iacute;picos de la zona)</p>",
+    "comentarios": "<p>JC: 23-04-2018: el a&ntilde;o pasado se solicit&oacute;: Telas, actuaci&oacute;n. Fireta. Colla de dol&ccedil;ainers. y mas cosas. reuni&oacute;n 15 abril. 27/06/2017 llega resoluci&oacute;n. 5.571,00 - 92,85%</p>\r\n<p>Se encarga Mar&iacute;a Vicenta en petici&oacute;n continuista.</p>\r\n<p>Son subvencionables dentro de esta l&iacute;nea, las actuaciones de gasto corriente para la realizaci&oacute;n de ferias y otros eventos comerciales que se especifican a continuaci&oacute;n:<br />- Asistencia t&eacute;cnica para la organizaci&oacute;n y montaje de la totalidad de la feria o evento comercial. Cuando se contrate la totalidad de la feria con un &uacute;nico proveedor.<br />Cuando la feria se organice desde la propia entidad:<br />- Alquiler de stands y/o carpas.<br />- Publicidad y promoci&oacute;n de la feria o evento comercial.<br />- Alquiler de iluminaci&oacute;n de la feria o evento comercial.<br />- Sonido y megafon&iacute;a de la feria o evento comercial.<br />- Realizaci&oacute;n de degustaciones de productos aut&oacute;ctonos locales y cuya cuant&iacute;a no podr&aacute; superar el 10% del resupuesto total de la feria o evento comercial.<br />- Actividades complementarias como por ejemplo representaciones art&iacute;sticas y musicales, ludotecas e hinchables, que se desarrollen dentro de la feria o evento comercial, como parte integrante del evento principal y cuya cuant&iacute;a<br />no podr&aacute; superar el 30% del presupuesto total del mismo.<br />- Decoraci&oacute;n.<br />No ser&aacute;n subvencionables<br />- Gastos de personal al servicio de las entidades peticionarias,<br />- Gastos de material de oficina, ni los gastos generales de funcionamiento de la entidad.<br />- Alquiler de mesas y sillas.<br />- Alquiler de WC<br />- Servicios de vigilancia.<br />- Servicios de limpieza.<br />- Comidas y bebidas que no entren en la categor&iacute;a de productos aut&oacute;ctonos locales (productos t&iacute;picos de la zona)</p>",
     "drive": "",
     "gestiona_expediente": "-",
     "responsable": [
@@ -3397,6 +3523,456 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 88,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-16",
+    "fin": "2018-05-14",
+    "created": "2018-04-23T16:17:37Z",
+    "updated": "2018-04-26T07:53:05Z",
+    "slug": "P55SQB",
+    "nombre": "Fomento y desarrollo - L\u00ednea 2.- Plan de modernizaci\u00f3n de mercados municipales",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=103",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 16,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      2
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      1
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 89,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-16",
+    "fin": "2018-05-15",
+    "created": "2018-04-23T16:36:09Z",
+    "updated": "2018-04-23T16:36:09Z",
+    "slug": "F8fxKa",
+    "nombre": "Fomento y desarrollo - L\u00ednea 3.- Promoci\u00f3n econ\u00f3mica",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=103",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 16,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "< 4000",
+    "descripcion": "Gastos de organizaci\u00f3n de concursos y premios para proyectos empresariales 3\r\nElaboraci\u00f3n de materiales para el asesoramiento empresarial, orientaci\u00f3n laboral o b\u00fasqueda de empleo que sirvan de apoyo para los agentes de empleo y desarrollo local en el servicio de sus funciones 1\r\nGastos de organizaci\u00f3n de cursos para fomento del empleo y emprendedurismo y para la consolidaci\u00f3n de la peque\u00f1a y mediana empresa con un l\u00edmite m\u00e1ximo de 1.000 euros por curso. 2\r\nGastos de organizaci\u00f3n de jornadas, foros y congresos para el empleo, el desarrollo local y el empresarial. 4\r\nRealizaci\u00f3n de actuaciones de dinamizaci\u00f3n y diversificaci\u00f3n de la econom\u00eda local 5",
+    "estado": 4,
+    "comentarios": "<p>JC: 23-04-2018: El a&ntilde;o pasado:&nbsp; World Caf&eacute; y pagos premios mujeres emprendedoras. hay que definir las fechas de los world caf&eacute;s. &ldquo;Dinamizacion y fomento de la participaci&oacute;n en el sector agricola y empresaria &ldquo;l</p>\r\n<p>Env&iacute;o correo a los empresarios y voy rumiando ideas.</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      2,
+      5
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      1
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 90,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-16",
+    "fin": "2018-05-15",
+    "created": "2018-04-23T16:49:43Z",
+    "updated": "2018-04-23T16:49:43Z",
+    "slug": "XECdbA",
+    "nombre": "Fomento de la agricultura y sostenimiento del medio rural. L\u00ednea 4",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=103",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 16,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "> 2500",
+    "descripcion": "Actuaciones formativas en materia de: agricultura ecol\u00f3gica, producci\u00f3n integrada, comercializaci\u00f3n de productos agr\u00edcolas, pr\u00e1cticas culturales y obtenci\u00f3n del carn\u00e9 oficial de manipulador de plaguicidas de uso fitosanitario de nivel b\u00e1sico 1\r\nLimpieza y conservaci\u00f3n mediante desbroce y roturaci\u00f3n de terrenos de titularidad municipal destinados a cultivo 2\r\nDesbroce o limpieza de m\u00e1rgenes de accesos a zonas rurales o agr\u00edcolas de titularidad municipal 3\r\nReparaci\u00f3n simple, conservaci\u00f3n o mantenimiento de acequias, m\u00e1rgenes, muretes, construcciones agr\u00edcolas tradicionales, conducciones de regad\u00edo en canal abierto y redes de drenaje y avenamiento de titularidad municipal 5",
+    "estado": 4,
+    "comentarios": "<p>JC: 23-04-2018: El a&ntilde;o pasado se hizo el desbroce camino font taronger y el curso de huerto ecol&oacute;gico.</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      2
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      1
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 91,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-16",
+    "fin": "2018-05-15",
+    "created": "2018-04-23T16:59:51Z",
+    "updated": "2018-04-23T16:59:51Z",
+    "slug": "ElbxuV",
+    "nombre": "Huertos urbanos municipales. L\u00ednea 5",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=103",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 16,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "< 1500",
+    "descripcion": "Actividades formativas a los usuarios de huertos urbanos municipales en materia de agricultura (agricultura ecol\u00f3gica, pr\u00e1cticas culturales:\r\nplantaci\u00f3n, riego, poda, injertos, labrado, tratamientos fitosanitarios), as\u00ed como las actuaciones formativas para la obtenci\u00f3n del carn\u00e9 oficial de manipulador de plaguicidas de uso fitosanitario de nivel b\u00e1sico, conforme a las especificaciones del Decreto 30/2015 de 06 de marzo por el que se desarrollan determinados aspectos dministrativos\r\nrelativos a los productos fitosanitarios en la Comunitat Valenciana. Se establece un l\u00edmite de 750 \u20ac por curso con un m\u00e1ximo de dos.\r\n- Trabajos de preparaci\u00f3n y roturaci\u00f3n de terreno en huertos urbanos municipales.\r\n- Se\u00f1al\u00e9tica horizontal para la identificaci\u00f3n del huerto, divisi\u00f3n de parcelas del huerto y marcado de caminales.\r\n- Reparaci\u00f3n simple y adecuaci\u00f3n del sistema de riego del huerto urbano.\r\n- Reparaci\u00f3n simple y conservaci\u00f3n de caminales del huerto urbano.\r\n- Reparaci\u00f3n simple y conservaci\u00f3n de almacenes y casetas ubicadas en huertos urbanos.\r\n- Trabajos de preparaci\u00f3n y roturaci\u00f3n de terrenos en huertos escolares municipales.\r\nNo ser\u00e1n subvencionables:\r\n- Gastos de personal al servicio de las entidades peticionarias.\r\n- Gastos de material de oficina y los gastos generales de funcionamiento de la entidad.",
+    "estado": 2,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      1
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 92,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-24",
+    "fin": "2018-05-23",
+    "created": "2018-04-24T10:40:15Z",
+    "updated": "2018-04-27T06:52:50Z",
+    "slug": "1q2Nx4",
+    "nombre": "Ayudas para la digitalizaci\u00f3n y la restauraci\u00f3n de la documentaci\u00f3n hist\u00f3rica y la mejora de las instalaciones de los archivos municipales de la Comunitat Valenciana.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=16631",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 13,
+    "gobierno": null,
+    "cuantia": "> 600 50%",
+    "descripcion": "Contribuir a la financiaci\u00f3n de los gastos derivados de la digitalizaci\u00f3n y de la restauraci\u00f3n de documentos existentes en el archivo municipal anteriores al a\u00f1o 1940 y que se encuentren en mal estado, as\u00ed como los gastos derivados de la compra o adquisici\u00f3n de equipamiento para la correcta conservaci\u00f3n y utilizaci\u00f3n de los fondos documentales exisitentes en los archivos municipales.\r\n\r\nEl tipo de equipamiento ser\u00e1 de uso exclusivo para el archivo y consistir\u00e1 exclusivamente en estanter\u00edas met\u00e1licas de \u00e1ngulo ranurado, armarios compactos m\u00f3viles sobre ra\u00edles, planeros horizontales, deshumidificadores y termohigr\u00f3metros.\r\n\r\nQueda totalmente excluido de esta convocatoria el mobiliario de oficina.",
+    "estado": 4,
+    "comentarios": "<p>JC: 27-04-2018: Le pido a Agnieszka que profundice en la subvenci&oacute;n.</p>\r\n<p>JC: 24-04-2018: El a&ntilde;o pasado ya se mir&oacute; el tema de mejorar las instalaciones con la adquisici&oacute;n de unas estanterias, pero era un poco caro. Nos encontramos en el mismo caso.&nbsp;<br />Hecho un vistazo al archivo y bueno, lo de las estanter&iacute;as hay que tomarselo con calma. lo que si que veo que ser&iacute;a interesante ser&iacute;an un <strong><a href=\"https://es.wikipedia.org/wiki/Higr%C3%B3metro\">higr&oacute;metro</a></strong>, y renovar alg&uacute;n <strong>deshumificador</strong>.</p>\r\n<p>habr&aacute; que comprarlos y&nbsp; enviar la subvenci&oacute;n. Menos de 20 d&iacute;as.</p>\r\n<p>- La aportaci&oacute;n de la Conselleria de Educaci&oacute;n, Investigaci&oacute;n, Cultura y Deporte ser&aacute; como m&aacute;ximo del cincuenta por ciento (50%) del coste de la inversi&oacute;n que se realice <strong>entre el 25 de enero de 2017 y la fecha de finalizaci&oacute;n de presentaci&oacute;n de solicitudes</strong>, ambos inclusive. Los beneficiarios deber&aacute;n aportar, con cargo a su presupuesto, la parte no financiada por la Generalitat.</p>",
+    "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsTnNPdk0tcmN6dTQ",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      3,
+      6,
+      10
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      1
+    ],
+    "users_like": [
+      5
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 93,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-24",
+    "fin": "2018-05-23",
+    "created": "2018-04-24T12:33:46Z",
+    "updated": "2018-04-25T20:32:58Z",
+    "slug": "fCAUSw",
+    "nombre": "Construcci\u00f3n e Instalaci\u00f3n de centros de Compostaje Comunitario.",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=234",
+    "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00095.pdf",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 15,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "< 10000 \u20ac",
+    "descripcion": "Ayudas para los gastos derivados de la ejecuci\u00f3n por la Diputaci\u00f3n Provincial de Alicante de las inversiones cuyo fin sea la instalaci\u00f3n de un centro de compostaje comunitario.",
+    "estado": 4,
+    "comentarios": "<p>JC: 24-04-2018: hay que leer bien las bases, pero podr&iacute;a ser un segundo paso hacia la compostera municipal. Teniendo en cuenta que el hogar provincial dan de comer a unas 400 personas y usan una de estas composteras, podr&iacute;amos dar covertura a al menos la mitad del pueblo. Hay que buscar una ubicaci&oacute;n que nos venga bien. quiz&aacute;s el tema del camino viejo, encima del barraca.&nbsp;</p>\r\n<p>- La adecuaci&oacute;n del espacio donde se instalar&aacute; el centro de compostaje. Queda incluida la preparaci&oacute;n del terreno, la colocaci&oacute;n&nbsp; de un suelo de celos&iacute;a de hormig&oacute;n, la instalaci&oacute;n de una estructura para poder colocar un vallado perimetral y una cubierta, as&iacute; como una puerta con control de acceso.<br />- Carteler&iacute;a informativa sobre el proceso de compostaje.<br />- Cajones est&aacute;ticos de 1m3 colocados de manera que las paredes laterales internas de los cajones sean compartidas.<br />- Cajones para el almacenamiento de material estructurante.<br />-Contenedores con tapa de color marr&oacute;n para el almacenamiento debiorresiduos.<br />-Herramientas y utensilios para llevar a cabo las tareas de compostaje.</p>",
+    "drive": "https://drive.google.com/open?id=1OJpgsJEsbhGx0mIpmuKXy7DLxIr-89s6",
+    "gestiona_expediente": "3/2018 EXP. 31",
+    "responsable": [
+      1,
+      5,
+      6
+    ],
+    "se_relaciona_con": [
+      29,
+      81,
+      77
+    ],
+    "colectivo": [
+      1
+    ],
+    "users_like": [
+      5
+    ]
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 94,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-25",
+    "fin": "2018-05-15",
+    "created": "2018-04-25T06:27:31Z",
+    "updated": "2018-04-25T06:27:31Z",
+    "slug": "MpMiTK",
+    "nombre": "TECG - Ayudas para mejorar las condiciones de producci\u00f3n y comercializaci\u00f3n de miel en la Comunidad Valenciana.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=1209",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 3,
+    "gobierno": null,
+    "cuantia": "",
+    "descripcion": "Se convocan ayudas dirigidas a los titulares de explotaciones ap\u00edcolas de la Comunitat Valenciana para que realicen inversiones y actuaciones con objeto de mejorar las condiciones de producci\u00f3n y comercializaci\u00f3n de la miel para la vigente campa\u00f1a FEAGA",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [
+      77,
+      95
+    ],
+    "colectivo": [
+      4
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 95,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-23",
+    "fin": "2018-05-14",
+    "created": "2018-04-25T20:11:09Z",
+    "updated": "2018-04-25T20:22:42Z",
+    "slug": "T3CV7s",
+    "nombre": "Obras de mejora de masas forestales (montes) de propiedad municipal",
+    "bases": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=233",
+    "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00094.pdf",
+    "observaciones": "",
+    "ente": "DA",
+    "diputacion": 8,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "40.000",
+    "descripcion": "Concesi\u00f3n de subvenciones destinadas a la ejecuci\u00f3n de obras de mejora de masas forestales (montes) de propiedad municipal en la provincia de Alicante, como pueden ser los siguientes: montes arbolados fosilizados, debilitados sin apenas crecimiento y con gran peligro de incendio; encinares degradados sin verdaderos \u00e1rboles; montes sometidos a fuertes procesos erosivos; montes afectados por da\u00f1os abi\u00f3ticos y cualquier otro tipo estado del monte que justifique su mejora paisaj\u00edstica",
+    "estado": 4,
+    "comentarios": "<p>JC: 25-04-2018: Subvenci&oacute;n muy interesante para complementar los trabajos que se est&aacute;n realizando en sacos. Muy en la l&iacute;nea que ya estamos realizando all&iacute;. Super.</p>\r\n<p>b) Tratamientos selv&iacute;colas de la vigorizaci&oacute;n del arbolado y mejora paisaj&iacute;stica:<br />Para zonas con una densidad de arbolado excesiva, q ue provoca una gran debilidad, estancamiento en el crecimiento, vulnerabilidad fre nte a plagas y peligro de incendios. Para ello se favorecer&aacute;n mediante claras a los mejores &aacute;rboles que pasar&iacute;an a ser dominantes, capaces de crecer ya sin peligro de estancamiento y con ello hacer crecer el monte, poner en valor su paisaje y reducir el riesgo de incendios.&nbsp;</p>\r\n<p>d) Repoblaciones forestales en terrenos de inter&eacute;s paisaj&iacute;stico, con un dise&ntilde;o del paisaje vegetal adaptado al medio. Tambi&eacute;n repoblaciones diversificadoras de monte arbolado, potenciado especies de inter&eacute;s donde sean escasas.</p>\r\n<p>e) Mejoras para la fauna dentro del monte: recuperaci&oacute;n de bancales agr&iacute;colas abandonados, destin&aacute;ndolos para siembras para la fauna, que al mismo tiempo actuar&iacute;an como fajas cortafuegos; recuperaci&oacute;n de antiguas fuentes y manantiales, o creaci&oacute;n de peque&ntilde;as charcas de llenado por escorrent&iacute;a; instalaci&oacute;n de nidales para peque&ntilde;as aves insect&iacute;voras, majanos para conejos o must&eacute;lidos, cajas refugio para murci&eacute;lagos, creaci&oacute;n de peque&ntilde;as charcas de llenado por escorrent&iacute;a y m&iacute;nimo mantenimiento, mantenimiento en pie de &aacute;rboles con huecos y agujeros de inter&eacute;s<br />para la nidificaci&oacute;n; mantenimiento de &aacute;rboles maduros muertos tumbados en el suelo, por la gran cantidad de insectos y larvas que es capaz de generar, adem&aacute;s de refugio en sus huecos; etc.</p>",
+    "drive": "https://drive.google.com/open?id=1-JG8x2wuc3X0nlS1aVsfYf0GEXizLveb",
+    "gestiona_expediente": "3/2018 EXP. 29",
+    "responsable": [
+      1,
+      2
+    ],
+    "se_relaciona_con": [
+      10,
+      45,
+      94,
+      9,
+      72
+    ],
+    "colectivo": [
+      1
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 97,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-26",
+    "fin": "2018-05-15",
+    "created": "2018-04-26T06:07:38Z",
+    "updated": "2018-04-26T06:07:38Z",
+    "slug": "7OZQl9",
+    "nombre": "Solicitud de ayudas a las entidades locales y entidades sin \u00e1nimo de lucro de la Comunitat Valenciana que promocionen la integraci\u00f3n de los colectivos de la diversidad a trav\u00e9s de la actividad f\u00edsica y el deporte.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=18630",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 13,
+    "gobierno": null,
+    "cuantia": "10.000",
+    "descripcion": "El objeto de las ayudas es la concesi\u00f3n de las subvenciones destinadas a entidades locales y entidades sin \u00e1nimo de lucro para actuaciones y proyectos que promocionen la integraci\u00f3n de los colectivos de la diversidad a trav\u00e9s de la actividad f\u00edsica y el deporte que se realicen del 1 de enero al 30 octubre de 2018, excluyendo la participaci\u00f3n en competiciones oficiales.\r\n\r\nNo se encuadrar\u00e1n en estas subvenciones aquellos proyectos que vayan dirigidos a la poblaci\u00f3n en general o a un segmento por edad y \u00fanicamente engloben una participaci\u00f3n abierta a personas de colectivos de la diversidad.",
+    "estado": 4,
+    "comentarios": "<p>JC: 25-04-2018: en principio creo que no proceder&aacute;. He creado el usuario @Angel para gestionar este tipo de cosas con Familias Alternativas, pero bueno, no s&eacute; que pasa que no aparece en el listado de usuarios. Lo vamos mirando pero creo que no hay mucho donde rascar aqu&iacute;.&nbsp;</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [
+      41,
+      40
+    ],
+    "colectivo": [
+      3,
+      1
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 98,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-26",
+    "fin": "2018-05-18",
+    "created": "2018-04-26T06:21:11Z",
+    "updated": "2018-04-26T06:21:11Z",
+    "slug": "m4q3Gh",
+    "nombre": "Solicitud de subvenciones destinadas a financiar la reforma y modernizaci\u00f3n de instalaciones y equipamiento de espacios esc\u00e9nicos existentes en 2018",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=19122",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 13,
+    "gobierno": null,
+    "cuantia": "< 70.000",
+    "descripcion": "Las subvenciones que se convoca tienen como finalidad financiar inversiones que tengan por objeto la ejecuci\u00f3n de obras de reforma y modernizaci\u00f3n de instalaciones y equipamiento de salas o espacios esc\u00e9nicos existentes, que se ejecuten \u00edntegramente en 2018.\r\nEl objeto de la inversi\u00f3n podr\u00e1 comprender la ejecuci\u00f3n de cualquier clase de obra de rehabilitaci\u00f3n o mejora del espacio esc\u00e9nico, incluso su ampliaci\u00f3n mediante la habilitaci\u00f3n de espacios anexos al mismo. Tambi\u00e9n pueden incluirse actuaciones referidas a las instalaciones esc\u00e9nicas y al equipamiento de la sala en un sentido amplio.",
+    "estado": 4,
+    "comentarios": "<p>JC: 25-04-2018: Podr&iacute;amos aprovechar el proyecto del escenario que hicimos para diputaci&oacute;n.</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      2,
+      5
+    ],
+    "se_relaciona_con": [
+      6
+    ],
+    "colectivo": [
+      1
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 99,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-26",
+    "fin": "2018-05-26",
+    "created": "2018-04-26T06:26:37Z",
+    "updated": "2018-04-26T06:26:37Z",
+    "slug": "d6rmtj",
+    "nombre": "Subvenciones a organizaciones no gubernamentales para el desarrollo (ONGD), para la financiaci\u00f3n de proyectos de cooperaci\u00f3n internacional para el desarrollo a ejecutar en pa\u00edses y poblaciones estructuralmente empobrecidos.",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=16844",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 4,
+    "gobierno": null,
+    "cuantia": "400.000",
+    "descripcion": "Convocar las subvenciones, en r\u00e9gimen de concurrencia competitiva, para la financiaci\u00f3n de gastos corrientes y de inversi\u00f3n de proyectos de cooperaci\u00f3n internacional para el desarrollo a ejecutar en pa\u00edses y poblaciones estructuralmente empobrecidos, destinadas a Organizaciones No Gubernamentales para el Desarrollo (en adelante ONGD).",
+    "estado": 4,
+    "comentarios": "",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      5
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      3
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 100,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-04-26",
+    "fin": "2018-05-18",
+    "created": "2018-04-26T06:30:55Z",
+    "updated": "2018-04-26T06:34:58Z",
+    "slug": "kxEITt",
+    "nombre": "Subvenciones para actuaciones de conservaci\u00f3n y protecci\u00f3n de los bienes inmuebles del Patrimonio Cultural de la Comunitat Valenciana",
+    "bases": "http://www.gva.es/es/inicio/procedimientos?id_proc=16662",
+    "solicitud": "",
+    "observaciones": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 13,
+    "gobierno": null,
+    "cuantia": "40.000 90%",
+    "descripcion": "El objeto de estas subvenciones es cofinanciar las actuaciones que se vayan a realizar sobre bienes de naturaleza inmueble: arqueol\u00f3gico, arquitect\u00f3nico, etnol\u00f3gico y paleontol\u00f3gico, del patrimonio Cultural de la Comunidad Valenciana considerados Bienes de Inter\u00e9s Cultural o de Relevancia Local, y cuyos trabajos sean destinados a su protecci\u00f3n, conservaci\u00f3n y o recuperaci\u00f3n dentro del marco de las atribuciones que corresponde ejercer a la Conselleria competente en materia de cultura.",
+    "estado": 4,
+    "comentarios": "<p>JC: 26-04-2018: Para alguna de las fuentes, est&aacute; claro. Como ibamos detr&aacute;s del <strong>Pou de Ses Peres</strong>, bien podr&iacute;a ir para ella.</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "responsable": [
+      1,
+      5,
+      10
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      3,
+      1
+    ],
+    "users_like": [
+      5
     ]
   }
 }
