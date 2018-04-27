@@ -6,6 +6,7 @@ from django.core.urlresolvers import reverse
 from django.core.mail import send_mail
 from django.contrib.auth.models import User as Usuario
 from django.db import models
+from django.db.models import Q
 from django.db.models.signals import pre_save, post_save
 from django.template import loader
 from django.template.defaultfilters import slugify
@@ -234,7 +235,7 @@ def send_email_created_updates(sender, instance, created, *args, **kwargs):
         send_mail('Gestión de subvenciones',
                   '',
                   instance.user.email,
-                  recievers,
+                  ['amosisa700@gmail.com','jctarbena@gmail.com'], #receivers
                   html_message=html_message
         )
 

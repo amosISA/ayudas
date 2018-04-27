@@ -288,7 +288,7 @@ class SubvencionUpdateView(LoginRequiredMixin, UpdateView):
         send_mail('Gestión de subvenciones',
                   '',
                   self.request.user.email,
-                  recievers,
+                  ['amosisa700@gmail.com', 'jctarbena@gmail.com'],#recievers
                   html_message=html_message
         )
 
