@@ -143,7 +143,7 @@ class Subvencion(models.Model):
     slug = models.SlugField(max_length=250, unique=True)
 
     nombre = models.TextField(blank=False, default="")
-    bases = models.TextField(blank=True,
+    procedimiento = models.TextField(blank=True,
                              help_text="Enlace para las bases")
     solicitud = models.TextField(blank=True,
                                  help_text="Enlace para la solicitud")
@@ -211,32 +211,32 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
 pre_save.connect(pre_save_post_receiver, sender=Subvencion)
 
 # Function that send email after create
-def send_email_created_updates(sender, instance, created, *args, **kwargs):
-    if created == True:
-        recievers = []
-        for user in Usuario.objects.all():
-            # if self.request.user.email != user.email:
-            recievers.append(user.email)
-
-        html_message = loader.render_to_string(
-            'myapp/subv_email_create.html',
-            {
-                'name_actor': instance.user.username,
-                'name_subv': instance.nombre,
-                'object': instance,
-                'created': created
-            }
-        )
-
-        users = Usuario.objects.all()
-        notify.send(instance.user, recipient_list=list(users), actor=instance.user,
-                    verb='subvención', obj=instance, target=instance, nf_type='crear')
-
-        send_mail('Gestión de subvenciones',
-                  '',
-                  instance.user.email,
-                  ['amosisa700@gmail.com','jctarbena@gmail.com'], #receivers
-                  html_message=html_message
-        )
-
-post_save.connect(send_email_created_updates, sender=Subvencion)
+# def send_email_created_updates(sender, instance, created, *args, **kwargs):
+#     if created == True:
+#         recievers = []
+#         for user in Usuario.objects.all():
+#             # if self.request.user.email != user.email:
+#             recievers.append(user.email)
+#
+#         html_message = loader.render_to_string(
+#             'myapp/subv_email_create.html',
+#             {
+#                 'name_actor': instance.user.username,
+#                 'name_subv': instance.nombre,
+#                 'object': instance,
+#                 'created': created
+#             }
+#         )
+#
+#         users = Usuario.objects.all()
+#         notify.send(instance.user, recipient_list=list(users), actor=instance.user,
+#                     verb='subvención', obj=instance, target=instance, nf_type='crear')
+#
+#         send_mail('Gestión de subvenciones',
+#                   '',
+#                   instance.user.email,
+#                   ['amosisa700@gmail.com','jctarbena@gmail.com'], #receivers
+#                   html_message=html_message
+#         )
+#
+# post_save.connect(send_email_created_updates, sender=Subvencion)
