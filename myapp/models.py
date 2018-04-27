@@ -147,7 +147,7 @@ class Subvencion(models.Model):
                              help_text="Enlace para los bases")
     bases = models.TextField(blank=True,
                                  help_text="Enlace para la solicitud")
-    observaciones = models.TextField(blank=True,
+    solicitud = models.TextField(blank=True,
                                      help_text="Enlace para observaciones")
 
     ENTE_CHOICES = (

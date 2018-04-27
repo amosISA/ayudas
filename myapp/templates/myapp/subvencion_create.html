@@ -119,9 +119,9 @@
                                 {{ form.cuantia|htmlattributes:"placeholder: Cuantia, class:form-control" }}
                             </div>
                             <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
-                                <!-- Observaciones -->
-                                <label for="id_observaciones">Otros enlaces:</label>
-                                {{ form.observaciones|htmlattributes:"placeholder: Observaciones, class:form-control" }}
+                                <!-- Solicitud -->
+                                <label for="id_solicitud">Otros enlaces:</label>
+                                {{ form.solicitud|htmlattributes:"placeholder: Solicitud, class:form-control" }}
                             </div>
                         </div>
                     </div>
@@ -310,7 +310,7 @@
             //$j("#id_inicio, #id_fin").multiDatesPicker();
 
             // Change textarea cols
-            $j("textarea[name='drive'], textarea[name='procedimiento'], textarea[name='bases'], textarea[name='observaciones'], textarea[name='nombre']").attr({'cols': '20', 'rows': '1'});
+            $j("textarea[name='drive'], textarea[name='procedimiento'], textarea[name='bases'], textarea[name='solicitud'], textarea[name='nombre']").attr({'cols': '20', 'rows': '1'});
             $j("textarea[name='descripcion']").attr({'cols': '20', 'rows': '12'});
             $j("textarea[name='comentarios']").attr({'cols': '20', 'rows': '12'});
             $j("textarea[name='cuantia']").attr({'cols': '20', 'rows': '1'});

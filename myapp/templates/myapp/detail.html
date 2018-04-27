@@ -104,9 +104,9 @@
                                 <textarea id="id_cuantia" rows="1" cols="20" class="form-control" readonly>{{ subvencion.cuantia }}</textarea>
                             </div>
                             <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
-                                <!-- Observaciones -->
-                                <label for="id_observaciones">Otros enlaces:</label>
-                                <textarea id="id_observaciones" rows="1" cols="20" class="form-control" readonly {% if subvencion.observaciones %}tabindex="0" data-toggle="popover" data-trigger="hover" data-html="true" title="Otros enlaces" data-content="<a href='{{ subvencion.observaciones }}' target='_blank'>{{ subvencion.observaciones }}</a>"{% endif %}>{{ subvencion.observaciones }}</textarea>
+                                <!-- Solicitud -->
+                                <label for="id_solicitud">Solicitud:</label>
+                                <textarea id="id_solicitud" rows="1" cols="20" class="form-control" readonly {% if subvencion.solicitud %}tabindex="0" data-toggle="popover" data-trigger="hover" data-html="true" title="Solicitud" data-content="<a href='{{ subvencion.solicitud }}' target='_blank'>{{ subvencion.solicitud }}</a>"{% endif %}>{{ subvencion.solicitud }}</textarea>
                             </div>
                         </div>
 
