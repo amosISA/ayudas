@@ -23,7 +23,7 @@
                 {% url 'myapp:subvencion_by_category' diputacion.slug as diputacion %}
                 {% url 'myapp:subvencion_by_category' generalitat.slug as generalitat %}
                 {% url 'myapp:subvencion_by_category' gobierno.slug as gobierno %}
-                {% url 'myapp:subvencion_by_category' responsable.responsable as responsable %}
+                {% url 'myapp:subvencion_by_category' responsable__responsable.responsable as responsable %}
 
                 {% url 'myapp:subvencion_detail' subvencion.id subvencion.slug as detail %}
                 {% url 'myapp:edit_subvencion' subvencion.slug as editsubv %}
@@ -34,15 +34,19 @@
                         <i class="far fa-bookmark"></i> Ver favoritos
                     </a>
                 <!-- En detalles, al editar, borrar la subvención aparecerá como favorita o no -->
-                {% else %}
+                {% elif request.path == detail or request.path == editsubv or request.path == delsubv %}
                     {% with total_likes=subvencion.users_like.count users_like=subvencion.users_like.all %}
                         <a class="nav-link like-button-details" href="#" data-id="{{ subvencion.id }}" data-action="{% if request.user in users_like %}un{% endif %}like">
                             <i class="likes_heart {% if request.user in users_like %}fas{% else %}far{% endif %} fa-bookmark"></i> Ver favoritos
                         </a>
                     {% endwith %}
+                {% else %}
+                    <a id="indexFavouritesButton" class="nav-link" href="{% url 'myapp:favourites' %}">
+                        <span id="badge-count-likes" class="badge">{{ userlikes.count }}</span>
+                        <i class="far fa-bookmark"></i> Ver favoritos
+                    </a>
                 {% endif %}
             </li>
-            <li>{{ responsable }}</li>
             <!--<li class="nav-item">
                 <a href="#" id="news" class="nav-link">
                     <i class="fa fa-bell"></i>
