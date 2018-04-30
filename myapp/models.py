@@ -162,16 +162,18 @@ class Subvencion(models.Model):
     gobierno = models.ForeignKey(Gobierno, on_delete=models.CASCADE, default=None, blank=True, null=True)
 
     cuantia = models.TextField(blank=True)
+    cuantia_final = models.TextField(blank=True)
     descripcion = models.TextField(blank=True)
     estado = models.ForeignKey(Estado, on_delete=models.CASCADE, default="Estado")
     comentarios = HTMLField(blank=True)
 
-    # Link y numero de expediente GESTIONA
+    # Link, nombre del link del drive y numero de expediente GESTIONA
     drive = models.TextField(blank=True,
                                 help_text="Drive")
     gestiona_expediente = models.CharField(max_length=250,
                                            help_text="Número de expediente del Gestiona",
                                            default="-")
+    nombre_carpeta_drive = models.TextField(blank=True)
     se_relaciona_con = models.ManyToManyField('self', blank=True, default='')
     colectivo = models.ManyToManyField(Colectivo, blank=True)
 

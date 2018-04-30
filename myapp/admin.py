@@ -51,17 +51,17 @@ class SubvencionAdmin(admin.ModelAdmin):
         return format_html('<a href="{}" target="_blank">{}</a>',
                            obj.solicitud,
                            obj.solicitud)
-    def Observaciones(self, obj):
+    def Procedimiento(self, obj):
         return format_html('<a href="{}" target="_blank">{}</a>',
-                           obj.observaciones,
-                           obj.observaciones)
+                           obj.procedimiento,
+                           obj.procedimiento)
     def Gestiona(self, obj):
         return format_html('<a href="{}" target="_blank">{}</a>',
                            obj.drive,
                            obj.drive)
 
     Responsable.allow_tags = True
-    Observaciones.allow_tags = True
+    Procedimiento.allow_tags = True
     Solicitud.allow_tags = True
     Bases.allow_tags = True
     Gestiona.allow_tags = True

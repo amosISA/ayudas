@@ -79,6 +79,12 @@
                             </div>
                         </div>
 
+                        <!-- Nombre carpeta drive -->
+                        <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
+                            {{ form.nombre_carpeta_drive.label_tag }}
+                            {{ form.nombre_carpeta_drive|htmlattributes:"class:form-control" }}
+                        </div>
+
                         <!-- Ente -->
                         <div class="form-group title-create_post" style="text-align:justify;font-weight:bold;">
                             <label for="id_ente">Departamento:</label>
@@ -114,14 +120,14 @@
 
                         <div class="row">
                             <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
-                                <!-- Cuantia -->
-                                {{ form.cuantia.label_tag }}
-                                {{ form.cuantia|htmlattributes:"placeholder: Cuantia, class:form-control" }}
+                                <!-- Cuantia inicio -->
+                                <label for="id_cuantia">Cuantía inicio:</label>
+                                {{ form.cuantia|htmlattributes:"class:form-control" }}
                             </div>
                             <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
-                                <!-- Solicitud -->
-                                <label for="id_solicitud">Otros enlaces:</label>
-                                {{ form.solicitud|htmlattributes:"placeholder: Solicitud, class:form-control" }}
+                                <!-- Cuantia final -->
+                                {{ form.cuantia_final.label_tag }}
+                                {{ form.cuantia_final|htmlattributes:"class:form-control" }}
                             </div>
                         </div>
                     </div>
@@ -134,15 +140,20 @@
                         </div>
 
                         <div class="row">
-                            <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
+                            <div class="form-group col-md-4 title-create_post" style="text-align:justify;font-weight:bold;">
                                 <!-- Procedimiento -->
                                 {{ form.procedimiento.label_tag }}
                                 {{ form.procedimiento|htmlattributes:"placeholder: Procedimiento, class:form-control" }}
                             </div>
-                            <div class="form-group col-md-6 title-create_post" style="text-align:justify;font-weight:bold;">
+                            <div class="form-group col-md-4 title-create_post" style="text-align:justify;font-weight:bold;">
                                 <!-- Bases -->
                                 {{ form.bases.label_tag }}
                                 {{ form.bases|htmlattributes:"placeholder: Bases, class:form-control" }}
+                            </div>
+                            <div class="form-group col-md-4 title-create_post" style="text-align:justify;font-weight:bold;">
+                                <!-- Solicitud -->
+                                <label for="id_solicitud">Solicitud:</label>
+                                {{ form.solicitud|htmlattributes:"placeholder: Solicitud, class:form-control" }}
                             </div>
                         </div>
 
@@ -314,6 +325,8 @@
             $j("textarea[name='descripcion']").attr({'cols': '20', 'rows': '12'});
             $j("textarea[name='comentarios']").attr({'cols': '20', 'rows': '12'});
             $j("textarea[name='cuantia']").attr({'cols': '20', 'rows': '1'});
+            $j("textarea[name='cuantia_final']").attr({'cols': '20', 'rows': '1'});
+            $j("textarea[name='nombre_carpeta_drive']").attr({'cols': '20', 'rows': '1'});
 
             // Admin plus
             /*$j('.related-widget-wrapper .related-widget-wrapper-link').each(function() {
