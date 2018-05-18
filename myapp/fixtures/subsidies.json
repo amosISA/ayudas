@@ -358,6 +358,15 @@
   }
 },
 {
+  "model": "myapp.generalitat",
+  "pk": 19,
+  "fields": {
+    "nombre": "IVACE - Instituto Valenciano de Competitividad Empresarial",
+    "font_color": "#FFFFFF",
+    "slug": "ivace-instituto-valenciano-de-competitividad-empresarial"
+  }
+},
+{
   "model": "myapp.estado",
   "pk": 1,
   "fields": {
@@ -732,7 +741,7 @@
     "inicio": "2018-02-13",
     "fin": "2018-05-16",
     "created": "2018-02-18T17:25:59Z",
-    "updated": "2018-04-27T11:25:19Z",
+    "updated": "2018-05-15T12:04:57Z",
     "slug": "W7Qouo",
     "nombre": "Ayudas para la aplicaci\u00f3n de medidas de gesti\u00f3n forestal sostenible en el marco del Programa de Desarrollo Rural de la Comunitat Valenciana 2014-2020",
     "procedimiento": "http://www.gva.es/es/inicio/procedimientos?id_proc=18518",
@@ -745,8 +754,8 @@
     "cuantia": "4.000 - 10.000 \u20ac",
     "cuantia_final": "",
     "descripcion": "Concesi\u00f3n de ayuda para la realizaci\u00f3n de inversiones destinadas al desarrollo de zonas forestales y a la mejora de la viabilidad de los bosques, basadas en la gesti\u00f3n sostenible y multifuncional de los mismos:\r\n\r\n- Operaci\u00f3n 8.5.1. Instrumentos de gesti\u00f3n forestal sostenible;\r\n- Operaci\u00f3n 8.5.2. Gesti\u00f3n forestal sostenible para la mejora ambiental, paisaj\u00edstica y fomento de los ecosistemas forestales;\r\n- Operaci\u00f3n 8.6.1. Inversiones para la transformaci\u00f3n y comercializaci\u00f3n de productos forestales.",
-    "estado": 4,
-    "comentarios": "<p>JC: 27/04/2018: hablo con Raimon, le comparto las parcelas v&iacute;a Drive, me pide el n&uacute;mero de la partida presupuestaria donde se aplicar&aacute; el gasto: <strong>920.22799, Otros trabajos realizados por empresas y profesionales</strong>.</p>\r\n<p>JC: 25-04-2018: Pues todo ha ido bien estos d&iacute;as. Se pusieron en contacto conmigo, en concreto Juan R. Gazquez, Jefe de la Secci&oacute;n Forestal. Que pusiermos las hect&aacute;reas con el arbolado que hubiera actualmente. Hablo seguidamente con Raimon para transmitirle la informaci&oacute;n. M&aacute;s tarde me env&iacute;a la nueva propuesta (de palabra) que significa que no tendr&iacute;amos que poner dinero para la redacci&oacute;n del Plan. Le pido a @MVicenta que me vaya sacando los certificados catastrales. Los tengo encima de mi mesa en papel. Ahora env&iacute;o correo a @MVicenta para que me pase los pdf y subirlos al expediente que acabo de crear. El viernes hablar&eacute; con Raimon.</p>\r\n<p>JC: 16-04-2018: Se amplia el plazo hasta el 16 de mayo. Carmen no contesta. Hay que mirar el presupuesto.</p>\r\n<p>28-03-2018 - tras reuni&oacute;n el d&iacute;a de ayer con Raimon seguimos trabajando en el asunto. Visito registro de la propiedad y sigo pista del \"certificado catastral\" y lo consigo. Hoy hablar&eacute; con alguno de los propietarios colindantes a ver que opinan. (24-03-2018)- le voy a proponer a Raimon P&eacute;rez que nos centremos en esta ayuda y descartemos la de planes contra incendios.</p>",
+    "estado": 3,
+    "comentarios": "<p>JC: 15/05/2018: enviado ayer, pero parece haber alg&uacute;n problema con el env&iacute;o. Llamo a la&nbsp;Direcci&oacute;n General De Medio Natural Y De Evaluaci&oacute;n Ambiental (961 208 168), all&iacute; me dicen que hable con Ordenaci&oacute;n y Gesti&oacute;n Forestal. Alli me env&iacute;an a Ordenacion y Gesti&oacute;n Forestal. All&iacute; me informan que como el plazo sigue abierto no saben que solicitudes han entrado. Me recomiendo que lo enviemos por correo, se lo pido a Maril&oacute;.</p>\r\n<p>JC: 08/05/2018: pues est&aacute; todo rellenado y subido al gestiona. Lo &uacute;ltimo ha sido subir todos los certificados catastrales. Queda firmar y enviar telem&aacute;ticamente.&nbsp;</p>\r\n<p>JC: 27/04/2018: hablo con Raimon, le comparto las parcelas v&iacute;a Drive, me pide el n&uacute;mero de la partida presupuestaria donde se aplicar&aacute; el gasto: <strong>920.22799, Otros trabajos realizados por empresas y profesionales</strong>.</p>\r\n<p>JC: 25-04-2018: Pues todo ha ido bien estos d&iacute;as. Se pusieron en contacto conmigo, en concreto Juan R. Gazquez, Jefe de la Secci&oacute;n Forestal. Que pusiermos las hect&aacute;reas con el arbolado que hubiera actualmente. Hablo seguidamente con Raimon para transmitirle la informaci&oacute;n. M&aacute;s tarde me env&iacute;a la nueva propuesta (de palabra) que significa que no tendr&iacute;amos que poner dinero para la redacci&oacute;n del Plan. Le pido a @MVicenta que me vaya sacando los certificados catastrales. Los tengo encima de mi mesa en papel. Ahora env&iacute;o correo a @MVicenta para que me pase los pdf y subirlos al expediente que acabo de crear. El viernes hablar&eacute; con Raimon.</p>\r\n<p>JC: 16-04-2018: Se amplia el plazo hasta el 16 de mayo. Carmen no contesta. Hay que mirar el presupuesto.</p>\r\n<p>28-03-2018 - tras reuni&oacute;n el d&iacute;a de ayer con Raimon seguimos trabajando en el asunto. Visito registro de la propiedad y sigo pista del \"certificado catastral\" y lo consigo. Hoy hablar&eacute; con alguno de los propietarios colindantes a ver que opinan. (24-03-2018)- le voy a proponer a Raimon P&eacute;rez que nos centremos en esta ayuda y descartemos la de planes contra incendios.</p>",
     "drive": "https://drive.google.com/open?id=1r1tyYh1YhZ3IVvq-3AKaP_-Mmpi3FvTr",
     "gestiona_expediente": "3/2018 EXP. 32",
     "nombre_carpeta_drive": "",
@@ -977,7 +986,7 @@
     "inicio": "2018-01-20",
     "fin": "2018-05-31",
     "created": "2018-02-20T17:19:19Z",
-    "updated": "2018-02-25T14:56:11Z",
+    "updated": "2018-05-16T20:43:47Z",
     "slug": "Y8auJv",
     "nombre": "Subvenciones para la realizaci\u00f3n y mejora de infraestructuras e instalaciones hidr\u00e1ulicas que incrementen la eficiencia del uso de agua en regad\u00edo",
     "procedimiento": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00038.pdf",
@@ -990,19 +999,22 @@
     "cuantia": "<50.000 80%",
     "cuantia_final": "",
     "descripcion": "Subvenciones a favor de entidades de riego de la provincia de Alicante para la realizaci\u00f3n y mejora de infraestructuras e instalaciones hidr\u00e1ulicas y otras inversiones que incrementen la eficiencia del uso del agua en regad\u00edo a ejecutar por la Diputaci\u00f3n de Alicante.",
-    "estado": 2,
-    "comentarios": "",
+    "estado": 4,
+    "comentarios": "<p>JC: 16/05/2018: tras primeras conversaciones con Thierry, Kubalah y Tom&aacute;s. Thierry me vuelve a llamar y me cuenta que hay inter&eacute;s en esta subvenci&oacute;n. Mirando m&aacute;s me doy cuenta de que hay una subveci&oacute;n mejor.</p>",
     "drive": "-",
     "gestiona_expediente": "-",
     "nombre_carpeta_drive": "",
     "responsable": [
+      1,
       2,
       3
     ],
     "se_relaciona_con": [
       16
     ],
-    "colectivo": [],
+    "colectivo": [
+      3
+    ],
     "users_like": []
   }
 },
@@ -1042,7 +1054,9 @@
       3,
       1
     ],
-    "users_like": []
+    "users_like": [
+      5
+    ]
   }
 },
 {
@@ -2210,7 +2224,7 @@
     "inicio": "2018-03-26",
     "fin": "2018-04-18",
     "created": "2018-03-28T09:38:24Z",
-    "updated": "2018-04-20T16:19:29Z",
+    "updated": "2018-05-14T11:42:46Z",
     "slug": "U29zRm",
     "nombre": "Subvenciones a Ayuntamientos para actividades en materia de ciudadanos extranjeros",
     "procedimiento": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=64",
@@ -2224,7 +2238,7 @@
     "cuantia_final": "",
     "descripcion": "Subvencionar actividades y programas destinados a integrar al colectivo de extranjeros en los municipios en los que residen.",
     "estado": 1,
-    "comentarios": "<p>JC: 20-04-2018: se env&iacute;a a las 12:17 del 18.-04-2018</p>\r\n<p>JC: 17-04-2018: a falta del presupuesto subimos a gestiona el pdf de la memoria y de la solicitud. veo que hay un l&iacute;mite de rango fechas gastos hasta el 1 de octubre. Pido nuevo presupuesto, pero subo el antiguo por si acaso al gestiona.</p>\r\n<p>JC:16-04-2018: Agnieszka redacta la memoria y rellena el formulario de solicitud. Yo hago calculos para el presupuesto y le mando propuesta a Julian. Quemos a la espera para enviar la solicitud ma&ntilde;ana.</p>\r\n<p>JC: 10-04-2018: le pido a Agnieszka que haga una memoria de las actividades que hemos ido desarrollando. La idea es seguir contando con TEO. Viniendo un d&iacute;a todas las semanas del a&ntilde;o sale 2240 &euro;+iva. Teniendo en cuenta que se subvenciona 3500. es una buena opci&oacute;n. 28-03-2018. El a&ntilde;o pasado se pidi&oacute; el curso de valenciano. La verdad es que al final los extranjeros lo han ido dejando porque no les gust&oacute; el m&eacute;todo de la profesora. tendr&iacute;amos dos opciones: - Ser&iacute;a interesante saber cuanto ha durado el curso de valenciano. - por otro lado podr&iacute;amos usar esta subvenci&oacute;n para el huerto ecol&oacute;gico. Aunque tambi&eacute;n podr&iacute;amos esperar a que saliera la de agricultura.</p>",
+    "comentarios": "<p>JC: 14/05/2018: me llaman de diputaci&oacute;n, que la subvenci&oacute;n va perfecta, pero que el material no ser&iacute;a subvencionable y que no lo enviemos en la justificaci&oacute;n.</p>\r\n<p>JC: 20-04-2018: se env&iacute;a a las 12:17 del 18.-04-2018</p>\r\n<p>JC: 17-04-2018: a falta del presupuesto subimos a gestiona el pdf de la memoria y de la solicitud. veo que hay un l&iacute;mite de rango fechas gastos hasta el 1 de octubre. Pido nuevo presupuesto, pero subo el antiguo por si acaso al gestiona.</p>\r\n<p>JC:16-04-2018: Agnieszka redacta la memoria y rellena el formulario de solicitud. Yo hago calculos para el presupuesto y le mando propuesta a Julian. Quemos a la espera para enviar la solicitud ma&ntilde;ana.</p>\r\n<p>JC: 10-04-2018: le pido a Agnieszka que haga una memoria de las actividades que hemos ido desarrollando. La idea es seguir contando con TEO. Viniendo un d&iacute;a todas las semanas del a&ntilde;o sale 2240 &euro;+iva. Teniendo en cuenta que se subvenciona 3500. es una buena opci&oacute;n. 28-03-2018. El a&ntilde;o pasado se pidi&oacute; el curso de valenciano. La verdad es que al final los extranjeros lo han ido dejando porque no les gust&oacute; el m&eacute;todo de la profesora. tendr&iacute;amos dos opciones: - Ser&iacute;a interesante saber cuanto ha durado el curso de valenciano. - por otro lado podr&iacute;amos usar esta subvenci&oacute;n para el huerto ecol&oacute;gico. Aunque tambi&eacute;n podr&iacute;amos esperar a que saliera la de agricultura.</p>",
     "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsYWxFN0l0S2N4QlE",
     "gestiona_expediente": "3/2018 EXP. 20",
     "nombre_carpeta_drive": "",
@@ -2288,7 +2302,7 @@
     "inicio": "2018-03-17",
     "fin": "2018-05-16",
     "created": "2018-03-28T10:21:26Z",
-    "updated": "2018-04-10T17:49:29Z",
+    "updated": "2018-05-15T08:02:41Z",
     "slug": "vfwmlE",
     "nombre": "Ayudas a las Obras y Servicios de Competencia Municipal para 2019",
     "procedimiento": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00078.pdf",
@@ -2301,7 +2315,7 @@
     "cuantia": "240.000 \u20ac 95%",
     "cuantia_final": "",
     "descripcion": "La colaboraci\u00f3n con los municipios se materializa a trav\u00e9s de diversos Programas Provinciales de Cooperaci\u00f3n aprobados anualmente por la Diputaci\u00f3n, centr\u00e1ndose, fundamentalmente, en los servicios municipales obligatorios y, dentro de \u00e9stos, en los que se pueden considerar como b\u00e1sicos: abastecimiento de agua potable, saneamiento de aguas residuales, tratamiento de residuos s\u00f3lidos, alumbrado p\u00fablico o pavimentaci\u00f3n, entre otros, y en general los establecidos en el art. 26.1 de la Ley 7/1985 Reguladora de Bases de R\u00e9gimen Local. Los Programas de Cooperaci\u00f3n Provincial en los que se centra esta Oficina son: \r\n- Plan Provincial de Obras y Servicios de Competencia Municipal. \r\n- Plan Complementario al de Obras y Servicios de Competencia Municipal. \r\n- Plan Especial de Infraestructuras Dotacionales. \r\n- Plan de ahorro Energ\u00e9tico en colaboraci\u00f3n con la Agencia Provincial de la Energ\u00eda. \r\n- Subvenciones para inversiones en obras, reparaciones y equipamiento de cooperaci\u00f3n municipal.",
-    "estado": 4,
+    "estado": 1,
     "comentarios": "",
     "drive": "",
     "gestiona_expediente": "-",
@@ -2363,7 +2377,7 @@
     "inicio": "2018-03-06",
     "fin": "2018-05-10",
     "created": "2018-03-28T11:17:32Z",
-    "updated": "2018-04-16T20:38:59Z",
+    "updated": "2018-05-09T11:03:20Z",
     "slug": "7NXcZZ",
     "nombre": "Ayudas a asociaciones y entidades sin fin de lucro de personas mayores en el \u00e1mbito de bienestar social, para el desarrollo de actividades formativas, terap\u00e9uticas y de convivencia",
     "procedimiento": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=60",
@@ -2376,7 +2390,7 @@
     "cuantia": "< 1800\u20ac",
     "cuantia_final": "",
     "descripcion": "Colaborar en el desarrollo de actividades formativas, terap\u00e9uticas y de convivencia que se lleven a cabo en la provincia de Alicante",
-    "estado": 4,
+    "estado": 10,
     "comentarios": "<p>JC:16-04-2018:&nbsp;Asociaciones sin &aacute;nimo de lucro de personas mayores, jubilados y pensionistas de la provincia de Alicante<br /><strong>Mart&iacute;?</strong> preguntar a <strong>MVicenta</strong></p>",
     "drive": "",
     "gestiona_expediente": "-",
@@ -2387,8 +2401,7 @@
     ],
     "se_relaciona_con": [],
     "colectivo": [
-      3,
-      1
+      3
     ],
     "users_like": []
   }
@@ -2810,7 +2823,9 @@
       1,
       2
     ],
-    "users_like": []
+    "users_like": [
+      5
+    ]
   }
 },
 {
@@ -3215,7 +3230,7 @@
     "inicio": "2018-04-13",
     "fin": "2018-05-28",
     "created": "2018-04-13T05:52:42Z",
-    "updated": "2018-04-13T05:52:42Z",
+    "updated": "2018-05-16T20:49:45Z",
     "slug": "vltGKd",
     "nombre": "TECG - Solicitud de ayudas para las comunidades de regantes y otras entidades de riego en relaci\u00f3n con el fomento de la utilizaci\u00f3n racional del agua en aprovechamientos hidr\u00e1ulicos y regad\u00edos.",
     "procedimiento": "http://www.gva.es/es/inicio/procedimientos?id_proc=562",
@@ -3228,17 +3243,18 @@
     "cuantia": "50 %",
     "cuantia_final": "",
     "descripcion": "Consolidar y modernizar los regad\u00edos de la Comunitat Valenciana, al tiempo que se promueven pr\u00e1cticas de cultivo en com\u00fan.\r\n\r\nSer\u00e1n obras subvencionables todas aquellas que contribuyan a la optimizaci\u00f3n del uso y gesti\u00f3n de los recursos h\u00eddricos, mediante la implantaci\u00f3n del riego localizado, incremento de la capacidad de embalse, ahorro de agua, aumento de la eficiencia en su utilizaci\u00f3n y mejora de la rentabilidad de las explotaciones agrarias.",
-    "estado": 10,
-    "comentarios": "Habr\u00eda que despestar a las asociaciones de regantes, que creo que hay hasta tres en el pueblo.",
+    "estado": 4,
+    "comentarios": "<p>JC: 14/05/2018: por la ma&ntilde;ana me comenta Thierry que deber&iacute;amos ir dejando de verter lo que sale de la EDAR hacia el pozo. Le comento que ten&iacute;a la idea de hablar con Kubalah sobre activar de nuevo a la asociaci&oacute;n de regantes. Hablo con &eacute;l esta misma ma&ntilde;ana, que el tiene todos los documentos de la asociaci&oacute;n, que habr&iacute;a poco que reparar, pero que bien. Que hable con Tom&aacute;s, que era parte de los implicados.</p>\r\n<p>Habr&iacute;a que despestar a las asociaciones de regantes, que creo que hay hasta tres en el pueblo.</p>",
     "drive": "",
     "gestiona_expediente": "-",
     "nombre_carpeta_drive": "",
     "responsable": [
-      1
+      1,
+      3
     ],
     "se_relaciona_con": [],
     "colectivo": [
-      3
+      1
     ],
     "users_like": []
   }
@@ -3311,8 +3327,7 @@
     ],
     "se_relaciona_con": [
       78,
-      94,
-      93
+      94
     ],
     "colectivo": [
       3,
@@ -3477,9 +3492,7 @@
     "colectivo": [
       1
     ],
-    "users_like": [
-      5
-    ]
+    "users_like": []
   }
 },
 {
@@ -3754,7 +3767,7 @@
     "inicio": "2018-04-16",
     "fin": "2018-05-15",
     "created": "2018-04-23T16:36:09Z",
-    "updated": "2018-04-30T19:37:40Z",
+    "updated": "2018-05-15T05:37:01Z",
     "slug": "F8fxKa",
     "nombre": "Fomento y desarrollo - L\u00ednea 3.- Promoci\u00f3n econ\u00f3mica",
     "procedimiento": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=103",
@@ -3768,10 +3781,10 @@
     "cuantia_final": "",
     "descripcion": "Gastos de organizaci\u00f3n de concursos y premios para proyectos empresariales 3\r\nElaboraci\u00f3n de materiales para el asesoramiento empresarial, orientaci\u00f3n laboral o b\u00fasqueda de empleo que sirvan de apoyo para los agentes de empleo y desarrollo local en el servicio de sus funciones 1\r\nGastos de organizaci\u00f3n de cursos para fomento del empleo y emprendedurismo y para la consolidaci\u00f3n de la peque\u00f1a y mediana empresa con un l\u00edmite m\u00e1ximo de 1.000 euros por curso. 2\r\nGastos de organizaci\u00f3n de jornadas, foros y congresos para el empleo, el desarrollo local y el empresarial. 4\r\nRealizaci\u00f3n de actuaciones de dinamizaci\u00f3n y diversificaci\u00f3n de la econom\u00eda local 5",
     "estado": 4,
-    "comentarios": "<p>JC: 30/04/2018: Ning&uacute;n empresario ha dicho ni pio. Creo que la opci&oacute;n 5: \"Realizaci&oacute;n de actuaciones de dinamizaci&oacute;n y diversificaci&oacute;n de la econom&iacute;a local\", podr&iacute;amos usarla para financiar el estudio de la <strong>valorizaci&oacute;n energ&eacute;tica de la pulpa de algarroba</strong></p>\r\n<p>JC: 23-04-2018: El a&ntilde;o pasado:&nbsp; World Caf&eacute; y pagos premios mujeres emprendedoras. hay que definir las fechas de los world caf&eacute;s. &ldquo;Dinamizacion y fomento de la participaci&oacute;n en el sector agricola y empresaria &ldquo;l</p>\r\n<p>Env&iacute;o correo a los empresarios y voy rumiando ideas.</p>",
-    "drive": "",
+    "comentarios": "<p>JC: 14/05/2018: Relleno la solicitud a falta de unos pocos detalles. Subo todo a gestiona y env&iacute;o correo a Maria Vicenta para que envie la solicitud.</p>\r\n<p>JC: 14/05/2018: Me env&iacute;a memoria y presupuesto. un poco oneroso, pero bueno. Ma&ntilde;ana hay que lanzar la subvenci&oacute;n.</p>\r\n<p>JC: 09/05/2018: intento ponerme en contacto con&nbsp;Miguel Escortell, el ingeniero de Alfaz con el que estoy mirando el tema. Me llama a la tarde.</p>\r\n<p>JC: 30/04/2018: Ning&uacute;n empresario ha dicho ni pio. Creo que la opci&oacute;n 5: \"Realizaci&oacute;n de actuaciones de dinamizaci&oacute;n y diversificaci&oacute;n de la econom&iacute;a local\", podr&iacute;amos usarla para financiar el estudio de la <strong>valorizaci&oacute;n energ&eacute;tica de la pulpa de algarroba</strong></p>\r\n<p>JC: 23-04-2018: El a&ntilde;o pasado:&nbsp; World Caf&eacute; y pagos premios mujeres emprendedoras. hay que definir las fechas de los world caf&eacute;s. &ldquo;Dinamizacion y fomento de la participaci&oacute;n en el sector agricola y empresaria &ldquo;l</p>\r\n<p>Env&iacute;o correo a los empresarios y voy rumiando ideas.</p>",
+    "drive": "https://drive.google.com/open?id=1HdxVfRrDP-2wIlUByUQo56VQW7PPFCSk",
     "gestiona_expediente": "-",
-    "nombre_carpeta_drive": "",
+    "nombre_carpeta_drive": "Fomento y desarrollo - L\u00ednea 3.- Promoci\u00f3n econ\u00f3mica - Algarrobas",
     "responsable": [
       1,
       2,
@@ -3792,7 +3805,7 @@
     "inicio": "2018-04-16",
     "fin": "2018-05-15",
     "created": "2018-04-23T16:49:43Z",
-    "updated": "2018-04-30T19:32:29Z",
+    "updated": "2018-05-15T08:22:55Z",
     "slug": "XECdbA",
     "nombre": "Fomento de la agricultura y sostenimiento del medio rural. L\u00ednea 4",
     "procedimiento": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=103",
@@ -3805,11 +3818,11 @@
     "cuantia": "2.500",
     "cuantia_final": "",
     "descripcion": "Actuaciones formativas en materia de: agricultura ecol\u00f3gica, producci\u00f3n integrada, comercializaci\u00f3n de productos agr\u00edcolas, pr\u00e1cticas culturales y obtenci\u00f3n del carn\u00e9 oficial de manipulador de plaguicidas de uso fitosanitario de nivel b\u00e1sico 1\r\nLimpieza y conservaci\u00f3n mediante desbroce y roturaci\u00f3n de terrenos de titularidad municipal destinados a cultivo 2\r\nDesbroce o limpieza de m\u00e1rgenes de accesos a zonas rurales o agr\u00edcolas de titularidad municipal 3\r\nReparaci\u00f3n simple, conservaci\u00f3n o mantenimiento de acequias, m\u00e1rgenes, muretes, construcciones agr\u00edcolas tradicionales, conducciones de regad\u00edo en canal abierto y redes de drenaje y avenamiento de titularidad municipal 5",
-    "estado": 4,
-    "comentarios": "<p>JC: 30-04-2018: Creo que vamos a pasar de formaciones y desbroces de sendas. Me parece m&aacute;s interesante el punto 2 de la convocatoria: \"<strong>Limpieza y conservaci&oacute;n mediante desbroce y roturaci&oacute;n de terrenos de titularidad municipal destinados a cultivo</strong>\". Hay que hablar con tres aut&oacute;nomos que tengan tractor para desbrozar, roturar y sembrar alfalfa.</p>\r\n<p>JC: 23-04-2018: El a&ntilde;o pasado se hizo el desbroce camino font taronger y el curso de huerto ecol&oacute;gico.</p>",
-    "drive": "",
-    "gestiona_expediente": "-",
-    "nombre_carpeta_drive": "",
+    "estado": 8,
+    "comentarios": "<p>JC: 15/05/2018: Llamo y estamos fuera de plazo, meto la petici&oacute;n en la subvenci&oacute;n de montes diputaci&oacute;n</p>\r\n<p>JC: 30-04-2018: Creo que vamos a pasar de formaciones y desbroces de sendas. Me parece m&aacute;s interesante el punto 2 de la convocatoria: \"<strong>Limpieza y conservaci&oacute;n mediante desbroce y roturaci&oacute;n de terrenos de titularidad municipal destinados a cultivo</strong>\". Hay que hablar con tres aut&oacute;nomos que tengan tractor para desbrozar, roturar y sembrar alfalfa.</p>\r\n<p>JC: 23-04-2018: El a&ntilde;o pasado se hizo el desbroce camino font taronger y el curso de huerto ecol&oacute;gico.</p>",
+    "drive": "https://drive.google.com/open?id=1j_UrE6IYhICDGJmoZU_VYviugud8ggGL",
+    "gestiona_expediente": "3/2018 EXP. 20 - FOMENTO DE LA AGRICULTURA Y SOSTENIMIENTO DEL MEDIO RURAL",
+    "nombre_carpeta_drive": "Fomento de la agricultura y sostenimiento del medio rural. L\u00ednea 4",
     "responsable": [
       1,
       2
@@ -3867,7 +3880,7 @@
     "inicio": "2018-04-24",
     "fin": "2018-05-23",
     "created": "2018-04-24T10:40:15Z",
-    "updated": "2018-04-30T11:22:56Z",
+    "updated": "2018-05-08T06:54:10Z",
     "slug": "1q2Nx4",
     "nombre": "Ayudas para la digitalizaci\u00f3n y la restauraci\u00f3n de la documentaci\u00f3n hist\u00f3rica y la mejora de las instalaciones de los archivos municipales de la Comunitat Valenciana.",
     "procedimiento": "http://www.gva.es/es/inicio/procedimientos?id_proc=16631",
@@ -3881,7 +3894,7 @@
     "cuantia_final": "",
     "descripcion": "Contribuir a la financiaci\u00f3n de los gastos derivados de la digitalizaci\u00f3n y de la restauraci\u00f3n de documentos existentes en el archivo municipal anteriores al a\u00f1o 1940 y que se encuentren en mal estado, as\u00ed como los gastos derivados de la compra o adquisici\u00f3n de equipamiento para la correcta conservaci\u00f3n y utilizaci\u00f3n de los fondos documentales exisitentes en los archivos municipales.\r\n\r\nEl tipo de equipamiento ser\u00e1 de uso exclusivo para el archivo y consistir\u00e1 exclusivamente en estanter\u00edas met\u00e1licas de \u00e1ngulo ranurado, armarios compactos m\u00f3viles sobre ra\u00edles, planeros horizontales, deshumidificadores y termohigr\u00f3metros.\r\n\r\nQueda totalmente excluido de esta convocatoria el mobiliario de oficina.",
     "estado": 4,
-    "comentarios": "<p>JC: 30/04/2018: hemos subido a echar un vistazo. Por lo que parece se renob&oacute; hace nada el <a href=\"http://www.leroymerlin.es/fp/15761242/deshumidificador-qlima-d512\">deshumificador</a>, habr&aacute; que presentar la factura, pero deber&iacute;amos hacer un gasto m&iacute;nimo de 600 &euro;. Me ha gustado <a href=\"https://www.optical-systems.es/es/Viento-Tiempo/Instrumentos-meteorol-gicos/Estaciones-meteorol-gicas-digitales/7000020000000.html\">esta estaci&oacute;n</a>.&nbsp; Estar&iacute;a bien mirar alguna estanter&iacute;a, escaner, portatil. no s&eacute;. algo.</p>\r\n<p>JC: 27-04-2018: Le pido a Agnieszka que profundice en la subvenci&oacute;n.</p>\r\n<p>JC: 24-04-2018: El a&ntilde;o pasado ya se mir&oacute; el tema de mejorar las instalaciones con la adquisici&oacute;n de unas estanterias, pero era un poco caro. Nos encontramos en el mismo caso.&nbsp;<br />Hecho un vistazo al archivo y bueno, lo de las estanter&iacute;as hay que tomarselo con calma. lo que si que veo que ser&iacute;a interesante ser&iacute;an un <strong><a href=\"https://es.wikipedia.org/wiki/Higr%C3%B3metro\">higr&oacute;metro</a></strong>, y renovar alg&uacute;n <strong>deshumificador</strong>.</p>\r\n<p>habr&aacute; que comprarlos y&nbsp; enviar la subvenci&oacute;n. Menos de 20 d&iacute;as.</p>\r\n<p>- La aportaci&oacute;n de la Conselleria de Educaci&oacute;n, Investigaci&oacute;n, Cultura y Deporte ser&aacute; como m&aacute;ximo del cincuenta por ciento (50%) del coste de la inversi&oacute;n que se realice <strong>entre el 25 de enero de 2017 y la fecha de finalizaci&oacute;n de presentaci&oacute;n de solicitudes</strong>, ambos inclusive. Los beneficiarios deber&aacute;n aportar, con cargo a su presupuesto, la parte no financiada por la Generalitat.</p>",
+    "comentarios": "<p>JC: 08/05/2018: le pido @Agnieszka que le pregunte @Maril&oacute; en que estanteria estan los documentos m&aacute;s antiguos y mire que caracter&iacute;sticas tienen. As&iacute; vemos la idoneidad de un scaner para A4 o A3. Que consiga la factura del deshumificador.&nbsp;</p>\r\n<p>JC: 30/04/2018: hemos subido a echar un vistazo. Por lo que parece se renov&oacute; hace nada el <a href=\"http://www.leroymerlin.es/fp/15761242/deshumidificador-qlima-d512\">deshumificador</a>, habr&aacute; que presentar la factura, pero deber&iacute;amos hacer un gasto m&iacute;nimo de 600 &euro;. Me ha gustado <a href=\"https://www.optical-systems.es/es/Viento-Tiempo/Instrumentos-meteorol-gicos/Estaciones-meteorol-gicas-digitales/7000020000000.html\">esta estaci&oacute;n</a>.&nbsp; Estar&iacute;a bien mirar alguna estanter&iacute;a, escaner, portatil. no s&eacute;. algo.</p>\r\n<p>JC: 27-04-2018: Le pido a Agnieszka que profundice en la subvenci&oacute;n.</p>\r\n<p>JC: 24-04-2018: El a&ntilde;o pasado ya se mir&oacute; el tema de mejorar las instalaciones con la adquisici&oacute;n de unas estanterias, pero era un poco caro. Nos encontramos en el mismo caso.&nbsp;<br />Hecho un vistazo al archivo y bueno, lo de las estanter&iacute;as hay que tomarselo con calma. lo que si que veo que ser&iacute;a interesante ser&iacute;an un <strong><a href=\"https://es.wikipedia.org/wiki/Higr%C3%B3metro\">higr&oacute;metro</a></strong>, y renovar alg&uacute;n <strong>deshumificador</strong>.</p>\r\n<p>habr&aacute; que comprarlos y&nbsp; enviar la subvenci&oacute;n. Menos de 20 d&iacute;as.</p>\r\n<p>- La aportaci&oacute;n de la Conselleria de Educaci&oacute;n, Investigaci&oacute;n, Cultura y Deporte ser&aacute; como m&aacute;ximo del cincuenta por ciento (50%) del coste de la inversi&oacute;n que se realice <strong>entre el 25 de enero de 2017 y la fecha de finalizaci&oacute;n de presentaci&oacute;n de solicitudes</strong>, ambos inclusive. Los beneficiarios deber&aacute;n aportar, con cargo a su presupuesto, la parte no financiada por la Generalitat.</p>",
     "drive": "https://drive.google.com/open?id=0B-6ZND28b8BsTnNPdk0tcmN6dTQ",
     "gestiona_expediente": "-",
     "nombre_carpeta_drive": "",
@@ -3909,7 +3922,7 @@
     "inicio": "2018-04-24",
     "fin": "2018-05-23",
     "created": "2018-04-24T12:33:46Z",
-    "updated": "2018-04-30T20:09:24Z",
+    "updated": "2018-05-09T07:48:31Z",
     "slug": "fCAUSw",
     "nombre": "Construcci\u00f3n e Instalaci\u00f3n de centros de Compostaje Comunitario.",
     "procedimiento": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=234",
@@ -3923,7 +3936,7 @@
     "cuantia_final": "",
     "descripcion": "Ayudas para los gastos derivados de la ejecuci\u00f3n por la Diputaci\u00f3n Provincial de Alicante de las inversiones cuyo fin sea la instalaci\u00f3n de un centro de compostaje comunitario.",
     "estado": 4,
-    "comentarios": "<p>JC: 30/04/2018: hablando el tema con Agnieszka llegamos a la conclusi&oacute;n de que pediremos herramientas, carteler&iacute;a&nbsp; y 8 contenedores peque&ntilde;os de tapa marr&oacute;n.</p>\r\n<p>JC: 24-04-2018: hay que leer bien las bases, pero podr&iacute;a ser un segundo paso hacia la compostera municipal. Teniendo en cuenta que el hogar provincial dan de comer a unas 400 personas y usan una de estas composteras, podr&iacute;amos dar covertura a al menos la mitad del pueblo. Hay que buscar una ubicaci&oacute;n que nos venga bien. quiz&aacute;s el tema del camino viejo, encima del barraca</p>\r\n<p>- La adecuaci&oacute;n del espacio donde se instalar&aacute; el centro de compostaje. Queda incluida la preparaci&oacute;n del terreno, la colocaci&oacute;n&nbsp; de un suelo de celos&iacute;a de hormig&oacute;n, la instalaci&oacute;n de una estructura para poder colocar un vallado perimetral y una cubierta, as&iacute; como una puerta con control de acceso.<br />- Carteler&iacute;a informativa sobre el proceso de compostaje.<br />- Cajones est&aacute;ticos de 1m3 colocados de manera que las paredes laterales internas de los cajones sean compartidas.<br />- Cajones para el almacenamiento de material estructurante.<br />-Contenedores con tapa de color marr&oacute;n para el almacenamiento debiorresiduos.<br />-Herramientas y utensilios para llevar a cabo las tareas de compostaje.</p>",
+    "comentarios": "<p>A: 09/05/2018: se pide el presupuesto de los cubos, el medidor de PH con term&oacute;metro.&nbsp; En cuanto a \"orcas\" supongo que nos referimos a forcas; todo incluido en <a href=\"https://docs.google.com/document/d/13CvUVisWkmi10t4XLzdx7JNQ0I0NTwQxyVGXUFNl7ik/edit\">este documento</a>&nbsp; (no access)</p>\r\n<p>JC: 08/05/2018: pues yo pedir&iacute;a presupuesto de una docena de orcas, u<a href=\"https://www.pisos.com/aldia/5-herramientas-para-hacer-compost/52855/\">n medidor de ph y un term&oacute;metro de alcohol</a>. Por otro lado le pedir&iacute;a a Ferri presupuesto para una carteler&iacute;a A2, unas pocas unidades y dise&ntilde;o. Y doce <a href=\"http://www.novodinamica.com/es/contenedores-y-cestones/contenedores-de-basura/cubo-basura-120-l-marron/21/95/946\">cubos de basura</a>. Con esto para este a&ntilde;o creo que la cosa anda bien.&nbsp;</p>\r\n<p>Se deber&iacute;a a&ntilde;adir <a href=\"https://docs.google.com/document/d/1GptZeIR2A5KBULBED-yGQ2nazbnel-gemKTz7uS2ynk/edit?usp=sharing\">la memoria</a> que hicimos para al PIMA. Puede ser interesante leer las indicaciones de Mikel de Ayora.</p>\r\n<p>JC: 30/04/2018: hablando el tema con Agnieszka llegamos a la conclusi&oacute;n de que pediremos herramientas, carteler&iacute;a&nbsp; y 8 contenedores peque&ntilde;os de tapa marr&oacute;n.</p>\r\n<p>JC: 24-04-2018: hay que leer bien las bases, pero podr&iacute;a ser un segundo paso hacia la compostera municipal. Teniendo en cuenta que el hogar provincial dan de comer a unas 400 personas y usan una de estas composteras, podr&iacute;amos dar covertura a al menos la mitad del pueblo. Hay que buscar una ubicaci&oacute;n que nos venga bien. quiz&aacute;s el tema del camino viejo, encima del barraca</p>\r\n<p>- La adecuaci&oacute;n del espacio donde se instalar&aacute; el centro de compostaje. Queda incluida la preparaci&oacute;n del terreno, la colocaci&oacute;n&nbsp; de un suelo de celos&iacute;a de hormig&oacute;n, la instalaci&oacute;n de una estructura para poder colocar un vallado perimetral y una cubierta, as&iacute; como una puerta con control de acceso.<br />- Carteler&iacute;a informativa sobre el proceso de compostaje.<br />- Cajones est&aacute;ticos de 1m3 colocados de manera que las paredes laterales internas de los cajones sean compartidas.<br />- Cajones para el almacenamiento de material estructurante.<br />-Contenedores con tapa de color marr&oacute;n para el almacenamiento debiorresiduos.<br />-Herramientas y utensilios para llevar a cabo las tareas de compostaje.</p>",
     "drive": "https://drive.google.com/open?id=1OJpgsJEsbhGx0mIpmuKXy7DLxIr-89s6",
     "gestiona_expediente": "3/2018 EXP. 31",
     "nombre_carpeta_drive": "",
@@ -3935,8 +3948,7 @@
     ],
     "se_relaciona_con": [
       29,
-      81,
-      77
+      81
     ],
     "colectivo": [
       1
@@ -3954,7 +3966,7 @@
     "inicio": "2018-04-25",
     "fin": "2018-05-15",
     "created": "2018-04-25T06:27:31Z",
-    "updated": "2018-04-25T06:27:31Z",
+    "updated": "2018-05-15T06:35:18Z",
     "slug": "MpMiTK",
     "nombre": "TECG - Ayudas para mejorar las condiciones de producci\u00f3n y comercializaci\u00f3n de miel en la Comunidad Valenciana.",
     "procedimiento": "http://www.gva.es/es/inicio/procedimientos?id_proc=1209",
@@ -3967,7 +3979,7 @@
     "cuantia": "",
     "cuantia_final": "",
     "descripcion": "Se convocan ayudas dirigidas a los titulares de explotaciones ap\u00edcolas de la Comunitat Valenciana para que realicen inversiones y actuaciones con objeto de mejorar las condiciones de producci\u00f3n y comercializaci\u00f3n de la miel para la vigente campa\u00f1a FEAGA",
-    "estado": 4,
+    "estado": 10,
     "comentarios": "",
     "drive": "",
     "gestiona_expediente": "-",
@@ -3980,6 +3992,7 @@
       95
     ],
     "colectivo": [
+      1,
       4
     ],
     "users_like": []
@@ -3993,7 +4006,7 @@
     "inicio": "2018-04-23",
     "fin": "2018-05-14",
     "created": "2018-04-25T20:11:09Z",
-    "updated": "2018-04-25T20:22:42Z",
+    "updated": "2018-05-15T11:37:49Z",
     "slug": "T3CV7s",
     "nombre": "Obras de mejora de masas forestales (montes) de propiedad municipal",
     "procedimiento": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=233",
@@ -4006,8 +4019,8 @@
     "cuantia": "40.000",
     "cuantia_final": "",
     "descripcion": "Concesi\u00f3n de subvenciones destinadas a la ejecuci\u00f3n de obras de mejora de masas forestales (montes) de propiedad municipal en la provincia de Alicante, como pueden ser los siguientes: montes arbolados fosilizados, debilitados sin apenas crecimiento y con gran peligro de incendio; encinares degradados sin verdaderos \u00e1rboles; montes sometidos a fuertes procesos erosivos; montes afectados por da\u00f1os abi\u00f3ticos y cualquier otro tipo estado del monte que justifique su mejora paisaj\u00edstica",
-    "estado": 4,
-    "comentarios": "<p>JC: 25-04-2018: Subvenci&oacute;n muy interesante para complementar los trabajos que se est&aacute;n realizando en sacos. Muy en la l&iacute;nea que ya estamos realizando all&iacute;. Super.</p>\r\n<p>b) Tratamientos selv&iacute;colas de la vigorizaci&oacute;n del arbolado y mejora paisaj&iacute;stica:<br />Para zonas con una densidad de arbolado excesiva, q ue provoca una gran debilidad, estancamiento en el crecimiento, vulnerabilidad fre nte a plagas y peligro de incendios. Para ello se favorecer&aacute;n mediante claras a los mejores &aacute;rboles que pasar&iacute;an a ser dominantes, capaces de crecer ya sin peligro de estancamiento y con ello hacer crecer el monte, poner en valor su paisaje y reducir el riesgo de incendios.&nbsp;</p>\r\n<p>d) Repoblaciones forestales en terrenos de inter&eacute;s paisaj&iacute;stico, con un dise&ntilde;o del paisaje vegetal adaptado al medio. Tambi&eacute;n repoblaciones diversificadoras de monte arbolado, potenciado especies de inter&eacute;s donde sean escasas.</p>\r\n<p>e) Mejoras para la fauna dentro del monte: recuperaci&oacute;n de bancales agr&iacute;colas abandonados, destin&aacute;ndolos para siembras para la fauna, que al mismo tiempo actuar&iacute;an como fajas cortafuegos; recuperaci&oacute;n de antiguas fuentes y manantiales, o creaci&oacute;n de peque&ntilde;as charcas de llenado por escorrent&iacute;a; instalaci&oacute;n de nidales para peque&ntilde;as aves insect&iacute;voras, majanos para conejos o must&eacute;lidos, cajas refugio para murci&eacute;lagos, creaci&oacute;n de peque&ntilde;as charcas de llenado por escorrent&iacute;a y m&iacute;nimo mantenimiento, mantenimiento en pie de &aacute;rboles con huecos y agujeros de inter&eacute;s<br />para la nidificaci&oacute;n; mantenimiento de &aacute;rboles maduros muertos tumbados en el suelo, por la gran cantidad de insectos y larvas que es capaz de generar, adem&aacute;s de refugio en sus huecos; etc.</p>",
+    "estado": 10,
+    "comentarios": "<p>JC: 15/05/2018: Finalmente veo problemas con las propiedad de alguna de las parcelas y decido anular la petici&oacute;n.</p>\r\n<p>JC: 25-04-2018: Subvenci&oacute;n muy interesante para complementar los trabajos que se est&aacute;n realizando en sacos. Muy en la l&iacute;nea que ya estamos realizando all&iacute;. Super.</p>\r\n<p>b) Tratamientos selv&iacute;colas de la vigorizaci&oacute;n del arbolado y mejora paisaj&iacute;stica:<br />Para zonas con una densidad de arbolado excesiva, q ue provoca una gran debilidad, estancamiento en el crecimiento, vulnerabilidad fre nte a plagas y peligro de incendios. Para ello se favorecer&aacute;n mediante claras a los mejores &aacute;rboles que pasar&iacute;an a ser dominantes, capaces de crecer ya sin peligro de estancamiento y con ello hacer crecer el monte, poner en valor su paisaje y reducir el riesgo de incendios.&nbsp;</p>\r\n<p>d) Repoblaciones forestales en terrenos de inter&eacute;s paisaj&iacute;stico, con un dise&ntilde;o del paisaje vegetal adaptado al medio. Tambi&eacute;n repoblaciones diversificadoras de monte arbolado, potenciado especies de inter&eacute;s donde sean escasas.</p>\r\n<p>e) Mejoras para la fauna dentro del monte: recuperaci&oacute;n de bancales agr&iacute;colas abandonados, destin&aacute;ndolos para siembras para la fauna, que al mismo tiempo actuar&iacute;an como fajas cortafuegos; recuperaci&oacute;n de antiguas fuentes y manantiales, o creaci&oacute;n de peque&ntilde;as charcas de llenado por escorrent&iacute;a; instalaci&oacute;n de nidales para peque&ntilde;as aves insect&iacute;voras, majanos para conejos o must&eacute;lidos, cajas refugio para murci&eacute;lagos, creaci&oacute;n de peque&ntilde;as charcas de llenado por escorrent&iacute;a y m&iacute;nimo mantenimiento, mantenimiento en pie de &aacute;rboles con huecos y agujeros de inter&eacute;s<br />para la nidificaci&oacute;n; mantenimiento de &aacute;rboles maduros muertos tumbados en el suelo, por la gran cantidad de insectos y larvas que es capaz de generar, adem&aacute;s de refugio en sus huecos; etc.</p>",
     "drive": "https://drive.google.com/open?id=1-JG8x2wuc3X0nlS1aVsfYf0GEXizLveb",
     "gestiona_expediente": "3/2018 EXP. 29",
     "nombre_carpeta_drive": "",
@@ -4025,7 +4038,9 @@
     "colectivo": [
       1
     ],
-    "users_like": []
+    "users_like": [
+      5
+    ]
   }
 },
 {
@@ -4077,7 +4092,7 @@
     "inicio": "2018-04-26",
     "fin": "2018-05-18",
     "created": "2018-04-26T06:21:11Z",
-    "updated": "2018-04-26T06:21:11Z",
+    "updated": "2018-05-17T20:48:22Z",
     "slug": "m4q3Gh",
     "nombre": "Solicitud de subvenciones destinadas a financiar la reforma y modernizaci\u00f3n de instalaciones y equipamiento de espacios esc\u00e9nicos existentes en 2018",
     "procedimiento": "http://www.gva.es/es/inicio/procedimientos?id_proc=19122",
@@ -4090,14 +4105,15 @@
     "cuantia": "< 70.000",
     "cuantia_final": "",
     "descripcion": "Las subvenciones que se convoca tienen como finalidad financiar inversiones que tengan por objeto la ejecuci\u00f3n de obras de reforma y modernizaci\u00f3n de instalaciones y equipamiento de salas o espacios esc\u00e9nicos existentes, que se ejecuten \u00edntegramente en 2018.\r\nEl objeto de la inversi\u00f3n podr\u00e1 comprender la ejecuci\u00f3n de cualquier clase de obra de rehabilitaci\u00f3n o mejora del espacio esc\u00e9nico, incluso su ampliaci\u00f3n mediante la habilitaci\u00f3n de espacios anexos al mismo. Tambi\u00e9n pueden incluirse actuaciones referidas a las instalaciones esc\u00e9nicas y al equipamiento de la sala en un sentido amplio.",
-    "estado": 4,
-    "comentarios": "<p>JC: 25-04-2018: Podr&iacute;amos aprovechar el proyecto del escenario que hicimos para diputaci&oacute;n.</p>",
-    "drive": "",
+    "estado": 10,
+    "comentarios": "<p>JC: 17/05/2018: Thierry no responde al correo que le env&iacute;o, as&iacute; que decido no pedir la subvenci&oacute;n porque si salen todas las que hemos pedido tendremos mucho gasto y hay que priorizar. Habr&aacute; que estar atento para el a&ntilde;o que viene.</p>\r\n<p>JC: 16/05/2018: he subido el presupuesto que nos enviaron sobre el escenario. son casi 13000 euros, teniendo en cuenta que la subvenci&oacute;n es al 60%, nos financian 7800 euros y tendremos que pagar 5200 euros... igual es demasiado?</p>\r\n<p>JC: 25-04-2018: Podr&iacute;amos aprovechar el proyecto del escenario que hicimos para diputaci&oacute;n.</p>",
+    "drive": "https://drive.google.com/file/d/1C-qK4hF11kg20MzbK5OyB1gqWLIXKSPv/view?usp=sharing",
     "gestiona_expediente": "-",
-    "nombre_carpeta_drive": "",
+    "nombre_carpeta_drive": "equipamiento instalaciones culturales municipales, 2018",
     "responsable": [
       1,
       2,
+      3,
       5
     ],
     "se_relaciona_con": [
@@ -4154,12 +4170,12 @@
     "inicio": "2018-04-26",
     "fin": "2018-05-18",
     "created": "2018-04-26T06:30:55Z",
-    "updated": "2018-04-30T19:58:03Z",
+    "updated": "2018-05-16T07:17:37Z",
     "slug": "kxEITt",
     "nombre": "Subvenciones para actuaciones de conservaci\u00f3n y protecci\u00f3n de los bienes inmuebles del Patrimonio Cultural de la Comunitat Valenciana",
     "procedimiento": "http://www.gva.es/es/inicio/procedimientos?id_proc=16662",
-    "bases": "",
-    "solicitud": "",
+    "bases": "http://www.dogv.gva.es/datos/2017/02/27/pdf/2017_1559.pdf",
+    "solicitud": "http://www.dogv.gva.es/datos/2018/04/25/pdf/2018_3917.pdf",
     "ente": "GV",
     "diputacion": null,
     "generalitat": 13,
@@ -4168,10 +4184,10 @@
     "cuantia_final": "",
     "descripcion": "El objeto de estas subvenciones es cofinanciar las actuaciones que se vayan a realizar sobre bienes de naturaleza inmueble: arqueol\u00f3gico, arquitect\u00f3nico, etnol\u00f3gico y paleontol\u00f3gico, del patrimonio Cultural de la Comunidad Valenciana considerados Bienes de Inter\u00e9s Cultural o de Relevancia Local, y cuyos trabajos sean destinados a su protecci\u00f3n, conservaci\u00f3n y o recuperaci\u00f3n dentro del marco de las atribuciones que corresponde ejercer a la Conselleria competente en materia de cultura.",
     "estado": 4,
-    "comentarios": "<p>JC: 30/04/2018: tras conversaci&oacute;n con Avalem Joves, me sugieren los lavaderos y <strong>sa font santa</strong>. Hoy mismo Josemi y Miralles han estado mirando el alcab&oacute; de sa font Santa, parece que les apetece.</p>\r\n<p>JC: 26-04-2018: Para alguna de las fuentes, est&aacute; claro. Como ibamos detr&aacute;s del <strong>Pou de Ses Peres</strong>, bien podr&iacute;a ir para ella.</p>",
-    "drive": "",
-    "gestiona_expediente": "-",
-    "nombre_carpeta_drive": "",
+    "comentarios": "<p>JC: 16/05/2018: ayer estuvo Josemi haciendo la memoria t&eacute;cnica. Le pregunto esta ma&ntilde;ana por whatsapp a ver como lo lleva. A ver que contesta.&nbsp;</p>\r\n<p>JC: 30/04/2018: tras conversaci&oacute;n con Avalem Joves, me sugieren los lavaderos y <strong>sa font santa</strong>. Hoy mismo Josemi y Miralles han estado mirando el alcab&oacute; de sa font Santa, parece que les apetece.</p>\r\n<p>JC: 26-04-2018: Para alguna de las fuentes, est&aacute; claro. Como ibamos detr&aacute;s del <strong>Pou de Ses Peres</strong>, bien podr&iacute;a ir para ella.</p>",
+    "drive": "https://drive.google.com/open?id=1vJnPqkYdeqoPvnJ4c2n6-Ee26ZBQqwJL",
+    "gestiona_expediente": "3/2018 - EXP. 33",
+    "nombre_carpeta_drive": "Subvenciones para actuaciones de conservaci\u00f3n y protecci\u00f3n de los bienes inmuebles del Patrimonio Cultural de la Comunitat Valenciana",
     "responsable": [
       1,
       5,
@@ -4234,7 +4250,7 @@
     "inicio": "2018-04-16",
     "fin": "2018-05-07",
     "created": "2018-04-30T18:46:43Z",
-    "updated": "2018-04-30T18:46:43Z",
+    "updated": "2018-05-08T06:31:08Z",
     "slug": "fFzfiw",
     "nombre": "Subvenciones a Mancomunidades para actividades en materia de ciudadanos extranjeros",
     "procedimiento": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=231",
@@ -4247,8 +4263,8 @@
     "cuantia": "3.500",
     "cuantia_final": "",
     "descripcion": "Es la misma subvenci\u00f3n que se env\u00eda a los ayuntamientos.",
-    "estado": 4,
-    "comentarios": "<p>El fomento de la participaci&oacute;n y la integraci&oacute;n de los ciudadanos extranjeros en el municipio.<br />2. Servicio de atenci&oacute;n y asesoramiento a los ciudadanos extranjeros.<br />3. Campa&ntilde;as de sensibilizaci&oacute;n y fomento para la igualdad e integraci&oacute;n de los ciudadanos extranjeros.<br />4. Campa&ntilde;as de empadronamiento.<br />5. Programas de informaci&oacute;n y ayuda para la integraci&oacute;n laboral de los ciudadanos extranjeros.<br />6. Programas o cursos de aprendizaje de castellano o valenciano.</p>",
+    "estado": 10,
+    "comentarios": "<p>JC: 7/05/2018: llamo a Rosa. Me comenta que no la han pedido nunca, pero que ahora que son m&aacute;s se pueden plantearlo para la siguiente convocatoria.</p>\r\n<p>El fomento de la participaci&oacute;n y la integraci&oacute;n de los ciudadanos extranjeros en el municipio.<br />2. Servicio de atenci&oacute;n y asesoramiento a los ciudadanos extranjeros.<br />3. Campa&ntilde;as de sensibilizaci&oacute;n y fomento para la igualdad e integraci&oacute;n de los ciudadanos extranjeros.<br />4. Campa&ntilde;as de empadronamiento.<br />5. Programas de informaci&oacute;n y ayuda para la integraci&oacute;n laboral de los ciudadanos extranjeros.<br />6. Programas o cursos de aprendizaje de castellano o valenciano.</p>",
     "drive": "",
     "gestiona_expediente": "-",
     "nombre_carpeta_drive": "",
@@ -4567,7 +4583,7 @@
     "inicio": "2018-05-04",
     "fin": "2018-06-01",
     "created": "2018-05-04T08:36:05Z",
-    "updated": "2018-05-04T08:36:05Z",
+    "updated": "2018-05-08T06:28:55Z",
     "slug": "An25mf",
     "nombre": "TECG-Solicitud de compra o cesi\u00f3n gratuita de plantas, partes de planta o semillas producidas por los viveros forestales de la Generalitat Valenciana",
     "procedimiento": "http://www.gva.es/es/inicio/procedimientos?id_proc=19088",
@@ -4581,10 +4597,10 @@
     "cuantia_final": "",
     "descripcion": "Solicitar la compra o cesi\u00f3n gratuita de plantas, partes de planta o semillas producidas por los viveros forestales de la Generalitat Valenciana",
     "estado": 4,
-    "comentarios": "<p>JC: 04/05/2018: en principio es para pedir planta y semillas. No s&eacute; si estamos en la situaci&oacute;n de meternos en m&aacute;s l&iacute;o. o simplemente ya pediremos planta en otro momento.</p>",
-    "drive": "",
+    "comentarios": "<p>JC: 07/05/2018: por lo menos habr&iacute;a que pedir semilla de lavanda y cosas as&iacute; para Es Pou.</p>\r\n<p>JC: 04/05/2018: en principio es para pedir planta y semillas. No s&eacute; si estamos en la situaci&oacute;n de meternos en m&aacute;s l&iacute;o. o simplemente ya pediremos planta en otro momento.</p>",
+    "drive": "https://drive.google.com/open?id=1rbKJ0jdb9XM5ULV2WDz0gfoYb8z4IbrQ",
     "gestiona_expediente": "-",
-    "nombre_carpeta_drive": "",
+    "nombre_carpeta_drive": "2018 - compra o cesi\u00f3n gratuita de plantas, partes o semillas",
     "responsable": [
       1,
       5,
@@ -4593,6 +4609,154 @@
     "se_relaciona_con": [],
     "colectivo": [
       1
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 112,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-05-02",
+    "fin": "2018-09-15",
+    "created": "2018-05-07T15:41:42Z",
+    "updated": "2018-05-07T15:41:42Z",
+    "slug": "0IDuxX",
+    "nombre": "Premios Provinciales de Voluntariado",
+    "procedimiento": "http://sede.diputacionalicante.es/detalle-catalogo-servicios/?id=236",
+    "bases": "http://sede.diputacionalicante.es/documentos/emeri/Convocatorias/00098.pdf",
+    "solicitud": "http://sede.diputacionalicante.es/documentos/emeri/ConvocatoriasImpresos/00095.pdf",
+    "ente": "DA",
+    "diputacion": 9,
+    "generalitat": null,
+    "gobierno": null,
+    "cuantia": "",
+    "cuantia_final": "",
+    "descripcion": "Los Premios Provinciales al Voluntariado pretenden reconocer y poner en valor la acci\u00f3n voluntaria, desarrollada en el \u00e1mbito de la provincia de Alicante, bien por personas f\u00edsicas voluntarias pertenecientes a alguna organizaci\u00f3n o bien por Entidades sin \u00e1nimo de lucro en el desarrollo de proyectos en los que el voluntariado sea esencial.",
+    "estado": 4,
+    "comentarios": "<p>JC: 07/05/2018: No procede con ninguna de las asociaciones que tenemos. Para la <strong>asociaci&oacute;n de j&oacute;venes</strong>, podr&iacute;a estar en sus <strong>estatutos</strong>.</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "nombre_carpeta_drive": "",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      3
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 113,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-05-04",
+    "fin": "2018-12-31",
+    "created": "2018-05-09T21:39:40Z",
+    "updated": "2018-05-09T21:39:40Z",
+    "slug": "ZfYEmh",
+    "nombre": "Solicitud de cursos del AULA VIRTUAL del SERVEF",
+    "procedimiento": "http://www.gva.es/es/inicio/procedimientos?id_proc=19480",
+    "bases": "",
+    "solicitud": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 11,
+    "gobierno": null,
+    "cuantia": "",
+    "cuantia_final": "",
+    "descripcion": "Estos cursos tienen como finalidad el aprendizaje del idioma ingl\u00e9s as\u00ed como el aprendizaje de competencias transversales que facilitan el acceso al mercado de trabajo. Est\u00e1n cofinanciados por el Fondo Social Europeo y son gratuitos para los destinatarios.\r\nEst\u00e1 previsto realizar sucesivas ediciones a lo largo del a\u00f1o, en funci\u00f3n de la demanda existente.\r\nLos CURSOS DE INGL\u00c9S responden a los seis niveles del marco europeo de las lenguas:\r\nIngl\u00e9s A1\r\nIngl\u00e9s A2\r\nIngl\u00e9s B1\r\nIngl\u00e9s B2\r\nIngl\u00e9s C1\r\nIngl\u00e9s C2\r\nLos CURSOS DE COMPETENCIAS TRANSVERSALES PARA EL EMPLEO son los siguientes:\r\nAutonom\u00eda e innovaci\u00f3n laboral - iniciativa y creatividad\r\nCapacidad de adaptaci\u00f3n, flexibilidad y agilidad\r\nCompetencias en la b\u00fasqueda de empleo\r\nComunicaci\u00f3n escrita\r\nEntrenamiento de la autoestima y autocontrol\r\n\u00c9tica profesional: fomento de los valores personales\r\nLiderazgo y direcci\u00f3n de equipos de trabajo\r\nMejora de la eficiencia profesional\r\nPensamiento positivo - optimismo y entusiasmo\r\nPresentaciones eficaces en p\u00fablico\r\nResoluci\u00f3n de conflictos en el trabajo\r\nT\u00e9cnicas para el afrontamiento del estr\u00e9s\r\nT\u00e9cnicas y habilidades de comunicaci\u00f3n\r\nT\u00e9cnicas y habilidades de negociaci\u00f3n\r\nToma de decisiones: c\u00f3mo afrontar el proceso de decisi\u00f3n\r\nTrabajo en equipo",
+    "estado": 4,
+    "comentarios": "<p>A lo largo del a&ntilde;o se puede ir la gente matriculando</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "nombre_carpeta_drive": "",
+    "responsable": [
+      1,
+      10,
+      12
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      4
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 114,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-05-07",
+    "fin": "2018-12-31",
+    "created": "2018-05-09T22:14:57Z",
+    "updated": "2018-05-09T22:14:57Z",
+    "slug": "nOqLfR",
+    "nombre": "Deducciones fiscales en el IRPF para autoconsumo y energ\u00edas renovables",
+    "procedimiento": "http://www.gva.es/es/inicio/procedimientos?id_proc=19476",
+    "bases": "",
+    "solicitud": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 19,
+    "gobierno": null,
+    "cuantia": "",
+    "cuantia_final": "",
+    "descripcion": "Solicitar al IVACE la certificaci\u00f3n acreditativa para la aplicaci\u00f3n de la deducci\u00f3n auton\u00f3mica en el IRPF por inversiones en instalaciones de autoconsumo o de aprovechamiento de energ\u00edas renovables realizadas en la vivienda habitual.",
+    "estado": 4,
+    "comentarios": "<p>Los contribuyentes podr&aacute;n deducirse un 20% del importe de las cantidades invertidas en instalaciones realizadas en la vivienda habitual y en instalaciones colectivas del edificio destinadas a alguna de las finalidades indicadas en el apartado anterior, siempre que estas no se encuentren relacionadas con el ejercicio de una actividad econ&oacute;mica, de conformidad con la normativa estatal reguladora del IRPF.</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "nombre_carpeta_drive": "",
+    "responsable": [
+      1,
+      3
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      4
+    ],
+    "users_like": []
+  }
+},
+{
+  "model": "myapp.subvencion",
+  "pk": 115,
+  "fields": {
+    "user": 5,
+    "inicio": "2018-05-25",
+    "fin": "2018-07-06",
+    "created": "2018-05-14T05:43:04Z",
+    "updated": "2018-05-14T05:43:04Z",
+    "slug": "96cTx3",
+    "nombre": "Convocatoria p\u00fablica de ayudas para el desarrollo de planes de apoyo a la incorporaci\u00f3n de tecnolog\u00edas de la informaci\u00f3n y la comunicaci\u00f3n (TIC) en el marco del Programa TICC\u00e1maras, financiado por el Fondo Europeo de Desarrollo Regional (FEDER)",
+    "procedimiento": "http://www.gva.es/es/inicio/procedimientos?id_proc=18658",
+    "bases": "",
+    "solicitud": "",
+    "ente": "GV",
+    "diputacion": null,
+    "generalitat": 10,
+    "gobierno": null,
+    "cuantia": "3.500",
+    "cuantia_final": "",
+    "descripcion": "servicios de diagn\u00f3stico asistido de TIC e implantaci\u00f3n",
+    "estado": 4,
+    "comentarios": "<p>El coste m&aacute;ximo por empresa de las ayudas a otorgar con cargo a esta convocatoria es de:</p>\r\n<p>- Fase I de diagn&oacute;stico, 1.200 euros y ser&aacute; cofinanciado por FEDER y la C&aacute;mara de Comercio de Alicante, por lo que este servicio ser&aacute; gratuito para las empresas participante<br />- Fase II de ayudas. Coste m&aacute;ximo elegible: 7.000 euros (IVA no incluido), prefinanciado en su totalidad por la empresa beneficiaria y cofinanciado al 50 % por FEDER, siendo por tanto la cuant&iacute;a m&aacute;xima de ayuda por empresa de 3.500,00 euros.</p>",
+    "drive": "",
+    "gestiona_expediente": "-",
+    "nombre_carpeta_drive": "",
+    "responsable": [
+      1
+    ],
+    "se_relaciona_con": [],
+    "colectivo": [
+      5,
+      4
     ],
     "users_like": []
   }
