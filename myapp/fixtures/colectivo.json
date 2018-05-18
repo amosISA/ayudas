@@ -1,0 +1,42 @@
+[
+{
+  "model": "myapp.colectivo",
+  "pk": 1,
+  "fields": {
+    "nombre": "Ayuntamiento",
+    "slug": "ayuntamiento"
+  }
+},
+{
+  "model": "myapp.colectivo",
+  "pk": 2,
+  "fields": {
+    "nombre": "Mancomunidad",
+    "slug": "mancomunidad"
+  }
+},
+{
+  "model": "myapp.colectivo",
+  "pk": 3,
+  "fields": {
+    "nombre": "Asociaciones",
+    "slug": "asociaciones"
+  }
+},
+{
+  "model": "myapp.colectivo",
+  "pk": 4,
+  "fields": {
+    "nombre": "Particulares",
+    "slug": "particulares"
+  }
+},
+{
+  "model": "myapp.colectivo",
+  "pk": 5,
+  "fields": {
+    "nombre": "Otros",
+    "slug": "otros"
+  }
+}
+]

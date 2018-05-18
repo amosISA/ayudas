@@ -1,0 +1,128 @@
+[
+{
+  "model": "myapp.diputacion",
+  "pk": 1,
+  "fields": {
+    "nombre": "Cultura",
+    "font_color": "#808080",
+    "slug": "cultura"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 2,
+  "fields": {
+    "nombre": "Agua. Ciclo h\u00eddrico",
+    "font_color": "#0000ff",
+    "slug": "agua-ciclo-hidrico"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 3,
+  "fields": {
+    "nombre": "Infraestructuras. Cooperaci\u00f3n",
+    "font_color": "#71866a",
+    "slug": "infraestructuras-cooperacion"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 6,
+  "fields": {
+    "nombre": "Bienestar social",
+    "font_color": "#86b179",
+    "slug": "bienestar-social"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 7,
+  "fields": {
+    "nombre": "Deportes",
+    "font_color": "#ffcc00",
+    "slug": "deportes"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 8,
+  "fields": {
+    "nombre": "Medio Ambiente",
+    "font_color": "#008000",
+    "slug": "medio-ambiente"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 9,
+  "fields": {
+    "nombre": "Igualdad y Juventud",
+    "font_color": "#ffcc99",
+    "slug": "igualdad-y-juventud"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 10,
+  "fields": {
+    "nombre": "Ciudadanos extranjeros",
+    "font_color": "#ffff00",
+    "slug": "ciudadanos-extranjeros"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 11,
+  "fields": {
+    "nombre": "Patronato de Turismo",
+    "font_color": "#3366ff",
+    "slug": "patronato-de-turismo"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 12,
+  "fields": {
+    "nombre": "Instituto Juan Gil-Albert",
+    "font_color": "#99ccff",
+    "slug": "instituto-juan-gil-albert"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 13,
+  "fields": {
+    "nombre": "Promoci\u00f3n y desarrollo local",
+    "font_color": "#000080",
+    "slug": "promocion-y-desarrollo-local"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 14,
+  "fields": {
+    "nombre": "Servicio Asistencia a Municipios",
+    "font_color": "#ff99cc",
+    "slug": "servicio-asistencia-a-municipios"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 15,
+  "fields": {
+    "nombre": "Residuos S\u00f3lidos Urbanos",
+    "font_color": "#ff6600",
+    "slug": "residuos-solidos-urbanos"
+  }
+},
+{
+  "model": "myapp.diputacion",
+  "pk": 16,
+  "fields": {
+    "nombre": "Fomento y desarrollo",
+    "font_color": "#FFFFFF",
+    "slug": "fomento-y-desarrollo"
+  }
+}
+]

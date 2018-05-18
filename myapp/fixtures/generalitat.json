@@ -1,0 +1,155 @@
+[
+{
+  "model": "myapp.generalitat",
+  "pk": 3,
+  "fields": {
+    "nombre": "Conselleria de Agricultura, Medio Ambiente, Cambio Clim\u00e1tico y Desarrollo Rural",
+    "font_color": "#008000",
+    "slug": "conselleria-de-agricultura-medio-ambiente-cambio-climatico-y-desarrollo-rural"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 4,
+  "fields": {
+    "nombre": "Conselleria de Transparencia, Responsabilidad Social, Participaci\u00f3n y Cooperaci\u00f3n",
+    "font_color": "#b1de81",
+    "slug": "conselleria-de-transparencia-responsabilidad-social-participacion-y-cooperacion"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 5,
+  "fields": {
+    "nombre": "Direcci\u00f3n General de Administraci\u00f3n Local, de la Presidencia de la Generalitat",
+    "font_color": "#a461d2",
+    "slug": "direccion-general-de-administracion-local-de-la-presidencia-de-la-generalitat"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 6,
+  "fields": {
+    "nombre": "Conselleria de Econom\u00eda Sostenible, Sectores Productivos, Comercio y Trabajo",
+    "font_color": "#ff6600",
+    "slug": "conselleria-de-economia-sostenible-sectores-productivos-comercio-y-trabajo"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 7,
+  "fields": {
+    "nombre": "Direcci\u00f3n Territorial de Igualdad y Pol\u00edticas Inclusivas",
+    "font_color": "#333333",
+    "slug": "direccion-territorial-de-igualdad-y-politicas-inclusivas"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 8,
+  "fields": {
+    "nombre": "Conselleria de Hacienda y Modelo Econ\u00f3mico",
+    "font_color": "#800080",
+    "slug": "conselleria-de-hacienda-y-modelo-economico"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 9,
+  "fields": {
+    "nombre": "Institut Valenci\u00e0 de la Joventut",
+    "font_color": "#ffff00",
+    "slug": "institut-valencia-de-la-joventut"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 10,
+  "fields": {
+    "nombre": "Consejo de C\u00e1maras de Comercio, Industria, Servicios y Navegaci\u00f3n",
+    "font_color": "#c0c0c0",
+    "slug": "consejo-de-camaras-de-comercio-industria-servicios-y-navegacion"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 11,
+  "fields": {
+    "nombre": "SERVEF",
+    "font_color": "#ccffff",
+    "slug": "servef"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 12,
+  "fields": {
+    "nombre": "Conselleria de Justicia, Administraci\u00f3n P\u00fablica, Reformas Democr\u00e1ticas y Libertades P\u00fablicas",
+    "font_color": "#00ccff",
+    "slug": "conselleria-de-justicia-administracion-publica-reformas-democraticas-y-libertades-publicas"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 13,
+  "fields": {
+    "nombre": "Educaci\u00f3n, Investigaci\u00f3n, Cultura y Deporte",
+    "font_color": "#33cccc",
+    "slug": "educacion-investigacion-cultura-y-deporte"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 14,
+  "fields": {
+    "nombre": "Agencia valenciana de seguridad y respuesta a las emergencia",
+    "font_color": "#ff99cc",
+    "slug": "agencia-valenciana-de-seguridad-y-respuesta-a-las-emergencia"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 15,
+  "fields": {
+    "nombre": "Conselleria de Sanidad Universal y Salud P\u00fablica",
+    "font_color": "#FFFFFF",
+    "slug": "conselleria-de-sanidad-universal-y-salud-publica"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 16,
+  "fields": {
+    "nombre": "Ag\u00e8ncia Valenciana del Turisme",
+    "font_color": "#008080",
+    "slug": "agencia-valenciana-del-turisme"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 17,
+  "fields": {
+    "nombre": "IVAJ",
+    "font_color": "#3366ff",
+    "slug": "ivaj"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 18,
+  "fields": {
+    "nombre": "Conselleria de Vivienda, Obras P\u00fablicas y Vertebraci\u00f3n del Territorio",
+    "font_color": "#ffff00",
+    "slug": "conselleria-de-vivienda-obras-publicas-y-vertebracion-del-territorio"
+  }
+},
+{
+  "model": "myapp.generalitat",
+  "pk": 19,
+  "fields": {
+    "nombre": "IVACE - Instituto Valenciano de Competitividad Empresarial",
+    "font_color": "#FFFFFF",
+    "slug": "ivace-instituto-valenciano-de-competitividad-empresarial"
+  }
+}
+]
