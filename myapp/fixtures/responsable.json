@@ -1,0 +1,90 @@
+[
+{
+  "model": "myapp.responsable",
+  "pk": 1,
+  "fields": {
+    "responsable": "Juan Carlos",
+    "user": 5
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 2,
+  "fields": {
+    "responsable": "Mar\u00eda Vicenta",
+    "user": 10
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 3,
+  "fields": {
+    "responsable": "Thierry",
+    "user": 3
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 4,
+  "fields": {
+    "responsable": "Rafa",
+    "user": null
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 5,
+  "fields": {
+    "responsable": "Maril\u00f3",
+    "user": 11
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 6,
+  "fields": {
+    "responsable": "Josemi",
+    "user": 7
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 8,
+  "fields": {
+    "responsable": "Personal",
+    "user": null
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 9,
+  "fields": {
+    "responsable": "Fernando",
+    "user": 4
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 10,
+  "fields": {
+    "responsable": "Agnieszka",
+    "user": 6
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 12,
+  "fields": {
+    "responsable": "Angel",
+    "user": 8
+  }
+},
+{
+  "model": "myapp.responsable",
+  "pk": 13,
+  "fields": {
+    "responsable": "Mar\u00eda Teresa",
+    "user": 9
+  }
+}
+]
